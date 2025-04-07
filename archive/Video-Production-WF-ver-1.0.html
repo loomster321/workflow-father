@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Production Workflow Requirements Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #3498db;
+        }
+        h4 {
+            color: #16a085;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: monospace;
+            background-color: #f8f8f8;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .mermaid {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            border: 1px solid #000;
+        }
+        .chatgpt {
+            background-color: #c9e4de;
+        }
+        .midjourney {
+            background-color: #f9d9ba;
+        }
+        .human {
+            background-color: #ffcfd2;
+        }
+        .kling {
+            background-color: #bde0fe;
+        }
+        .elevenlabs {
+            background-color: #ffc6ff;
+        }
+        .n8n {
+            background-color: #e2ece9;
+        }
+        .document {
+            background-color: #f1f1f1;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'default',
+                securityLevel: 'loose'
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Video Production Workflow Requirements Document</h1>
+    
+    <h2>Document Metadata</h2>
+    <ul>
+        <li><strong>Name:</strong> Video Production Workflow</li>
+        <li><strong>Version:</strong> 1.0</li>
+        <li><strong>Timestamp:</strong> 2025-04-02T10:00:00+00:00</li>
+        <li><strong>Description:</strong> End-to-end workflow for automating and streamlining the creation of high-quality video content, enhancing viewer engagement and emotional connection through best practices in visual storytelling, dynamic pacing, and other production techniques.</li>
+    </ul>
+    
+    <h3>Workflow Persona</h3>
+    <p>I am a Video Production Director with over 20 years of experience in professional video creation, post-production workflows, and digital content distribution. I specialize in optimizing video production pipelines and ensuring high-quality outputs across various platforms, with particular expertise in AI-assisted content creation and automated workflows for visual storytelling.</p>
+
+    <h2>1. Overview & Context</h2>
+
+    <h3>1.1 Project Purpose</h3>
+    <p>To create an agentic video production workflow system that automates and streamlines the creation of high-quality video content, enhancing viewer engagement and emotional connection through best practices in visual storytelling, dynamic pacing, and other production techniques.</p>
+
+    <h3>1.2 Current Technology Stack</h3>
+    <ul>
+        <li><strong>Workflow Agents:</strong> n8n and ChatGPT</li>
+        <li><strong>Database:</strong> Airtable</li>
+        <li><strong>Image Generation:</strong> MidJourney</li>
+        <li><strong>Sound Effects:</strong> ElevenLabs</li>
+        <li><strong>Video Generation:</strong> Kling</li>
+        <li><strong>Editing and Special Effects:</strong> Premiere Pro, After Effects</li>
+    </ul>
+
+    <h2>2. Core Requirements</h2>
+
+    <h3>2.1 Key Priorities</h3>
+    <ul>
+        <li>Balanced optimization for speed, cost-efficiency, and creative flexibility</li>
+        <li>Output format standardized to 16:9 (separate production process for shorts)</li>
+        <li>Human oversight at critical junctures (after image generation and during final edits)</li>
+    </ul>
+
+    <h3>2.2 Pain Points to Address</h3>
+    <ul>
+        <li>Poor quality image and video generation due to inadequate prompt construction</li>
+        <li>Excessive iterations needed for satisfactory visual content</li>
+        <li>Incomplete information and adherence to production scripts</li>
+        <li>Labor-intensive editing process in Premiere Pro</li>
+    </ul>
+
+    <h3>2.3 Workflow Structure Requirements</h3>
+    <ul>
+        <li>Clear distinction between scenes and shots (scenes can contain multiple shots)</li>
+        <li>Explicit differentiation between A-Roll (narration-driven content) and B-Roll (supplementary visual content)</li>
+        <li>Separate B-Roll ideation from prompt engineering to prevent agent overload</li>
+        <li>Separate MidJourney and Kling prompt engineering into distinct nodes</li>
+        <li>Position Kling prompt engineering after image review to use approved images as context</li>
+        <li>Allow optional human-selected character reference images to be injected into the image generation process</li>
+        <li>Inclusion of duration estimates at both scene and shot levels</li>
+        <li>Structured handovers between all workflow stages with well-defined documents</li>
+    </ul>
+
+    <h2 id="workflow-nodes">3. Workflow Nodes and Documents</h2>
+
+    <h3 id="workflow-nodes-list">3.1 Workflow Nodes</h3>
+
+    <h4 id="scene-segmentation-node">3.1.1 Scene Segmentation Node</h4>
+    <p><strong>Description:</strong> Breaks the video narration script into distinct scenes, each containing narration text, scene description, suggested visuals, suggested audio, and expected duration.<br>
+    <strong>Node Type:</strong> AI Agent<br>
+    <strong>Category:</strong> Tool-Using Agent<br>
+    <strong>Agent:</strong> ScriptSegmenter<br>
+    <strong>Input:</strong> <a href="#video-narration-script">Video Narration Script</a><br>
+    <strong>Output:</strong> <a href="#scene-segmented-script">Scene Segmented Script</a></p>
+
+    <h4 id="shot-segmentation-node">3.1.2 Shot Segmentation & A/B Roll Classification Node</h4>
+    <p><strong>Description:</strong> Breaks scenes into individual shots, classifying each as A-Roll or B-Roll, with shot descriptions, durations, visual/audio suggestions, and emotional tone indicators.<br>
+    <strong>Node Type:</strong> AI Agent<br>
+    <strong>Category:</strong> Tool-Using Agent<br>
+    <strong>Agent:</strong> ShotSegmenter<br>
+    <strong>Input:</strong> <a href="#scene-segmented-script">Scene Segmented Script</a><br>
+    <strong>Output:</strong> <a href="#shot-segmented-script">Shot Segmented Script with A-Roll/B-Roll Classification</a></p>
+
+    <h4 id="broll-ideation-node">3.1.3 B-Roll Ideation Node</h4>
+    <p><strong>Description:</strong> Generates three tiers of creative visual concepts for B-Roll shots, ranging from standard to experimental, based on the shot segmented script.<br>
+    <strong>Node Type:</strong> AI Agent<br>
+    <strong>Category:</strong> Tool-Using Agent<br>
+    <strong>Agent:</strong> BRollIdeator<br>
+    <strong>Input:</strong> <a href="#shot-segmented-script">Shot Segmented Script with A-Roll/B-Roll Classification</a><br>
+    <strong>Output:</strong> <a href="#shot-broll-concepts">Shot B-Roll Concepts (with three creativity tiers)</a></p>
+
+    <h4 id="broll-intermediate-script-node">3.1.4 B-Roll Intermediate Video Script Node</h4>
+    <p><strong>Description:</strong> Creates a comprehensive visual narrative guide that defines shot transitions, visual styling, and storytelling elements across all B-Roll content to ensure cohesive visual storytelling.<br>
+    <strong>Node Type:</strong> AI Agent<br>
+    <strong>Category:</strong> Tool-Using Agent<br>
+    <strong>Agent:</strong> VisualNarrativeDesigner<br>
+    <strong>Input:</strong> <a href="#shot-broll-concepts">Shot B-Roll Concepts</a><br>
+    <strong>Output:</strong> <a href="#broll-intermediate-script">B-Roll Intermediate Video Script</a></p>
+
+    <h4 id="midjourney-prompt-node">3.1.5 B-Roll MidJourney Prompt Engineering Node</h4>
+    <p><strong>Description:</strong> Transforms B-Roll concepts into optimized MidJourney image generation prompts.<br>
+    <strong>Node Type:</strong> AI Agent<br>
+    <strong>Category:</strong> Tool-Using Agent<br>
+    <strong>Agent:</strong> PromptEngineer<br>
+    <strong>Input:</strong> <a href="#shot-broll-concepts">Shot B-Roll Concepts</a>, <a href="#broll-intermediate-script">B-Roll Intermediate Video Script</a><br>
+    <strong>Output:</strong> <a href="#broll-midjourney-prompts">Shot B-Roll MidJourney Prompts</a></p>
+
+    <h4 id="character-reference-node">3.1.6 Character Reference Selection Node</h4>
+    <p><strong>Description:</strong> Human selection of character reference images to maintain visual consistency in generated content.<br>
+    <strong>Node Type:</strong> Human in the Loop<br>
+    <strong>Category:</strong> Review<br>
+    <strong>Human Role:</strong> Character Director<br>
+    <strong>Input:</strong> <a href="#shot-broll-concepts">Shot B-Roll Concepts</a><br>
+    <strong>Output:</strong> <a href="#character-reference-images">Character Reference Images</a><br>
+    <strong>Configuration:</strong>
+        <ul>
+            <li>Review Method: Visual Interface</li>
+            <li>Timeout Hours: 24</li>
+            <li>Required Fields: character_id, character_name, reference_image_file, character_description</li>
+        </ul>
+    </p>
+
+    <h4 id="image-generation-node">3.1.7 B-Roll Image Generation Node</h4>
+    <p><strong>Description:</strong> Generates images for B-Roll using MidJourney based on engineered prompts, optionally incorporating character reference images provided by humans.<br>
+    <strong>Node Type:</strong> Integration<br>
+    <strong>Category:</strong> Image Generation<br>
+    <strong>Agent:</strong> MidJourney<br>
+    <strong>Input:</strong> <a href="#broll-midjourney-prompts">Shot B-Roll MidJourney Prompts</a>, Optional <a href="#character-reference-images">Character Reference Images</a><br>
+    <strong>Output:</strong> <a href="#broll-image-assets">B-Roll Image Assets</a></p>
+
+    <h4 id="image-review-node">3.1.8 B-Roll Image Review Node</h4>
+    <p><strong>Description:</strong> Human review of generated images to ensure quality and adherence to creative vision.<br>
+    <strong>Node Type:</strong> Human in the Loop<br>
+    <strong>Category:</strong> Review<br>
+    <strong>Human Role:</strong> Image Director<br>
+    <strong>Input:</strong> <a href="#broll-image-assets">B-Roll Image Assets</a><br>
+    <strong>Output:</strong> <a href="#broll-reviewed-assets">B-Roll Reviewed Assets</a><br>
+    <strong>Configuration:</strong>
+        <ul>
+            <li>Review Method: Visual Gallery Interface</li>
+            <li>Timeout Hours: 48</li>
+            <li>Required Fields: status, feedback</li>
+            <li>Options: Approve, Reject with Feedback, Request Alternatives</li>
+        </ul>
+    </p>
+
+    <h4 id="kling-prompt-node">3.1.9 B-Roll Kling Prompt Engineering Node</h4>
+    <p><strong>Description:</strong> Creates optimized motion prompts for Kling video generation, using the approved B-Roll images as context to ensure optimal animation.<br>
+    <strong>Node Type:</strong> AI Agent<br>
+    <strong>Category:</strong> Tool-Using Agent<br>
+    <strong>Agent:</strong> KlingPromptEngineer<br>
+    <strong>Input:</strong> <a href="#broll-reviewed-assets">B-Roll Reviewed Assets</a><br>
+    <strong>Output:</strong> <a href="#broll-kling-prompts">Shot B-Roll Kling Prompts</a></p>
+
+    <h4 id="image-to-video-node">3.1.10 Image-to-Video Conversion Node</h4>
+    <p><strong>Description:</strong> Converts static images into animated video clips with motion effects based on specialized Kling prompts.<br>
+    <strong>Node Type:</strong> Integration<br>
+    <strong>Category:</strong> Video Generation<br>
+    <strong>Agent:</strong> Kling<br>
+    <strong>Input:</strong> <a href="#broll-reviewed-assets">B-Roll Reviewed Assets</a>, <a href="#broll-kling-prompts">Shot B-Roll Kling Prompts</a><br>
+    <strong>Output:</strong> <a href="#broll-video-assets">B-Roll Video Assets</a></p>
+
+    <h4 id="audio-generation-node">3.1.11 A-Roll Recording & Audio Generation Node</h4>
+    <p><strong>Description:</strong> Generates voiceover narration based on the script segments.<br>
+    <strong>Node Type:</strong> Integration<br>
+    <strong>Category:</strong> Audio Generation<br>
+    <strong>Agent:</strong> ElevenLabs<br>
+    <strong>Input:</strong> <a href="#shot-segmented-script">Shot Segmented Script (narration text)</a><br>
+    <strong>Output:</strong> <a href="#audio-narration">Audio Narration files</a></p>
+
+    <h4 id="timeline-assembly-node">3.1.12 Editing Preparation & Timeline Assembly Node</h4>
+    <p><strong>Description:</strong> Assembles a structured timeline for video editing, linking A-Roll narration with B-Roll visuals.<br>
+    <strong>Node Type:</strong> Integration<br>
+    <strong>Category:</strong> Media Processing<br>
+    <strong>Agent:</strong> n8n-Assembler<br>
+    <strong>Input:</strong> <a href="#broll-reviewed-assets">B-Roll Reviewed Assets</a>, <a href="#broll-video-assets">B-Roll Video Assets</a>, <a href="#audio-narration">Audio Narration</a>, <a href="#mixed-audio-tracks">Mixed Audio Tracks</a><br>
+    <strong>Output:</strong> <a href="#editing-timeline">Editing Timeline</a></p>
+
+    <h4 id="music-selection-node">3.1.13 Background Music Selection Node</h4>
+    <p><strong>Description:</strong> Identifies appropriate background music tracks based on emotional tone, narrative pacing, and thematic elements.<br>
+    <strong>Node Type:</strong> AI Agent<br>
+    <strong>Category:</strong> Tool-Using Agent<br>
+    <strong>Agent:</strong> MusicSelector<br>
+    <strong>Input:</strong> <a href="#scene-segmented-script">Scene Segmented Script</a>, <a href="#broll-intermediate-script">B-Roll Intermediate Video Script</a><br>
+    <strong>Output:</strong> <a href="#bg-music-specs">Background Music Specifications</a></p>
+
+    <h4 id="sfx-generation-node">3.1.14 Sound Effects Generation Node</h4>
+    <p><strong>Description:</strong> Generates or selects appropriate ambient audio and sound effects to enhance both A-Roll and B-Roll segments.<br>
+    <strong>Node Type:</strong> AI Agent<br>
+    <strong>Category:</strong> Tool-Using Agent<br>
+    <strong>Agent:</strong> SFXDesigner<br>
+    <strong>Input:</strong> <a href="#shot-segmented-script">Shot Segmented Script</a>, <a href="#broll-intermediate-script">B-Roll Intermediate Video Script</a><br>
+    <strong>Output:</strong> <a href="#sfx-specs">Sound Effects Specifications</a></p>
+
+    <h4 id="audio-mixing-node">3.1.15 Audio Mixing and Integration Node</h4>
+    <p><strong>Description:</strong> Combines narration, background music, and sound effects with appropriate levels and transitions.<br>
+    <strong>Node Type:</strong> Integration<br>
+    <strong>Category:</strong> Audio Processing<br>
+    <strong>Agent:</strong> ElevenLabs-AudioMixer<br>
+    <strong>Input:</strong> <a href="#audio-narration">Audio Narration</a>, <a href="#bg-music-specs">Background Music Specifications</a>, <a href="#sfx-specs">Sound Effects Specifications</a><br>
+    <strong>Output:</strong> <a href="#mixed-audio-tracks">Mixed Audio Tracks</a></p>
+
+    <h4 id="final-editing-node">3.1.16 Final Editing & Assembly Node</h4>
+    <p><strong>Description:</strong> Human editor finalizes the video, adjusting pacing, transitions, and effects.<br>
+    <strong>Node Type:</strong> Human in the Loop<br>
+    <strong>Category:</strong> Final Approval<br>
+    <strong>Human Role:</strong> Video Editor<br>
+    <strong>Input:</strong> Premiere Pro project with <a href="#editing-timeline">Editing Timeline</a> loaded<br>
+    <strong>Output:</strong> Final Video (MP4, 16:9)<br>
+    <strong>Configuration:</strong>
+        <ul>
+            <li>Editing Software: Adobe Premiere Pro</li>
+            <li>Review Cycle: Single Review</li>
+            <li>Quality Standards: Professional Broadcast Quality</li>
+            <li>Output Formats: MP4, 16:9 aspect ratio</li>
+        </ul>
+    </p>
+
+    <h3 id="document-specs">3.2 Document Specifications</h3>
+
+    <h4 id="video-narration-script">3.2.0 Video Narration Script</h4>
+    <p><strong>Format:</strong> Markdown (Single Document)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> Markdown<br>
+    <strong>Description:</strong> Initial script containing the narration text and general direction for the video production.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>string</td>
+            <td>Title of the video project</td>
+        </tr>
+        <tr>
+            <td>introduction</td>
+            <td>string</td>
+            <td>Introductory section describing the project purpose</td>
+        </tr>
+        <tr>
+            <td>script_body</td>
+            <td>string</td>
+            <td>Main narration text with speaker notes</td>
+        </tr>
+        <tr>
+            <td>visual_suggestions</td>
+            <td>string</td>
+            <td>General visual direction for the video</td>
+        </tr>
+        <tr>
+            <td>tone_notes</td>
+            <td>string</td>
+            <td>Overall mood and presentation style guidance</td>
+        </tr>
+        <tr>
+            <td>audio_direction</td>
+            <td>string</td>
+            <td>General music style and sound effects suggestions</td>
+        </tr>
+        <tr>
+            <td>target_audience</td>
+            <td>string</td>
+            <td>Description of the intended audience</td>
+        </tr>
+        <tr>
+            <td>messaging_goals</td>
+            <td>string</td>
+            <td>Key points to be communicated in the video</td>
+        </tr>
+    </table>
+
+    <h4 id="scene-segmented-script">3.2.1 Scene Segmented Script</h4>
+    <p><strong>Format:</strong> JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Breakdown of the script into distinct scenes with associated metadata.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Unique identifier for the scene</td>
+        </tr>
+        <tr>
+            <td>scene_narration</td>
+            <td>string</td>
+            <td>Narration text for this scene</td>
+        </tr>
+        <tr>
+            <td>scene_description</td>
+            <td>string</td>
+            <td>Description of what happens in this scene</td>
+        </tr>
+        <tr>
+            <td>suggested_visuals</td>
+            <td>string</td>
+            <td>Suggestions for visual content in this scene</td>
+        </tr>
+        <tr>
+            <td>suggested_audio</td>
+            <td>object</td>
+            <td>Object containing background_music and sound_effects suggestions</td>
+        </tr>
+        <tr>
+            <td>expected_duration</td>
+            <td>number</td>
+            <td>Estimated duration of the scene in seconds</td>
+        </tr>
+    </table>
+
+    <h4 id="shot-segmented-script">3.2.2 Shot Segmented Script</h4>
+    <p><strong>Format:</strong> JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Breakdown of scenes into individual shots with detailed specifications.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Unique identifier for the shot</td>
+        </tr>
+        <tr>
+            <td>shot_description</td>
+            <td>string</td>
+            <td>Description of what happens in this shot</td>
+        </tr>
+        <tr>
+            <td>roll_type</td>
+            <td>string</td>
+            <td>Classification as "A" (narration-driven) or "B" (supplementary visuals)</td>
+        </tr>
+        <tr>
+            <td>expected_duration</td>
+            <td>number</td>
+            <td>Estimated duration of the shot in seconds</td>
+        </tr>
+        <tr>
+            <td>suggested_broll_visuals</td>
+            <td>string</td>
+            <td>Visual suggestions for B-Roll shots</td>
+        </tr>
+        <tr>
+            <td>suggested_sound_effects</td>
+            <td>array</td>
+            <td>Array of sound effect suggestions</td>
+        </tr>
+        <tr>
+            <td>emotional_tone</td>
+            <td>string</td>
+            <td>Intended emotional quality of the shot</td>
+        </tr>
+    </table>
+
+    <h4 id="shot-broll-concepts">3.2.3 Shot B-Roll Concepts</h4>
+    <p><strong>Format:</strong> JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Creative concepts for B-Roll shots at three distinct creativity tiers.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Reference to the specific shot</td>
+        </tr>
+        <tr>
+            <td>standard_broll</td>
+            <td>object</td>
+            <td>Conventional concept with idea, visual_style, and motion properties</td>
+        </tr>
+        <tr>
+            <td>enhanced_broll</td>
+            <td>object</td>
+            <td>More creative concept with idea, visual_style, and motion properties</td>
+        </tr>
+        <tr>
+            <td>experimental_broll</td>
+            <td>object</td>
+            <td>Highly innovative concept with idea, visual_style, and motion properties</td>
+        </tr>
+    </table>
+
+    <h4 id="broll-intermediate-script">3.2.4 B-Roll Intermediate Video Script</h4>
+    <p><strong>Format:</strong> JSON (Composite)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Comprehensive guide for visual storytelling across all B-Roll content.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>project_visual_style</td>
+            <td>object</td>
+            <td>Overall visual style specifications for the project</td>
+        </tr>
+        <tr>
+            <td>shots_sequence</td>
+            <td>array</td>
+            <td>Ordered array of shot objects with detailed specifications</td>
+        </tr>
+        <tr>
+            <td>shot_transitions</td>
+            <td>array</td>
+            <td>Specifications for transitions between shots</td>
+        </tr>
+        <tr>
+            <td>visual_motifs</td>
+            <td>array</td>
+            <td>Recurring visual elements to maintain throughout the video</td>
+        </tr>
+        <tr>
+            <td>emotional_progression</td>
+            <td>array</td>
+            <td>Planned emotional journey throughout the video</td>
+        </tr>
+        <tr>
+            <td>technical_requirements</td>
+            <td>object</td>
+            <td>Technical specifications for visual consistency</td>
+        </tr>
+        <tr>
+            <td>style_reference_links</td>
+            <td>array</td>
+            <td>Links to reference materials for visual style</td>
+        </tr>
+    </table>
+
+    <h4 id="broll-midjourney-prompts">3.2.5 Shot B-Roll MidJourney Prompts</h4>
+    <p><strong>Format:</strong> JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Optimized prompts for generating images with MidJourney.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Reference to the specific shot</td>
+        </tr>
+        <tr>
+            <td>concept_type</td>
+            <td>string</td>
+            <td>Classification as "standard", "enhanced", or "experimental"</td>
+        </tr>
+        <tr>
+            <td>midjourney_prompt</td>
+            <td>string</td>
+            <td>Complete prompt text for MidJourney image generation</td>
+        </tr>
+        <tr>
+            <td>character_references</td>
+            <td>array</td>
+            <td>Optional array of character reference image identifiers</td>
+        </tr>
+    </table>
+
+    <h4 id="character-reference-images">3.2.6 Character Reference Images</h4>
+    <p><strong>Format:</strong> Directory + Metadata JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON + Image Files<br>
+    <strong>Description:</strong> Reference images for consistent character representation.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>character_id</td>
+            <td>string</td>
+            <td>Unique identifier for the character</td>
+        </tr>
+        <tr>
+            <td>character_name</td>
+            <td>string</td>
+            <td>Name of the character</td>
+        </tr>
+        <tr>
+            <td>reference_image_file</td>
+            <td>string</td>
+            <td>Path to the reference image file</td>
+        </tr>
+        <tr>
+            <td>character_description</td>
+            <td>string</td>
+            <td>Detailed description of the character's appearance and attributes</td>
+        </tr>
+    </table>
+
+    <h4 id="broll-image-assets">3.2.7 B-Roll Image Assets</h4>
+    <p><strong>Format:</strong> Directory + Metadata JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON + Image Files<br>
+    <strong>Description:</strong> Generated images for B-Roll content.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Reference to the specific shot</td>
+        </tr>
+        <tr>
+            <td>image_file</td>
+            <td>string</td>
+            <td>Path to the generated image file</td>
+        </tr>
+        <tr>
+            <td>concept_type</td>
+            <td>string</td>
+            <td>Classification as "standard", "enhanced", or "experimental"</td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>string</td>
+            <td>Current status of the image (pending, generated)</td>
+        </tr>
+    </table>
+
+    <h4 id="broll-reviewed-assets">3.2.8 B-Roll Reviewed Assets</h4>
+    <p><strong>Format:</strong> JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Human-reviewed and approved images for B-Roll content.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Reference to the specific shot</td>
+        </tr>
+        <tr>
+            <td>image_file</td>
+            <td>string</td>
+            <td>Path to the approved image file</td>
+        </tr>
+        <tr>
+            <td>concept_type</td>
+            <td>string</td>
+            <td>Classification as "standard", "enhanced", or "experimental"</td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>string</td>
+            <td>Status after review (approved, rejected)</td>
+        </tr>
+        <tr>
+            <td>feedback</td>
+            <td>string</td>
+            <td>Human reviewer feedback or comments</td>
+        </tr>
+    </table>
+
+    <h4 id="broll-kling-prompts">3.2.9 Shot B-Roll Kling Prompts</h4>
+    <p><strong>Format:</strong> JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Optimized prompts for generating motion from static images.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Reference to the specific shot</td>
+        </tr>
+        <tr>
+            <td>image_file</td>
+            <td>string</td>
+            <td>Path to the source image file</td>
+        </tr>
+        <tr>
+            <td>kling_motion_prompt</td>
+            <td>string</td>
+            <td>Complete prompt text for Kling motion generation</td>
+        </tr>
+        <tr>
+            <td>animation_style</td>
+            <td>string</td>
+            <td>Style specification for the animation</td>
+        </tr>
+        <tr>
+            <td>camera_movement</td>
+            <td>string</td>
+            <td>Description of desired camera movement</td>
+        </tr>
+        <tr>
+            <td>duration</td>
+            <td>number</td>
+            <td>Desired duration of the video clip in seconds</td>
+        </tr>
+    </table>
+
+    <h4 id="broll-video-assets">3.2.10 B-Roll Video Assets</h4>
+    <p><strong>Format:</strong> Directory + Metadata JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON + Video Files<br>
+    <strong>Description:</strong> Generated video clips from static images.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Reference to the specific shot</td>
+        </tr>
+        <tr>
+            <td>video_file</td>
+            <td>string</td>
+            <td>Path to the generated video file</td>
+        </tr>
+        <tr>
+            <td>source_image_file</td>
+            <td>string</td>
+            <td>Path to the source image file</td>
+        </tr>
+        <tr>
+            <td>duration</td>
+            <td>number</td>
+            <td>Actual duration of the video clip in seconds</td>
+        </tr>
+    </table>
+
+    <h4 id="audio-narration">3.2.11 Audio Narration</h4>
+    <p><strong>Format:</strong> Directory + Metadata JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON + Audio Files<br>
+    <strong>Description:</strong> Generated voiceover narration files.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Reference to the specific shot (for A-Roll segments)</td>
+        </tr>
+        <tr>
+            <td>audio_file</td>
+            <td>string</td>
+            <td>Path to the generated audio file</td>
+        </tr>
+        <tr>
+            <td>transcript</td>
+            <td>string</td>
+            <td>Text transcript of the audio content</td>
+        </tr>
+        <tr>
+            <td>duration</td>
+            <td>number</td>
+            <td>Duration of the audio clip in seconds</td>
+        </tr>
+    </table>
+
+    <h4 id="bg-music-specs">3.2.12 Background Music Specifications</h4>
+    <p><strong>Format:</strong> JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Specifications for background music selection and placement.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>segment_id</td>
+            <td>string</td>
+            <td>Unique identifier for the music segment</td>
+        </tr>
+        <tr>
+            <td>scene_ids</td>
+            <td>array</td>
+            <td>Array of scene IDs where this music should be used</td>
+        </tr>
+        <tr>
+            <td>music_style</td>
+            <td>string</td>
+            <td>Style classification of the music</td>
+        </tr>
+        <tr>
+            <td>emotional_tone</td>
+            <td>string</td>
+            <td>Emotional quality of the music</td>
+        </tr>
+        <tr>
+            <td>tempo</td>
+            <td>string</td>
+            <td>Tempo description or BPM range</td>
+        </tr>
+        <tr>
+            <td>intensity_progression</td>
+            <td>object</td>
+            <td>Object with start_level and end_level properties</td>
+        </tr>
+        <tr>
+            <td>suggested_tracks</td>
+            <td>array</td>
+            <td>Array of recommended music tracks</td>
+        </tr>
+        <tr>
+            <td>duration</td>
+            <td>number</td>
+            <td>Required duration of the music segment in seconds</td>
+        </tr>
+        <tr>
+            <td>transition_in</td>
+            <td>string</td>
+            <td>Description of how to transition into this segment</td>
+        </tr>
+        <tr>
+            <td>transition_out</td>
+            <td>string</td>
+            <td>Description of how to transition out of this segment</td>
+        </tr>
+    </table>
+
+    <h4 id="sfx-specs">3.2.13 Sound Effects Specifications</h4>
+    <p><strong>Format:</strong> JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Specifications for sound effects selection and placement.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>effect_id</td>
+            <td>string</td>
+            <td>Unique identifier for the sound effect</td>
+        </tr>
+        <tr>
+            <td>scene_id</td>
+            <td>string</td>
+            <td>Reference to the parent scene</td>
+        </tr>
+        <tr>
+            <td>shot_id</td>
+            <td>string</td>
+            <td>Reference to the specific shot</td>
+        </tr>
+        <tr>
+            <td>effect_type</td>
+            <td>string</td>
+            <td>Classification as "ambient", "spot", or "transition"</td>
+        </tr>
+        <tr>
+            <td>effect_description</td>
+            <td>string</td>
+            <td>Detailed description of the sound effect</td>
+        </tr>
+        <tr>
+            <td>timing</td>
+            <td>string</td>
+            <td>When the effect should occur relative to the shot</td>
+        </tr>
+        <tr>
+            <td>duration</td>
+            <td>number</td>
+            <td>Duration of the sound effect in seconds</td>
+        </tr>
+        <tr>
+            <td>intensity</td>
+            <td>string</td>
+            <td>Volume or prominence level of the effect</td>
+        </tr>
+        <tr>
+            <td>suggested_source</td>
+            <td>string</td>
+            <td>Recommended source for obtaining the sound effect</td>
+        </tr>
+    </table>
+
+    <h4 id="mixed-audio-tracks">3.2.14 Mixed Audio Tracks</h4>
+    <p><strong>Format:</strong> Directory + Metadata JSON (Array)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON + Audio Files<br>
+    <strong>Description:</strong> Combined audio tracks with narration, music, and effects.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>track_id</td>
+            <td>string</td>
+            <td>Unique identifier for the audio track</td>
+        </tr>
+        <tr>
+            <td>scene_ids</td>
+            <td>array</td>
+            <td>Array of scene IDs covered by this track</td>
+        </tr>
+        <tr>
+            <td>audio_file</td>
+            <td>string</td>
+            <td>Path to the mixed audio file</td>
+        </tr>
+        <tr>
+            <td>duration</td>
+            <td>number</td>
+            <td>Duration of the audio track in seconds</td>
+        </tr>
+        <tr>
+            <td>track_components</td>
+            <td>array</td>
+            <td>Array of contained elements (narration, music, effects)</td>
+        </tr>
+        <tr>
+            <td>levels</td>
+            <td>object</td>
+            <td>Object with level settings for each component</td>
+        </tr>
+    </table>
+
+    <h4 id="editing-timeline">3.2.15 Editing Timeline</h4>
+    <p><strong>Format:</strong> JSON/XML (Premiere Pro compatible)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON/XML<br>
+    <strong>Description:</strong> Structured timeline for video editing with tracks and clip placements.</p>
+    
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>video_tracks</td>
+            <td>array</td>
+            <td>Array of video track objects</td>
+        </tr>
+        <tr>
+            <td>audio_tracks</td>
+            <td>array</td>
+            <td>Array of audio track objects</td>
+        </tr>
+        <tr>
+            <td>clips</td>
+            <td>array</td>
+            <td>Array of clip objects with scene_id and shot_id references</td>
+        </tr>
+        <tr>
+            <td>transitions</td>
+            <td>array</td>
+            <td>Array of transition objects between clips</td>
+        </tr>
+        <tr>
+            <td>markers</td>
+            <td>array</td>
+            <td>Array of marker objects for editor reference</td>
+        </tr>
+    </table>
+
+    <h2>4. Workflow Process Requirements</h2>
+
+    <h3>4.1 Data Flow</h3>
+    <ul>
+        <li>Structured handovers between all nodes with validation checks</li>
+        <li>Consistent naming conventions for assets tied to scene_id and shot_id</li>
+        <li>Standardized JSON formats for all metadata documents</li>
+        <li>Character reference data flow to ensure consistent character appearance across generated images</li>
+        <li>Separate data flows for MidJourney and Kling prompt generation</li>
+        <li>Parallel audio processing workflow integrating with visual production flow</li>
+        <li>Clear dependency management between nodes to allow partial parallel processing</li>
+        <li>Incremental metadata enrichment as assets progress through workflow</li>
+        <li>Version control for assets requiring multiple iterations</li>
+        <li>Comprehensive asset state tracking through database integration</li>
+    </ul>
+
+    <h3>4.2 Error Handling</h3>
+    <ul>
+        <li>Validation at each handover point</li>
+        <li>Notification system for missing assets or incomplete data</li>
+        <li>Fallback options for failed image generation or audio production</li>
+        <li>Version control for assets to allow rollback to previous iterations</li>
+        <li>Error logs with detailed context for troubleshooting</li>
+    </ul>
+
+    <h3>4.3 Human Review Points</h3>
+    <ul>
+        <li>During character reference image selection</li>
+        <li>After B-Roll image generation</li>
+        <li>During final video editing</li>
+        <li>Optional review of B-Roll Intermediate Video Script for complex projects</li>
+        <li>Final audio review before integration</li>
+    </ul>
+
+    <h2>5. Quality Assurance Requirements</h2>
+
+    <h3>5.1 Visual Content Quality</h3>
+    <ul>
+        <li>Detailed, context-rich prompts for MidJourney to reduce iterations</li>
+        <li>Style consistency across all generated images</li>
+        <li>Technical specifications (16:9 aspect ratio) included in all prompts</li>
+        <li>Character consistency through reference image injection</li>
+        <li>Enhanced motion quality through post-review Kling prompt engineering</li>
+        <li>Cohesive visual narrative across shots as defined in B-Roll Intermediate Video Script</li>
+        <li>Three-tier creativity approach to provide options ranging from conventional to experimental</li>
+    </ul>
+
+    <h3>5.2 Audio Quality</h3>
+    <ul>
+        <li>Clear voiceover narration matching script</li>
+        <li>Appropriate background music and sound effects</li>
+        <li>Proper synchronization with visual elements</li>
+        <li>Consistent audio levels across narration segments</li>
+        <li>Smooth audio transitions between scenes</li>
+        <li>Emotionally appropriate music selection that enhances storytelling</li>
+        <li>Strategic use of sound effects to reinforce visual concepts</li>
+    </ul>
+
+    <h3>5.3 Final Video Quality</h3>
+    <ul>
+        <li>Smooth transitions between scenes and shots</li>
+        <li>Proper pacing and timing according to estimated durations</li>
+        <li>Professional-grade visual and audio production</li>
+        <li>Emotional impact consistent with narrative goals</li>
+        <li>Coherent storytelling that maintains viewer engagement</li>
+        <li>Appropriate balance between conventional and experimental visual elements</li>
+    </ul>
+
+    <h2>6. Agent System Examples</h2>
+
+    <h3>6.1 Scene Segmentation Agent Instructions</h3>
+
+    <p>The Scene Segmentation Agent (ScriptSegmenter) should follow these instructions:</p>
+
+    <ol>
+        <li><strong>Receive Input:</strong> Video Narration Script</li>
+        <li><strong>Identify Scene Boundaries:</strong> Look for topic transitions, tone changes, or subject shifts</li>
+        <li><strong>Define Scene Count:</strong> Target 3-6 scenes for short scripts, 5-12 for longer scripts</li>
+        <li><strong>Extract Scene Narration:</strong> Preserve exact spoken text with proper formatting</li>
+        <li><strong>Generate Visual Suggestions:</strong> Create concise descriptions of settings, people, objects, and style</li>
+        <li><strong>Develop Audio Recommendations:</strong> Suggest background music and sound effects</li>
+        <li><strong>Calculate Expected Duration:</strong> Use industry-standard pacing (words per minute) formulas</li>
+        <li><strong>Structure Output:</strong> Produce a properly formatted Scene Segmented Script JSON</li>
+        <li><strong>Verify Quality:</strong> Ensure logical scene flow, appropriate duration estimates, unique visual/audio cues</li>
+    </ol>
+
+    <h3>6.2 B-Roll Ideation Agent Instructions</h3>
+
+    <p>The B-Roll Ideation Agent (BRollIdeator) should follow these enhanced instructions:</p>
+
+    <ol>
+        <li><strong>Receive Input:</strong> Shot Segmented Script with A-Roll/B-Roll Classifications</li>
+        <li><strong>Analyze Context:</strong> Understand the narrative purpose, emotional tone, and messaging goals of each shot</li>
+        <li><strong>Generate Three-Tier Concepts for each B-Roll shot:</strong>
+            <ul>
+                <li><strong>Standard B-Roll:</strong> Create conventional, clear, and relevant visual concepts that directly support the narration with straightforward representation</li>
+                <li><strong>Enhanced B-Roll:</strong> Develop more dynamic concepts using creative angles, symbolic imagery, or mood-enhancing elements while maintaining clear narrative connection</li>
+                <li><strong>Viral/Experimental B-Roll:</strong> Design highly creative concepts intended to capture attention, provoke emotion, or encourage sharing, utilizing experimental techniques like time-lapse, layered imagery, visual metaphors, unexpected juxtapositions, or pattern interruptions</li>
+            </ul>
+        </li>
+        <li><strong>Define Visual Style:</strong> For each tier, specify appropriate visual treatment including composition, color palette, and lighting approach</li>
+        <li><strong>Suggest Motion:</strong> For each tier, describe potential motion characteristics appropriate to the concept</li>
+        <li><strong>Structure Output:</strong> Produce a properly formatted Shot B-Roll Concepts JSON with all three tiers</li>
+        <li><strong>Verify Range:</strong> Ensure genuine creative differentiation between the three tiers while maintaining narrative coherence</li>
+    </ol>
+
+    <h3>6.3 B-Roll Intermediate Video Script Agent Instructions</h3>
+
+    <p>The B-Roll Intermediate Video Script Agent (VisualNarrativeDesigner) should follow these instructions:</p>
+
+    <ol>
+        <li><strong>Receive Input:</strong> Shot B-Roll Concepts</li>
+        <li><strong>Define Overall Visual Style:</strong> Determine a cohesive visual language that unifies all shots while supporting the narrative</li>
+        <li><strong>Structure Shot Sequence:</strong> Map the logical and emotional flow between shots, ensuring narrative continuity</li>
+        <li><strong>Design Transitions:</strong> Specify how each shot should transition to the next (match cuts, contrast, etc.)</li>
+        <li><strong>Identify Visual Motifs:</strong> Designate recurring visual elements, symbols, or techniques that should appear across multiple shots</li> 
+        <li><strong>Map Emotional Progression:</strong> Define how the emotional tone evolves across the sequence of shots</li>
+        <li><strong>Specify Technical Parameters:</strong> Document consistent technical requirements (composition guidelines, depth of field, etc.)</li>
+        <li><strong>Structure Output:</strong> Produce a properly formatted B-Roll Intermediate Video Script JSON</li>
+        <li><strong>Verify Coherence:</strong> Ensure logical flow, stylistic consistency, and alignment with narrative goals</li>
+    </ol>
+
+    <h3>6.4 B-Roll Kling Prompt Engineering Agent Instructions</h3>
+
+    <p>The B-Roll Kling Prompt Engineering Agent (KlingPromptEngineer) should follow these instructions:</p>
+
+    <ol>
+        <li><strong>Receive Input:</strong> B-Roll Reviewed Assets (including approved images)</li>
+        <li><strong>Analyze Image Content:</strong> Identify key visual elements, composition, and focal points in each approved image</li>
+        <li><strong>Create Motion Strategy:</strong> Determine appropriate camera movements that enhance the storytelling (e.g., slow pan, zoom, parallax effects)</li>
+        <li><strong>Define Animation Parameters:</strong> Specify animation style, duration, and intensity based on emotional tone of the shot</li>
+        <li><strong>Optimize for Technical Quality:</strong> Ensure prompt includes Kling-specific parameters for optimal rendering</li>
+        <li><strong>Structure Output:</strong> Produce a properly formatted Shot B-Roll Kling Prompts JSON</li>
+        <li><strong>Verify Compatibility:</strong> Ensure the motion prompts are technically compatible with the approved images</li>
+    </ol>
+
+    <h3>6.5 Background Music Selection Agent Instructions</h3>
+
+    <p>The Background Music Selection Agent (MusicSelector) should follow these instructions:</p>
+
+    <ol>
+        <li><strong>Receive Input:</strong> Scene Segmented Script, B-Roll Intermediate Video Script</li>
+        <li><strong>Analyze Emotional Tone:</strong> Identify the emotional qualities required for each scene segment</li>
+        <li><strong>Map Narrative Structure:</strong> Determine music needs based on story arc and emotional progression</li>
+        <li><strong>Define Music Segments:</strong> Create logical music segments that may span multiple scenes</li>
+        <li><strong>Specify Style Parameters:</strong> Detail genre, tempo, instrumentation, and intensity for each segment</li>
+        <li><strong>Design Transitions:</strong> Plan natural transitions between music segments</li>
+        <li><strong>Suggest Specific Tracks:</strong> Recommend appropriate music tracks when possible</li>
+        <li><strong>Structure Output:</strong> Produce a properly formatted Background Music Specifications JSON</li>
+        <li><strong>Verify Alignment:</strong> Ensure music recommendations support the emotional and narrative goals</li>
+    </ol>
+
+    <h2>7. Updated Workflow Flow Chart</h2>
+
+    <h3>Color Code Legend</h3>
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color chatgpt" style="background-color: #c9e4de;"></div>
+            <div>AI Language Model Agents</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color midjourney" style="background-color: #f9d9ba;"></div>
+            <div>MidJourney Agent</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color human" style="background-color: #ffcfd2;"></div>
+            <div>Human Agents</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color kling" style="background-color: #bde0fe;"></div>
+            <div>Kling Agent</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color elevenlabs" style="background-color: #ffc6ff;"></div>
+            <div>ElevenLabs Agent</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color n8n" style="background-color: #e2ece9;"></div>
+            <div>n8n Agent</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color document" style="background-color: #f1f1f1;"></div>
+            <div>Documents/Data</div>
+        </div>
+    </div>
+
+    <div class="mermaid">
+    flowchart TD
+        %% Documents using speech bubble style nodes
+        A>"Video Narration Script"]:::document ---> B
+        B[Scene Segmentation]:::agentChatGPT ---> C
+        C>"Scene Segmented Script"]:::document ---> D
+        D[Shot Segmentation & A/B Roll Classification]:::agentChatGPT ---> E
+        E>"Shot Segmented Script"]:::document ---> F
+
+        subgraph "B-Roll Production"
+            F[B-Roll Ideation]:::agentChatGPT ---> G
+            G>"Shot B-Roll Concepts"]:::document ---> H1
+            H1[B-Roll Intermediate Video Script]:::agentChatGPT ---> G1
+            G1>"B-Roll Intermediate Video Script"]:::document ---> H
+            G ---> H
+            
+            %% Character reference image injection
+            Z[Human Character Selection]:::agentHuman -.-> Z1
+            Z1>"Character Reference Images"]:::document -.-> J
+            
+            H[B-Roll MidJourney Prompt Engineering]:::agentChatGPT ---> I
+            I>"Shot B-Roll MidJourney Prompts"]:::document ---> J
+            J[B-Roll Image Generation]:::agentMidjourney ---> K
+            K>"B-Roll Image Assets"]:::document ---> L
+            L[B-Roll Image Review]:::agentHuman ---> M
+            M>"B-Roll Reviewed Assets"]:::document ---> H2
+            
+            %% Kling prompting node after review
+            H2[B-Roll Kling Prompt Engineering]:::agentChatGPT ---> I2
+            I2>"Shot B-Roll Kling Prompts"]:::document ---> N
+            N[Image-to-Video Conversion]:::agentKling ---> O
+            O>"B-Roll Video Assets"]:::document ---> R
+        end
+
+        subgraph "A-Roll Production"
+            E ---> P
+            P[A-Roll Recording & Audio Generation]:::agentElevenLabs ---> Q
+            Q>"Audio Narration"]:::document ---> R
+            Q ---> AM
+        end
+
+        subgraph "Audio Production"
+            C ---> BM
+            G1 ---> BM
+            BM[Background Music Selection]:::agentChatGPT ---> BMO
+            BMO>"Background Music Specifications"]:::document ---> AM
+            
+            E ---> SE
+            G1 ---> SE
+            SE[Sound Effects Generation]:::agentChatGPT ---> SEO
+            SEO>"Sound Effects Specifications"]:::document ---> AM
+            
+            AM[Audio Mixing and Integration]:::agentElevenLabs ---> AMO
+            AMO>"Mixed Audio Tracks"]:::document ---> R
+        end
+
+        subgraph "Post-Production"
+            R[Editing Preparation & Timeline Assembly]:::agentN8N ---> S
+            S>"Editing Timeline"]:::document ---> T
+            T[Final Editing & Assembly]:::agentHuman ---> U
+            U>"Final Video"]:::document
+        end
+
+        %% Decision points
+        L -- "Approved" --> M
+        L -- "Needs Revision" --> H
+
+        %% Click actions for nodes
+        click A href "#video-narration-script" "Go to Video Narration Script"
+        click B href "#scene-segmentation-node" "Go to Scene Segmentation Node"
+        click C href "#scene-segmented-script" "Go to Scene Segmented Script"
+        click D href "#shot-segmentation-node" "Go to Shot Segmentation Node"
+        click E href "#shot-segmented-script" "Go to Shot Segmented Script"
+        click F href "#broll-ideation-node" "Go to B-Roll Ideation Node"
+        click G href "#shot-broll-concepts" "Go to Shot B-Roll Concepts"
+        click H1 href "#broll-intermediate-script-node" "Go to B-Roll Intermediate Video Script Node"
+        click G1 href "#broll-intermediate-script" "Go to B-Roll Intermediate Video Script"
+        click H href "#midjourney-prompt-node" "Go to B-Roll MidJourney Prompt Engineering Node"
+        click I href "#broll-midjourney-prompts" "Go to Shot B-Roll MidJourney Prompts"
+        click Z href "#character-reference-node" "Go to Character Reference Selection Node"
+        click Z1 href "#character-reference-images" "Go to Character Reference Images"
+        click J href "#image-generation-node" "Go to B-Roll Image Generation Node"
+        click K href "#broll-image-assets" "Go to B-Roll Image Assets"
+        click L href "#image-review-node" "Go to B-Roll Image Review Node"
+        click M href "#broll-reviewed-assets" "Go to B-Roll Reviewed Assets"
+        click H2 href "#kling-prompt-node" "Go to B-Roll Kling Prompt Engineering Node"
+        click I2 href "#broll-kling-prompts" "Go to Shot B-Roll Kling Prompts"
+        click N href "#image-to-video-node" "Go to Image-to-Video Conversion Node"
+        click O href "#broll-video-assets" "Go to B-Roll Video Assets"
+        click P href "#audio-generation-node" "Go to A-Roll Recording & Audio Generation Node"
+        click Q href "#audio-narration" "Go to Audio Narration"
+        click BM href "#music-selection-node" "Go to Background Music Selection Node"
+        click BMO href "#bg-music-specs" "Go to Background Music Specifications"
+        click SE href "#sfx-generation-node" "Go to Sound Effects Generation Node"
+        click SEO href "#sfx-specs" "Go to Sound Effects Specifications"
+        click AM href "#audio-mixing-node" "Go to Audio Mixing and Integration Node"
+        click AMO href "#mixed-audio-tracks" "Go to Mixed Audio Tracks"
+        click R href "#timeline-assembly-node" "Go to Editing Preparation & Timeline Assembly Node"
+        click S href "#editing-timeline" "Go to Editing Timeline"
+        click T href "#final-editing-node" "Go to Final Editing & Assembly Node"
+
+        %% Class definitions
+        classDef agentChatGPT fill:#c9e4de,stroke:#000,stroke-width:1px
+        classDef agentMidjourney fill:#f9d9ba,stroke:#000,stroke-width:1px
+        classDef agentHuman fill:#ffcfd2,stroke:#000,stroke-width:1px
+        classDef agentKling fill:#bde0fe,stroke:#000,stroke-width:1px
+        classDef agentElevenLabs fill:#ffc6ff,stroke:#000,stroke-width:1px
+        classDef agentN8N fill:#e2ece9,stroke:#000,stroke-width:1px
+        classDef document fill:#f1f1f1,stroke:#000,stroke-width:1px
+    </div>
+
+    <h2>8. Detailed Node Descriptions for Implementation</h2>
+
+    <h3>Scene Segmentation Node (ScriptSegmenter)</h3>
+    <p>This node analyzes the original video narration script to identify logical scene boundaries based on narrative flow, topic transitions, and shifts in subject matter. Each scene should be a self-contained idea with a beginning, middle, and end. The agent calculates expected durations based on word count and speaking rate, and generates visual and audio suggestions for each scene.</p>
+
+    <h3>Shot Segmentation & A/B Roll Classification Node (ShotSegmenter)</h3>
+    <p>This node breaks each scene into individual shots, explicitly identifying which should be A-Roll (narration-driven) versus B-Roll (supplementary visuals). It assigns emotional tones to each shot and provides detailed suggestions for B-Roll visuals and sound effects to enhance the narrative.</p>
+
+    <h3>B-Roll Ideation Node (BRollIdeator)</h3>
+    <p>This node generates three distinct creative tiers for each B-Roll shot: standard (conventional but effective), enhanced (creative but straightforward), and experimental (innovative, attention-grabbing). Each tier includes detailed visual style and motion suggestions, providing a range of creative options to choose from during production.</p>
+
+    <h3>B-Roll Intermediate Video Script Node (VisualNarrativeDesigner)</h3>
+    <p>This node creates a comprehensive visual narrative guide that unifies all B-Roll content into a cohesive visual story. It defines transitions between shots, recurring visual motifs, emotional progression, and consistent technical parameters to ensure all B-Roll elements work together harmoniously regardless of which creativity tier is selected for each shot.</p>
+
+    <h3>B-Roll MidJourney Prompt Engineering Node (PromptEngineer)</h3>
+    <p>This specialized node takes the creative B-Roll concepts and the intermediate video script to create technically optimized prompts for image generation via MidJourney. The prompts incorporate style consistency from the intermediate script while implementing the specific creative direction for each shot, focusing on static image generation.</p>
+
+    <h3>Character Reference Selection Node (Human-CharacterDirector)</h3>
+    <p>A human-driven node where character reference images are selected for consistent character representation across generated content. This node allows human creative direction to ensure characters maintain consistent appearance, style, and characteristics throughout the video.</p>
+
+    <h3>B-Roll Image Generation Node (MidJourney)</h3>
+    <p>This node generates images based on the engineered MidJourney prompts, optionally incorporating the character reference images when appropriate. It ensures consistent naming and metadata for each generated asset to maintain the connection to its associated scene, shot, and creativity tier.</p>
+
+    <h3>B-Roll Image Review Node (Human-ImageDirector)</h3>
+    <p>A critical human intervention point where a creative director reviews each generated image for quality, appropriateness, and alignment with the creative vision. Images can be approved or sent back for revision with specific feedback.</p>
+
+    <h3>B-Roll Kling Prompt Engineering Node (KlingPromptEngineer)</h3>
+    <p>This node creates optimized motion prompts for Kling video generation after image review is complete. By operating post-review, it has access to the final approved images, allowing it to create motion prompts that are specifically tailored to these images. This produces higher quality animation by considering the actual image composition, focal points, and depth elements.</p>
+
+    <h3>Image-to-Video Conversion Node (Kling)</h3>
+    <p>This node converts the approved static images into short video clips using the specialized Kling prompts. The motion effects (panning, zooming, or other dynamic effects) are applied according to the detailed specifications in the Kling prompts, resulting in more contextually appropriate animations.</p>
+
+    <h3>A-Roll Recording & Audio Generation Node (ElevenLabs)</h3>
+    <p>This node generates high-quality voiceover narration based on the script, maintaining appropriate pacing, emotional tone, and clarity for all A-Roll segments.</p>
+
+    <h3>Background Music Selection Node (MusicSelector)</h3>
+    <p>This node analyzes the narrative structure and emotional tone of the content to identify appropriate background music segments. It creates specifications for music style, tempo, transitions, and emotional qualities, suggesting specific tracks when possible.</p>
+
+    <h3>Sound Effects Generation Node (SFXDesigner)</h3>
+    <p>This node identifies opportunities for ambient audio and sound effects throughout both A-Roll and B-Roll content. It creates detailed specifications for each sound effect including timing, intensity, and acoustic characteristics to enhance immersion.</p>
+
+    <h3>Audio Mixing and Integration Node (ElevenLabs-AudioMixer)</h3>
+    <p>This node combines narration audio, background music, and sound effects into cohesive mixed audio tracks with appropriate levels, crossfades, and dynamic adjustments to create a professional, consistent audio experience.</p>
+
+    <h3>Editing Preparation & Timeline Assembly Node (n8n-Assembler)</h3>
+    <p>This automation-focused node combines all generated assets (B-Roll visuals, A-Roll audio, mixed audio tracks) into a structured timeline for video editing, ensuring proper synchronization and sequencing according to the script and intermediate video guide.</p>
+
+    <h3>Final Editing & Assembly Node (Human-VideoEditor)</h3>
+    <p>The final human review and editing stage where a professional video editor refines the automatically assembled timeline, adjusts pacing, applies transitions and effects, and ensures the final video meets quality standards before delivery.</p>
+
+</body>
+</html>

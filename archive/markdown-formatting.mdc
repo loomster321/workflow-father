@@ -1,0 +1,26 @@
+---
+description: 
+globs: *.md
+alwaysApply: false
+---
+
+
+# Markdown Formatting Guidelines 
+- Use proper Markdown syntax for all system instructions
+- Structure documents with clear hierarchical headings (# for main title, ## for sections, ### for subsections)
+- Use bold (**text**) for emphasis on important concepts and requirements
+- Use italic (*text*) for parameter names and minor emphasis
+- Format code snippets and examples with proper code blocks (```javascript) including language specification
+- Use bullet points for lists of related items
+- Use numbered lists for sequential steps or prioritized items
+- Use blockquotes (> text) for important notes, cautions, and examples
+- Create tables with proper markdown syntax for structured data and parameter definitions
+- Use horizontal rules (---) to separate major sections when appropriate
+- Include proper linking syntax for references to documentation
+- Maintain consistent formatting patterns throughout the document
+- Use inline code formatting (`text`) for short code references, parameters, and values
+- Avoid excessive formatting that might interfere with LLM parsing
+- Include a table of contents for longer instruction sets
+- Use code comments within code blocks to explain logic
+- Ensure proper indentation in both markdown and code examples
+- Use HTML sparingly and only when markdown limitations require it
