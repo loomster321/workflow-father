@@ -1,0 +1,294 @@
+[
+  {
+    "output": {
+      "broll_concepts": [
+        {
+          "scene_id": "scene-1",
+          "shot_id": "scene-1_shot_1",
+          "standard_broll": {
+            "idea": "Close-up of a person's hand poised to click a mouse, then their facial expression changes from eager anticipation to sudden regret.",
+            "visual_style": "Realistic, with natural lighting to emphasize the authenticity of the moment.",
+            "motion": "A slow zoom on the mouse click followed by a quick cut to the person's facial expression change."
+          },
+          "enhanced_broll": {
+            "idea": "A stylized split-screen showing the mouse click alongside a montage of quick, regretful flashbacks related to impulse buys.",
+            "visual_style": "Dramatic lighting with a slightly desaturated color palette to amplify the regretful tone.",
+            "motion": "Split-screen transitions that flicker between past purchases and the current action to connect impulsive behavior and regret."
+          },
+          "experimental_broll": {
+            "idea": "A POV shot where the viewer's vision distorts momentarily after the click, simulating a rush of regret, alongside animated pop-ups of previous impulse purchases around the user.",
+            "visual_style": "Surreal with exaggerated colors and distortion effects to capture the emotional impact and decision regret.",
+            "motion": "Dynamic POV movements paired with fast-paced pop-ups creating an immersive experience of regret."
+          }
+        },
+        {
+          "scene_id": "scene-1",
+          "shot_id": "scene-1_shot_2",
+          "standard_broll": {
+            "idea": "A couple sitting silently at a table cluttered with bills, their expressions signaling the unspoken tension between them.",
+            "visual_style": "Moody, with low-key lighting to accentuate the emotional distance.",
+            "motion": "Static camera focusing on subtle hand movements and facial expressions to convey tension."
+          },
+          "enhanced_broll": {
+            "idea": "Dramatic lighting on a dining table with a divide of shadow between the couple, emphasizing their emotional distance.",
+            "visual_style": "High-contrast, with shadows strategically placed to highlight physical and emotional barriers.",
+            "motion": "A slow pan across the table that accentuates the division and tension between the couple."
+          },
+          "experimental_broll": {
+            "idea": "A metaphorical image of a physical wall of bills rising between the couple, dramatically illustrating the emotional distance caused by financial stress.",
+            "visual_style": "Expressionist style with exaggerated features and perspectives to create a powerful visual metaphor.",
+            "motion": "Bills animated to rise like a wall, symbolization the growing divide, ending with a zoom out to show the separation."
+          }
+        },
+        {
+          "scene_id": "scene-1",
+          "shot_id": "scene-1_shot_3",
+          "standard_broll": {
+            "idea": "A series of shots showing diverse individuals in moments of reflection, ending with someone confidently making notes for change.",
+            "visual_style": "Warm and inviting with soft lighting to encourage a sense of hope and community.",
+            "motion": "Gentle dolly movements capturing transitions from contemplation to determination."
+          },
+          "enhanced_broll": {
+            "idea": "Different individuals around a city engaging in introspective activities culminating in a group shot of collective resolve.",
+            "visual_style": "Urban setting with vibrant colors to symbolize diversity and shared experiences.",
+            "motion": "Sweeping camera angles that reveal individual stories juxtaposed with a collective, resolved stance."
+          },
+          "experimental_broll": {
+            "idea": "Animation intermixing realistic shots with flowing watercolor representations of thoughts and resolve, leading to the final close-up of determination.",
+            "visual_style": "Mixed media with watercolor transitions blending fluidly with live-action to visualize personal growth.",
+            "motion": "Following individuals' thoughts visualized in watercolor rising and transforming into concrete actions."
+          }
+        },
+        {
+          "scene_id": "scene-3",
+          "shot_id": "scene-3_shot_1",
+          "standard_broll": {
+            "idea": "Shots of the program's interface and clients engaging with it in a variety of settings.",
+            "visual_style": "Professional with modern aesthetics to reflect the innovative nature of the program.",
+            "motion": "Tracking shots that smoothly transition between different features and user interactions."
+          },
+          "enhanced_broll": {
+            "idea": "An energetic animation introducing the program with graphic elements linking modules to client successes.",
+            "visual_style": "Futuristic with a dynamic color scheme to reflect advancement.",
+            "motion": "Fast-paced motion graphics illustrating interconnected client experiences and program elements."
+          },
+          "experimental_broll": {
+            "idea": "A digital world visual representation where the program's elements animate into a virtual city bustling with client activity and success stories.",
+            "visual_style": "Cyberpunk-inspired with neon accents that create a vibrant, futuristic community feel.",
+            "motion": "Complex virtual fly-throughs of the city, symbolizing digital transformation and interactivity."
+          }
+        },
+        {
+          "scene_id": "scene-3",
+          "shot_id": "scene-3_shot_2",
+          "standard_broll": {
+            "idea": "Clients surrounding a table, engaged in an enthusiastic discussion with digital overlays showing interaction highlights.",
+            "visual_style": "Bright and clear with warm tones to promote friendliness and participation.",
+            "motion": "Dynamic focus pulls highlighting client interactions and communications."
+          },
+          "enhanced_broll": {
+            "idea": "Interactive holograms popping up as clients discuss, simulating real-time feedback and engagement.",
+            "visual_style": "Augmented reality effects highlighting client interactions in a futuristic setting.",
+            "motion": "Holographic pop-ups with layered animations providing dynamic engagement visuals."
+          },
+          "experimental_broll": {
+            "idea": "A visual narrative where clients step into an augmented reality, using VR-like elements to visualize their learning and interactions.",
+            "visual_style": "Overlay of digital glasses view elements with exaggerated graphical interactions depicting learning results.",
+            "motion": "Clients’ environments transform in AR, dynamically reshaping as they interact with program content in real-time."
+          }
+        },
+        {
+          "scene_id": "scene-3",
+          "shot_id": "scene-3_shot_3",
+          "standard_broll": {
+            "idea": "Simple infographics showing data flows and processes involved in cognitive behavioral techniques.",
+            "visual_style": "Clean and minimalist with an emphasis on clarity and informative design.",
+            "motion": "Steady animations that walk through each aspect of the program logically."
+          },
+          "enhanced_broll": {
+            "idea": "Layered graphics breaking down complex concepts into simple, animated 3D diagrams of the brain and its processes.",
+            "visual_style": "3D modeling with color gradients to visually distinguish different cognitive processes.",
+            "motion": "Animated layering of the brain showing illuminated areas depicting activity related to program techniques."
+          },
+          "experimental_broll": {
+            "idea": "A VR segment displaying users sweet-swimming through neural pathways with interactive data points illustrating cognitive techniques.",
+            "visual_style": "Immersive virtual environment crafted in full 360 degrees, visualizing brain-behavior interactions.",
+            "motion": "Dynamic VR navigation through brain synapses with interactive touchpoints revealing cognitive processes."
+          }
+        },
+        {
+          "scene_id": "scene-3",
+          "shot_id": "scene-3_shot_4",
+          "standard_broll": {
+            "idea": "Series of quick-hitting transitions showing clients achieving milestones, with their journals capturing their journey.",
+            "visual_style": "Optimistic with bright colors and textures to communicate positivity and achievement.",
+            "motion": "Quick-paced edits between different client moments and milestones, using vibrant transitions."
+          },
+          "enhanced_broll": {
+            "idea": "Visual diary entries reflecting milestones with in-scene pop-ups highlighting client progress and achievements.",
+            "visual_style": "Vivid scrapbook aesthetic with emphasis on personal achievements and growth.",
+            "motion": "Stop-motion animations tracking progress over time like a living diary journal."
+          },
+          "experimental_broll": {
+            "idea": "A surreal montage where clients are seen planting seeds that bloom into flowers representing achievements, against a digitally enhanced backdrop.",
+            "visual_style": "Dreamlike with hyper-realistic details showing growth and success symbolism through nature.",
+            "motion": "Slow-motion transitions from planting to blooming flowers, symbolizing ongoing growth and achievement."
+          }
+        },
+        {
+          "scene_id": "scene-4",
+          "shot_id": "scene-4_shot_1",
+          "standard_broll": {
+            "idea": "A person stretches in bed, sunlight filtering through open curtains, exposing their refreshed look.",
+            "visual_style": "Relaxed and comforting with natural light bringing warmth to the scene.",
+            "motion": "Slow pan from windows to individual rising, capturing serenity and calmness."
+          },
+          "enhanced_broll": {
+            "idea": "A time-lapse showing the gradual brightness of a room as morning unfolds, matching the person's relaxing morning routine.",
+            "visual_style": "Brighter tones with a more active time-flow to symbolize rejuvenation.",
+            "motion": "Smooth time-lapse moving from shadows to illuminated space as the morning progresses."
+          },
+          "experimental_broll": {
+            "idea": "An animation showing the person's dream world melting away to reveal their real peaceful surroundings as they wake up.",
+            "visual_style": "Blend of dream-like surrealism transitioning to calm reality, with rich pastel hues.",
+            "motion": "Transition animation that morphs dream visuals into the calm serenity of waking life."
+          }
+        },
+        {
+          "scene_id": "scene-5",
+          "shot_id": "scene-5_shot_1",
+          "standard_broll": {
+            "idea": "A group session in a circle, with participants actively listening and responding to each other's stories.",
+            "visual_style": "Warm and inviting with flattering, indirect lighting to convey support and comfort.",
+            "motion": "Circular tracking shot around the group capturing the energy and engagement in the room."
+          },
+          "enhanced_broll": {
+            "idea": "Participants passing an illustrated 'story journal,' where each shares a visual snapshot of their journey and goals.",
+            "visual_style": "Bright colors and personal memorabilia aesthetic to emphasize unified sharing and hope.",
+            "motion": "Stops on each participant as they hand over the journal, transitioning into an animation detailing their personal stories."
+          },
+          "experimental_broll": {
+            "idea": "A 360-degree interactive visual allowing viewers to explore various group activities from any angle, experiencing stories as if part of the group.",
+            "visual_style": "Immersive storytelling environment enabling an explorative and personal viewing experience.",
+            "motion": "Virtual reality visuals that dynamically adjust per viewer interaction, enhancing participation in the group experience."
+          }
+        },
+        {
+          "scene_id": "scene-5",
+          "shot_id": "scene-5_shot_2",
+          "standard_broll": {
+            "idea": "Close-ups and reactions of group members exchanging supportive gestures and smiles, highlighting positive energy.",
+            "visual_style": "Bright and natural capturing candid laughters and affirming gestures, promoting unity.",
+            "motion": "Swift cuts between positive interactions, focusing on facial expressions and gestures."
+          },
+          "enhanced_broll": {
+            "idea": "Short video montage of group members exchanging high-fives and supportive touches, accentuated with quick clips of their individual journeys.",
+            "visual_style": "Colorful and energetic to emphasize support, with kinetic typography enhancing expressions.",
+            "motion": "Snap-motion editing capturing fleeting moments of joy and connection."
+          },
+          "experimental_broll": {
+            "idea": "An animated comic sequence where group members are transformed into heroes overcoming challenges, transitioning between real-world and animated scenes seamlessly.",
+            "visual_style": "Graphic novel style fusing real interactions with animated hero stories, providing a playful yet powerful narrative.",
+            "motion": "Scenes morph between reality and animation using fluid transitions that blur boundaries between struggle and empowerment."
+          }
+        },
+        {
+          "scene_id": "scene-6",
+          "shot_id": "scene-6_shot_1",
+          "standard_broll": {
+            "idea": "A character deeply focused on an online course, taking notes, embodying a serene learning environment.",
+            "visual_style": "Soft-focused, with warm desk lamp lighting creating a cozy learning space.",
+            "motion": "Gentle zoom-ins on screens and handwritten notes, accompanied by reserved camera turns."
+          },
+          "enhanced_broll": {
+            "idea": "Structured setting with visual overlays depicting flowing data and light tracking the learning journey path optimally.",
+            "visual_style": "Technical yet soft, using flowing data streams to amplify learning and concentration.",
+            "motion": "Strategic pull-back of the camera fade revealing an intricate web of learning interactions."
+          },
+          "experimental_broll": {
+            "idea": "An ultra-modern learning visualization with digital elements orbiting the learner, interacting with them as they work.",
+            "visual_style": "Futuristic with holographic displays and digital interactions, creating an interactive interface around the learner.",
+            "motion": "Holographic displays rotate interactively, merging real-world and digital workspace seamlessly."
+          }
+        },
+        {
+          "scene_id": "scene-6",
+          "shot_id": "scene-6_shot_2",
+          "standard_broll": {
+            "idea": "Multiple screen setups where the same individual shifts comfy between locations with devices at home.",
+            "visual_style": "Coloristically coordinated with relaxed, uniform elegance musing over screens at varied locales.",
+            "motion": "Steady, subtle tracking shots capturing seamless device transition from room to room."
+          },
+          "enhanced_broll": {
+            "idea": "Panning collection of vignettes, each representing different home settings equipped with modern technology enabling flexible learning.",
+            "visual_style": "Modern domestic aesthetic with vivid indications of connectivity and adaptation.",
+            "motion": "Flowing pans combined with jump cuts mimicking quick device hopping for variety."
+          },
+          "experimental_broll": {
+            "idea": "Augmented depiction of home with flowing digital streams tying together varied learning environments, visualizing real-time interactivity with online platforms.",
+            "visual_style": "Conceptual with animated synapses or streams integral to real objects, capturing interactive learning zones intuitively.",
+            "motion": "Dynamic transitions incorporating diverse home settings visualized through lens distortion and layered digital effects."
+          }
+        },
+        {
+          "scene_id": "scene-7",
+          "shot_id": "scene-7_shot_2",
+          "standard_broll": {
+            "idea": "Scenes of clients reflecting in journals with contemplative music building towards self-realization, capturing authentic expression.",
+            "visual_style": "Intimate and soft lighting with heartfelt focus in candid expressions.",
+            "motion": "Lingering zoom-ins on reflective facial expressions and careful journaling."
+          },
+          "enhanced_broll": {
+            "idea": "Combination of slow motion and normal speed scenes showing a progression from initial struggle to victorious moments in diverse settings.",
+            "visual_style": "Richly toned gradients providing depth showing emotional journey during transformation.",
+            "motion": "Seamlessly rolling scenes varying pace to capture dynamic emotional shifts among characters."
+          },
+          "experimental_broll": {
+            "idea": "Clients' reflections visualized in a digitally enhanced mirror that reflects not only their image but their aspirations and resolved accomplishments.",
+            "visual_style": "Ethereal with surreal reflections interplaying aspiration and lived experience, visually abstracting the inner transformation.",
+            "motion": "Fluid transitions between reflective insights to digital augmentations emulating aspirations evolving within real reflections."
+          }
+        },
+        {
+          "scene_id": "scene-8",
+          "shot_id": "scene-8_shot_1",
+          "standard_broll": {
+            "idea": "Client with family enjoying the outdoors, engaging in laughter and shared joy illustrating freedom from financial worry.",
+            "visual_style": "Natural with vibrant colors, capturing genuine smiles and togetherness.",
+            "motion": "Slow pans combined with steady cam shots evoking a sense of liberated joy among family members."
+          },
+          "enhanced_broll": {
+            "idea": "Scenes sequentially of family joyfully experiencing new milestones, superimposed with financial freedom imagery, such as flying bills dissipating into achievements.",
+            "visual_style": "Symbolic with uplifting overlays depicting progression, merging joy with visual connotations of achievement.",
+            "motion": "Creative cut transitions infusing upward motion representing the release of financial burden into joy."
+          },
+          "experimental_broll": {
+            "idea": "Whimsical representation with stop-motion claymation of a financial anchor lifting, as a family celebrates a new dawn of liberation in a fantasy landscape.",
+            "visual_style": "Playful yet inventive with clay animation stylization weaving metaphorical storytelling.",
+            "motion": "Layered motion with stop-motion and live-action blurring realms for an inspirational and imaginative revelation of transformed circumstances."
+          }
+        }
+      ],
+      "metadata": {
+        "processed_shots_count": 13,
+        "token_usage": {
+          "prompt_tokens": 1500,
+          "completion_tokens": 2000,
+          "total_tokens": 3500,
+          "input_tokens": 1200,
+          "output_tokens": 1800,
+          "internal_processing_tokens": 500,
+          "source": "api"
+        },
+        "input_size_chars": 48000,
+        "output_size_chars": 72000,
+        "model_name": "gpt-4o",
+        "model_info": {
+          "name": "gpt-4o",
+          "provider": "openai"
+        },
+        "execution_timestamp": "2023-06-15T14:32:21.789Z"
+      }
+    }
+  }
+]
