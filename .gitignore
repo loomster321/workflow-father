@@ -1,7 +1,8 @@
 # System files
-**/desktop.ini
+desktop.ini
 .DS_Store
 Thumbs.db
+**/desktop.ini
 
 # Editor directories and files
 .cursor/
