@@ -71,11 +71,24 @@ When creating a Shot Plan:
 4. For each identified shot:
    - Classify as either A-roll or B-roll based on narrative function
    - Create concise shot_description within the 100 character limit
+     - For A-roll shots: focus ONLY on the presenter/narrator (framing, expression, delivery style)
+     - For B-roll shots: describe the supplementary visuals that support the narration
    - Extract the specific narration_text for this shot from the scene narration
    - Define emotional_tone using 2-3 key emotions within the 30 character limit
-   - For B-roll shots, provide suggested_broll_visuals within the 100 character limit
+     - For A-roll shots: describe the presenter's emotional delivery and tone
+     - For B-roll shots: describe the emotional quality of the visuals
+   - For A-roll shots:
+     - ALWAYS set suggested_broll_visuals to an empty string ("")
+     - suggested_sound_effects should ONLY relate to presenter/studio environment
+     - shot_purpose should focus on the narrative purpose of the presenter's direct address
+   - For B-roll shots:
+     - Provide suggested_broll_visuals within the 100 character limit
+     - suggested_sound_effects can include sounds related to the visuals
+     - shot_purpose should focus on how the visuals support the narrative
    - Suggest up to 2 sound_effects within 25 characters each
    - Create a shot_number and brief shot_title within the 50 character limit
+     - For A-roll shots: title should clearly indicate it's presenter-focused
+     - For B-roll shots: title should describe the visual content or concept
    - Write a concise shot_purpose within the 75 character limit
    - Note: You don't need to calculate word_count or expected_duration as these will be added by the Shot Metrics Calculator node
 5. Ensure the overall shot sequence maintains:
@@ -96,6 +109,64 @@ When classifying shots as A-roll or B-roll:
   - Interview segments
   - Primary narrative moments requiring focused attention
   - Flexible duration based on content complexity
+  - **IMPORTANT: A-roll shots MUST ALWAYS have an empty string ("") for the suggested_broll_visuals field**
+  - **IMPORTANT: A-roll shot_description should ONLY describe the presenter/narrator and their delivery (facial expressions, framing, camera angle, emotional delivery) - NOT graphics, animations, or supplementary visuals**
+  - **A-roll suggested_sound_effects should ONLY include sounds directly related to the presenter/studio environment (mic effects, studio ambience, voice treatments)**
+  - **A-roll emotional_tone should describe the presenter's delivery style and emotional quality**
+  - **A-roll shot_purpose should focus on the narrative/communicative purpose of the presenter's direct address**
+  - **A-roll shot_title should clearly indicate it's a presenter-focused shot (e.g., "Presenter Intro," "Host Explanation," "Dr. Leslie's Reflection")**
+
+  **Examples of correct A-roll shot descriptions:**
+  - "Medium shot of presenter speaking directly to camera with confident expression"
+  - "Close-up of Dr. Leslie with empathetic facial expression and warm smile"
+  - "Wide shot of narrator gesturing expressively while explaining concept"
+  - "Dr. Leslie speaking to camera with contemplative expression in office setting"
+  
+  **Examples of incorrect A-roll shot descriptions (these describe B-roll content):**
+  - "Logo animation with call-to-action focus" (describes graphic, not presenter)
+  - "Invitation to take action through enrollment or self-assessment" (describes concept, not presenter)
+  - "Text overlay showing program benefits with animated icons" (describes graphics, not presenter)
+
+**Examples of correct A-roll suggested_sound_effects:**
+- ["studio ambience", "subtle mic reverb"]
+- ["voice treatment", "chair movement"]
+- ["paper shuffle", "mic tap"]
+- ["quiet office sounds", "keyboard typing"]
+
+**Examples of incorrect A-roll suggested_sound_effects:**
+- ["button click", "fade note"] (related to graphics or transitions, not presenter)
+- ["applause", "celebration bell"] (related to B-roll visuals, not direct presenter audio)
+- ["data processing tone", "interface sounds"] (related to graphics, not presenter)
+
+**Examples of correct A-roll emotional_tone:**
+- "confident, authoritative"
+- "empathetic, thoughtful"
+- "enthusiastic, energetic"
+- "calm, reassuring"
+
+**Examples of correct A-roll shot_purpose:**
+- "Establish presenter as trustworthy expert on the topic"
+- "Create emotional connection with audience through direct address"
+- "Deliver key information with clarity and emphasis"
+- "Transition narrative to next concept with engaging setup"
+
+**Examples of incorrect A-roll shot_purpose:**
+- "Visualize the data through animated graphics" (describes B-roll purpose)
+- "Show product features with detailed close-ups" (describes B-roll purpose)
+- "Create visual metaphor for concept through animation" (describes B-roll purpose)
+
+**Examples of correct A-roll shot_title:**
+- "Presenter Introduction"
+- "Dr. Leslie's Empathetic Appeal"
+- "Host Explains Process"
+- "Narrator's Closing Reflection"
+- "Expert Direct Address"
+
+**Examples of incorrect A-roll shot_title:**
+- "Program Features" (describes content, not presenter role)
+- "Future Begins" (conceptual, not presenter-focused)
+- "Emotional Triggers" (topic-focused, not presenter-focused)
+- "Logo Animation" (visual element, not presenter-focused)
 
 - **B-roll shots** serve as supplementary visual content and usually feature:
   - Visual illustrations of concepts mentioned in narration
@@ -116,6 +187,13 @@ When classifying shots as A-roll or B-roll:
 - If scene_description is ambiguous, create shots that focus on clear elements
 - Log all shot planning challenges for review
 - If unable to determine appropriate roll_type, default to A-roll for narrative clarity
+- **CRITICAL: Validate all A-roll shots for the following before finalizing output:**
+  - **suggested_broll_visuals must be an empty string ("")**
+  - **shot_description must focus ONLY on the presenter/narrator and not describe graphics, animations, or supplementary visuals**
+  - **suggested_sound_effects must ONLY include sounds related to the presenter/studio environment**
+  - **emotional_tone must describe the presenter's delivery style and emotional quality**
+  - **shot_purpose must focus on the narrative purpose of the presenter's direct address**
+  - **shot_title must clearly indicate it's a presenter-focused shot**
 
 ## Output Document Generation
 
@@ -148,14 +226,14 @@ The final output should look like this, but with shots for ALL scenes from the i
     "scene_id": "scene-1",
     "shot_id": "scene-1_shot_1",
     "shot_number": 1,
-    "shot_title": "Impulse Purchase Moment",
-    "shot_description": "Close-up of finger clicking Buy Now button followed by concerned facial expression",
+    "shot_title": "Presenter's Reflective Question",
+    "shot_description": "Close-up of presenter with concerned expression addressing audience directly",
     "roll_type": "A",
     "narration_text": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later?",
     "suggested_broll_visuals": "",
-    "suggested_sound_effects": ["mouse click", "subtle sigh"],
-    "emotional_tone": "conflicted, regretful",
-    "shot_purpose": "Establish emotional conflict of shopping addiction through relatable experience"
+    "suggested_sound_effects": ["studio ambience", "subtle voice treatment"],
+    "emotional_tone": "thoughtful, questioning",
+    "shot_purpose": "Establish emotional connection through relatable question about shopping regret"
   },
   // Additional shots for all scenes...
 ]

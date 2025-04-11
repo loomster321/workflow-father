@@ -291,4 +291,3 @@ When working with different emotional tones, adapt your visual approach:
 8. **Shareability Factors**: For experimental/viral tier, emphasize elements that drive audience engagement and sharing
 9. **Continuity Awareness**: Refer to your memory of previously processed shots to maintain thematic, stylistic, and narrative continuity
 10. **Sequential Development**: Build upon creative decisions made for earlier shots to create a cohesive visual experience
-
