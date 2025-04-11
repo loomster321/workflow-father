@@ -1,0 +1,42 @@
+[
+    {
+      "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_1\",\"shot_number\":1,\"shot_title\":\"Shopping Impulse Emotions\",\"shot_description\":\"Close-up of finger on Buy Now button and a look of regret\",\"roll_type\":\"A\",\"narration_text\":\"Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later?\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"mouse click\",\"subtle sigh\"],\"emotional_tone\":\"conflicted, regretful\",\"shot_purpose\":\"Establish theme of emotional conflict in shopping addiction\",\"word_count\":16,\"expected_duration\":6.4}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_2\",\"shot_number\":2,\"shot_title\":\"Family Impact\",\"shot_description\":\"Family tension visual with subtle emotional cues\",\"roll_type\":\"B\",\"narration_text\":\"Sometimes, the ripple effect of these struggles quietly touches the people you love,\",\"suggested_broll_visuals\":\"Family members with tension, subtle emotional cues\",\"suggested_sound_effects\":[\"soft ambient rustle\",\"subdued murmur\"],\"emotional_tone\":\"tense, reflective\",\"shot_purpose\":\"Show emotional impact on relationships due to shopping behavior\",\"word_count\":13,\"expected_duration\":5.2}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_3\",\"shot_number\":3,\"shot_title\":\"Hopeful Reflection\",\"shot_description\":\"Visual of hopeful transformation with warm lighting\",\"roll_type\":\"A\",\"narration_text\":\"You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"gentle music rise\",\"soft heartfelt tone\"],\"emotional_tone\":\"hopeful, encouraging\",\"shot_purpose\":\"Conclude scene with a hopeful, positive outlook\",\"word_count\":21,\"expected_duration\":8.4}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_1\",\"shot_number\":1,\"shot_title\":\"Dr. Leslie's Introduction\",\"shot_description\":\"Dr. Leslie introduces herself warmly to camera\",\"roll_type\":\"A\",\"narration_text\":\"Hi, I'm Dr. Leslie Davis.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"subtle office amb\",\"soft home ambiance\"],\"emotional_tone\":\"welcoming, supportive\",\"shot_purpose\":\"Introduce Dr. Leslie as trusted guide\",\"word_count\":5,\"expected_duration\":2}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_2\",\"shot_number\":2,\"shot_title\":\"Breaking Free\",\"shot_description\":\"Visual of tackling compulsive habits with coaching support\",\"roll_type\":\"B\",\"narration_text\":\"For over 20 years, I've helped people break free from compulsive behaviors.\",\"suggested_broll_visuals\":\"Visuals of individuals overcoming challenges and seeing progress\",\"suggested_sound_effects\":[\"page flip\",\"pen scratch\"],\"emotional_tone\":\"inspirational, empowering\",\"shot_purpose\":\"Visualizing success in breaking free from compulsive habits\",\"word_count\":12,\"expected_duration\":4.8}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_3\",\"shot_number\":3,\"shot_title\":\"Emotional Triggers\",\"shot_description\":\"Dramatic cut to emotional stress elements and reflection\",\"roll_type\":\"B\",\"narration_text\":\"It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret.\",\"suggested_broll_visuals\":\"Close-up of face showing stress and regret while reflecting\",\"suggested_sound_effects\":[\"subtle stress reveal\",\"reflective sound\"],\"emotional_tone\":\"stressed, reflective\",\"shot_purpose\":\"Emphasize the emotional triggers and resultant stress\",\"word_count\":15,\"expected_duration\":6}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_4\",\"shot_number\":4,\"shot_title\":\"Control Takeback\",\"shot_description\":\"Empowering visual of taking control back over finances\",\"roll_type\":\"A\",\"narration_text\":\"But here's the good news: You can take back control-and I can show you how.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"soft triumph note\",\"uplifting chord\"],\"emotional_tone\":\"empowering, motivating\",\"shot_purpose\":\"Convey empowerment and motivation for change\",\"word_count\":15,\"expected_duration\":6}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_1\",\"shot_number\":1,\"shot_title\":\"Program Start\",\"shot_description\":\"Overview of the coaching program with key features\",\"roll_type\":\"A\",\"narration_text\":\"That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"inspirational chord\",\"brief upbeat tune\"],\"emotional_tone\":\"encouraging, proactive\",\"shot_purpose\":\"Introduce the coaching program's key elements\",\"word_count\":20,\"expected_duration\":8}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_2\",\"shot_number\":2,\"shot_title\":\"Science-Backed Techniques\",\"shot_description\":\"Focus on science-backed methods with Cognitive Behavioral Therapy techniques\",\"roll_type\":\"B\",\"narration_text\":\"It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.\",\"suggested_broll_visuals\":\"Visuals of CBT techniques in action with emotional progress tracking\",\"suggested_sound_effects\":[\"keyboard typing\",\"data processing tone\"],\"emotional_tone\":\"methodical, assured\",\"shot_purpose\":\"Highlight the scientific basis and effectiveness of the program\",\"word_count\":29,\"expected_duration\":11.6}",
+      "sessionId": 77895
+    },
+    {
+      "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_3\",\"shot_number\":3,\"shot_title\":\"Spending Why Exploration\",\"shot_description\":\"Deep dive into the why behind spending habits with goal setting visuals\",\"roll_type\":\"B\",\"narration_text\":\"We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.\",\"suggested_broll_visuals\":\"Charts and personal reflection exercises\",\"suggested_sound_effects\":[\"light pen scratches\",\"page turns\"],\"emotional_tone\":\"reflective, transforming\",\"shot_purpose\":\"Focus on uncovering the why of spending habits for deep, lasting change\",\"word_count\":23,\"expected_duration\":9.2}",
+      "sessionId": 77895
+    }
+  ]

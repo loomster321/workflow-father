@@ -1,0 +1,452 @@
+[
+  {
+    "scene_id": "scene-1",
+    "shot_id": "scene-1_shot_1",
+    "shot_number": 1,
+    "shot_title": "Shopping Impulse Emotions",
+    "shot_description": "Close-up of finger on Buy Now button and a look of regret",
+    "roll_type": "A",
+    "narration_text": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later?",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "mouse click",
+      "subtle sigh"
+    ],
+    "emotional_tone": "conflicted, regretful",
+    "shot_purpose": "Establish theme of emotional conflict in shopping addiction",
+    "word_count": 16,
+    "expected_duration": 6.4
+  },
+  {
+    "scene_id": "scene-1",
+    "shot_id": "scene-1_shot_2",
+    "shot_number": 2,
+    "shot_title": "Family Impact",
+    "shot_description": "Family tension visual with subtle emotional cues",
+    "roll_type": "B",
+    "narration_text": "Sometimes, the ripple effect of these struggles quietly touches the people you love,",
+    "suggested_broll_visuals": "Family members with tension, subtle emotional cues",
+    "suggested_sound_effects": [
+      "soft ambient rustle",
+      "subdued murmur"
+    ],
+    "emotional_tone": "tense, reflective",
+    "shot_purpose": "Show emotional impact on relationships due to shopping behavior",
+    "word_count": 13,
+    "expected_duration": 5.2
+  },
+  {
+    "scene_id": "scene-1",
+    "shot_id": "scene-1_shot_3",
+    "shot_number": 3,
+    "shot_title": "Hopeful Reflection",
+    "shot_description": "Visual of hopeful transformation with warm lighting",
+    "roll_type": "A",
+    "narration_text": "You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "gentle music rise",
+      "soft heartfelt tone"
+    ],
+    "emotional_tone": "hopeful, encouraging",
+    "shot_purpose": "Conclude scene with a hopeful, positive outlook",
+    "word_count": 21,
+    "expected_duration": 8.4
+  },
+  {
+    "scene_id": "scene-2",
+    "shot_id": "scene-2_shot_1",
+    "shot_number": 1,
+    "shot_title": "Dr. Leslie's Introduction",
+    "shot_description": "Dr. Leslie introduces herself warmly to camera",
+    "roll_type": "A",
+    "narration_text": "Hi, I'm Dr. Leslie Davis.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "subtle office amb",
+      "soft home ambiance"
+    ],
+    "emotional_tone": "welcoming, supportive",
+    "shot_purpose": "Introduce Dr. Leslie as trusted guide",
+    "word_count": 5,
+    "expected_duration": 2
+  },
+  {
+    "scene_id": "scene-2",
+    "shot_id": "scene-2_shot_2",
+    "shot_number": 2,
+    "shot_title": "Breaking Free",
+    "shot_description": "Visual of tackling compulsive habits with coaching support",
+    "roll_type": "B",
+    "narration_text": "For over 20 years, I've helped people break free from compulsive behaviors.",
+    "suggested_broll_visuals": "Visuals of individuals overcoming challenges and seeing progress",
+    "suggested_sound_effects": [
+      "page flip",
+      "pen scratch"
+    ],
+    "emotional_tone": "inspirational, empowering",
+    "shot_purpose": "Visualizing success in breaking free from compulsive habits",
+    "word_count": 12,
+    "expected_duration": 4.8
+  },
+  {
+    "scene_id": "scene-2",
+    "shot_id": "scene-2_shot_3",
+    "shot_number": 3,
+    "shot_title": "Emotional Triggers",
+    "shot_description": "Dramatic cut to emotional stress elements and reflection",
+    "roll_type": "B",
+    "narration_text": "It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret.",
+    "suggested_broll_visuals": "Close-up of face showing stress and regret while reflecting",
+    "suggested_sound_effects": [
+      "subtle stress reveal",
+      "reflective sound"
+    ],
+    "emotional_tone": "stressed, reflective",
+    "shot_purpose": "Emphasize the emotional triggers and resultant stress",
+    "word_count": 15,
+    "expected_duration": 6
+  },
+  {
+    "scene_id": "scene-2",
+    "shot_id": "scene-2_shot_4",
+    "shot_number": 4,
+    "shot_title": "Control Takeback",
+    "shot_description": "Empowering visual of taking control back over finances",
+    "roll_type": "A",
+    "narration_text": "But here's the good news: You can take back control-and I can show you how.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "soft triumph note",
+      "uplifting chord"
+    ],
+    "emotional_tone": "empowering, motivating",
+    "shot_purpose": "Convey empowerment and motivation for change",
+    "word_count": 15,
+    "expected_duration": 6
+  },
+  {
+    "scene_id": "scene-3",
+    "shot_id": "scene-3_shot_1",
+    "shot_number": 1,
+    "shot_title": "Program Start",
+    "shot_description": "Overview of the coaching program with key features",
+    "roll_type": "A",
+    "narration_text": "That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "inspirational chord",
+      "brief upbeat tune"
+    ],
+    "emotional_tone": "encouraging, proactive",
+    "shot_purpose": "Introduce the coaching program's key elements",
+    "word_count": 20,
+    "expected_duration": 8
+  },
+  {
+    "scene_id": "scene-3",
+    "shot_id": "scene-3_shot_2",
+    "shot_number": 2,
+    "shot_title": "Science-Backed Techniques",
+    "shot_description": "Focus on science-backed methods with Cognitive Behavioral Therapy techniques",
+    "roll_type": "B",
+    "narration_text": "It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.",
+    "suggested_broll_visuals": "Visuals of CBT techniques in action with emotional progress tracking",
+    "suggested_sound_effects": [
+      "keyboard typing",
+      "data processing tone"
+    ],
+    "emotional_tone": "methodical, assured",
+    "shot_purpose": "Highlight the scientific basis and effectiveness of the program",
+    "word_count": 29,
+    "expected_duration": 11.6
+  },
+  {
+    "scene_id": "scene-3",
+    "shot_id": "scene-3_shot_3",
+    "shot_number": 3,
+    "shot_title": "Spending Why Exploration",
+    "shot_description": "Deep dive into the why behind spending habits with goal setting visuals",
+    "roll_type": "B",
+    "narration_text": "We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.",
+    "suggested_broll_visuals": "Charts and personal reflection exercises",
+    "suggested_sound_effects": [
+      "light pen scratches",
+      "page turns"
+    ],
+    "emotional_tone": "reflective, transforming",
+    "shot_purpose": "Focus on uncovering the why of spending habits for deep, lasting change",
+    "word_count": 23,
+    "expected_duration": 9.2
+  },
+  {
+    "scene_id": "scene-4",
+    "shot_id": "scene-4_shot_1",
+    "shot_number": 1,
+    "shot_title": "Personalized Coaching Intro",
+    "shot_description": "Visual of Dr. Leslie with a personal message in cozy setting",
+    "roll_type": "A",
+    "narration_text": "Imagine waking up without that knot of anxiety about your spending.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "morning ambiance",
+      "soft hopeful tone"
+    ],
+    "emotional_tone": "calming, hopeful",
+    "shot_purpose": "Start the narrative of personal freedom from financial anxiety",
+    "word_count": 11,
+    "expected_duration": 4.4
+  },
+  {
+    "scene_id": "scene-4",
+    "shot_id": "scene-4_shot_2",
+    "shot_number": 2,
+    "shot_title": "One-on-One Success",
+    "shot_description": "One-on-one coaching session with a satisfaction moment",
+    "roll_type": "B",
+    "narration_text": "This is one-on-one support tailored just for you.",
+    "suggested_broll_visuals": "Close-up of a client smiling after a breakthrough in a session",
+    "suggested_sound_effects": [
+      "gentle affirmations",
+      "calm ambiance"
+    ],
+    "emotional_tone": "personally supportive, accomplished",
+    "shot_purpose": "Highlight the personal, supportive aspect of the coaching program",
+    "word_count": 8,
+    "expected_duration": 3.2
+  },
+  {
+    "scene_id": "scene-4",
+    "shot_id": "scene-4_shot_3",
+    "shot_number": 3,
+    "shot_title": "Overcoming Blocks",
+    "shot_description": "Overcoming emotional blocks through guided steps",
+    "roll_type": "B",
+    "narration_text": "We'll identify your triggers, create a step-by-step action plan, and work through emotional roadblocks together-so the changes you make aren't just temporary.",
+    "suggested_broll_visuals": "Visual aids showing step-by-step progress and block removals",
+    "suggested_sound_effects": [
+      "transition tones",
+      "calm success note"
+    ],
+    "emotional_tone": "progressive, overcoming",
+    "shot_purpose": "Show the structured approach to eliminating emotional blocks",
+    "word_count": 22,
+    "expected_duration": 8.8
+  },
+  {
+    "scene_id": "scene-5",
+    "shot_id": "scene-5_shot_1",
+    "shot_number": 1,
+    "shot_title": "Empowerment Group Intro",
+    "shot_description": "Introduction of group dynamics and empowerment vibe",
+    "roll_type": "A",
+    "narration_text": "Maybe you're looking for support-but you don't want to go it alone.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "group laughter",
+      "conversational murmur"
+    ],
+    "emotional_tone": "inclusive, welcoming",
+    "shot_purpose": "Introduce group coaching as a supportive community experience",
+    "word_count": 12,
+    "expected_duration": 4.8
+  },
+  {
+    "scene_id": "scene-5",
+    "shot_id": "scene-5_shot_2",
+    "shot_number": 2,
+    "shot_title": "Community Support Highlight",
+    "shot_description": "Vibrant scene of group sharing experiences and breakthroughs",
+    "roll_type": "B",
+    "narration_text": "You'll join a community of people who get it. Together, we'll share wins, tackle challenges, and celebrate breakthroughs.",
+    "suggested_broll_visuals": "Group sessions with positive dynamics and interactions",
+    "suggested_sound_effects": [
+      "claps",
+      "joint laughter"
+    ],
+    "emotional_tone": "encouraging, communal",
+    "shot_purpose": "Convey the strength and unity within the group coaching sessions",
+    "word_count": 18,
+    "expected_duration": 7.2
+  },
+  {
+    "scene_id": "scene-5",
+    "shot_id": "scene-5_shot_3",
+    "shot_number": 3,
+    "shot_title": "Realization Power",
+    "shot_description": "Visualization of personal empowerment from group insights",
+    "roll_type": "A",
+    "narration_text": "You'll realize you're not the only one struggling-and that realization? It's powerful.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "gentle music rise",
+      "subtle realization tone"
+    ],
+    "emotional_tone": "empowered, enlightening",
+    "shot_purpose": "Emphasize self-discovery and empowerment through group support",
+    "word_count": 12,
+    "expected_duration": 4.8
+  },
+  {
+    "scene_id": "scene-6",
+    "shot_id": "scene-6_shot_1",
+    "shot_number": 1,
+    "shot_title": "Self-Guided Independence Intro",
+    "shot_description": "Focus on the personal freedom and independence offered in the program",
+    "roll_type": "A",
+    "narration_text": "Or maybe you prefer to work at your own pace?",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "paper rustle",
+      "digital chimes"
+    ],
+    "emotional_tone": "independent, encouraging",
+    "shot_purpose": "Position the self-guided program as an empowering choice",
+    "word_count": 10,
+    "expected_duration": 4
+  },
+  {
+    "scene_id": "scene-6",
+    "shot_id": "scene-6_shot_2",
+    "shot_number": 2,
+    "shot_title": "Strategic Exercises",
+    "shot_description": "Participants engaging with step-by-step module exercises from the program",
+    "roll_type": "B",
+    "narration_text": "This interactive journey is packed with real-world strategies, exercises, and step-by-step modules designed to help you regain control-on your terms.",
+    "suggested_broll_visuals": "Digital modules and DIY exercises to track progress",
+    "suggested_sound_effects": [
+      "module clicks",
+      "page turns"
+    ],
+    "emotional_tone": "self-empowered, strategic",
+    "shot_purpose": "Highlight the practical, self-driven strategies available in the program",
+    "word_count": 20,
+    "expected_duration": 8
+  },
+  {
+    "scene_id": "scene-6",
+    "shot_id": "scene-6_shot_3",
+    "shot_number": 3,
+    "shot_title": "Goal Celebration",
+    "shot_description": "Participants celebrating milestones and progress",
+    "roll_type": "B",
+    "narration_text": "You'll track your progress and celebrate your wins as you reach clear, definable goals.",
+    "suggested_broll_visuals": "Ceremonial activity or high-five over success and goal achievement",
+    "suggested_sound_effects": [
+      "applause",
+      "celebration bell"
+    ],
+    "emotional_tone": "triumphant, happy",
+    "shot_purpose": "Emphasize the milestone celebrations and tangible results",
+    "word_count": 14,
+    "expected_duration": 5.6
+  },
+  {
+    "scene_id": "scene-7",
+    "shot_id": "scene-7_shot_1",
+    "shot_number": 1,
+    "shot_title": "Transformation Reflection",
+    "shot_description": "Dr. Leslie reflects warmly to the audience on change",
+    "roll_type": "A",
+    "narration_text": "I know what it feels like to want change but not know where to start.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "reflective chord",
+      "thoughtful music cue"
+    ],
+    "emotional_tone": "empathetic, motivational",
+    "shot_purpose": "Empathize with viewer to strengthen emotional connection",
+    "word_count": 15,
+    "expected_duration": 6
+  },
+  {
+    "scene_id": "scene-7",
+    "shot_id": "scene-7_shot_2",
+    "shot_number": 2,
+    "shot_title": "Empowerment Journey",
+    "shot_description": "Viewers visualize the empowerment process and steps",
+    "roll_type": "B",
+    "narration_text": "This transformation journey isn't just about changing your spending habits-it's about reclaiming your peace of mind, rebuilding your confidence, and feeling proud of the progress you can see and feel in your everyday life.",
+    "suggested_broll_visuals": "Journals, confidence-building visuals, and calendar progress marks",
+    "suggested_sound_effects": [
+      "calendar page",
+      "motivation melody"
+    ],
+    "emotional_tone": "empowering, transformational",
+    "shot_purpose": "Communicate the holistic transformation of individuals through empowered change",
+    "word_count": 34,
+    "expected_duration": 13.6
+  },
+  {
+    "scene_id": "scene-8",
+    "shot_id": "scene-8_shot_1",
+    "shot_number": 1,
+    "shot_title": "Call to Action Start",
+    "shot_description": "Presenting program options with urgency and action focus",
+    "roll_type": "A",
+    "narration_text": "So, what's the next step for you?",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "urgent beat",
+      "subtle chime"
+    ],
+    "emotional_tone": "focused, motivating",
+    "shot_purpose": "Prompt viewers to consider their next steps with urgency",
+    "word_count": 7,
+    "expected_duration": 2.8
+  },
+  {
+    "scene_id": "scene-8",
+    "shot_id": "scene-8_shot_2",
+    "shot_number": 2,
+    "shot_title": "Engagement Choice",
+    "shot_description": "Presentation of choice in how viewers can engage with each program",
+    "roll_type": "B",
+    "narration_text": "One-on-one coaching, group support, or a self-guided journey-each path leads to freedom.",
+    "suggested_broll_visuals": "Clear visuals for each program with distinct identities",
+    "suggested_sound_effects": [
+      "click",
+      "subtle transition"
+    ],
+    "emotional_tone": "motivational, assertive",
+    "shot_purpose": "Visualize and clarify the choices for engaging with the program",
+    "word_count": 12,
+    "expected_duration": 4.8
+  },
+  {
+    "scene_id": "scene-9",
+    "shot_id": "scene-9_shot_1",
+    "shot_number": 1,
+    "shot_title": "Future Begins",
+    "shot_description": "Logo animation with call-to-action focus",
+    "roll_type": "A",
+    "narration_text": "Your future starts now.",
+    "suggested_broll_visuals": "Retail Therapy Unplugged logo animation",
+    "suggested_sound_effects": [
+      "button click",
+      "fade note"
+    ],
+    "emotional_tone": "optimistic, forward-thinking",
+    "shot_purpose": "Encourage immediate action by ending on a hopeful note with a CTA focus",
+    "word_count": 4,
+    "expected_duration": 1.6
+  },
+  {
+    "scene_id": "scene-9",
+    "shot_id": "scene-9_shot_2",
+    "shot_number": 2,
+    "shot_title": "Enrollment Invitation",
+    "shot_description": "Invitation to take action through enrollment or self-assessment",
+    "roll_type": "A",
+    "narration_text": "Take our free self-assessment or enroll in one of our programs today.",
+    "suggested_broll_visuals": "Crisp CTA visuals indicating sign-up or assessment",
+    "suggested_sound_effects": [
+      "decision chime",
+      "affirmative click"
+    ],
+    "emotional_tone": "urging, persuasive",
+    "shot_purpose": "Convey the urgency and appeal of engaging with the program right away",
+    "word_count": 12,
+    "expected_duration": 4.8
+  }
+]

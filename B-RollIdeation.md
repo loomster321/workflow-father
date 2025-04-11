@@ -87,6 +87,42 @@ When you receive an A-roll shot:
 
 This analysis of A-roll shots should be used to create more contextually appropriate and narratively coherent B-roll concepts when you process subsequent B-roll shots.
 
+## 4.2 A-Roll Context Output Format
+
+When processing A-roll shots, output a JSON object with the following structure:
+
+```json
+{
+  "aroll_context": {
+    "scene_id": "string (from Shot Plan)",
+    "shot_id": "string (from Shot Plan)",
+    "narrative_summary": "string (brief description of narrative content)",
+    "emotional_tone": "string (emotional qualities present in the shot)",
+    "visual_elements": "string (key visual components described in the shot)",
+    "relevance_to_broll": "string (how this A-roll informs subsequent B-roll)"
+  }
+}
+```
+
+This simplified format provides just enough context for B-roll concept generation while maintaining consistency with the JSON output format used for B-roll shots. The A-roll analysis should be brief and focused exclusively on elements that will inform B-roll concepts.
+
+### Example A-Roll Context Output
+
+```json
+{
+  "aroll_context": {
+    "scene_id": "scene_03",
+    "shot_id": "scene_03_shot_1",
+    "narrative_summary": "Introduction of the AI system's capabilities for handling complex tasks",
+    "emotional_tone": "sophisticated, impressive",
+    "visual_elements": "Establishing shot for AI system architecture",
+    "relevance_to_broll": "Sets up expectation for B-roll to visualize complex AI systems in an engaging way"
+  }
+}
+```
+
+Do not produce prose analysis for A-roll shots - strictly adhere to this JSON format to maintain workflow consistency.
+
 ## 5. Output Document Generation
 
 Generate a B-Roll Concepts document following this exact structure for the current B-Roll shot:

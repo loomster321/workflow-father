@@ -1,0 +1,34 @@
+﻿# Cursor LevelDB Log Extraction
+Date: 2025-04-10 12:06:00
+Source: .\cursor_chats_leveldb\leveldb_backup_2025-04-10_12-05-15
+--------------------------------------------------
+
+### File: 000003.log (198 bytes)
+```
+.....................VERSION.1..META:devtools://devtools...........(..METAACCESS:devtools://devtools...........!_devtools://devtools..experiments..{}.+_devtools://devtools..localInspectorVersion..38
+```n
+--------------------------------------------------
+
+### File: LOG (286 bytes)
+```
+2025/04/10-11:48:07.118 84b8 Reusing MANIFEST C:\Users\tim_l\AppData\Roaming\Cursor\Local Storage\leveldb/MANIFEST-000001
+2025/04/10-11:48:07.119 84b8 Recovering log #3
+2025/04/10-11:48:07.119 84b8 Reusing old log C:\Users\tim_l\AppData\Roaming\Cursor\Local Storage\leveldb/000003.log 
+
+```n
+**Found potential chat keywords:** user, cursor
+
+--------------------------------------------------
+
+### File: LOG.old (286 bytes)
+```
+2025/04/10-11:29:22.615 80ec Reusing MANIFEST C:\Users\tim_l\AppData\Roaming\Cursor\Local Storage\leveldb/MANIFEST-000001
+2025/04/10-11:29:22.615 80ec Recovering log #3
+2025/04/10-11:29:22.616 80ec Reusing old log C:\Users\tim_l\AppData\Roaming\Cursor\Local Storage\leveldb/000003.log 
+
+```n
+**Found potential chat keywords:** user, cursor
+
+--------------------------------------------------
+
+
