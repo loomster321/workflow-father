@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Production Workflow Requirements Document v2.3</title>
+    <title>Video Production Workflow Requirements Document v2.4</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -131,14 +131,14 @@
 </head>
 
 <body> <!-- START OF METADATA SECTION -->
-    <h1>Video Production Workflow Requirements Document v2.3</h1>
+    <h1>Video Production Workflow Requirements Document v2.4</h1>
     <h2>Document Metadata</h2>
     <ul>
         <li><strong>Name:</strong> Video Production Workflow</li>
-        <li><strong>Version:</strong> 2.3</li>
-        <li><strong>Timestamp:</strong> 2024-07-05T14:00:00+00:00</li>
+        <li><strong>Version:</strong> 2.4</li>
+        <li><strong>Timestamp:</strong> 2024-07-10T16:00:00+00:00</li>
         <li><strong>Description:</strong> End-to-end workflow for automating and streamlining the creation of
-            high-quality video content. This version contains a comprehensive expansion of deferred requirements for future implementation phases, including MidJourney moodboard integration, prompt template systems, and advanced seed management. The core workflow structure, agent responsibilities, and document specifications remain unchanged from version 2.2.</li>
+            high-quality video content. This version updates the Visual Narrative Design node to independently process all B-roll shots, preserving all three B-roll concepts (standard, enhanced, experimental) for each shot rather than selecting just one. The Visual Narrative Design node now directly feeds the Image Prompt Generator and Sound Effects Generator, creating a single comprehensive Visual Narrative document that maintains project-level visual consistency while preserving creative options for later selection during image review. The core workflow structure and other agent responsibilities remain unchanged from previous versions.</li>
     </ul>
 
     <h3>Workflow Persona</h3>
@@ -356,9 +356,9 @@
         <strong>Agent Persona:</strong> Storyboard Supervisor / Visual Strategist<br>
         <strong>Input:</strong> <a href="#broll-concepts">B-Roll Concepts</a><br>
         <strong>Output:</strong> <a href="#visual-narrative">Visual Narrative</a><br>
-        <strong>Description:</strong> Selects one B-roll visual concept per segment (from standard, enhanced, or experimental options) and synthesizes them into a coherent
-        narrative through visual design annotations. Creates a comprehensive visual narrative guide that defines shot
-        transitions, visual styling, and storytelling elements across all B-Roll content. Establishes motion directives that specify how elements should move within shots and defines camera movement patterns that enhance storytelling. Ensures direct audience connection through strategic visual storytelling techniques including establishing shots, creative angles, lighting design, and visual pacing that resonates emotionally with viewers and maintains engagement throughout the narrative.
+        <strong>Description:</strong> Preserves and enhances all three B-roll visual concepts per segment (standard, enhanced, and experimental options) and synthesizes them into a coherent
+        narrative through visual design annotations. Processes all shots to create a comprehensive visual narrative guide that defines shot
+        transitions, visual styling, and storytelling elements across all B-Roll content. Establishes project-wide visual style, consistent visual motifs, emotional progression mapping, motion directives that specify how elements should move within shots, and defines camera movement patterns that enhance storytelling. Creates cross-connections between disparate parts of the narrative while handling situation-specific exceptions that require broader context, such as character appearances across multiple scenes or location continuity. Ensures direct audience connection through strategic visual storytelling techniques including establishing shots, creative angles, lighting design, and visual pacing that resonates emotionally with viewers and maintains engagement throughout the narrative. The output is a single, comprehensive Visual Narrative JSON object that provides a complete visual blueprint for the entire video while maintaining all three concept options (standard, enhanced, experimental) for each B-roll shot, allowing for selection during image review.
     </p>
 
     <h4 id="character-reference-node">4.1.5 Character Reference Selection</h4>
@@ -754,7 +754,7 @@
         </tr>
     </table>
     
-    <h4 id="visual-narrative">5.1.5 Visual Narrative</h4>
+        <h4 id="visual-narrative">5.1.5 Visual Narrative</h4>
     <p><strong>Format:</strong> JSON (Array)<br>
         <strong>Type:</strong> Structured Data<br>
         <strong>Subtype:</strong> JSON<br>
@@ -777,7 +777,7 @@
         <tr>
             <td>shots_sequence</td>
             <td>array</td>
-            <td>Ordered array of shot objects with detailed specifications</td>
+            <td>Ordered array of shot objects with detailed specifications, each with standard, enhanced, and experimental concepts</td>
         </tr>
         <tr>
             <td>shot_transitions</td>
@@ -1439,6 +1439,17 @@
     <h4>6.2.3 Visual Consistency</h4>
     <ul>
         <li><strong>Color Palette Management:</strong> Implementation of color palette consistency management across all shots within the Visual Narrative Design agent</li>
+        <li><strong>Global Narrative Consistency:</strong> Implementation of additional capabilities within the Visual Narrative Design agent to ensure project-wide visual coherence through:
+            <ul>
+                <li>Stylistic contradiction resolution across scenes with different emotional tones</li>
+                <li>Cross-referencing of visual motifs that appear in non-adjacent scenes</li>
+                <li>Character continuity tracking across multiple scenes</li>
+                <li>Location continuity enforcement for recurring settings</li>
+                <li>Global emotional progression mapping to ensure cohesive narrative arcs</li>
+                <li>Project-wide standardization of visual language beyond individual shot contexts</li>
+            </ul>
+        </li>
+        <li><strong>Memory-Based Processing:</strong> Implementation of a memory window mechanism that processes shots in sequence while maintaining context of recently processed shots, combined with an aggregation layer to synthesize these windowed outputs. This approach would offer scalability benefits for extremely long-form content while maintaining near-shot context awareness.</li>
     </ul>
     
     <h4>6.2.4 MidJourney Enhancements</h4>
