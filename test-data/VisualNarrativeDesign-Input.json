@@ -1,0 +1,283 @@
+[
+  {
+    "scene_id": "scene-1",
+    "shot_id": "scene-1_shot_1",
+    "shot_number": 1,
+    "shot_title": "Presenter's Relatable Question",
+    "shot_description": "CU presenter, empathetic, addressing online buyer's regret to camera",
+    "roll_type": "A",
+    "narration_text": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later?",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "studio ambience",
+      "soft mic tap"
+    ],
+    "emotional_tone": "empathetic, inviting",
+    "shot_purpose": "Make audience feel seen and initiate emotional connection",
+    "word_count": 16,
+    "expected_duration": 6.4,
+    "aroll_context": {
+      "narrative_summary": "Presenter directly addresses the audience about the universal experience of buyer's regret, aiming to establish an empathetic connection.",
+      "emotional_tone": "empathetic, inviting",
+      "visual_elements": "Close-up of presenter, direct eye contact, subtle studio background",
+      "relevance_to_broll": "Sets a personal, relatable tone for B-roll; subsequent visuals should reinforce the feeling of shared experience and emotional resonance."
+    }
+  },
+  {
+    "scene_id": "scene-1",
+    "shot_id": "scene-1_shot_2",
+    "shot_number": 2,
+    "shot_title": "Hiding Purchases Montage",
+    "shot_description": "Various people hide shopping bags, faces show worry and secrecy",
+    "roll_type": "B",
+    "narration_text": "Or maybe you've promised yourself, 'This is the last time'-but it never is.",
+    "suggested_broll_visuals": "People hiding purchases furtively, shifting body language",
+    "suggested_sound_effects": [
+      "bag rustle",
+      "door close"
+    ],
+    "emotional_tone": "nervous, secretive",
+    "shot_purpose": "Reveal cycle of repeat behavior and internal conflict",
+    "word_count": 13,
+    "expected_duration": 5.2,
+    "broll_concepts": [
+      {
+        "standard_broll": {
+          "idea": "A montage of different people quickly and discreetly stashing shopping bags in closets, under beds, or inside car trunks. Their faces subtly express anxiety and secrecy.",
+          "visual_style": "Naturalistic lighting, handheld camera feel to enhance realism. Medium-close shots focused on hands, shopping bags, and glimpses of concerned faces, creating intimacy.",
+          "motion": "Quick, furtive motions as people look around, then swiftly hide bags. Slight camera shakes or movements following their actions, mimicking documentary or reality style."
+        },
+        "enhanced_broll": {
+          "idea": "Stylized sequence where each character 'passes' the shopping bag off-screen to the next, linking their secretive actions across different environments and emphasizing the repetitive cycle.",
+          "visual_style": "Softly desaturated color palette with selective pops of color from the shopping bags. Subtle vignetting to enhance a sense of secrecy. Focus on expressive body language and tight framing.",
+          "motion": "Fluid, match-cut transitions where the shopping bag consistently moves from one set of hands to another, across multiple locations. Smooth, slightly slow-motion for the key hand-offs to heighten emotional awareness."
+        },
+        "viral_broll": {
+          "idea": "Visually inventive split-screen showing half a dozen people in parallel, each going through similar motions to hide their purchases—creating visual symmetry and amplifying the universality of the behavior. As each person hides their bag, their backgrounds visually morph into one another, blending home, car, and office environments.",
+          "visual_style": "Crisp, contemporary look with bold differences in each half of the split-screen. Clever visual morphs and transitions between environments create a seamless flow, with exaggerated, stylized body language for emphasis. Subtle textures (like shadow overlays or scribbled animation) represent internal anxiety.",
+          "motion": "Synchronized movements across the split panels, with rapid, smooth morphs blending scenes together. As shopping bags are hidden, faint animated crackles or anxiety-indicative effects ripple through each frame—culminating in a moment where all panels freeze on facial expressions of worry."
+        }
+      }
+    ]
+  },
+  {
+    "scene_id": "scene-1",
+    "shot_id": "scene-1_shot_3",
+    "shot_number": 3,
+    "shot_title": "Stress in Relationships",
+    "shot_description": "Couple exchanging tense looks over unpaid bills at kitchen table",
+    "roll_type": "B",
+    "narration_text": "Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it.",
+    "suggested_broll_visuals": "Tense couple at table, paperwork and bills scattered",
+    "suggested_sound_effects": [
+      "paper shuffle",
+      "subtle sigh"
+    ],
+    "emotional_tone": "tense, somber",
+    "shot_purpose": "Show social/familial impact of compulsive spending",
+    "word_count": 22,
+    "expected_duration": 8.8,
+    "broll_concepts": [
+      {
+        "standard_broll": {
+          "idea": "A couple sits at a kitchen table covered with scattered bills and paperwork, exchanging strained, silent glances. Their body language is closed off, with one person holding their head in their hands and the other staring tensely at a bill.",
+          "visual_style": "Muted, naturalistic lighting with a cool color temperature to emphasize somberness. Wide and medium shots carefully composed to show both individuals and the cluttered table, reinforcing the emotional and financial tension.",
+          "motion": "Minimal movement: a paper is slowly shuffled, one partner sighs and looks away. The camera lingers with steady, subtle push-ins to heighten the sense of unease."
+        },
+        "enhanced_broll": {
+          "idea": "The couple sits at opposite ends of a long table, with bills forming a visual 'barrier' between them, their discomfort heightened by the exaggerated physical distance and asymmetric framing. Hands almost touch over the paperwork but never quite connect.",
+          "visual_style": "Dramatically lit with a shaft of cold, directional window light cutting across the table. Deep shadows accentuate the gulf between the couple. Soft focus on distant elements, sharp focus on hands, bills, and faces.",
+          "motion": "Slow dolly move sideways along the length of the table, passing stacks of paperwork. Subtle, slow zooms-in on faces as tension rises, accompanied by a gentle ruffling of paper and a nearly inaudible sigh."
+        },
+        "viral_broll": {
+          "idea": "A surreal overhead shot transforms the kitchen table into a visual metaphor: as tension rises, the paperwork and bills animate, growing taller and creating a literal paper wall between the couple. Their silhouettes become further separated as the wall expands, highlighting emotional and physical distance.",
+          "visual_style": "Hyperreal, slightly desaturated palette with pops of color from the swirling or 'growing' documents. Animated shadow effects and ambient glow mark the intensifying separation. Tabletop becomes a stage, blending live action with stylized animation.",
+          "motion": "Papers slowly animate upward and outward, building into a daunting barrier. The couple's hands reach for each other but get blocked by the 'wall.' The camera pulls up and away, emphasizing the expanding divide—a visual crescendo that freezes for dramatic effect."
+        }
+      }
+    ]
+  },
+  {
+    "scene_id": "scene-1",
+    "shot_id": "scene-1_shot_4",
+    "shot_number": 4,
+    "shot_title": "Infographic Prevalence",
+    "shot_description": "Animated charts: stats, silhouettes, highlighting prevalence rates",
+    "roll_type": "B",
+    "narration_text": "You're not alone. And it's not your fault.",
+    "suggested_broll_visuals": "Infographic with animated uplifting data overlays",
+    "suggested_sound_effects": [
+      "data ping",
+      "gentle whoosh"
+    ],
+    "emotional_tone": "reassuring, statistical",
+    "shot_purpose": "Normalize experience and reassure viewer through prevalence data",
+    "word_count": 8,
+    "expected_duration": 3.2,
+    "broll_concepts": [
+      {
+        "standard_broll": {
+          "idea": "A simple animated bar chart smoothly rises, accompanied by labeled statistics indicating how many people experience similar feelings. Silhouette icons representing individuals appear, some highlighted to show prevalence.",
+          "visual_style": "Clean, modern infographic design using soft, reassuring blues and greens. Minimalist layout with rounded shapes and clear fonts for quick comprehension.",
+          "motion": "Data bars rise one after another with subtle easing; silhouette icons fade in and light up to visualize the prevalence rate. Numbers animate upward in sync with chart growth."
+        },
+        "enhanced_broll": {
+          "idea": "A dynamic infographic scene where stylized silhouettes fill up a grid, each one animating in with a gentle glow as the narration reassures the viewer. Percentage figures count up beside the visualization, and animated connecting lines link groups to illustrate shared experience.",
+          "visual_style": "Soft gradients blend from blue to teal for a hopeful feel. Silhouette icons are slightly rounded and appear hand-drawn for warmth. Light particle effects suggest a sense of togetherness.",
+          "motion": "Wave-like motion as rows of silhouettes light up sequentially. Lines sweep in to connect figures, and percentage numbers smoothly increase beside the graphic. End with a gentle upward float of glowing icons."
+        },
+        "viral_broll": {
+          "idea": "Immersive 3D infographic scene where the camera dives through a field of floating, luminous human silhouettes. As key statistics appear in bold above clusters of people, the camera seamlessly shifts perspectives, creating the sensation of moving among a supportive crowd. Silhouettes gently pulse with light in sync with the message.",
+          "visual_style": "Vivid, luminous color palette with glowing edges and smooth gradients. Infographic-style overlays float in 3D space, with elegant, bold typography. Artistic depth of field creates a dreamy illusion that blurs the boundaries between data and emotional connection.",
+          "motion": "Sweeping, ethereal camera moves weave between glowing silhouette clusters. Key data stats rise up from the crowd, numbers animating and pulsing in time with soft sound cues. Crowd silhouettes occasionally turn slightly toward the viewer as if in acknowledgment, reinforcing reassurance and unity."
+        }
+      }
+    ]
+  },
+  {
+    "scene_id": "scene-1",
+    "shot_id": "scene-1_shot_5",
+    "shot_number": 5,
+    "shot_title": "Presenter Offers Hope",
+    "shot_description": "CU presenter, soft smile, gentle reassurance to camera",
+    "roll_type": "A",
+    "narration_text": "There is hope for healing—for you, and for the relationships that matter most.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "studio ambience",
+      "soft breath"
+    ],
+    "emotional_tone": "hopeful, warm",
+    "shot_purpose": "Instill hope and support to conclude scene",
+    "word_count": 13,
+    "expected_duration": 5.2,
+    "aroll_context": {
+      "narrative_summary": "Presenter offers reassurance and hope directly to the audience, emphasizing positivity and support for personal and relational healing.",
+      "emotional_tone": "hopeful, warm",
+      "visual_elements": "Close-up of presenter with a gentle, encouraging expression, inviting visual warmth and intimacy.",
+      "relevance_to_broll": "Sets an uplifting, reassuring mood for subsequent visual storytelling; any following B-roll should evoke warmth, optimism, and connection."
+    }
+  },
+  {
+    "scene_id": "scene-2",
+    "shot_id": "scene-2_shot_1",
+    "shot_number": 1,
+    "shot_title": "Dr. Leslie's Introduction",
+    "shot_description": "MS Dr. Leslie warmly introduces herself in studio with degrees visible",
+    "roll_type": "A",
+    "narration_text": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors—especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "studio ambience",
+      "voice treatment"
+    ],
+    "emotional_tone": "trustworthy, empathetic",
+    "shot_purpose": "Establish Dr. Leslie’s credibility and connection",
+    "word_count": 33,
+    "expected_duration": 13.2,
+    "aroll_context": {
+      "narrative_summary": "Dr. Leslie introduces herself, highlighting her expertise in helping people overcome compulsive behaviors that impact finances and relationships.",
+      "emotional_tone": "trustworthy, empathetic",
+      "visual_elements": "Medium shot of Dr. Leslie in the studio, warm lighting, degrees and credentials visible in the background.",
+      "relevance_to_broll": "Establishes expert authority and a caring atmosphere; subsequent B-roll should reflect professionalism, empathy, and client-focused visuals."
+    }
+  },
+  {
+    "scene_id": "scene-2",
+    "shot_id": "scene-2_shot_2",
+    "shot_number": 2,
+    "shot_title": "Behavioral Impact Montage",
+    "shot_description": "Cut: closeups of worried faces, hands on bills, personal stress moments",
+    "roll_type": "B",
+    "narration_text": "Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret.",
+    "suggested_broll_visuals": "Hands fidgeting, facial tension, scrolling phones with regret",
+    "suggested_sound_effects": [
+      "soft sigh",
+      "pen tap"
+    ],
+    "emotional_tone": "reflective, somber",
+    "shot_purpose": "Expand problem beyond money, build empathy",
+    "word_count": 21,
+    "expected_duration": 8.4,
+    "broll_concepts": [
+      {
+        "standard_broll": {
+          "idea": "A series of closeups showing varied individuals: furrowed brows, downcast eyes, hands rubbing temples, and fingers nervously tapping on unpaid bills or a smartphone screen. Each vignette conveys personal stress and quiet worry.",
+          "visual_style": "Soft, low-key lighting to accentuate facial tension and create a contemplative atmosphere. Natural, unembellished framing that focuses on expressive details like hands, faces, and bills.",
+          "motion": "Subtle movements: fingers fidgeting with paper, a phone being scrolled with hesitation, a pen tapped softly on a table. Smooth cross-dissolves transition between each closeup to build an empathetic montage."
+        },
+        "enhanced_broll": {
+          "idea": "Montage of slow-motion macro shots capturing micro-expressions of worry: a deep exhale, a slow blink, tightly clenched hands. Overlay translucent reflections of online shopping carts or credit card icons on top of the personal stress moments to deepen meaning.",
+          "visual_style": "Desaturated color palette with focused highlights on hands and faces. Slightly stylized depth-of-field blur keeps the viewer's eye locked on emotional cues, with soft overlays to connect actions and consequences.",
+          "motion": "Slow-motion emphasis on key gestures (hand clench, exhale), with ethereal overlays that subtly animate—like shopping icons fading in and out—adding an emotional undercurrent as images gently dissolve from one to the next."
+        },
+        "viral_broll": {
+          "idea": "Visually striking sequence where real closeup stress details (eyes, hands, fidgeting) morph via animation into illustrative, semi-transparent overlays depicting internal emotional triggers: swirling chaotic lines, storm clouds, or fleeting dollar signs in the background. At the peak, a digital shopping cart flickers and dissolves into regretful expressions.",
+          "visual_style": "Bold contrast between live-action closeups and animated, painterly overlays. Use of muted tones interrupted by sudden flashes of color tied to emotional triggers. Expressive, almost surreal layering of real and animated elements.",
+          "motion": "Seamless animated transitions: a closeup on anxious eyes dissolves into a swirling line animation suggesting inner turmoil; fingers scrolling a phone trail glitchy shadows of online carts or dollar signs, then snap back to somber reality. End with a slow pullback as the overlays fade, leaving the viewer with a poignant emotional afterimage."
+        }
+      }
+    ]
+  },
+  {
+    "scene_id": "scene-2",
+    "shot_id": "scene-2_shot_3",
+    "shot_number": 3,
+    "shot_title": "Dr. Leslie's Assurance",
+    "shot_description": "CU Dr. Leslie, direct eye contact, gently encouraging viewers",
+    "roll_type": "A",
+    "narration_text": "But here's the good news: You can take back control—and I can show you how.",
+    "suggested_broll_visuals": "",
+    "suggested_sound_effects": [
+      "chair shift",
+      "studio ambience"
+    ],
+    "emotional_tone": "assuring, motivating",
+    "shot_purpose": "Transition from struggle to hope and expert support",
+    "word_count": 15,
+    "expected_duration": 6,
+    "aroll_context": {
+      "narrative_summary": "Dr. Leslie looks directly at the camera, offering assurance and motivation for regaining control, transitioning the narrative toward hope and expert-led support.",
+      "emotional_tone": "assuring, motivating",
+      "visual_elements": "Close-up on Dr. Leslie with direct eye contact, warm light, gentle and encouraging demeanor.",
+      "relevance_to_broll": "Signals a narrative turn from difficulty to optimism; upcoming B-roll should visually move from somber to uplifting, reflecting newfound empowerment and support."
+    }
+  },
+  {
+    "scene_id": "scene-3",
+    "shot_id": "scene-3_shot_1",
+    "shot_number": 1,
+    "shot_title": "Logo & Transformation Visuals",
+    "shot_description": "Animated logo appears, morphing into gears/pathways for science theme",
+    "roll_type": "B",
+    "narration_text": "That's why I created Retail Therapy Unplugged—a proven coaching program designed to help you break the cycle of compulsive spending.",
+    "suggested_broll_visuals": "Program logo, animated transitions to gears, pathways imagery",
+    "suggested_sound_effects": [
+      "chime",
+      "whoosh"
+    ],
+    "emotional_tone": "inspired, innovative",
+    "shot_purpose": "Introduce and differentiate program visually",
+    "word_count": 20,
+    "expected_duration": 8,
+    "broll_concepts": [
+      {
+        "standard_broll": {
+          "idea": "The Retail Therapy Unplugged program logo animates smoothly onto the screen, then morphs into a simple graphic of interlocking gears and branching pathways, representing the scientific, systematic approach of the program.",
+          "visual_style": "Clean 2D animation with soft gradients and modern sans-serif typography. Subtle science-inspired motifs accent the logo and transition elements.",
+          "motion": "Logo fades in, gently transforms into gears that rotate and connect, then seamlessly branch into flowing pathway lines, illustrating organized movement and transformation."
+        },
+        "enhanced_broll": {
+          "idea": "The logo appears with a burst of light, then breaks apart into modular, semi-transparent gear pieces and glowing pathway lines that assemble themselves into a dynamic, interconnected network, visually representing transformative change.",
+          "visual_style": "3D animation style with glass-like transparency and glowing edges. Cool color palette with accent highlights on pathways and gear teeth. Hints of circuitry and connection metaphors.",
+          "motion": "The logo bursts in with a chime, then 'splits' into components that float apart, reassembling as gears and flowing, animated pathways. Camera slightly orbits around elements as the network grows, creating a feeling of building momentum."
+        },
+        "viral_broll": {
+          "idea": "Animated sequence where the program logo bursts open to reveal a visually stunning, ever-shifting labyrinth made of glowing pathways and kinetic, morphing gears. As viewers watch, the pathways spark and rearrange, suggesting the rewiring of habits—culminating in a bold transformation where the entire structure resolves into an inspiring symbol or uplifting word.",
+          "visual_style": "Striking, high-contrast visuals blending sharp 3D and motion-graphics, with vibrant neon highlights set against a dark background. Holographic effects and surreal science-inspired animation bridge the real and abstract.",
+          "motion": "Rapid, energetic morphing: the logo unfolds in a surprise burst into a complex world of glowing gears and branching pathways. Animated pulses of energy run along the paths, gears shift and click in unexpected ways, and the entire system eventually locks into place to reveal an aspirational symbol or word (e.g., 'Change' or 'Freedom'), creating a wow-moment designed for maximum engagement and shareability."
+        }
+      }
+    ]
+  }
+]

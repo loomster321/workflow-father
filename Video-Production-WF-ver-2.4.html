@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -138,7 +138,7 @@
         <li><strong>Version:</strong> 2.4</li>
         <li><strong>Timestamp:</strong> 2024-07-10T16:00:00+00:00</li>
         <li><strong>Description:</strong> End-to-end workflow for automating and streamlining the creation of
-            high-quality video content. This version updates the Visual Narrative Design node to independently process all B-roll shots, preserving all three B-roll concepts (standard, enhanced, experimental) for each shot rather than selecting just one. The Visual Narrative Design node now directly feeds the Image Prompt Generator and Sound Effects Generator, creating a single comprehensive Visual Narrative document that maintains project-level visual consistency while preserving creative options for later selection during image review. The core workflow structure and other agent responsibilities remain unchanged from previous versions.</li>
+            high-quality video content. This version updates the Visual Narrative Design node to independently process all B-roll shots, preserving all three B-roll concepts (standard, enhanced, viral) for each shot rather than selecting just one. The Visual Narrative Design node now directly feeds the Image Prompt Generator and Sound Effects Generator, creating a single comprehensive Visual Narrative document that maintains project-level visual consistency while preserving creative options for later selection during image review. The core workflow structure and other agent responsibilities remain unchanged from previous versions.</li>
     </ul>
 
     <h3>Workflow Persona</h3>
@@ -196,7 +196,7 @@
         <li>Allow optional human-selected character reference images to be injected into the image generation process</li>
         <li>Inclusion of duration estimates at both scene and shot levels</li>
         <li>Structured handovers between all workflow stages with well-defined documents</li>
-        <li>Maintenance of all three tiers of B-Roll concepts (standard, enhanced, experimental) for creative flexibility</li>
+        <li>Maintenance of all three tiers of B-Roll concepts (standard, enhanced, viral) for creative flexibility</li>
     </ul>
 
     <h2 id="workflow-components">3. Workflow Components</h2>
@@ -252,7 +252,7 @@
         <tr>
             <td>B-Roll Ideation</td>
             <td>Creative Director</td>
-            <td>Develops creative concepts across tiers of engagement (standard, enhanced, experimental). Uses lateral
+            <td>Develops creative concepts across tiers of engagement (standard, enhanced, viral). Uses lateral
                 thinking to surface emotionally resonant, trend-aligned, and visually surprising ideas.</td>
         </tr>
         <tr>
@@ -346,7 +346,7 @@
         <strong>Input:</strong> <a href="#shot-plan">Shot Plan</a><br>
         <strong>Output:</strong> <a href="#broll-concepts">B-Roll Concepts</a><br>
         <strong>Description:</strong> Takes B-roll classified shots and proposes three tiers of visual concepts:
-        standard, enhanced, and experimental. Uses lateral thinking to surface emotionally resonant, trend-aligned, or
+        standard, enhanced, and viral. Uses lateral thinking to surface emotionally resonant, trend-aligned, or
         visually surprising ideas. Each tier provides progressively more innovative visual solutions while
         maintaining narrative coherence.
     </p>
@@ -356,37 +356,34 @@
         <strong>Agent Persona:</strong> Storyboard Supervisor / Visual Strategist<br>
         <strong>Input:</strong> <a href="#broll-concepts">B-Roll Concepts</a><br>
         <strong>Output:</strong> <a href="#visual-narrative">Visual Narrative</a><br>
-        <strong>Description:</strong> Preserves and enhances all three B-roll visual concepts per segment (standard, enhanced, and experimental options) and synthesizes them into a coherent
+        <strong>Description:</strong> Preserves and enhances all three B-roll visual concepts per segment (standard, enhanced, and viral options) and synthesizes them into a coherent
         narrative through visual design annotations. Processes all shots to create a comprehensive visual narrative guide that defines shot
-        transitions, visual styling, and storytelling elements across all B-Roll content. Establishes project-wide visual style, consistent visual motifs, emotional progression mapping, motion directives that specify how elements should move within shots, and defines camera movement patterns that enhance storytelling. Creates cross-connections between disparate parts of the narrative while handling situation-specific exceptions that require broader context, such as character appearances across multiple scenes or location continuity. Ensures direct audience connection through strategic visual storytelling techniques including establishing shots, creative angles, lighting design, and visual pacing that resonates emotionally with viewers and maintains engagement throughout the narrative. The output is a single, comprehensive Visual Narrative JSON object that provides a complete visual blueprint for the entire video while maintaining all three concept options (standard, enhanced, experimental) for each B-roll shot, allowing for selection during image review.
+        transitions, visual styling, and storytelling elements across all B-Roll content. Establishes project-wide visual style, consistent visual motifs, emotional progression mapping, motion directives that specify how elements should move within shots, and defines camera movement patterns that enhance storytelling. Creates cross-connections between disparate parts of the narrative while handling situation-specific exceptions that require broader context, such as character appearances across multiple scenes or location continuity. Ensures direct audience connection through strategic visual storytelling techniques including establishing shots, creative angles, lighting design, and visual pacing that resonates emotionally with viewers and maintains engagement throughout the narrative. The output is a single, comprehensive Visual Narrative JSON object that provides a complete visual blueprint for the entire video while maintaining all three concept options (standard, enhanced, viral) for each B-roll shot, allowing for selection during image review.
     </p>
 
     <h4 id="character-reference-node">4.1.5 Character Reference Selection</h4>
-    <p><strong>Node Type:</strong> Human in the Loop<br>
+    <p><strong>Node Type:</strong> Integration with Human in the Loop<br>
         <strong>Human Role:</strong> Character Director<br>
         <strong>Input:</strong> <a href="#scene-blueprint">Scene Blueprint</a><br>
         <strong>Output:</strong> <a href="#character-references">Character References</a><br>
-        <strong>Description:</strong> Human selection of character reference images to maintain visual consistency in
-        generated content. This optional node creates input that can be used by the MidJourney Prompt Engineering node for shots containing characters. Not all projects or shots require character references.<br>
+        <strong>Description:</strong> System-supported interface for human selection of character reference images to maintain visual consistency in
+        generated content. This integration node provides tools for users to select, upload, and manage character references while ensuring proper metadata and formatting for downstream usage. Character references are used by the MidJourney Prompt Engineering node for shots containing characters. Not all projects or shots require character references.<br>
         <strong>Configuration:</strong>
     <ul>
         <li>Review Method: Visual Interface</li>
         <li>Timeout Hours: 24</li>
         <li>Required Fields: character_id, character_name, reference_image_file, character_description</li>
     </ul>
-    <strong>Selection Process:</strong> The Character Director reviews the Scene Blueprint to identify any significant characters in the narrative, then selects appropriate visual reference images for these characters. This is an optional process - if no references are provided, the MidJourney Prompt Engineering node will proceed without character references. Unlike other human nodes, there is no rejection path since this is an additive rather than approval-based process.
+    <strong>Selection Process:</strong> The Character Director uses the integration's interface to review the Scene Blueprint, identify significant characters in the narrative, then selects and uploads appropriate visual reference images for these characters. The system automatically processes and formats the references for compatibility with downstream nodes. This is an optional process - if no references are provided, the MidJourney Prompt Engineering node will proceed without character references. Unlike other human nodes, there is no rejection path since this is an additive rather than approval-based process.
     </p>
 
-    <h4 id="midjourney-prompt-engineering-node">4.1.6 MidJourney Prompt Engineering</h4>
+    <h4 id="storyboarding-agent-node">4.1.6 Storyboarding Agent</h4>
     <p><strong>Node Type:</strong> AI Agent<br>
         <strong>Agent Persona:</strong> Art Director / Prompt Technologist<br>
-        <strong>Input:</strong> <a href="#visual-narrative">Visual Narrative</a><br>
-        <strong>Referenced Data:</strong> <a href="#character-references">Character References</a> (optional)<br>
+        <strong>Input:</strong> <a href="#visual-narrative">Visual Narrative</a>, <a href="#variation-keys">Variation Keys</a> (selected from Images-Variations.json; can be single or any combination)<br>
         <strong>Output:</strong> <a href="#image-prompts">Image Prompts</a><br>
-        <strong>Description:</strong> Transforms shot-level visual instructions into detailed image generation prompts
-        optimized for MidJourney. Encodes scene styles, framing, mood cues, and subject clarity—balancing visual
-        artistry with generative reliability. Character references will be incorporated for shots containing characters when available, maintaining visual consistency. The node will check if character references exist for any characters mentioned in the shot and automatically include them in the generated prompts.</p>
-        <p>When revising prompts based on Image Review feedback, this node analyzes the specific feedback and applies targeted adjustments to address identified issues while maintaining successful elements from the original prompt. The agent implements a systematic revision process by categorizing feedback (compositional, style, technical, or content issues) and applying appropriate prompt adjustments for each category. Version numbers are incremented with each revision to maintain proper versioning.</p>
+        <strong>Description:</strong> Generates prompts for each B-roll shot and concept type (standard, enhanced, viral) based on the Visual Narrative and any selected variation keys (from Images-Variations.json). The first generation defaults to core, but subsequent requests can use any combination of variation types. Prompts are formatted for MidJourney and sent to the Image Generation node for 4-up grid output (minimum 12 images per shot).<br>
+        <strong>Variation Handling:</strong> Can process single or multiple variation types per request, as selected by the user via the RTU Shot Control Panel.</p>
 
     <h4 id="image-generation-node">4.1.7 Image Generation</h4>
     <p><strong>Node Type:</strong> Integration<br>
@@ -398,32 +395,29 @@
         generated content while maintaining character continuity.
     </p>
 
-    <h4 id="image-review-node">4.1.8 Image Review</h4>
-    <p><strong>Node Type:</strong> Human in the Loop<br>
-        <strong>Human Role:</strong> Image Director<br>
+    <h4 id="rtu-shot-control-panel-node">4.1.8 RTU Shot Control Panel</h4>
+    <p><strong>Node Type:</strong> Integration<br>
+        <strong>Service:</strong> RTU Shot Control Panel<br>
         <strong>Input:</strong> <a href="#generated-images">Generated Images</a><br>
-        <strong>Output:</strong> <a href="#approved-images">Approved Images</a><br>
-        <strong>Description:</strong> Human review of generated images to ensure quality and adherence to creative
-        vision. If images are rejected, the workflow will route back to MidJourney Prompt Engineering with feedback for revisions.<br>
-        <strong>Configuration:</strong>
-    <ul>
-        <li>Review Method: Visual Gallery Interface</li>
-        <li>Timeout Hours: 48</li>
-        <li>Required Fields: status, feedback</li>
-        <li>Options: Approve, Reject with Feedback, Request Alternatives</li>
-    </ul>
-    <strong>Rejection Path:</strong> When an image is rejected, the workflow routes back to the MidJourney Prompt Engineering node with feedback, as shown by the "Rejected" connection in the workflow diagram. This creates a revision loop that continues until images are approved.
-    </p>
-    <p><strong>Feedback Guidelines:</strong> When rejecting images, the Image Director should provide specific, actionable feedback organized by issue type:
-    <ul>
-        <li><strong>Compositional Feedback:</strong> Issues related to framing, subject placement, or visual hierarchy</li>
-        <li><strong>Style Feedback:</strong> Inconsistencies with project visual style or artistic direction</li>
-        <li><strong>Technical Feedback:</strong> Problems with lighting, detail level, realism, or other technical aspects</li>
-        <li><strong>Content Feedback:</strong> Missing or inappropriate visual elements</li>
-    </ul>
-    Feedback should clearly identify what to retain from the original image as well as what specific aspects need revision. This structured feedback enables the MidJourney Prompt Engineering node to implement targeted prompt adjustments rather than complete rewrites, increasing efficiency in the revision process.</p>
+        <strong>Output:</strong> <a href="#variation-requests">Variation Requests & Selected Images</a><br>
+        <strong>Description:</strong> Provides an online interface for human users to review image URLs stored in the database, select images, and request new variations by choosing variation keys. Outputs selected image metadata and variation keys back to the Storyboarding Agent or Image Refinement Agent. For further refinement, passes selected image metadata and variation keys to the Image Refinement Agent, enabling iterative improvement.</p>
 
-    <h4 id="kling-prompt-engineering-node">4.1.9 Kling Prompt Engineering</h4>
+    <h4 id="image-refinement-agent-node">4.1.9 Image Refinement Agent</h4>
+    <p><strong>Node Type:</strong> AI Agent<br>
+        <strong>Agent Persona:</strong> Art Director / Prompt Technologist<br>
+        <strong>Input:</strong> <a href="#variation-requests">Selected Image Metadata & Variation Keys</a> (variation keys selected from Images-Variations.json; can be single or any combination)<br>
+        <strong>Output:</strong> <a href="#refined-image-prompts">Refined Image Prompts</a><br>
+        <strong>Description:</strong> Accepts a single image's metadata and any combination of variation keys from the RTU panel, applies the requested variation(s) to the original prompt, increments version, and outputs a new MidJourney prompt for single-image refinement. The output is sent to the Image Generation node, and the resulting image is returned to the RTU Shot Control Panel for further review or additional refinement, enabling an iterative loop.<br>
+        <strong>Variation Handling:</strong> Can process single or multiple variation types per request, as selected by the user via the RTU Shot Control Panel.</p>
+
+    <h4 id="image-generation-node">4.1.10 Image Generation</h4>
+    <p><strong>Node Type:</strong> Integration<br>
+        <strong>Service:</strong> MidJourney<br>
+        <strong>Input:</strong> <a href="#image-prompts">Image Prompts</a>, <a href="#refined-image-prompts">Refined Image Prompts</a><br>
+        <strong>Output:</strong> <a href="#generated-images">Generated Images</a><br>
+        <strong>Description:</strong> Generates images for B-Roll using MidJourney based on engineered prompts, incorporating character reference images when specified in the prompts. Ensures consistent visual quality and style across all generated content while maintaining character continuity. Receives both initial prompts from the Storyboarding Agent and refined prompts from the Image Refinement Agent. Generated images are returned to the RTU Shot Control Panel for review and further refinement if needed.</p>
+
+    <h4 id="kling-prompt-engineering-node">4.1.11 Kling Prompt Engineering</h4>
     <p><strong>Node Type:</strong> AI Agent<br>
         <strong>Agent Persona:</strong> Animation Director<br>
         <strong>Input:</strong> <a href="#approved-images">Approved Images</a><br>
@@ -434,7 +428,7 @@
         sequences to life. The Visual Narrative document is used consistently for all shots to ensure animation style, transitions, and camera movements align with the overall creative direction.
     </p>
 
-    <h4 id="image-to-video-node">4.1.10 Image-to-Video Conversion</h4>
+    <h4 id="image-to-video-node">4.1.12 Image-to-Video Conversion</h4>
     <p><strong>Node Type:</strong> Integration<br>
         <strong>Service:</strong> Kling<br>
         <strong>Input:</strong> <a href="#animation-prompts">Animation Prompts</a><br>
@@ -445,16 +439,15 @@
         image quality and creative intent. The images referenced in the animation prompts are used as source material.
     </p>
 
-    <h4 id="audio-generation-node">4.1.11 Audio Generation</h4>
+    <h4 id="audio-generation-node">4.1.13 Audio Generation</h4>
     <p><strong>Node Type:</strong> Integration<br>
         <strong>Service:</strong> ElevenLabs<br>
-        <strong>Input:</strong> <a href="#scene-blueprint">Scene Blueprint</a><br>
-        <strong>Referenced Data:</strong> <a href="#shot-plan">Shot Plan</a><br>
+        <strong>Input:</strong> <a href="#scene-blueprint">Scene Blueprint</a>, <a href="#shot-plan">Shot Plan</a><br>
         <strong>Output:</strong> <a href="#narration-audio">Narration Audio</a><br>
-        <strong>Description:</strong> Generates high-quality voiceover narration for the entire video based on the script segments and emotional context from the Scene Blueprint. The Shot Plan is referenced to ensure proper pacing and timing. Audio is generated as a complete narration track for the entire video with timing markers that allow individual shots to reference specific segments for synchronization.
+        <strong>Description:</strong> Generates high-quality voiceover narration for the entire video based on the script segments and emotional context from the Scene Blueprint. The Shot Plan is directly provided to this node to ensure proper pacing and timing of narration based on shot-level details. Audio is generated as a complete narration track for the entire video with timing markers that allow individual shots to reference specific segments for synchronization. This automated process requires no human intervention and creates consistent, professional voiceover output according to predefined voice settings and parameters.
     </p>
 
-    <h4 id="music-selection-node">4.1.12 Music Selection</h4>
+    <h4 id="music-selection-node">4.1.14 Music Selection</h4>
     <p><strong>Node Type:</strong> AI Agent<br>
         <strong>Agent Persona:</strong> Music Supervisor / Audio Storyteller<br>
         <strong>Input:</strong> <a href="#scene-blueprint">Scene Blueprint</a><br>
@@ -464,7 +457,7 @@
         tempo, and instrumentation align to support the story arc.
     </p>
 
-    <h4 id="sfx-generation-node">4.1.13 Sound Effects Generation</h4>
+    <h4 id="sfx-generation-node">4.1.15 Sound Effects Generation</h4>
     <p><strong>Node Type:</strong> AI Agent<br>
         <strong>Agent Persona:</strong> Sound Designer<br>
         <strong>Input:</strong> <a href="#shot-plan">Shot Plan</a><br>
@@ -475,7 +468,7 @@
         maintain coherence and heighten engagement across the video timeline. The Visual Narrative document provides important context about the visual style, transitions, and emotional progression that helps inform appropriate sound effect choices that enhance rather than compete with the visual elements.
     </p>
 
-    <h4 id="audio-mixing-node">4.1.14 Audio Mixing</h4>
+    <h4 id="audio-mixing-node">4.1.16 Audio Mixing</h4>
     <p><strong>Node Type:</strong> Integration<br>
         <strong>Service:</strong> ElevenLabs-AudioMixer<br>
         <strong>Input:</strong> <a href="#narration-audio">Narration Audio</a>, <a
@@ -485,7 +478,7 @@
         and transitions. All inputs are processed together at this stage rather than in separate nodes to ensure proper balance and integration.
     </p>
 
-    <h4 id="timeline-assembly-node">4.1.15 Timeline Assembly</h4>
+    <h4 id="timeline-assembly-node">4.1.17 Timeline Assembly</h4>
     <p><strong>Node Type:</strong> Integration<br>
         <strong>Service:</strong> n8n-Assembler<br>
         <strong>Input:</strong> <a href="#animated-clips">Animated Clips</a>, <a href="#narration-audio">Narration Audio</a>, <a href="#final-audio">Final Audio</a><br>
@@ -494,7 +487,7 @@
         B-Roll visuals. Creates an organized project structure that streamlines the final editing process. Details regarding integration with Premiere Pro will be defined in future implementation phases. This node integrates all previously generated assets and synchronizes timing between visual and audio components.
     </p>
 
-    <h4 id="final-editing-node">4.1.16 Final Editing & Assembly</h4>
+    <h4 id="final-editing-node">4.1.18 Final Editing & Assembly</h4>
     <p><strong>Node Type:</strong> Human in the Loop<br>
         <strong>Human Role:</strong> Video Editor<br>
         <strong>Input:</strong> <a href="#edit-assembly">Edit Assembly</a><br>
@@ -748,7 +741,7 @@
             <td>More creative concept with idea, visual_style, and motion properties</td>
         </tr>
         <tr>
-            <td>experimental_broll</td>
+            <td>viral_broll</td>
             <td>object</td>
             <td>Highly innovative concept with idea, visual_style, and motion properties</td>
         </tr>
@@ -777,7 +770,7 @@
         <tr>
             <td>shots_sequence</td>
             <td>array</td>
-            <td>Ordered array of shot objects with detailed specifications, each with standard, enhanced, and experimental concepts</td>
+            <td>Ordered array of shot objects with detailed specifications, each with standard, enhanced, and viral concepts</td>
         </tr>
         <tr>
             <td>shot_transitions</td>
@@ -881,7 +874,7 @@
         <tr>
             <td>concept_type</td>
             <td>string</td>
-            <td>Classification as "standard", "enhanced", or "experimental"</td>
+            <td>Classification as "standard", "enhanced", or "viral"</td>
         </tr>
         <tr>
             <td>midjourney_prompt</td>
@@ -938,7 +931,7 @@
         <tr>
             <td>concept_type</td>
             <td>string</td>
-            <td>Classification as "standard", "enhanced", or "experimental"</td>
+            <td>Classification as "standard", "enhanced", or "viral"</td>
         </tr>
         <tr>
             <td>status</td>
@@ -1259,7 +1252,7 @@
         <tr>
             <td>concept_type</td>
             <td>string</td>
-            <td>Classification as "standard", "enhanced", or "experimental"</td>
+            <td>Classification as "standard", "enhanced", or "viral"</td>
         </tr>
         <tr>
             <td>status</td>
@@ -1378,7 +1371,7 @@
         <tr>
             <td>concept_type</td>
             <td>string</td>
-            <td>Classification as "standard", "enhanced", or "experimental"</td>
+            <td>Classification as "standard", "enhanced", or "viral"</td>
         </tr>
         <tr>
             <td>status</td>
@@ -1401,6 +1394,14 @@
             <td>ISO timestamp when this version was created</td>
         </tr>
     </table>
+
+    <h4 id="final-video">5.1.19 Final Video</h4>
+    <p><strong>Format:</strong> MP4 Video File (16:9)<br>
+    <strong>Type:</strong> Video Asset<br>
+    <strong>Description:</strong> The completed, fully edited video ready for distribution or review.<br>
+    <strong>Generated By:</strong> <a href="#final-editing-node">Final Editing & Assembly</a><br>
+    <strong>Used By:</strong> Distribution, review, or publishing workflows.
+    </p>
 
     <h2>6. Workflow Process Requirements</h2>
 
@@ -1464,10 +1465,10 @@
     <h4>6.2.5 B-Roll Ideation Agent Improvements</h4>
     <ul>
         <li><strong>Visual Reference Database:</strong> Creation of a curated library of successful B-Roll implementations categorized by visual style, emotional tone, and audience response metrics to provide the agent with high-quality reference examples</li>
-        <li><strong>Performance Analytics Integration:</strong> Development of a feedback system that tracks audience engagement metrics (view retention, sharing behavior, reaction data) for different B-Roll concept types to identify which experimental concepts perform best</li>
-        <li><strong>Conceptual Tier Refinement:</strong> Implementation of a formalized framework to clearly define the boundaries between standard, enhanced, and experimental concept tiers with specific criteria for each category based on novelty, technical complexity, and emotional impact</li>
+        <li><strong>Performance Analytics Integration:</strong> Development of a feedback system that tracks audience engagement metrics (view retention, sharing behavior, reaction data) for different B-Roll concept types to identify which viral concepts perform best</li>
+        <li><strong>Conceptual Tier Refinement:</strong> Implementation of a formalized framework to clearly define the boundaries between standard, enhanced, and viral concept tiers with specific criteria for each category based on novelty, technical complexity, and emotional impact</li>
         <li><strong>Cross-Agent Feedback Loop:</strong> Establishment of a structured feedback mechanism allowing downstream agents (particularly Visual Narrative Design and MidJourney Prompt Engineering) to provide qualitative assessments of concept implementability and creative effectiveness</li>
-        <li><strong>Adaptive Temperature Control:</strong> Integration of an external iteration controller that dynamically adjusts the LLM temperature parameter in incremental steps to produce appropriately calibrated creativity levels for each concept tier (standard, enhanced, experimental), ensuring consistent differentiation between tiers while maintaining narrative coherence</li>
+        <li><strong>Adaptive Temperature Control:</strong> Integration of an external iteration controller that dynamically adjusts the LLM temperature parameter in incremental steps to produce appropriately calibrated creativity levels for each concept tier (standard, enhanced, viral), ensuring consistent differentiation between tiers while maintaining narrative coherence</li>
     </ul>
     
     <div class="note">
@@ -1482,7 +1483,7 @@
             <ul>
                 <li>Automatic retry with modified prompts</li>
                 <li>Human intervention via notification</li>
-                <li>Option to use alternative concept type (e.g., standard instead of experimental)</li>
+                <li>Option to use alternative concept type (e.g., standard instead of viral)</li>
             </ul>
         </li>
         <li>Fallback options for failed audio production, including:
@@ -1499,16 +1500,16 @@
 
     <h3>6.4 Human Review Points</h3>
     <ul>
-        <li>Character Reference Selection (optional, prior to MidJourney Prompt Engineering)</li>
-        <li>Image Review (mandatory, after image generation)</li>
+        <li>Character Reference Selection (optional integration with human input, prior to Storyboarding Agent)</li>
+        <li>RTU Shot Control Panel Review (mandatory, after initial image generation)</li>
         <li>Final Editing & Assembly (mandatory, final quality check)</li>
     </ul>
     
     <h3>6.5 Workflow Review Paths</h3>
     <p>The workflow includes the following review paths for handling rejected assets:</p>
     <ul>
-        <li><strong>Image Review Loop:</strong> If an image is rejected during Image Review, feedback is routed back to MidJourney Prompt Engineering for prompt refinement</li>
-        <li><strong>Final Quality Review:</strong> Occurs during Final Editing & Assembly, with the option to request revisions of specific shots if needed</li>
+        <li><strong>Variation Request Loop:</strong> If a user requests new variations via the RTU Shot Control Panel, the selected variation keys are passed back to Storyboarding Agent or Image Refinement Agent for regeneration</li>
+        <li><strong>Final Quality Review:</strong> Occurs during Final Editing & Assembly, with the option to request refinement on individual images</li>
     </ul>
 
     <h3>6.6 Node Interaction Patterns</h3>
@@ -1535,7 +1536,7 @@
         <li>Cohesive visual narrative across shots as defined in Visual Narrative document</li>
         <li>Strategic motion directives defining natural, realistic movement of subjects and elements</li>
         <li>Purposeful camera movement patterns that enhance storytelling and viewer engagement</li>
-        <li>Three-tier creativity approach (standard, enhanced, experimental) providing options ranging from conventional to innovative</li>
+        <li>Three-tier creativity approach (standard, enhanced, viral) providing options ranging from conventional to innovative</li>
         <li>Visual motifs and style references carried throughout all B-Roll content</li>
         <li>Human review points strategically positioned to ensure quality without bottlenecking the process</li>
     </ul>
@@ -1561,7 +1562,7 @@
         <li>Professional-grade visual and audio production meeting broadcast standards</li>
         <li>Emotional impact consistent with narrative goals and emotional_progression</li>
         <li>Coherent storytelling that maintains viewer engagement throughout</li>
-        <li>Appropriate balance between conventional and experimental visual elements</li>
+        <li>Appropriate balance between conventional and viral visual elements</li>
         <li>Technical quality meeting 16:9 aspect ratio and output specifications</li>
         <li>Seamless integration of A-Roll narration and B-Roll visuals</li>
         <li>Final human review and editing to ensure professional quality</li>
@@ -1615,71 +1616,70 @@
         B1[Scene Metrics Calculator]:::integration ---> C
         C>"Scene Blueprint"]:::document ---> D
         C ---> Z
-        C ---> P
         C ---> BM
         D[Shot Segmentation]:::aiAgent ---> D1
         D1[Shot Metrics Calculator]:::integration ---> E
         E>"Shot Plan"]:::document ---> F
-        E ---> P
+        E ---> P1
         E -.-> SE
 
-        subgraph "B-Roll Production"
+        %% B-Roll Production (left)
+        subgraph BROLL["B-Roll Production"]
+        direction TB
         F[B-Roll Ideation]:::aiAgent ---> G
         G>"B-Roll Concepts"]:::document ---> H1
         H1[Visual Narrative Design]:::aiAgent ---> G1
         G1>"Visual Narrative"]:::document ---> H
         G1 -.-> SE
         G1 -.-> H2
-
-        %% Character reference image selection happens early
-        Z[Character Reference Selection]:::humanInLoop ---> Z1
+        Z[Character Reference Selection]:::integration ---> Z1
         Z1>"Character References"]:::document -.-> H
-
-        H[MidJourney Prompt Engineering]:::aiAgent ---> I
-        I>"Image Prompts"]:::document ---> J
+        H[Storyboarding]:::aiAgent ---> IP
+        N[Image Refinement]:::aiAgent ---> IP
+        IP>"Image Prompts"]:::document ---> J
         J[Image Generation]:::integration ---> K
         K>"Generated Images"]:::document ---> L
-        L[Image Review]:::humanInLoop ---> M
-        M>"Approved Images"]:::document ---> H2
-        M -.-> N
-
-        %% Feedback loop from Image Review to MidJourney Prompt Engineering
-        L -- "Rejected with Feedback" --> H
+        L[RTU Shot Control Panel]:::humanInLoop ---> VR
+        L ---> RR
+        VR>"Variation Request"]:::document ---> H
+        RR>"Refinement Request"]:::document ---> N
+        L -.-> H2
+        end
 
         %% Kling prompt engineering references Visual Narrative for context
         H2[Kling Prompt Engineering]:::aiAgent ---> I2
-        I2>"Animation Prompts"]:::document ---> N
-        N[Image-to-Video Conversion]:::integration ---> O
-        O>"Animated Clips"]:::document ---> R
-        end
+        I2>"Animation Prompts"]:::document ---> O
+        O[Image-to-Video Conversion]:::integration ---> P
+        P>"Animated Clips"]:::document ---> R
 
-        subgraph "A-Roll Production"
-        P[Audio Generation]:::integration ---> Q
+        %% A-Roll Production (center-right)
+        subgraph AROLL["A-Roll Production"]
+        direction TB
+        P1[Audio Generation]:::integration ---> Q
         Q>"Narration Audio"]:::document ---> R
         Q ---> AM
         end
 
-        subgraph "Audio Production"
+        %% Audio Production (right)
+        subgraph AUDIO["Audio Production"]
+        direction TB
         BM[Music Selection]:::aiAgent ---> BMO
         BMO>"Music Plan"]:::document ---> AM
-
-        %% Sound Effects Generation references both Shot Plan and Visual Narrative
         SE[Sound Effects Generation]:::aiAgent ---> SEO
         SEO>"SFX Plan"]:::document ---> AM
-
         AM[Audio Mixing]:::integration ---> AMO
         AMO>"Final Audio"]:::document ---> R
         end
 
-        subgraph "Post-Production"
+        %% Post-Production (bottom)
+        subgraph POST["Post-Production"]
+        direction TB
         R[Timeline Assembly]:::integration ---> S
         S>"Edit Assembly"]:::document ---> T
         T[Final Editing & Assembly]:::humanInLoop ---> U
         U>"Final Video"]:::document
         end
 
-        %% Review paths - Removed redundant "L -- Approved --> M" connection
-        
         %% Dotted lines represent n8n data references without direct connections
         classDef reference stroke-dasharray: 5 5
 
@@ -1695,19 +1695,19 @@
         click G href "#broll-concepts" "Go to B-Roll Concepts"
         click H1 href "#visual-narrative-design-node" "Go to Visual Narrative Design"
         click G1 href "#visual-narrative" "Go to Visual Narrative"
-        click H href "#midjourney-prompt-engineering-node" "Go to MidJourney Prompt Engineering"
-        click I href "#image-prompts" "Go to Image Prompts"
-        click Z href "#character-reference-node" "Go to Character Reference Selection"
-        click Z1 href "#character-references" "Go to Character References"
+        click H href "#storyboarding-agent-node" "Go to Storyboarding"
+        click N href "#image-refinement-agent-node" "Go to Image Refinement"
+        click IP href "#image-prompts" "Go to Image Prompts"
+        click I2 href "#animation-prompts" "Go to Animation Prompts"
         click J href "#image-generation-node" "Go to Image Generation"
         click K href "#generated-images" "Go to Generated Images"
-        click L href "#image-review-node" "Go to Image Review"
-        click M href "#approved-images" "Go to Approved Images"
+        click L href "#rtu-shot-control-panel-node" "Go to RTU Shot Control Panel"
+        click VR href "#variation-request" "Go to Variation Request"
+        click RR href "#refinement-request" "Go to Refinement Request"
         click H2 href "#kling-prompt-engineering-node" "Go to Kling Prompt Engineering"
-        click I2 href "#animation-prompts" "Go to Animation Prompts"
-        click N href "#image-to-video-node" "Go to Image-to-Video Conversion"
-        click O href "#animated-clips" "Go to Animated Clips"
-        click P href "#audio-generation-node" "Go to Audio Generation"
+        click O href "#image-to-video-node" "Go to Image-to-Video Conversion"
+        click P href "#animated-clips" "Go to Animated Clips"
+        click P1 href "#audio-generation-node" "Go to Audio Generation"
         click Q href "#narration-audio" "Go to Narration Audio"
         click BM href "#music-selection-node" "Go to Music Selection"
         click BMO href "#music-plan" "Go to Music Plan"
@@ -1718,6 +1718,7 @@
         click R href "#timeline-assembly-node" "Go to Timeline Assembly"
         click S href "#edit-assembly" "Go to Edit Assembly"
         click T href "#final-editing-node" "Go to Final Editing & Assembly"
+        click U href "#final-video" "Go to Final Video"
 
         %% Class definitions
         classDef aiAgent fill:#c9e4de,stroke:#000,stroke-width:1px
@@ -1771,6 +1772,162 @@
     <div class="note">
         <strong>Implementation Priority:</strong> When implementing this workflow, start with core document structure definitions and validations, then add AI agent nodes, followed by integration nodes, and finally human review interfaces. This approach ensures that the foundational data structures are solid before building more complex components.
     </div>
-</body>
 
+    <h4 id="variation-request">5.1.17 Variation Request</h4>
+    <p><strong>Format:</strong> JSON (Object)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Request for the Storyboarding Agent to generate new image prompts for a shot and concept type, specifying a single or any combination of variation types as defined in Images-Variations.json.<br>
+    <strong>Generated By:</strong> <a href="#rtu-shot-control-panel-node">RTU Shot Control Panel</a><br>
+    <strong>Used By:</strong> <a href="#storyboarding-agent-node">Storyboarding Agent</a>
+    </p>
+    <table>
+        <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+        <tr><td>scene_id</td><td>string</td><td>Reference to the parent scene</td></tr>
+        <tr><td>shot_id</td><td>string</td><td>Reference to the specific shot</td></tr>
+        <tr><td>concept_type</td><td>string</td><td>"standard", "enhanced", or "viral"</td></tr>
+        <tr><td>variation_types</td><td>array</td><td>Array of variation type keys (from Images-Variations.json) to apply; can be single or any combination</td></tr>
+        <tr><td>requester</td><td>string</td><td>User or system making the request</td></tr>
+        <tr><td>timestamp</td><td>string</td><td>ISO timestamp of the request</td></tr>
+        <tr><td>notes</td><td>string</td><td>Optional additional instructions or context</td></tr>
+    </table>
+
+    <h4 id="refinement-request">5.1.18 Refinement Request</h4>
+    <p><strong>Format:</strong> JSON (Object)<br>
+    <strong>Type:</strong> Structured Data<br>
+    <strong>Subtype:</strong> JSON<br>
+    <strong>Description:</strong> Request for the Image Refinement Agent to generate a refined image prompt for a specific image, specifying a single or any combination of variation types as defined in Images-Variations.json.<br>
+    <strong>Generated By:</strong> <a href="#rtu-shot-control-panel-node">RTU Shot Control Panel</a><br>
+    <strong>Used By:</strong> <a href="#image-refinement-agent-node">Image Refinement Agent</a>
+    </p>
+    <table>
+        <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+        <tr><td>scene_id</td><td>string</td><td>Reference to the parent scene</td></tr>
+        <tr><td>shot_id</td><td>string</td><td>Reference to the specific shot</td></tr>
+        <tr><td>image_id</td><td>string</td><td>Reference to the specific generated image to refine</td></tr>
+        <tr><td>variation_types</td><td>array</td><td>Array of variation type keys (from Images-Variations.json) to apply; can be single or any combination</td></tr>
+        <tr><td>requester</td><td>string</td><td>User or system making the request</td></tr>
+        <tr><td>timestamp</td><td>string</td><td>ISO timestamp of the request</td></tr>
+        <tr><td>notes</td><td>string</td><td>Optional additional instructions or context</td></tr>
+    </table>
+
+    <div class="mermaid">
+    flowchart TD
+    %% Documents using speech bubble style nodes
+    A>"Video Script"]:::document ---> B
+    B[Scene Segmentation]:::aiAgent ---> B1
+    B1[Scene Metrics Calculator]:::integration ---> C
+    C>"Scene Blueprint"]:::document ---> D
+    C ---> Z
+    C ---> BM
+    D[Shot Segmentation]:::aiAgent ---> D1
+    D1[Shot Metrics Calculator]:::integration ---> E
+    E>"Shot Plan"]:::document ---> F
+    E ---> P1
+    E -.-> SE
+
+    %% B-Roll Production (left)
+    subgraph BROLL["B-Roll Production"]
+    direction TB
+    F[B-Roll Ideation]:::aiAgent ---> G
+    G>"B-Roll Concepts"]:::document ---> H1
+    H1[Visual Narrative Design]:::aiAgent ---> G1
+    G1>"Visual Narrative"]:::document ---> H
+    G1 -.-> SE
+    G1 -.-> H2
+    Z[Character Reference Selection]:::integration ---> Z1
+    Z1>"Character References"]:::document -.-> H
+    H[Storyboarding]:::aiAgent ---> IP
+    N[Image Refinement]:::aiAgent ---> IP
+    IP>"Image Prompts"]:::document ---> J
+    J[Image Generation]:::integration ---> K
+    K>"Generated Images"]:::document ---> L
+    L[RTU Shot Control Panel]:::humanInLoop ---> VR
+    L ---> RR
+    VR>"Variation Request"]:::document ---> H
+    RR>"Refinement Request"]:::document ---> N
+    L -.-> H2
+    end
+
+    %% Kling prompt engineering references Visual Narrative for context
+    H2[Kling Prompt Engineering]:::aiAgent ---> I2
+    I2>"Animation Prompts"]:::document ---> O
+    O[Image-to-Video Conversion]:::integration ---> P
+    P>"Animated Clips"]:::document ---> R
+
+    %% A-Roll Production (center-right)
+    subgraph AROLL["A-Roll Production"]
+    direction TB
+    P1[Audio Generation]:::integration ---> Q
+    Q>"Narration Audio"]:::document ---> R
+    Q ---> AM
+    end
+
+    %% Audio Production (right)
+    subgraph AUDIO["Audio Production"]
+    direction TB
+    BM[Music Selection]:::aiAgent ---> BMO
+    BMO>"Music Plan"]:::document ---> AM
+    SE[Sound Effects Generation]:::aiAgent ---> SEO
+    SEO>"SFX Plan"]:::document ---> AM
+    AM[Audio Mixing]:::integration ---> AMO
+    AMO>"Final Audio"]:::document ---> R
+    end
+
+    %% Post-Production (bottom)
+    subgraph POST["Post-Production"]
+    direction TB
+    R[Timeline Assembly]:::integration ---> S
+    S>"Edit Assembly"]:::document ---> T
+    T[Final Editing & Assembly]:::humanInLoop ---> U
+    U>"Final Video"]:::document
+    end
+
+    %% Dotted lines represent n8n data references without direct connections
+    classDef reference stroke-dasharray: 5 5
+
+    %% Click actions for nodes
+    click A href "#video-script" "Go to Video Script"
+    click B href "#scene-segmentation-node" "Go to Scene Segmentation"
+    click B1 href "#scene-metrics-node" "Go to Scene Metrics Calculator"
+    click C href "#scene-blueprint" "Go to Scene Blueprint"
+    click D href "#shot-segmentation-node" "Go to Shot Segmentation"
+    click D1 href "#shot-metrics-node" "Go to Shot Metrics Calculator"
+    click E href "#shot-plan" "Go to Shot Plan"
+    click F href "#broll-ideation-node" "Go to B-Roll Ideation"
+    click G href "#broll-concepts" "Go to B-Roll Concepts"
+    click H1 href "#visual-narrative-design-node" "Go to Visual Narrative Design"
+    click G1 href "#visual-narrative" "Go to Visual Narrative"
+    click H href "#storyboarding-agent-node" "Go to Storyboarding"
+    click N href "#image-refinement-agent-node" "Go to Image Refinement"
+    click IP href "#image-prompts" "Go to Image Prompts"
+    click I2 href "#animation-prompts" "Go to Animation Prompts"
+    click J href "#image-generation-node" "Go to Image Generation"
+    click K href "#generated-images" "Go to Generated Images"
+    click L href "#rtu-shot-control-panel-node" "Go to RTU Shot Control Panel"
+    click VR href "#variation-request" "Go to Variation Request"
+    click RR href "#refinement-request" "Go to Refinement Request"
+    click H2 href "#kling-prompt-engineering-node" "Go to Kling Prompt Engineering"
+    click O href "#image-to-video-node" "Go to Image-to-Video Conversion"
+    click P href "#animated-clips" "Go to Animated Clips"
+    click P1 href "#audio-generation-node" "Go to Audio Generation"
+    click Q href "#narration-audio" "Go to Narration Audio"
+    click BM href "#music-selection-node" "Go to Music Selection"
+    click BMO href "#music-plan" "Go to Music Plan"
+    click SE href "#sfx-generation-node" "Go to Sound Effects Generation"
+    click SEO href "#sfx-plan" "Go to SFX Plan"
+    click AM href "#audio-mixing-node" "Go to Audio Mixing"
+    click AMO href "#final-audio" "Go to Final Audio"
+    click R href "#timeline-assembly-node" "Go to Timeline Assembly"
+    click S href "#edit-assembly" "Go to Edit Assembly"
+    click T href "#final-editing-node" "Go to Final Editing & Assembly"
+    click U href "#final-video" "Go to Final Video"
+
+    %% Class definitions
+    classDef aiAgent fill:#c9e4de,stroke:#000,stroke-width:1px
+    classDef integration fill:#bde0fe,stroke:#000,stroke-width:1px
+    classDef humanInLoop fill:#ffcfd2,stroke:#000,stroke-width:1px
+    classDef document fill:#f1f1f1,stroke:#000,stroke-width:1px
+</div>
+</body>
 </html>

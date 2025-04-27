@@ -1,0 +1,188 @@
+{
+  "base_variation_types": [
+    {
+      "type": "core",
+      "description": "The primary interpretation of the visual concept that most directly represents the narrative.",
+      "examples": [
+        "A digital infographic illustration of gentle waves rippling outward from a central shopping cart icon to family member icons against a minimalist white background",
+        "A high-resolution photograph of a single red apple on a wooden table with soft, even lighting and a shallow depth of field",
+        "A clean vector-style graphic of overlapping geometric shapes in pastel colors with clear outlines"
+      ]
+    },
+    {
+      "type": "perspective",
+      "description": "Alternative camera angle or viewpoint of the same subject to highlight different story elements.",
+      "examples": [
+        "A bird's-eye view of a bustling city street with pedestrians forming colorful patterns",
+        "A worm's-eye upward angle of a towering oak tree against a vibrant sunset sky",
+        "An extreme close-up from a low vantage point capturing the intricate veins of a green leaf"
+      ]
+    },
+    {
+      "type": "lighting",
+      "description": "Same composition with modified lighting conditions or time of day to shift mood.",
+      "examples": [
+        "A medium shot illuminated by warm golden hour sunlight casting long shadows across a grassy field",
+        "A high-contrast studio portrait with dramatic side lighting creating sharp chiaroscuro effects",
+        "A cool moonlit scene with soft ambient light and subtle bluish shadows"
+      ]
+    },
+    {
+      "type": "style",
+      "description": "Alternative artistic treatment while maintaining the same subject and composition.",
+      "examples": [
+        "A watercolor painting of a mountain landscape with soft brushstrokes and muted color palette",
+        "A noir-style black-and-white graphic novel illustration of a detective in a rainy urban alley",
+        "A pixel art scene of a retro video game forest with blocky trees and vibrant colors"
+      ]
+    },
+    {
+      "type": "conceptual",
+      "description": "Different metaphorical or thematic approach to the same narrative concept.",
+      "examples": [
+        "Growth depicted as a spiral staircase emerging from an open book, symbolizing knowledge expansion",
+        "Connectivity illustrated by intertwined tree roots glowing with bioluminescent lines in a dark forest",
+        "Time represented as a melting clock draped over a desert landscape, conveying fragility of moments"
+      ]
+    }
+  ],
+  "extended_variation_types": [
+    {
+      "type": "color",
+      "description": "Experiment with different color schemes to shift emotional impact.",
+      "examples": [
+        "A portrait rendered in a complementary duotone palette of deep teal and warm orange",
+        "A street scene tinted in monochromatic shades of purple for a moody, dreamlike effect",
+        "A landscape bathed in high-saturation neon green and hot pink for a futuristic vibe"
+      ]
+    },
+    {
+      "type": "texture",
+      "description": "Emphasize or alter surface qualities to change the tactile feel of the scene.",
+      "examples": [
+        "A close-up shot of a weathered leather jacket showing visible creases and grainy texture",
+        "A macro photograph of dew-covered spider web with crisp, glossy water droplets",
+        "An abstract background of rough concrete surface with chipped paint and subtle moss growth"
+      ]
+    },
+    {
+      "type": "environment",
+      "description": "Modify background or setting elements to recontextualize the subject.",
+      "examples": [
+        "An outdoor market scene in a rustic rural village with wooden stalls and colorful produce",
+        "An indoor modern loft space with industrial decor and large panoramic windows",
+        "A futuristic urban skyline at dusk with holographic billboards and flying vehicles"
+      ]
+    },
+    {
+      "type": "mood",
+      "description": "Focus on the emotional tone using atmospheric effects or color temperature shifts.",
+      "examples": [
+        "A misty forest at dawn with soft fog enveloping towering pine trees for a serene, ethereal mood",
+        "A stormy coastal scene with dark clouds and crashing waves for a dramatic, tense atmosphere",
+        "A warm fireplace interior bathed in gentle amber light for a cozy, intimate feeling"
+      ]
+    },
+    {
+      "type": "detail",
+      "description": "Zoom into or isolate specific details to draw attention to micro-elements.",
+      "examples": [
+        "An extreme close-up focusing on the intricate pattern of a leaf's vein structure",
+        "A zoomed-in shot of a vintage watch's gears and cogs in sharp focus against a blurred background",
+        "A macro image of a painted canvas surface showing visible brushstrokes and subtle paint cracks"
+      ]
+    },
+    {
+      "type": "scale",
+      "description": "Play with relative sizing to create surreal or impactful compositional contrasts.",
+      "examples": [
+        "A giant whale breaking through the ocean surface next to a tiny sailboat to exaggerate size contrast",
+        "A small insect perched on the tip of a human finger in a dramatic macro perspective",
+        "A towering skyscraper shot from a distance with a single person as a small silhouette in the foreground"
+      ]
+    },
+    {
+      "type": "depth_of_field",
+      "description": "Alter focus and blur to direct the viewer's eye and create different spatial relationships.",
+      "examples": [
+        "A shallow depth of field portrait with only the subject's eyes in sharp focus and blurred background",
+        "A landscape shot with deep focus, keeping both the foreground rocks and distant mountains crisp",
+        "A close-up of a flower with the petals sharply focused and background greenery softly blurred"
+      ]
+    },
+    {
+      "type": "narrative",
+      "description": "Introduce slight story beats or context shifts to suggest a broader story arc.",
+      "examples": [
+        "A photograph showing a suitcase on an open train door hinting at an upcoming journey",
+        "An image of half-eaten cake on a table beside an empty chair suggesting an interrupted celebration",
+        "A street scene with a stray dog looking at a lit window conveying longing and connection"
+      ]
+    },
+    {
+      "type": "seasonal_temporal",
+      "description": "Change time of day or season to explore how temporal context influences mood.",
+      "examples": [
+        "A winter scene with snow-covered branches and soft twilight lighting",
+        "An autumnal forest with golden leaves falling under midday sun",
+        "A summer beach scene with bright sunlight, clear blue skies, and gentle waves"
+      ]
+    },
+    {
+      "type": "abstract_minimalist",
+      "description": "Strip back detail and composition to minimalist forms or abstract shapes.",
+      "examples": [
+        "A minimalist composition of simple black geometric shapes on a stark white background",
+        "An abstract arrangement of pastel color blocks with clean lines and negative space",
+        "A single curved brushstroke in bold red on a neutral grey canvas emphasizing form"
+      ]
+    }
+  ],
+  "hybrid_variation_examples": [
+    {
+      "variation": "perspective + lighting",
+      "description": "Combine alternative viewpoint with dramatic lighting shifts to create dynamic compositions.",
+      "examples": [
+        "A worm's‑eye close‑up of the subject with dramatic low‑key studio lighting and deep side shadows",
+        "A bird's‑eye cityscape at dusk with neon reflections and moody backlighting",
+        "An extreme angle shot of a dancer in motion under a single spotlight casting long shadows"
+      ]
+    },
+    {
+      "variation": "style + color",
+      "description": "Fuse an artistic medium with distinct color palette choices for rich visual impact.",
+      "examples": [
+        "An Art Nouveau–inspired digital painting rendered in a complementary duotone palette of teal and amber",
+        "A watercolor street scene in vibrant primary colors with expressive brushwork",
+        "A pixel art portrait using high-contrast neon color blocks in retro style"
+      ]
+    },
+    {
+      "variation": "mood + environment",
+      "description": "Merge atmospheric effects with setting changes to intensify emotional tone.",
+      "examples": [
+        "A melancholic winter scene with soft snowfall in a misty forest clearing under cool moonlight",
+        "A sunlit desert oasis with swirling dust and warm golden haze for a nostalgic feel",
+        "A rainy urban alley with reflective puddles and glowing neon signs for a moody noir vibe"
+      ]
+    },
+    {
+      "variation": "depth_of_field + detail",
+      "description": "Combine focus manipulation with close-up details to highlight textures and form.",
+      "examples": [
+        "A shallow macro shot focusing on weathered wood grain, background rendered in smooth bokeh",
+        "A tight crop of a vintage camera's lens elements with blurred surroundings",
+        "A close-up of a snail shell spiral with selective focus on the center and soft edges"
+      ]
+    },
+    {
+      "variation": "color + texture",
+      "description": "Pair bold color schemes with tactile surface treatments for sensory depth.",
+      "examples": [
+        "A high-saturation scene with glossy reflective surfaces contrasted against matte fabrics",
+        "A monochromatic blue study with subtle metallic sheen on textured metal",
+        "A complementary orange and teal image featuring rough stone walls and smooth glass reflections"
+      ]
+    }
+  ]
+} 

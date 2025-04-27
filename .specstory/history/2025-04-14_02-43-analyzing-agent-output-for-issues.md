@@ -2221,9 +2221,134 @@ I'll create a more nuanced approach to motion language that distinguishes betwee
 
 ---
 
-Cancelled
+```diff
+  **CRITICAL: MidJourney generates only static images, not videos or animations.**
+  
+- FORBIDDEN WORDS - DO NOT USE ANY OF THESE:
+- - transitioning
+- - transforming
+- - moving
+- - animating
+- - zooming
+- - panning
+- - shifting
+- - evolving
+- - emerging
+- - morphing
+- - flowing
++ ### Allowed Motion in Static Images
++ It's perfectly fine to describe implied motion that can be captured in a single frame:
++ - Flowing water or fabric
++ - Wind effects on hair or clothing
++ - A subject in mid-action (jumping, running)
++ - Partial transformations (e.g., a face partially morphed)
++ - Dynamic compositions and energy in the scene
++ - Light rays, particles, or effects that suggest movement
++ 
++ ### Prohibited Camera/Sequence Terms
++ DO NOT use terms that describe camera movements or sequences that require multiple frames:
++ - zooming / zoom
++ - panning / pan
++ - tracking
++ - dolly
+  - time-lapse
+- - sequence
+- - progression
+- 
+- Describe only what would be visible in a single static frame. Focus on describing a single moment in time as if frozen in a photograph.
++ - sequence / sequential
++ - before / after
++ - multiple frames
++ - animation / animated
++ - video
++ - movie
++ - film
++ 
++ Remember, MidJourney creates a single static image frozen in time. While the image can imply or suggest motion through composition, it cannot actually show movement over time or camera techniques.
+  
+  ## Photorealistic Techniques
+  - DO NOT add any text before or after the JSON array
+  - DO NOT include periods at the end of prompts
+- - DO NOT include words that imply motion or animation
+- - DO NOT use ANY of the forbidden words listed above
++ - DO NOT use camera motion terms or sequence terms
++ - DO NOT describe anything that requires multiple frames to show
+  - Your response for each shot should begin with [ and end with ] with no other characters
+  
+```
 
 ---
+
+I've completely revised the approach to motion in the instructions with a more nuanced perspective:
+
+1. **Added "Allowed Motion in Static Images" Section**:
+   - Explicitly permits describing implied motion that can be captured in a single frame
+   - Provides clear examples of acceptable motion descriptions like flowing water, wind effects, or subjects in mid-action
+   - Includes partial transformations as acceptable (e.g., a face partially morphed)
+   - Allows for dynamic compositions and energy in the scene
+   - Permits light rays, particles, or effects that suggest movement
+
+2. **Focused Prohibitions on Camera/Sequence Terms**:
+   - Narrows prohibitions to camera movements that cannot be shown in a single image
+   - Specifically prohibits terms that describe techniques requiring multiple frames
+   - Includes technical camera motion terms like "tracking" and "dolly"
+   - Maintains prohibitions on animation and sequence terms
+
+3. **Clarified Overall Intent**:
+   - Added explanatory text that acknowledges images can imply motion through composition
+   - Emphasizes that the limitation is on showing actual movement over time or camera techniques
+   - Focuses on the core concern: MidJourney creates a single static image
+
+4. **Updated Final Reminders**:
+   - Changed from broad prohibition on "words that imply motion" to specific "camera motion terms or sequence terms"
+   - Added clearer direction: "DO NOT describe anything that requires multiple frames to show"
+   - Removed the overly restrictive "DO NOT use ANY of the forbidden words" directive
+
+This revised approach should allow for more creative and dynamic image descriptions while still preventing terms that would lead to technically impossible prompts for MidJourney to execute.
+
+---
+
+_**User**_
+
+Should the CRITICAL FINAL REMINDERS: have a mafrkdown section?
+
+---
+
+_**Assistant**_
+
+You're right to point that out. The "CRITICAL FINAL REMINDERS" section should have proper markdown formatting to maintain consistency with the rest of the document structure.
+
+---
+
+```diff
+  8. Output one JSON array for each shot without any additional text
+  
+- CRITICAL FINAL REMINDERS:
++ ## CRITICAL FINAL REMINDERS
++ 
+  - DO NOT use markdown code blocks 
+  - DO NOT add any text before or after the JSON array
+```
+
+---
+
+I've updated the "CRITICAL FINAL REMINDERS" section to use proper markdown formatting by:
+
+1. Converting "CRITICAL FINAL REMINDERS:" (with a colon) to "## CRITICAL FINAL REMINDERS" with proper Markdown heading syntax
+2. Adding a blank line after the heading to ensure proper rendering
+3. Maintaining the existing bullet points for all the reminders
+
+This change makes the section consistent with the rest of the document's formatting and ensures it will be properly rendered as a heading, giving it the appropriate visual emphasis in the rendered document.
+
+---
+
+_**User**_
+
+OK I have updated the output data. See anything unexpected?
+
+---
+
+_**Assistant**_
 
 
 
