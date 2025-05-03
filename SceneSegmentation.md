@@ -27,7 +27,7 @@ The input is a plain text Video Script containing the full narration content for
 
 ### Output Format
 
-The output is a Scene Blueprint JSON array, where each object represents a scene with properties including scene_id, scene_narration (exact text from the input script), scene_description, suggested_visuals, suggested_audio (background_music and sound_effects), and production_notes.
+The output is a Scene Blueprint JSON array, where each object represents a scene with properties including scene_label, scene_narration (exact text from the input script), scene_description, suggested_visuals, suggested_audio (background_music and sound_effects), and production_notes.
 
 ## Input Processing Guidelines
 
@@ -43,7 +43,7 @@ The output is a Scene Blueprint JSON array, where each object represents a scene
 ```json
 [
   {
-    "scene_id": "scene-1",
+    "scene_label": "scene-1",
     "scene_narration": "The exact spoken text that will be narrated in this scene, preserved with proper formatting and punctuation.",
     "scene_description": "Description of what happens in this scene",
     "suggested_visuals": "Detailed suggestions for visual content in this scene, including setting, subjects, and style elements",
@@ -110,7 +110,7 @@ As we conclude, it's important to consider both the benefits and ethical implica
 ```json
 [
   {
-    "scene_id": "scene-1",
+    "scene_label": "scene-1",
     "scene_narration": "Welcome to our comprehensive guide on artificial intelligence. Today, we'll explore how AI is transforming various industries and our daily lives.",
     "scene_description": "Introduction to the topic of AI and its transformative impact",
     "suggested_visuals": "Modern, clean tech environment with digital interfaces; visual representation of AI concept, possibly showing connected nodes or digital brain imagery; bright, forward-looking aesthetic with blue and white color palette",
@@ -121,7 +121,7 @@ As we conclude, it's important to consider both the benefits and ethical implica
     "production_notes": "Opening scene should establish an optimistic, educational tone; focus on creating visual excitement about the topic while maintaining accessibility"
   },
   {
-    "scene_id": "scene-2",
+    "scene_label": "scene-2",
     "scene_narration": "AI has revolutionized healthcare by enabling faster diagnosis and treatment planning. Hospitals around the world now use advanced algorithms to analyze medical images and patient data, leading to earlier detection of diseases and more personalized care.",
     "scene_description": "Exploration of AI applications in healthcare settings",
     "suggested_visuals": "Modern hospital or medical facility with advanced technology; medical professionals interacting with AI diagnostic systems, medical imaging displays, patient data visualizations; clean, precise styling with clinical lighting and medical color scheme (whites, blues, subtle greens)",
@@ -132,7 +132,7 @@ As we conclude, it's important to consider both the benefits and ethical implica
     "production_notes": "Emphasize the human-AI collaboration rather than replacement; highlight the benefits to patients while maintaining emotional connection"
   },
   {
-    "scene_id": "scene-3",
+    "scene_label": "scene-3",
     "scene_narration": "In the transportation sector, self-driving vehicles represent one of the most visible applications of AI. These autonomous systems use a combination of sensors, cameras, and machine learning algorithms to navigate complex environments safely.",
     "scene_description": "Showcase of AI in transportation with focus on autonomous vehicles",
     "suggested_visuals": "Urban environment with autonomous vehicles in motion; visualization of sensors and detection systems, traffic flow; dynamic movement with technology overlays showing AI processing, urban color palette",
@@ -143,7 +143,7 @@ As we conclude, it's important to consider both the benefits and ethical implica
     "production_notes": "Visualize the sensing and decision-making capabilities of autonomous systems; emphasize safety and technological sophistication"
   },
   {
-    "scene_id": "scene-4",
+    "scene_label": "scene-4",
     "scene_narration": "Looking ahead, the future of AI promises even more groundbreaking developments. From virtual assistants that can understand context and emotions to AI systems that can create art and music, the possibilities seem endless.",
     "scene_description": "Forward-looking exploration of emerging AI capabilities",
     "suggested_visuals": "Futuristic environment showing advanced AI applications; next-gen virtual assistants, AI-created artwork and musical instruments, innovative interfaces; forward-looking, slightly abstract styling with creative lighting and vibrant color accents",
@@ -154,7 +154,7 @@ As we conclude, it's important to consider both the benefits and ethical implica
     "production_notes": "Balance technological optimism with realistic representation; showcase creative applications that viewers might not have considered"
   },
   {
-    "scene_id": "scene-5",
+    "scene_label": "scene-5",
     "scene_narration": "As we conclude, it's important to consider both the benefits and ethical implications of these rapidly evolving technologies. The decisions we make today will shape how AI develops and integrates into our society for generations to come.",
     "scene_description": "Conclusion addressing ethical considerations and societal impact",
     "suggested_visuals": "Thoughtful environment showing human-AI interaction and decision-making; diverse group of people engaged in discussion or collaboration with AI systems; balanced composition with warm lighting contrasting with technological elements",

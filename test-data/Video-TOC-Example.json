@@ -1,0 +1,138 @@
+{
+    "video_id": 12345,
+    "videoTitle": "How to Setup a Garden Irrigation System",
+    "scenes": [
+      {
+        "scene_id": 101,
+        "label": "scene-1",
+        "shots": [
+          {
+            "shot_id": 1001,
+            "label": "scene-1_shot_1",
+            "narration": "Hello gardeners! I'm standing here in my garden to show you how a proper irrigation system transforms your gardening experience. No more dragging hoses around or forgetting to water!"
+          },
+          {
+            "shot_id": 1002,
+            "label": "scene-1_shot_2",
+            "narration": "Let's look at some examples of irrigation systems. Here we have drip irrigation ideal for vegetable gardens, sprinkler systems for lawns, and soaker hoses for perennial beds."
+          }
+        ]
+      },
+      {
+        "scene_id": 102,
+        "label": "scene-2",
+        "shots": [
+          {
+            "shot_id": 1003,
+            "label": "scene-2_shot_1",
+            "narration": "To start planning, we'll measure our garden dimensions using a long tape measure. Be sure to note any slopes or special features that might affect water flow."
+          },
+          {
+            "shot_id": 1004,
+            "label": "scene-2_shot_2",
+            "narration": "Different plants have different water needs. Vegetables typically need 1-2 inches per week, while drought-tolerant perennials might need only half that amount."
+          },
+          {
+            "shot_id": 1005,
+            "label": "scene-2_shot_3",
+            "narration": "Now I'm sketching our irrigation layout, marking water sources, main lines, and where each type of emitter will go. This planning stage saves a lot of headaches later."
+          }
+        ]
+      },
+      {
+        "scene_id": 103,
+        "label": "scene-3",
+        "shots": [
+          {
+            "shot_id": 1006,
+            "label": "scene-3_shot_1",
+            "narration": "Here on my workbench are all the tools we'll need: pipe cutters, hole punch, measuring tape, stakes, and a shovel for burying main lines."
+          },
+          {
+            "shot_id": 1007,
+            "label": "scene-3_shot_2",
+            "narration": "And these are our irrigation components: main PVC pipes, flexible poly tubing, various connectors, drippers, sprinklers, and a timer unit with backup battery."
+          }
+        ]
+      },
+      {
+        "scene_id": 104,
+        "label": "scene-4",
+        "shots": [
+          {
+            "shot_id": 1008,
+            "label": "scene-4_shot_1",
+            "narration": "First, we'll attach our timer and backflow preventer to the outdoor spigot. The backflow preventer is essential to prevent contamination of your household water supply."
+          },
+          {
+            "shot_id": 1009,
+            "label": "scene-4_shot_2",
+            "narration": "Now I'm laying out the main irrigation lines. For permanent installations, we'll dig shallow trenches about 6 inches deep to protect the pipes from UV damage and accidental cuts."
+          },
+          {
+            "shot_id": 1010,
+            "label": "scene-4_shot_3",
+            "narration": "For our vegetable beds, I'm installing adjustable drippers at each plant location. For the perennial border, these micro-sprayers will provide gentle overhead watering."
+          },
+          {
+            "shot_id": 1011,
+            "label": "scene-4_shot_4",
+            "narration": "Now let's program our timer. I recommend watering in early morning, between 5 and 7 AM, when evaporation is minimal and plants can dry before evening to prevent disease."
+          }
+        ]
+      },
+      {
+        "scene_id": 105,
+        "label": "scene-5",
+        "shots": [
+          {
+            "shot_id": 1012,
+            "label": "scene-5_shot_1",
+            "narration": "With everything connected, let's run our first test. I'm checking each zone to ensure proper water pressure and that all connections are secure."
+          },
+          {
+            "shot_id": 1013,
+            "label": "scene-5_shot_2",
+            "narration": "Here's a leak at one of our connections. I'll show you how to quickly fix it by cutting out the damaged section and adding a repair coupling."
+          },
+          {
+            "shot_id": 1014,
+            "label": "scene-5_shot_3",
+            "narration": "Now I'm adjusting our sprinkler heads to prevent overspray onto paths or structures, and fine-tuning our drippers to deliver the right amount of water for each plant type."
+          }
+        ]
+      },
+      {
+        "scene_id": 106,
+        "label": "scene-6",
+        "shots": [
+          {
+            "shot_id": 1015,
+            "label": "scene-6_shot_1",
+            "narration": "Mark your calendar for these maintenance tasks: monthly emitter cleaning in season, filter changes twice a year, and checking for leaks or clogged emitters after winter."
+          },
+          {
+            "shot_id": 1016,
+            "label": "scene-6_shot_2",
+            "narration": "In cold areas, winterizing is crucial. I'm using compressed air to blow all water out of the lines before freezing temperatures arrive, then disconnecting and storing the timer indoors."
+          }
+        ]
+      },
+      {
+        "scene_id": 107,
+        "label": "scene-7",
+        "shots": [
+          {
+            "shot_id": 1017,
+            "label": "scene-7_shot_1",
+            "narration": "Look at this side-by-side comparison. On the left is my garden before irrigation - with uneven growth and dry patches. On the right, after just one month with our new system, everything is lush and thriving."
+          },
+          {
+            "shot_id": 1018,
+            "label": "scene-7_shot_2",
+            "narration": "I hope this guide helps you create an efficient irrigation system for your own garden. Your plants will thank you, you'll save water, and you'll have more time to enjoy your garden rather than maintain it. Happy gardening!"
+          }
+        ]
+      }
+    ]
+  }

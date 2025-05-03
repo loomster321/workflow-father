@@ -1,0 +1,165 @@
+{
+    "scenes": [
+      {
+        "shots": [
+          {
+            "shot_id": 270,
+            "narration": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later? Or maybe you've promised yourself, 'This is the last time'-but it never is.",
+            "shot_label": "scene-1_shot_1"
+          },
+          {
+            "shot_id": 271,
+            "narration": "Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it.",
+            "shot_label": "scene-1_shot_2"
+          },
+          {
+            "shot_id": 272,
+            "narration": "You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.",
+            "shot_label": "scene-1_shot_3"
+          }
+        ],
+        "scene_id": 176,
+        "scene_label": "scene-1"
+      },
+      {
+        "shots": [
+          {
+            "shot_id": 273,
+            "narration": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors-especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind.",
+            "shot_label": "scene-2_shot_1"
+          },
+          {
+            "shot_id": 274,
+            "narration": "Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret. But here's the good news: You can take back control-and I can show you how.",
+            "shot_label": "scene-2_shot_2"
+          },
+          {
+            "shot_id": 275,
+            "narration": "That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending. This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.",
+            "shot_label": "scene-2_shot_3"
+          },
+          {
+            "shot_id": 276,
+            "narration": "We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.",
+            "shot_label": "scene-2_shot_4"
+          }
+        ],
+        "scene_id": 177,
+        "scene_label": "scene-2"
+      },
+      {
+        "shots": [
+          {
+            "shot_id": 277,
+            "narration": "Imagine waking up without that knot of anxiety about your spending. That's the transformation we aim for with our top-tier program: Personalized Transformation Coaching.",
+            "shot_label": "scene-3_shot_1"
+          },
+          {
+            "shot_id": 278,
+            "narration": "This is one-on-one support tailored just for you. We'll identify your triggers, create a step-by-step action plan, and work through emotional roadblocks together-so the changes you make aren't just temporary. They're permanent.",
+            "shot_label": "scene-3_shot_2"
+          },
+          {
+            "shot_id": 279,
+            "narration": "This level is perfect for high-achievers, professionals, or anyone ready to invest in deep, meaningful change. Because when your mindset shifts, your life shifts. Experience personalized coaching for lasting financial freedom and emotional resilience.",
+            "shot_label": "scene-3_shot_3"
+          }
+        ],
+        "scene_id": 178,
+        "scene_label": "scene-3"
+      },
+      {
+        "shots": [
+          {
+            "shot_id": 280,
+            "narration": "Maybe you're looking for support-but you don't want to go it alone. That's where our Empowerment Group Coaching comes in.",
+            "shot_label": "scene-4_shot_1"
+          },
+          {
+            "shot_id": 281,
+            "narration": "You'll join a community of people who get it. Together, we'll share wins, tackle challenges, and celebrate breakthroughs. These aren't just 'support groups'-they're transformation hubs where real change happens.",
+            "shot_label": "scene-4_shot_2"
+          },
+          {
+            "shot_id": 282,
+            "narration": "You'll realize you're not the only one struggling-and that realization? It's powerful. Because when we grow together, we grow stronger.\n\n\"I thought I was the only one. But hearing others' stories gave me the strength to face my own.\" - Emily, Former Client\n\nJoin a supportive community and transform your relationship with money.",
+            "shot_label": "scene-4_shot_3"
+          }
+        ],
+        "scene_id": 179,
+        "scene_label": "scene-4"
+      },
+      {
+        "shots": [
+          {
+            "shot_id": 283,
+            "narration": "Or maybe you prefer to work at your own pace? That's exactly why I created the Self-Guided Freedom Program.",
+            "shot_label": "scene-5_shot_1"
+          },
+          {
+            "shot_id": 284,
+            "narration": "This interactive journey is packed with real-world strategies, exercises, and step-by-step modules designed to help you regain control-on your terms.",
+            "shot_label": "scene-5_shot_2"
+          },
+          {
+            "shot_id": 285,
+            "narration": "This is perfect if you're motivated to create change independently but need the right tools to make it stick. You'll track your progress and celebrate your wins as you reach clear, definable goals.\n\nBreak free from compulsive spending-at your own pace.",
+            "shot_label": "scene-5_shot_3"
+          }
+        ],
+        "scene_id": 180,
+        "scene_label": "scene-5"
+      },
+      {
+        "shots": [
+          {
+            "shot_id": 286,
+            "narration": "I know what it feels like to want change but not know where to start. This transformation journey isn't just about changing your spending habits-it's about reclaiming your peace of mind, rebuilding your confidence, and feeling proud of the progress you can see and feel in your everyday life.",
+            "shot_label": "scene-6_shot_1"
+          },
+          {
+            "shot_id": 287,
+            "narration": "Once you understand why you spend, you unlock the power to change it-for good.",
+            "shot_label": "scene-6_shot_2"
+          }
+        ],
+        "scene_id": 181,
+        "scene_label": "scene-6"
+      },
+      {
+        "shots": [
+          {
+            "shot_id": 288,
+            "narration": "I'm debt-free for the first time in years. I don't feel controlled by my impulses anymore. This program changed my life.",
+            "shot_label": "scene-7_shot_1"
+          }
+        ],
+        "scene_id": 182,
+        "scene_label": "scene-7"
+      },
+      {
+        "shots": [
+          {
+            "shot_id": 289,
+            "narration": "So, what's the next step for you? One-on-one coaching, group support, or a self-guided journey-each path leads to freedom. The question is: Are you ready to take the first step?\n\nYour future starts now. Take our free self-assessment or enroll in one of our programs today.",
+            "shot_label": "scene-8_shot_1"
+          }
+        ],
+        "scene_id": 183,
+        "scene_label": "scene-8"
+      },
+      {
+        "shots": [
+          {
+            "shot_id": 290,
+            "narration": "Inspiring music swells. The Retail Therapy Unplugged logo appears with a soft fade-out.",
+            "shot_label": "scene-9_shot_1"
+          }
+        ],
+        "scene_id": 184,
+        "scene_label": "scene-9"
+      }
+    ],
+    "video_id": 23,
+    "video_title": "Video Sales Letter (VSL)"
+  }

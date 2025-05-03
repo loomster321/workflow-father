@@ -1,42 +1,398 @@
 [
-    {
-      "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_1\",\"shot_number\":1,\"shot_title\":\"Shopping Impulse Emotions\",\"shot_description\":\"Close-up of finger on Buy Now button and a look of regret\",\"roll_type\":\"A\",\"narration_text\":\"Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later?\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"mouse click\",\"subtle sigh\"],\"emotional_tone\":\"conflicted, regretful\",\"shot_purpose\":\"Establish theme of emotional conflict in shopping addiction\",\"word_count\":16,\"expected_duration\":6.4}",
-      "sessionId": 77895
+  {
+    "latest_user_chat": {
+      "message_id": null,
+      "chat_msg": "",
+      "sender": "",
+      "timestamp": null,
+      "is_user_message": true,
+      "shot_id": 354,
+      "form_data": null
     },
-    {
-      "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_2\",\"shot_number\":2,\"shot_title\":\"Family Impact\",\"shot_description\":\"Family tension visual with subtle emotional cues\",\"roll_type\":\"B\",\"narration_text\":\"Sometimes, the ripple effect of these struggles quietly touches the people you love,\",\"suggested_broll_visuals\":\"Family members with tension, subtle emotional cues\",\"suggested_sound_effects\":[\"soft ambient rustle\",\"subdued murmur\"],\"emotional_tone\":\"tense, reflective\",\"shot_purpose\":\"Show emotional impact on relationships due to shopping behavior\",\"word_count\":13,\"expected_duration\":5.2}",
-      "sessionId": 77895
+    "id": 354,
+    "scene_id": 203,
+    "shot_number": 1,
+    "is_broll": true,
+    "narrative": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later? Or maybe you've promised yourself, 'This is the last time'-but it never is.",
+    "word_count": 29,
+    "estimated_duration": 11.6,
+    "shot_data": {
+      "a_roll": {
+        "shot_notes": "Host pauses gently for impact.",
+        "shot_title": "Presenter Empathizes with Viewer",
+        "shot_purpose": "Establish connection and relate to common experiences",
+        "emotional_tone": "warm, understanding",
+        "shot_description": "Host faces camera, soft empathetic eye contact, gentle tone",
+        "suggested_sound_effects": [
+          "studio ambience"
+        ]
+      },
+      "b_roll": {
+        "shot_notes": "Montage pacing mirrors rush/regret.",
+        "shot_title": "Impulse Buy & Regret Montage",
+        "shot_purpose": "Visually establish shopping compulsion and regret cycle",
+        "emotional_tone": "fleeting excitement, immediate remorse",
+        "shot_description": "Quick cuts: online shopping, smiles fading into frowns, people hiding bags",
+        "suggested_broll_visuals": "Tight shots of clicks, delivery arrivals, face transitions from joy to regret",
+        "suggested_sound_effects": [
+          "cart click",
+          "faint sigh"
+        ]
+      },
+      "scene_id": 203,
+      "video_id": "26",
+      "shot_label": "scene-1_shot_1",
+      "word_count": 29,
+      "scene_label": "scene-1",
+      "shot_number": 1,
+      "narration_text": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later? Or maybe you've promised yourself, 'This is the last time'-but it never is.",
+      "rationale_a_roll": "Presenter introduction would break immersion. B-roll better illustrates emotions.",
+      "rationale_b_roll": "Montage quickly conveys internal struggles and relational tension visually.",
+      "expected_duration": 11.6,
+      "roll_recommendation": "B"
     },
-    {
-      "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_3\",\"shot_number\":3,\"shot_title\":\"Hopeful Reflection\",\"shot_description\":\"Visual of hopeful transformation with warm lighting\",\"roll_type\":\"A\",\"narration_text\":\"You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"gentle music rise\",\"soft heartfelt tone\"],\"emotional_tone\":\"hopeful, encouraging\",\"shot_purpose\":\"Conclude scene with a hopeful, positive outlook\",\"word_count\":21,\"expected_duration\":8.4}",
-      "sessionId": 77895
+    "shot_label": "scene-1_shot_1",
+    "rationale_a_roll": "Presenter introduction would break immersion. B-roll better illustrates emotions.",
+    "rationale_b_roll": "Montage quickly conveys internal struggles and relational tension visually.",
+    "video_id": 26
+  },
+  {
+    "latest_user_chat": {
+      "message_id": null,
+      "chat_msg": "",
+      "sender": "",
+      "timestamp": null,
+      "is_user_message": true,
+      "shot_id": 355,
+      "form_data": null
     },
-    {
-      "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_1\",\"shot_number\":1,\"shot_title\":\"Dr. Leslie's Introduction\",\"shot_description\":\"Dr. Leslie introduces herself warmly to camera\",\"roll_type\":\"A\",\"narration_text\":\"Hi, I'm Dr. Leslie Davis.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"subtle office amb\",\"soft home ambiance\"],\"emotional_tone\":\"welcoming, supportive\",\"shot_purpose\":\"Introduce Dr. Leslie as trusted guide\",\"word_count\":5,\"expected_duration\":2}",
-      "sessionId": 77895
+    "id": 355,
+    "scene_id": 203,
+    "shot_number": 2,
+    "is_broll": true,
+    "narrative": "Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it.",
+    "word_count": 22,
+    "estimated_duration": 8.8,
+    "shot_data": {
+      "a_roll": {
+        "shot_notes": "",
+        "shot_title": "Presenter Highlights Relationships",
+        "shot_purpose": "Acknowledge broader personal impacts for relatability",
+        "emotional_tone": "concerned, gentle",
+        "shot_description": "Host shifts tone, addresses unseen tension empathetically",
+        "suggested_sound_effects": [
+          "subtle mic reverb"
+        ]
+      },
+      "b_roll": {
+        "shot_notes": "Actors keep expressions understated; natural light.",
+        "shot_title": "Family Strain Visuals",
+        "shot_purpose": "Show hidden impact on relationships",
+        "emotional_tone": "strained, subtle sadness",
+        "shot_description": "Couple sits across table, worried looks, bills between them, body language tense",
+        "suggested_broll_visuals": "Hands on bills, distant gazes, subtle distancing cues",
+        "suggested_sound_effects": [
+          "paper shuffle",
+          "ambient tension"
+        ]
+      },
+      "scene_id": 203,
+      "video_id": "26",
+      "shot_label": "scene-1_shot_2",
+      "word_count": 22,
+      "scene_label": "scene-1",
+      "shot_number": 2,
+      "narration_text": "Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it.",
+      "rationale_a_roll": "Internal struggles are better shown than told. Presenter less impactful here.",
+      "rationale_b_roll": "Visuals of credit card stress and couple tension reinforce emotional consequences.",
+      "expected_duration": 8.8,
+      "roll_recommendation": "B"
     },
-    {
-      "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_2\",\"shot_number\":2,\"shot_title\":\"Breaking Free\",\"shot_description\":\"Visual of tackling compulsive habits with coaching support\",\"roll_type\":\"B\",\"narration_text\":\"For over 20 years, I've helped people break free from compulsive behaviors.\",\"suggested_broll_visuals\":\"Visuals of individuals overcoming challenges and seeing progress\",\"suggested_sound_effects\":[\"page flip\",\"pen scratch\"],\"emotional_tone\":\"inspirational, empowering\",\"shot_purpose\":\"Visualizing success in breaking free from compulsive habits\",\"word_count\":12,\"expected_duration\":4.8}",
-      "sessionId": 77895
+    "shot_label": "scene-1_shot_2",
+    "rationale_a_roll": "Internal struggles are better shown than told. Presenter less impactful here.",
+    "rationale_b_roll": "Visuals of credit card stress and couple tension reinforce emotional consequences.",
+    "video_id": 26
+  },
+  {
+    "latest_user_chat": {
+      "message_id": null,
+      "chat_msg": "",
+      "sender": "",
+      "timestamp": null,
+      "is_user_message": true,
+      "shot_id": 356,
+      "form_data": null
     },
-    {
-      "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_3\",\"shot_number\":3,\"shot_title\":\"Emotional Triggers\",\"shot_description\":\"Dramatic cut to emotional stress elements and reflection\",\"roll_type\":\"B\",\"narration_text\":\"It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret.\",\"suggested_broll_visuals\":\"Close-up of face showing stress and regret while reflecting\",\"suggested_sound_effects\":[\"subtle stress reveal\",\"reflective sound\"],\"emotional_tone\":\"stressed, reflective\",\"shot_purpose\":\"Emphasize the emotional triggers and resultant stress\",\"word_count\":15,\"expected_duration\":6}",
-      "sessionId": 77895
+    "id": 356,
+    "scene_id": 203,
+    "shot_number": 3,
+    "is_broll": true,
+    "narrative": "You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.",
+    "word_count": 21,
+    "estimated_duration": 8.4,
+    "shot_data": {
+      "a_roll": {
+        "shot_notes": "",
+        "shot_title": "Presenter Offers Reassurance",
+        "shot_purpose": "Instill hope and mitigate viewer shame early",
+        "emotional_tone": "reassuring, hopeful",
+        "shot_description": "Host delivers comfort, soft smile, open body language to camera",
+        "suggested_sound_effects": [
+          "soft chime"
+        ]
+      },
+      "b_roll": {
+        "shot_notes": "Stat overlays remain readable; modern style.",
+        "shot_title": "Dynamic Infographic Montage",
+        "shot_purpose": "Visualize scale of issue; reduce viewer isolation",
+        "emotional_tone": "validating, encouraging",
+        "shot_description": "Animated infographic: silhouettes show prevalence, key stats fade in",
+        "suggested_broll_visuals": "Flowing data overlays, diverse faces highlighted, number counters animate smoothly",
+        "suggested_sound_effects": [
+          "gentle transition"
+        ]
+      },
+      "scene_id": 203,
+      "video_id": "26",
+      "shot_label": "scene-1_shot_3",
+      "word_count": 21,
+      "scene_label": "scene-1",
+      "shot_number": 3,
+      "narration_text": "You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.",
+      "rationale_a_roll": "Presenter repeating empathy could feel repetitive. Visual data strengthens message.",
+      "rationale_b_roll": "Infographic gives tangible scope, supports narrator's reassurance.",
+      "expected_duration": 8.4,
+      "roll_recommendation": "B"
     },
-    {
-      "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_4\",\"shot_number\":4,\"shot_title\":\"Control Takeback\",\"shot_description\":\"Empowering visual of taking control back over finances\",\"roll_type\":\"A\",\"narration_text\":\"But here's the good news: You can take back control-and I can show you how.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"soft triumph note\",\"uplifting chord\"],\"emotional_tone\":\"empowering, motivating\",\"shot_purpose\":\"Convey empowerment and motivation for change\",\"word_count\":15,\"expected_duration\":6}",
-      "sessionId": 77895
+    "shot_label": "scene-1_shot_3",
+    "rationale_a_roll": "Presenter repeating empathy could feel repetitive. Visual data strengthens message.",
+    "rationale_b_roll": "Infographic gives tangible scope, supports narrator's reassurance.",
+    "video_id": 26
+  },
+  {
+    "latest_user_chat": {
+      "message_id": null,
+      "chat_msg": "",
+      "sender": "",
+      "timestamp": null,
+      "is_user_message": true,
+      "shot_id": 357,
+      "form_data": null
     },
-    {
-      "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_1\",\"shot_number\":1,\"shot_title\":\"Program Start\",\"shot_description\":\"Overview of the coaching program with key features\",\"roll_type\":\"A\",\"narration_text\":\"That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"inspirational chord\",\"brief upbeat tune\"],\"emotional_tone\":\"encouraging, proactive\",\"shot_purpose\":\"Introduce the coaching program's key elements\",\"word_count\":20,\"expected_duration\":8}",
-      "sessionId": 77895
+    "id": 357,
+    "scene_id": 204,
+    "shot_number": 1,
+    "is_broll": false,
+    "narrative": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors-especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind.",
+    "word_count": 33,
+    "estimated_duration": 13.2,
+    "shot_data": {
+      "a_roll": {
+        "shot_notes": "Soft lighting enhances approachability.",
+        "shot_title": "Dr. Leslie's Direct Introduction",
+        "shot_purpose": "Build credibility and initial rapport with viewers",
+        "emotional_tone": "trustworthy, approachable",
+        "shot_description": "Warm close-up, Dr. Leslie smiles to camera, gentle hand gesture",
+        "suggested_sound_effects": [
+          "studio ambience"
+        ]
+      },
+      "b_roll": {
+        "shot_notes": "Credentials animate in.",
+        "shot_title": "Expert Introduction Visuals",
+        "shot_purpose": "Visually back up Dr. Leslie’s expertise",
+        "emotional_tone": "assured, inviting",
+        "shot_description": "Still images: certificates, Dr. Leslie with clients, thank-you notes overlays",
+        "suggested_broll_visuals": "Framed diplomas, handshake shots, welcoming office decor",
+        "suggested_sound_effects": [
+          "page turning"
+        ]
+      },
+      "scene_id": 204,
+      "video_id": "26",
+      "shot_label": "scene-2_shot_1",
+      "word_count": 33,
+      "scene_label": "scene-2",
+      "shot_number": 1,
+      "narration_text": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors-especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind.",
+      "rationale_a_roll": "Personal, expert intro best delivered face-to-face for credibility.",
+      "rationale_b_roll": "Could use photo montage but less trust-building than direct address.",
+      "expected_duration": 13.2,
+      "roll_recommendation": "A"
     },
-    {
-      "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_2\",\"shot_number\":2,\"shot_title\":\"Science-Backed Techniques\",\"shot_description\":\"Focus on science-backed methods with Cognitive Behavioral Therapy techniques\",\"roll_type\":\"B\",\"narration_text\":\"It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.\",\"suggested_broll_visuals\":\"Visuals of CBT techniques in action with emotional progress tracking\",\"suggested_sound_effects\":[\"keyboard typing\",\"data processing tone\"],\"emotional_tone\":\"methodical, assured\",\"shot_purpose\":\"Highlight the scientific basis and effectiveness of the program\",\"word_count\":29,\"expected_duration\":11.6}",
-      "sessionId": 77895
+    "shot_label": "scene-2_shot_1",
+    "rationale_a_roll": "Personal, expert intro best delivered face-to-face for credibility.",
+    "rationale_b_roll": "Could use photo montage but less trust-building than direct address.",
+    "video_id": 26
+  },
+  {
+    "latest_user_chat": {
+      "message_id": null,
+      "chat_msg": "",
+      "sender": "",
+      "timestamp": null,
+      "is_user_message": true,
+      "shot_id": 358,
+      "form_data": null
     },
-    {
-      "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_3\",\"shot_number\":3,\"shot_title\":\"Spending Why Exploration\",\"shot_description\":\"Deep dive into the why behind spending habits with goal setting visuals\",\"roll_type\":\"B\",\"narration_text\":\"We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.\",\"suggested_broll_visuals\":\"Charts and personal reflection exercises\",\"suggested_sound_effects\":[\"light pen scratches\",\"page turns\"],\"emotional_tone\":\"reflective, transforming\",\"shot_purpose\":\"Focus on uncovering the why of spending habits for deep, lasting change\",\"word_count\":23,\"expected_duration\":9.2}",
-      "sessionId": 77895
-    }
-  ]
+    "id": 358,
+    "scene_id": 204,
+    "shot_number": 2,
+    "is_broll": false,
+    "narrative": "Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret. But here's the good news: You can take back control-and I can show you how.",
+    "word_count": 36,
+    "estimated_duration": 14.4,
+    "shot_data": {
+      "a_roll": {
+        "shot_notes": "Cut to a comforting smile on 'good news.'",
+        "shot_title": "Dr. Leslie Discusses Triggers",
+        "shot_purpose": "Educate on deeper causes and offer hope",
+        "emotional_tone": "caring, enlightening",
+        "shot_description": "Medium shot, Dr. Leslie empathetic, slight emphasis on key phrases",
+        "suggested_sound_effects": [
+          "subtle mic reverb"
+        ]
+      },
+      "b_roll": {
+        "shot_notes": "Emotive iconography preferred.",
+        "shot_title": "Emotion-Money Visual Metaphor",
+        "shot_purpose": "Visualize emotional roots and prospects for change",
+        "emotional_tone": "thoughtful, inspiring",
+        "shot_description": "Animated graphics: emotion icons (stress, regret) cycle with currency signs",
+        "suggested_broll_visuals": "Icons for triggers, animated quick-fix loop, hopeful spark at 'take back control'",
+        "suggested_sound_effects": [
+          "notification chime"
+        ]
+      },
+      "scene_id": 204,
+      "video_id": "26",
+      "shot_label": "scene-2_shot_2",
+      "word_count": 36,
+      "scene_label": "scene-2",
+      "shot_number": 2,
+      "narration_text": "Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret. But here's the good news: You can take back control-and I can show you how.",
+      "rationale_a_roll": "Presenter explains emotional underpinnings with empathy and clarity.",
+      "rationale_b_roll": "Abstract visuals possible, but core info best from expert directly.",
+      "expected_duration": 14.4,
+      "roll_recommendation": "A"
+    },
+    "shot_label": "scene-2_shot_2",
+    "rationale_a_roll": "Presenter explains emotional underpinnings with empathy and clarity.",
+    "rationale_b_roll": "Abstract visuals possible, but core info best from expert directly.",
+    "video_id": 26
+  },
+  {
+    "latest_user_chat": {
+      "message_id": null,
+      "chat_msg": "",
+      "sender": "",
+      "timestamp": null,
+      "is_user_message": true,
+      "shot_id": 359,
+      "form_data": null
+    },
+    "id": 359,
+    "scene_id": 204,
+    "shot_number": 3,
+    "is_broll": true,
+    "narrative": "That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending. This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.",
+    "word_count": 55,
+    "estimated_duration": 22,
+    "shot_data": {
+      "a_roll": {
+        "shot_notes": "",
+        "shot_title": "Presenter Explains Program",
+        "shot_purpose": "Communicate program’s evidence-based difference",
+        "emotional_tone": "enthusiastic, reassuring",
+        "shot_description": "Presenter gestures to highlight program’s uniqueness, confident posture",
+        "suggested_sound_effects": [
+          "pen writing"
+        ]
+      },
+      "b_roll": {
+        "shot_notes": "Feature diverse clients in montage.",
+        "shot_title": "Coaching & Program Montage",
+        "shot_purpose": "Show smart, personalized, scientific program features",
+        "emotional_tone": "optimistic, credible",
+        "shot_description": "Fast-cut: coaching call, open workbook, shown techniques, CBT keyword overlays",
+        "suggested_broll_visuals": "Hands on workbook, psychology icons, group video session, science badge graphic",
+        "suggested_sound_effects": [
+          "page turn",
+          "soft digital tone"
+        ]
+      },
+      "scene_id": 204,
+      "video_id": "26",
+      "shot_label": "scene-2_shot_3",
+      "word_count": 55,
+      "scene_label": "scene-2",
+      "shot_number": 3,
+      "narration_text": "That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending. This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.",
+      "rationale_a_roll": "Listing features less engaging directly from presenter.",
+      "rationale_b_roll": "B-roll/montage illustrates coaching, evidence-based methods, client optimism.",
+      "expected_duration": 22,
+      "roll_recommendation": "B"
+    },
+    "shot_label": "scene-2_shot_3",
+    "rationale_a_roll": "Listing features less engaging directly from presenter.",
+    "rationale_b_roll": "B-roll/montage illustrates coaching, evidence-based methods, client optimism.",
+    "video_id": 26
+  },
+  {
+    "latest_user_chat": {
+      "message_id": null,
+      "chat_msg": "",
+      "sender": "",
+      "timestamp": null,
+      "is_user_message": true,
+      "shot_id": 360,
+      "form_data": null
+    },
+    "id": 360,
+    "scene_id": 204,
+    "shot_number": 4,
+    "is_broll": true,
+    "narrative": "We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.",
+    "word_count": 23,
+    "estimated_duration": 9.2,
+    "shot_data": {
+      "a_roll": {
+        "shot_notes": "",
+        "shot_title": "Presenter Explains Difference",
+        "shot_purpose": "Highlight focus on habits and deeper change",
+        "emotional_tone": "hopeful, earnest",
+        "shot_description": "Host sincere, softens tone to stress unique approach",
+        "suggested_sound_effects": [
+          "soft chime"
+        ]
+      },
+      "b_roll": {
+        "shot_notes": "Montage ends on a positive note.",
+        "shot_title": "Client Breakthroughs Montage",
+        "shot_purpose": "Reinforce emotional authenticity and success",
+        "emotional_tone": "uplifting, proud",
+        "shot_description": "Clients smiling, celebrating milestones, gratitude note overlays",
+        "suggested_broll_visuals": "Handwritten thank-yous, relieved faces, high-five, digital 'progress' bars",
+        "suggested_sound_effects": [
+          "notification ping",
+          "applause"
+        ]
+      },
+      "scene_id": 204,
+      "video_id": "26",
+      "shot_label": "scene-2_shot_4",
+      "word_count": 23,
+      "scene_label": "scene-2",
+      "shot_number": 4,
+      "narration_text": "We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.",
+      "rationale_a_roll": "Presenter repeating details feels redundant. Visuals emphasize transformation.",
+      "rationale_b_roll": "Montage powerfully shows client breakthroughs and emotional authenticity.",
+      "expected_duration": 9.2,
+      "roll_recommendation": "B"
+    },
+    "shot_label": "scene-2_shot_4",
+    "rationale_a_roll": "Presenter repeating details feels redundant. Visuals emphasize transformation.",
+    "rationale_b_roll": "Montage powerfully shows client breakthroughs and emotional authenticity.",
+    "video_id": 26
+  }
+]

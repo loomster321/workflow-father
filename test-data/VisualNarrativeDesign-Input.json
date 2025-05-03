@@ -1,118 +1,444 @@
 [
   {
-    "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_1\",\"shot_number\":1,\"shot_title\":\"Presenter's Relatable Question\",\"shot_description\":\"CU presenter, empathetic, addressing online buyer's regret to camera\",\"roll_type\":\"A\",\"narration_text\":\"Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later?\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\",\"soft mic tap\"],\"emotional_tone\":\"empathetic, inviting\",\"shot_purpose\":\"Make audience feel seen and initiate emotional connection\",\"word_count\":16,\"expected_duration\":6.4,\"aroll_context\":{\"narrative_summary\":\"Presenter directly addresses the audience about the universal experience of buyer's regret, aiming to establish an empathetic connection.\",\"emotional_tone\":\"empathetic, inviting\",\"visual_elements\":\"Close-up of presenter, direct eye contact, subtle studio background\",\"relevance_to_broll\":\"Sets a personal, relatable tone for B-roll; subsequent visuals should reinforce the feeling of shared experience and emotional resonance.\"}}",
-    "sessionId": 61664
+    "id": 2,
+    "shot_id": 354,
+    "creative_direction": "Empathetic Montage",
+    "idea_data": {
+      "motion": "Fast-paced edits, subtle jump cuts from smile to frown, brief slow-motion on moment of regret.",
+      "description": "A rapid sequence showing a diverse set of everyday people online shopping, their initial delight instantly shifting to quiet regret—heads lowering, bags hidden, subtle sighs. The montage remains relatable and personal, focusing on the human emotion rather than product detail.",
+      "visual_style": "Warm, naturalistic lighting; real-world, documentary feel; tight handheld close-ups on faces and hands.",
+      "creative_direction": "Empathetic Montage"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_2\",\"shot_number\":2,\"shot_title\":\"Hiding Purchases Montage\",\"shot_description\":\"Various people hide shopping bags, faces show worry and secrecy\",\"roll_type\":\"B\",\"narration_text\":\"Or maybe you've promised yourself, 'This is the last time'-but it never is.\",\"suggested_broll_visuals\":\"People hiding purchases furtively, shifting body language\",\"suggested_sound_effects\":[\"bag rustle\",\"door close\"],\"emotional_tone\":\"nervous, secretive\",\"shot_purpose\":\"Reveal cycle of repeat behavior and internal conflict\",\"word_count\":13,\"expected_duration\":5.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A montage of different people quickly and discreetly stashing shopping bags in closets, under beds, or inside car trunks. Their faces subtly express anxiety and secrecy.\",\"visual_style\":\"Naturalistic lighting, handheld camera feel to enhance realism. Medium-close shots focused on hands, shopping bags, and glimpses of concerned faces, creating intimacy.\",\"motion\":\"Quick, furtive motions as people look around, then swiftly hide bags. Slight camera shakes or movements following their actions, mimicking documentary or reality style.\"},\"enhanced_broll\":{\"idea\":\"Stylized sequence where each character 'passes' the shopping bag off-screen to the next, linking their secretive actions across different environments and emphasizing the repetitive cycle.\",\"visual_style\":\"Softly desaturated color palette with selective pops of color from the shopping bags. Subtle vignetting to enhance a sense of secrecy. Focus on expressive body language and tight framing.\",\"motion\":\"Fluid, match-cut transitions where the shopping bag consistently moves from one set of hands to another, across multiple locations. Smooth, slightly slow-motion for the key hand-offs to heighten emotional awareness.\"},\"viral_broll\":{\"idea\":\"Visually inventive split-screen showing half a dozen people in parallel, each going through similar motions to hide their purchases—creating visual symmetry and amplifying the universality of the behavior. As each person hides their bag, their backgrounds visually morph into one another, blending home, car, and office environments.\",\"visual_style\":\"Crisp, contemporary look with bold differences in each half of the split-screen. Clever visual morphs and transitions between environments create a seamless flow, with exaggerated, stylized body language for emphasis. Subtle textures (like shadow overlays or scribbled animation) represent internal anxiety.\",\"motion\":\"Synchronized movements across the split panels, with rapid, smooth morphs blending scenes together. As shopping bags are hidden, faint animated crackles or anxiety-indicative effects ripple through each frame—culminating in a moment where all panels freeze on facial expressions of worry.\"}}]}",
-    "sessionId": 61664
+    "id": 3,
+    "shot_id": 354,
+    "creative_direction": "Emotional Rollercoaster Metaphor",
+    "idea_data": {
+      "motion": "Sweeping dolly or simulated camera moves following the cart; playful energy giving way to a downbeat, sudden stop at the end.",
+      "description": "A metaphorical ride: a person sits in a toy shopping cart on a miniature rollercoaster that soars (as animation or compositing) in a burst of excitement, then plunges into shadow or grayness to represent regret, returning the rider to reality.",
+      "visual_style": "Colorful, stylized set or digital composites; exaggerated contrast between vibrant highs and muted lows.",
+      "creative_direction": "Emotional Rollercoaster Metaphor"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_3\",\"shot_number\":3,\"shot_title\":\"Stress in Relationships\",\"shot_description\":\"Couple exchanging tense looks over unpaid bills at kitchen table\",\"roll_type\":\"B\",\"narration_text\":\"Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it.\",\"suggested_broll_visuals\":\"Tense couple at table, paperwork and bills scattered\",\"suggested_sound_effects\":[\"paper shuffle\",\"subtle sigh\"],\"emotional_tone\":\"tense, somber\",\"shot_purpose\":\"Show social/familial impact of compulsive spending\",\"word_count\":22,\"expected_duration\":8.8,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A couple sits at a kitchen table covered with scattered bills and paperwork, exchanging strained, silent glances. Their body language is closed off, with one person holding their head in their hands and the other staring tensely at a bill.\",\"visual_style\":\"Muted, naturalistic lighting with a cool color temperature to emphasize somberness. Wide and medium shots carefully composed to show both individuals and the cluttered table, reinforcing the emotional and financial tension.\",\"motion\":\"Minimal movement: a paper is slowly shuffled, one partner sighs and looks away. The camera lingers with steady, subtle push-ins to heighten the sense of unease.\"},\"enhanced_broll\":{\"idea\":\"The couple sits at opposite ends of a long table, with bills forming a visual 'barrier' between them, their discomfort heightened by the exaggerated physical distance and asymmetric framing. Hands almost touch over the paperwork but never quite connect.\",\"visual_style\":\"Dramatically lit with a shaft of cold, directional window light cutting across the table. Deep shadows accentuate the gulf between the couple. Soft focus on distant elements, sharp focus on hands, bills, and faces.\",\"motion\":\"Slow dolly move sideways along the length of the table, passing stacks of paperwork. Subtle, slow zooms-in on faces as tension rises, accompanied by a gentle ruffling of paper and a nearly inaudible sigh.\"},\"viral_broll\":{\"idea\":\"A surreal overhead shot transforms the kitchen table into a visual metaphor: as tension rises, the paperwork and bills animate, growing taller and creating a literal paper wall between the couple. Their silhouettes become further separated as the wall expands, highlighting emotional and physical distance.\",\"visual_style\":\"Hyperreal, slightly desaturated palette with pops of color from the swirling or 'growing' documents. Animated shadow effects and ambient glow mark the intensifying separation. Tabletop becomes a stage, blending live action with stylized animation.\",\"motion\":\"Papers slowly animate upward and outward, building into a daunting barrier. The couple's hands reach for each other but get blocked by the 'wall.' The camera pulls up and away, emphasizing the expanding divide—a visual crescendo that freezes for dramatic effect.\"}}]}",
-    "sessionId": 61664
+    "id": 4,
+    "shot_id": 354,
+    "creative_direction": "Surreal Remorse Animation",
+    "idea_data": {
+      "motion": "Slow, dreamlike melting or morphing, with faces and objects subtly warping; lingering dissolves.",
+      "description": "Transition from shopping scenes to surreal visual effects: bright objects or shopping icons melting or morphing into gray puddles, faces dissolving into regretful gestures. Time stretches as emotions overwhelm the subject.",
+      "visual_style": "Soft pastel or gradient backgrounds, mixed with hand-drawn or digital liquid-morph animations.",
+      "creative_direction": "Surreal Remorse Animation"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_4\",\"shot_number\":4,\"shot_title\":\"Infographic Prevalence\",\"shot_description\":\"Animated charts: stats, silhouettes, highlighting prevalence rates\",\"roll_type\":\"B\",\"narration_text\":\"You're not alone. And it's not your fault.\",\"suggested_broll_visuals\":\"Infographic with animated uplifting data overlays\",\"suggested_sound_effects\":[\"data ping\",\"gentle whoosh\"],\"emotional_tone\":\"reassuring, statistical\",\"shot_purpose\":\"Normalize experience and reassure viewer through prevalence data\",\"word_count\":8,\"expected_duration\":3.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A simple animated bar chart smoothly rises, accompanied by labeled statistics indicating how many people experience similar feelings. Silhouette icons representing individuals appear, some highlighted to show prevalence.\",\"visual_style\":\"Clean, modern infographic design using soft, reassuring blues and greens. Minimalist layout with rounded shapes and clear fonts for quick comprehension.\",\"motion\":\"Data bars rise one after another with subtle easing; silhouette icons fade in and light up to visualize the prevalence rate. Numbers animate upward in sync with chart growth.\"},\"enhanced_broll\":{\"idea\":\"A dynamic infographic scene where stylized silhouettes fill up a grid, each one animating in with a gentle glow as the narration reassures the viewer. Percentage figures count up beside the visualization, and animated connecting lines link groups to illustrate shared experience.\",\"visual_style\":\"Soft gradients blend from blue to teal for a hopeful feel. Silhouette icons are slightly rounded and appear hand-drawn for warmth. Light particle effects suggest a sense of togetherness.\",\"motion\":\"Wave-like motion as rows of silhouettes light up sequentially. Lines sweep in to connect figures, and percentage numbers smoothly increase beside the graphic. End with a gentle upward float of glowing icons.\"},\"viral_broll\":{\"idea\":\"Immersive 3D infographic scene where the camera dives through a field of floating, luminous human silhouettes. As key statistics appear in bold above clusters of people, the camera seamlessly shifts perspectives, creating the sensation of moving among a supportive crowd. Silhouettes gently pulse with light in sync with the message.\",\"visual_style\":\"Vivid, luminous color palette with glowing edges and smooth gradients. Infographic-style overlays float in 3D space, with elegant, bold typography. Artistic depth of field creates a dreamy illusion that blurs the boundaries between data and emotional connection.\",\"motion\":\"Sweeping, ethereal camera moves weave between glowing silhouette clusters. Key data stats rise up from the crowd, numbers animating and pulsing in time with soft sound cues. Crowd silhouettes occasionally turn slightly toward the viewer as if in acknowledgment, reinforcing reassurance and unity.\"}}]}",
-    "sessionId": 61664
+    "id": 5,
+    "shot_id": 354,
+    "creative_direction": "Viral Story Format",
+    "idea_data": {
+      "motion": "Quick swiping transitions, jittery zooms, animated stickers/emojis that appear with actions.",
+      "description": "A vertical-video mobile format mimicking popular social platforms—fast cuts, bold text pop-ups (“#ImpulseBuy,” “#Regret”), and expressive reaction shots. The viewer sees the journey from rapid purchase to regret as a series of shareable moments.",
+      "visual_style": "Bright overlays, vertical cropping, emojis, Gen Z-friendly aesthetics.",
+      "creative_direction": "Viral Story Format"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-1\",\"shot_id\":\"scene-1_shot_5\",\"shot_number\":5,\"shot_title\":\"Presenter Offers Hope\",\"shot_description\":\"CU presenter, soft smile, gentle reassurance to camera\",\"roll_type\":\"A\",\"narration_text\":\"There is hope for healing—for you, and for the relationships that matter most.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\",\"soft breath\"],\"emotional_tone\":\"hopeful, warm\",\"shot_purpose\":\"Instill hope and support to conclude scene\",\"word_count\":13,\"expected_duration\":5.2,\"aroll_context\":{\"narrative_summary\":\"Presenter offers reassurance and hope directly to the audience, emphasizing positivity and support for personal and relational healing.\",\"emotional_tone\":\"hopeful, warm\",\"visual_elements\":\"Close-up of presenter with a gentle, encouraging expression, inviting visual warmth and intimacy.\",\"relevance_to_broll\":\"Sets an uplifting, reassuring mood for subsequent visual storytelling; any following B-roll should evoke warmth, optimism, and connection.\"}}",
-    "sessionId": 61664
+    "id": 6,
+    "shot_id": 354,
+    "creative_direction": "Cinematic Infographic",
+    "idea_data": {
+      "motion": "Graphics animate in sync with emotional beats, with seamless dissolves between face and infographic elements.",
+      "description": "Blend emotional close-ups with animated infographics: shopping silhouettes, graphs, or statistics dynamically overlay as the subject’s emotions shift, visually connecting their personal experience with the wider impact.",
+      "visual_style": "Moody, cinematic lighting; elegant graphics in muted tones; dynamic overlays tracking emotional changes.",
+      "creative_direction": "Cinematic Infographic"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_1\",\"shot_number\":1,\"shot_title\":\"Dr. Leslie's Introduction\",\"shot_description\":\"MS Dr. Leslie warmly introduces herself in studio with degrees visible\",\"roll_type\":\"A\",\"narration_text\":\"Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors—especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\",\"voice treatment\"],\"emotional_tone\":\"trustworthy, empathetic\",\"shot_purpose\":\"Establish Dr. Leslie’s credibility and connection\",\"word_count\":33,\"expected_duration\":13.2,\"aroll_context\":{\"narrative_summary\":\"Dr. Leslie introduces herself, highlighting her expertise in helping people overcome compulsive behaviors that impact finances and relationships.\",\"emotional_tone\":\"trustworthy, empathetic\",\"visual_elements\":\"Medium shot of Dr. Leslie in the studio, warm lighting, degrees and credentials visible in the background.\",\"relevance_to_broll\":\"Establishes expert authority and a caring atmosphere; subsequent B-roll should reflect professionalism, empathy, and client-focused visuals.\"}}",
-    "sessionId": 61664
+    "id": 7,
+    "shot_id": 355,
+    "creative_direction": "Ripple Across Tabletop",
+    "idea_data": {
+      "motion": "Slow-motion ripple effect subtly triggered by a paper or bill being placed down; camera gently tracks the ripple.",
+      "description": "Natural light scene of a couple seated at a table, a subtle ripple—like from a dropped pebble—spreads through a nearby glass of water or across the tabletop, symbolizing the invisible spread of stress. Minimal dialogue, focus on hands and unspoken tension.",
+      "visual_style": "Cinematic realism, shallow depth of field, soft light highlighting faces and hands.",
+      "creative_direction": "Ripple Across Tabletop"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_2\",\"shot_number\":2,\"shot_title\":\"Behavioral Impact Montage\",\"shot_description\":\"Cut: closeups of worried faces, hands on bills, personal stress moments\",\"roll_type\":\"B\",\"narration_text\":\"Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret.\",\"suggested_broll_visuals\":\"Hands fidgeting, facial tension, scrolling phones with regret\",\"suggested_sound_effects\":[\"soft sigh\",\"pen tap\"],\"emotional_tone\":\"reflective, somber\",\"shot_purpose\":\"Expand problem beyond money, build empathy\",\"word_count\":21,\"expected_duration\":8.4,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A series of closeups showing varied individuals: furrowed brows, downcast eyes, hands rubbing temples, and fingers nervously tapping on unpaid bills or a smartphone screen. Each vignette conveys personal stress and quiet worry.\",\"visual_style\":\"Soft, low-key lighting to accentuate facial tension and create a contemplative atmosphere. Natural, unembellished framing that focuses on expressive details like hands, faces, and bills.\",\"motion\":\"Subtle movements: fingers fidgeting with paper, a phone being scrolled with hesitation, a pen tapped softly on a table. Smooth cross-dissolves transition between each closeup to build an empathetic montage.\"},\"enhanced_broll\":{\"idea\":\"Montage of slow-motion macro shots capturing micro-expressions of worry: a deep exhale, a slow blink, tightly clenched hands. Overlay translucent reflections of online shopping carts or credit card icons on top of the personal stress moments to deepen meaning.\",\"visual_style\":\"Desaturated color palette with focused highlights on hands and faces. Slightly stylized depth-of-field blur keeps the viewer's eye locked on emotional cues, with soft overlays to connect actions and consequences.\",\"motion\":\"Slow-motion emphasis on key gestures (hand clench, exhale), with ethereal overlays that subtly animate—like shopping icons fading in and out—adding an emotional undercurrent as images gently dissolve from one to the next.\"},\"viral_broll\":{\"idea\":\"Visually striking sequence where real closeup stress details (eyes, hands, fidgeting) morph via animation into illustrative, semi-transparent overlays depicting internal emotional triggers: swirling chaotic lines, storm clouds, or fleeting dollar signs in the background. At the peak, a digital shopping cart flickers and dissolves into regretful expressions.\",\"visual_style\":\"Bold contrast between live-action closeups and animated, painterly overlays. Use of muted tones interrupted by sudden flashes of color tied to emotional triggers. Expressive, almost surreal layering of real and animated elements.\",\"motion\":\"Seamless animated transitions: a closeup on anxious eyes dissolves into a swirling line animation suggesting inner turmoil; fingers scrolling a phone trail glitchy shadows of online carts or dollar signs, then snap back to somber reality. End with a slow pullback as the overlays fade, leaving the viewer with a poignant emotional afterimage.\"}}]}",
-    "sessionId": 61664
+    "id": 8,
+    "shot_id": 355,
+    "creative_direction": "Shadow Distance",
+    "idea_data": {
+      "motion": "Slow zoom, shadows grow a little farther apart as bills are handled; gentle camera drift emphasizes tension.",
+      "description": "A couple sits together, but their shadows on the wall are distinctly separated or facing away, suggesting emotional distance. The room is warm but shaded, with the physical subjects close but their shadows conveying the rift.",
+      "visual_style": "Symbolic, moody lighting, controlled use of shadows and silhouettes.",
+      "creative_direction": "Shadow Distance"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-2\",\"shot_id\":\"scene-2_shot_3\",\"shot_number\":3,\"shot_title\":\"Dr. Leslie's Assurance\",\"shot_description\":\"CU Dr. Leslie, direct eye contact, gently encouraging viewers\",\"roll_type\":\"A\",\"narration_text\":\"But here's the good news: You can take back control—and I can show you how.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"chair shift\",\"studio ambience\"],\"emotional_tone\":\"assuring, motivating\",\"shot_purpose\":\"Transition from struggle to hope and expert support\",\"word_count\":15,\"expected_duration\":6,\"aroll_context\":{\"narrative_summary\":\"Dr. Leslie looks directly at the camera, offering assurance and motivation for regaining control, transitioning the narrative toward hope and expert-led support.\",\"emotional_tone\":\"assuring, motivating\",\"visual_elements\":\"Close-up on Dr. Leslie with direct eye contact, warm light, gentle and encouraging demeanor.\",\"relevance_to_broll\":\"Signals a narrative turn from difficulty to optimism; upcoming B-roll should visually move from somber to uplifting, reflecting newfound empowerment and support.\"}}",
-    "sessionId": 61664
+    "id": 9,
+    "shot_id": 355,
+    "creative_direction": "Animated Ties",
+    "idea_data": {
+      "motion": "Animated lines subtly shift—reaching out, then easing back as emotions change, synced with body language.",
+      "description": "A light animation overlays live action: delicate, animated lines or ribbons attempt to connect family members around a table. When the tension rises, the ribbons gently slacken and float apart.",
+      "visual_style": "Hybrid—naturalistic live action footage with soft, hand-drawn 2D animation, pastel color overlays.",
+      "creative_direction": "Animated Ties"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_1\",\"shot_number\":1,\"shot_title\":\"Logo & Transformation Visuals\",\"shot_description\":\"Animated logo appears, morphing into gears/pathways for science theme\",\"roll_type\":\"B\",\"narration_text\":\"That's why I created Retail Therapy Unplugged—a proven coaching program designed to help you break the cycle of compulsive spending.\",\"suggested_broll_visuals\":\"Program logo, animated transitions to gears, pathways imagery\",\"suggested_sound_effects\":[\"chime\",\"whoosh\"],\"emotional_tone\":\"inspired, innovative\",\"shot_purpose\":\"Introduce and differentiate program visually\",\"word_count\":20,\"expected_duration\":8,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"The Retail Therapy Unplugged program logo animates smoothly onto the screen, then morphs into a simple graphic of interlocking gears and branching pathways, representing the scientific, systematic approach of the program.\",\"visual_style\":\"Clean 2D animation with soft gradients and modern sans-serif typography. Subtle science-inspired motifs accent the logo and transition elements.\",\"motion\":\"Logo fades in, gently transforms into gears that rotate and connect, then seamlessly branch into flowing pathway lines, illustrating organized movement and transformation.\"},\"enhanced_broll\":{\"idea\":\"The logo appears with a burst of light, then breaks apart into modular, semi-transparent gear pieces and glowing pathway lines that assemble themselves into a dynamic, interconnected network, visually representing transformative change.\",\"visual_style\":\"3D animation style with glass-like transparency and glowing edges. Cool color palette with accent highlights on pathways and gear teeth. Hints of circuitry and connection metaphors.\",\"motion\":\"The logo bursts in with a chime, then 'splits' into components that float apart, reassembling as gears and flowing, animated pathways. Camera slightly orbits around elements as the network grows, creating a feeling of building momentum.\"},\"viral_broll\":{\"idea\":\"Animated sequence where the program logo bursts open to reveal a visually stunning, ever-shifting labyrinth made of glowing pathways and kinetic, morphing gears. As viewers watch, the pathways spark and rearrange, suggesting the rewiring of habits—culminating in a bold transformation where the entire structure resolves into an inspiring symbol or uplifting word.\",\"visual_style\":\"Striking, high-contrast visuals blending sharp 3D and motion-graphics, with vibrant neon highlights set against a dark background. Holographic effects and surreal science-inspired animation bridge the real and abstract.\",\"motion\":\"Rapid, energetic morphing: the logo unfolds in a surprise burst into a complex world of glowing gears and branching pathways. Animated pulses of energy run along the paths, gears shift and click in unexpected ways, and the entire system eventually locks into place to reveal an aspirational symbol or word (e.g., 'Change' or 'Freedom'), creating a wow-moment designed for maximum engagement and shareability.\"}}]}",
-    "sessionId": 61664
+    "id": 10,
+    "shot_id": 355,
+    "creative_direction": "Photographic Glance Mosaic",
+    "idea_data": {
+      "motion": "Quick cross-dissolves between stills; a few slow, reflective push-ins to heighten emotion.",
+      "description": "A modern montage of still images: close-ups of hands on bills, subtle glances, and gentle expressions that tell a story of distance in a few silent moments.",
+      "visual_style": "Soft, lightly desaturated palette, almost documentary or lifestyle photographic style.",
+      "creative_direction": "Photographic Glance Mosaic"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_2\",\"shot_number\":2,\"shot_title\":\"Presenter Explains Approach\",\"shot_description\":\"MS Dr. Leslie animated, using expressive gestures in bright studio\",\"roll_type\":\"A\",\"narration_text\":\"This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\",\"expressive hand movement\"],\"emotional_tone\":\"confident, inspiring\",\"shot_purpose\":\"Reiterate program uniqueness—science, psychology, evidence\",\"word_count\":35,\"expected_duration\":14,\"aroll_context\":{\"narrative_summary\":\"Dr. Leslie explains the science-backed, psychology-inspired uniqueness of her program, using expressive gestures to convey confidence and energy.\",\"emotional_tone\":\"confident, inspiring\",\"visual_elements\":\"Medium shot in a bright studio, Dr. Leslie animated with expressive hand gestures and warm, upbeat lighting.\",\"relevance_to_broll\":\"Highlights the program’s scientific and psychological foundation—future B-roll should feel dynamic, evidence-based, and spotlight elements of neuroscience, psychology, and real-world progress.\"}}",
-    "sessionId": 61664
+    "id": 11,
+    "shot_id": 355,
+    "creative_direction": "Viral Split-Screen Disconnect",
+    "idea_data": {
+      "motion": "Gentle lateral movement, with each side's actions occurring slightly out of sync to emphasize disconnection.",
+      "description": "Split the screen: one side shows a partner attempting to engage (reaching hand out, looking up); the other side shows the other partner subtly distracted by bills or a phone, head turned away.",
+      "visual_style": "High-contrast, social-media inspired split-screen layout. Clean graphics, light vignette.",
+      "creative_direction": "Viral Split-Screen Disconnect"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-3\",\"shot_id\":\"scene-3_shot_3\",\"shot_number\":3,\"shot_title\":\"Habit Change Visual Metaphors\",\"shot_description\":\"Animated chains break, flowers bloom, clients journaling breakthroughs\",\"roll_type\":\"B\",\"narration_text\":\"We don't just focus on what you spend—we uncover why you spend, and how to build lasting habits that lead to financial freedom.\",\"suggested_broll_visuals\":\"Break chains, upward arrows, client notes, visual metaphors of renewal\",\"suggested_sound_effects\":[\"chain snap\",\"page turn\"],\"emotional_tone\":\"liberated, hopeful\",\"shot_purpose\":\"Visual metaphor for lasting change, reinforce program benefits\",\"word_count\":23,\"expected_duration\":9.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"Close-up animation of metal chains snapping, quickly cutting to a flower blooming and then to clients writing in journals, visually representing transition from old habits to personal breakthroughs.\",\"visual_style\":\"Clean, semi-realistic animation with vivid detail—focus on tangible, uplifting imagery like shining chains, bright petals, and handwritten notes.\",\"motion\":\"Chains tense and break with a decisive snap, quick fade into a time-lapse bloom of a flower, followed by gentle hand movements as a client writes in a journal. Each transition is smooth and steady, echoing progress.\"},\"enhanced_broll\":{\"idea\":\"Animated sequence beginning with dramatic slow-motion chains breaking into sparks, which morph into petals swirling upward to form blooming flowers. The scene transitions to a creative top-down shot of a journal page filling with hopeful words and sketches as a client's hand moves purposefully.\",\"visual_style\":\"Stylized, with glowing accent colors on points of transformation; pastel gradients with soft lighting. Slightly painterly touch for emotional warmth, creating a hopeful, personal feel.\",\"motion\":\"Chains shatter in slow motion and dissolve into sparkling particles; petals float upward and assemble into an opening bloom. Camera drifts softly overhead as a journal page animates open, and time-lapse handwriting captures key breakthroughs.\"},\"viral_broll\":{\"idea\":\"Visually captivating sequence: as animated 3D chains shatter explosively, the fragments morph in midair into vibrant, kinetic flowers and upward-swirling arrows. Each flower then becomes individual journal entries floating through space, with handwritten breakthroughs dynamically animating onto the pages. The sequence culminates in a mesmerizing visual cascade, symbolizing collective renewal and empowerment, designed for emotional impact and shareability.\",\"visual_style\":\"Bold, surreal motion graphics with high-contrast colors and gloss—flowers and journal pages rendered with semi-abstract, iridescent textures. Elements hover in a luminous, dream-like void, inviting viewers into a world of transformative hope.\",\"motion\":\"Rapid, energetic chain break with cinematic debris flares; fragments morph in flowing, fluid animations into flowers and arrows that spiral upwards. Journal entries spin and flip open, with key positive phrases and affirmations dynamically appearing in expressive lettering. Concludes with all elements spiraling together in an uplifting, forward-surging visual crescendo.\"}}]}",
-    "sessionId": 61664
+    "id": 12,
+    "shot_id": 356,
+    "creative_direction": "Dynamic Infographic Montage",
+    "idea_data": {
+      "motion": "Smooth growing transitions, number counters animate up, silhouettes fade in/out in sync with narration.",
+      "description": "Animated silhouettes and iconography show the prevalence of shopping struggles, with statistics counting up and diverse faces gently illuminated as stats overlay.",
+      "visual_style": "Modern, clean infographics with soft gradients; high-contrast overlays for clarity.",
+      "creative_direction": "Dynamic Infographic Montage"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-4\",\"shot_id\":\"scene-4_shot_1\",\"shot_number\":1,\"shot_title\":\"Freedom From Anxiety Intro\",\"shot_description\":\"Establishing: sunrise, person wakes peacefully, soft light in room\",\"roll_type\":\"B\",\"narration_text\":\"Imagine waking up without that knot of anxiety about your spending.\",\"suggested_broll_visuals\":\"Gentle sunrise, calm awakening in sunlit bedroom\",\"suggested_sound_effects\":[\"morning birds\",\"soft breath\"],\"emotional_tone\":\"peaceful, uplifting\",\"shot_purpose\":\"Visualize the emotional freedom promised by program\",\"word_count\":11,\"expected_duration\":4.4,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A tranquil morning scene: soft golden sunrise light filters through a bedroom window as a person gently wakes up, stretching calmly in bed.\",\"visual_style\":\"Warm, natural lighting with pastel hues. Clean, uncluttered bedroom composition emphasizing comfort. Focus on soft textures and subtle details.\",\"motion\":\"Slow pan or tilt from the glowing window to the waking person; gentle, natural movements as the person rises and breathes deeply, conveying serenity.\"},\"enhanced_broll\":{\"idea\":\"The sun’s rays filter through fluttering gauze curtains, casting soft moving patterns on the walls. The person wakes with a subtle smile, surrounded by gently shifting morning light and plants that softly sway in an invisible breeze.\",\"visual_style\":\"Dreamy, ethereal lighting with lens flare and diffused highlights. Earthy, biophilic touches with a hint of cinematic haze, reinforcing a peaceful and connected atmosphere.\",\"motion\":\"Curtains ripple quietly as the sunlight slowly intensifies. Camera gently glides along bedside details—plants, a sunlit journal—then focuses on the person's face as they open their eyes, with a peaceful exhale in time with the morning birdsong.\"},\"viral_broll\":{\"idea\":\"Surreal, share-worthy awakening: as the sun rises, beams of golden light physically dissolve a subtle, ghostly cloud of anxiety above the sleeper. The person awakens with a radiating smile as the light transforms the entire room—colors become richer, small objects glow or sprout flowers, symbolizing a new beginning and emotional freedom.\",\"visual_style\":\"High-emotion mixed media: combine soft-focus live action or 3D animation with magical realism VFX (animated light, dissolving clouds, suddenly-blooming flowers). Brighter-than-life color grading, giving an instant social media 'feel-good' aesthetic.\",\"motion\":\"Cinematic sunrise timelapse, light rays sweep through the room, visually 'melting away' a translucent anxiety cloud. Camera pulls back as colors intensify, animated flourishes of light sweep across the room, objects transform or bloom, and the person sits up to greet the day, inviting and emotionally resonant.\"}}]}",
-    "sessionId": 61664
+    "id": 13,
+    "shot_id": 356,
+    "creative_direction": "Connection Metaphor",
+    "idea_data": {
+      "motion": "Hands move in slow, graceful arcs; text and glows fade in organically as each 'connection' is made.",
+      "description": "A sequence of hands reaching out and gently connecting, forming a chain across backgrounds representing different walks of life. Floating text reinforces messages of hope and belonging.",
+      "visual_style": "Soft light, pastel palette, subtle bokeh effect, gentle vignetting to focus attention.",
+      "creative_direction": "Connection Metaphor"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-4\",\"shot_id\":\"scene-4_shot_2\",\"shot_number\":2,\"shot_title\":\"Presenter Details 1:1 Process\",\"shot_description\":\"MS Dr. Leslie outlines step-by-step plan with direct, caring tone to camera\",\"roll_type\":\"A\",\"narration_text\":\"That's the transformation we aim for with our top-tier program: Personalized Transformation Coaching. This is one-on-one support tailored just for you. We'll identify your triggers, create a step-by-step action plan, and work through emotional roadblocks together—so the changes you make aren't just temporary. They're permanent.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\",\"soft page turn\"],\"emotional_tone\":\"reassuring, empowering\",\"shot_purpose\":\"Explain and build credibility around 1:1 approach\",\"word_count\":45,\"expected_duration\":18,\"aroll_context\":{\"narrative_summary\":\"Dr. Leslie, in a medium shot, personally addresses the viewer, explaining the individualized, step-by-step nature of the Personalized Transformation Coaching program with warmth and reassurance.\",\"emotional_tone\":\"reassuring, empowering\",\"visual_elements\":\"Bright, welcoming studio lighting; Dr. Leslie maintains eye contact and uses caring gestures; environment feels open and inviting.\",\"relevance_to_broll\":\"Future B-roll should visually convey personal attention, support, and long-term change—emphasizing interpersonal connection and the journey from challenge to empowerment.\"}}",
-    "sessionId": 61664
+    "id": 14,
+    "shot_id": 356,
+    "creative_direction": "Community Mosaic",
+    "idea_data": {
+      "motion": "Mosaic tiles snap into place; occasional micro-zoom toward individual faces as stats or affirmations appear.",
+      "description": "A rapid-build mosaic of diverse, real faces looking straight to camera—a virtual wall of support. Overlaid messages like 'You’re not alone' and validating terms gently animate in.",
+      "visual_style": "Photo grid, light warm tones, humanizing details like subtle smiles and eye contact.",
+      "creative_direction": "Community Mosaic"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-4\",\"shot_id\":\"scene-4_shot_3\",\"shot_number\":3,\"shot_title\":\"Empowered Clients Montage\",\"shot_description\":\"Clients journaling, video chat w/ coach, celebratory self-hugs\",\"roll_type\":\"B\",\"narration_text\":\"This level is perfect for high-achievers, professionals, or anyone ready to invest in deep, meaningful change. Because when your mindset shifts, your life shifts.\",\"suggested_broll_visuals\":\"Clients in online sessions, happy self-reflection shots\",\"suggested_sound_effects\":[\"calendar ping\",\"celebratory chime\"],\"emotional_tone\":\"empowered, confident\",\"shot_purpose\":\"Show positive client outcomes and encourage aspiration\",\"word_count\":24,\"expected_duration\":9.6,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"Montage of confident clients journaling at desks, engaging in friendly video chats with a supportive coach, and giving themselves small celebratory hugs, each in warmly lit home environments.\",\"visual_style\":\"Natural, documentary-inspired visuals with bright, inviting lighting. Everyday settings that feel genuine and relatable, focusing on positive facial expressions and subtle confidence cues.\",\"motion\":\"Simple dissolves or smooth cuts between shots; gentle zoom-in on a smile, soft camera pan across a lined journal page, clients subtly hug themselves in unguarded moments of joy.\"},\"enhanced_broll\":{\"idea\":\"Dynamic split-screen montage showing multiple clients journaling, sharing highs in video calls, and celebrating personal victories with empowering self-hugs, all intercut with flashes of on-screen affirmations.\",\"visual_style\":\"Contemporary, energetic edit style with optimistic color grading—subtle lens flares and bokeh effects dramatize key moments. Elements of motivational text or emojis overlay brief celebratory scenes.\",\"motion\":\"Split screens animate in and out, kinetic transitions keep the energy high, text affirmations appear in sync with client smiles or celebration. Camera movements mirror the clients’ empowering actions—the shot breathes with confidence.\"},\"viral_broll\":{\"idea\":\"Social-media-ready, emotive montage: rapid, visually striking clips of diverse clients journaling with animated lines of personal breakthroughs, high-fiving coaches via video chat (with celebratory digital confetti), and hugging themselves as golden aura ripples out, symbolizing transformation. Optimized to inspire sharing and aspirational connection.\",\"visual_style\":\"Vibrant, TikTok/Instagram-friendly mix of live action, dynamic overlays, and animated enhancements (glowing outlines, pop-up reactions, celebratory sparkles). Ultra-bright, bold color palette for instant emotional impact.\",\"motion\":\"Fast-paced, energetic cuts; dynamic overlays (emojis, bold affirmations) burst with each achievement; confetti and motion graphics animate in sync with high-fives and hugs. Final wide shot amplifies radiance as a collective empowerment moment, inviting viewers to imagine themselves in the story.\"}}]}",
-    "sessionId": 61664
+    "id": 15,
+    "shot_id": 356,
+    "creative_direction": "Poetic Affirmation",
+    "idea_data": {
+      "motion": "Animated words appear as if being written; clouds or leaves drift slowly across the frame; subtle pulse on hopeful phrases.",
+      "description": "Floating affirmations—'There is hope'—written in handwritten script on softly animated backgrounds (clouds, watercolor washes). Graphical elements like leaves or gentle ripples reinforce growth and healing.",
+      "visual_style": "Airy, light, watercolor-inspired, using subtle organic textures.",
+      "creative_direction": "Poetic Affirmation"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-5\",\"shot_id\":\"scene-5_shot_1\",\"shot_number\":1,\"shot_title\":\"Presenter Invites Connection\",\"shot_description\":\"Dr. Leslie gently introduces group program, inviting camera gaze\",\"roll_type\":\"A\",\"narration_text\":\"Maybe you're looking for support—but you don't want to go it alone. That's where our Empowerment Group Coaching comes in.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\",\"gentle smile\"],\"emotional_tone\":\"welcoming, sincere\",\"shot_purpose\":\"Welcome viewers, shift to emphasis on group support\",\"word_count\":20,\"expected_duration\":8,\"aroll_context\":{\"narrative_summary\":\"Dr. Leslie warmly introduces the Empowerment Group Coaching program, addressing the camera with a sincere invitation for viewers to connect and find support together.\",\"emotional_tone\":\"welcoming, sincere\",\"visual_elements\":\"Soft, inviting studio lighting; Dr. Leslie maintains gentle eye contact and an open posture, visually reinforcing the sense of belonging and approachability.\",\"relevance_to_broll\":\"Upcoming B-roll should depict group connection, inclusion, and supportive social interactions, visually emphasizing the welcoming tone and the benefits of community-based growth.\"}}",
-    "sessionId": 61664
+    "id": 16,
+    "shot_id": 356,
+    "creative_direction": "Viral/Shareable Hope",
+    "idea_data": {
+      "motion": "Pop-in card-style animation, hashtag counters tick up; emojis float by and fade; stat numbers animate to spark engagement.",
+      "description": "Text overlays styled as trending social media posts (with uplifting hashtags like #HopeHeals #YouBelong). Avatars or silhouettes animate entrance, boosting the message’s shareability.",
+      "visual_style": "Vivid, bold fonts, familiar social card layouts, light UI accents.",
+      "creative_direction": "Viral/Shareable Hope"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-5\",\"shot_id\":\"scene-5_shot_2\",\"shot_number\":2,\"shot_title\":\"Group Coaching Montage\",\"shot_description\":\"Dynamic grid of diverse faces in lively online group call, candid smiles\",\"roll_type\":\"B\",\"narration_text\":\"You'll join a community of people who get it. Together, we'll share wins, tackle challenges, and celebrate breakthroughs.\",\"suggested_broll_visuals\":\"Participants on upbeat virtual call, animated overlays highlight unity\",\"suggested_sound_effects\":[\"group laughter\",\"notification ping\"],\"emotional_tone\":\"connected, enthusiastic\",\"shot_purpose\":\"Show community feeling, reinforce transformation hub\",\"word_count\":18,\"expected_duration\":7.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A lively virtual meeting grid featuring a diverse group of faces, each participant engaged and smiling during a group coaching call.\",\"visual_style\":\"Clean, familiar video call interface with natural indoor lighting. Emphasis on authentic smiles, positive reactions, and warm color tones.\",\"motion\":\"Steady screen capture feel; small animated pop-ups highlight laughter and reactions, with subtle focus pulls to key expressions in the grid.\"},\"enhanced_broll\":{\"idea\":\"Dynamic, animated split-screen grid where participant tiles occasionally brighten or pulse as people share a laugh or celebrate a breakthrough, with brief on-screen highlights that identify wins and unity.\",\"visual_style\":\"Contemporary, energetic use of soft gradients and accent colors to make the grid visually appealing. Moderate depth-of-field blurs non-active speakers, and overlays use handwritten-style highlights or digital sparkles.\",\"motion\":\"Participant tiles gently pulse or flash when someone reacts; animated ribbons or markers swirl between smiling faces to visually connect group members in moments of unity and collective celebration.\"},\"viral_broll\":{\"idea\":\"Socially optimized montage: participant tiles break free from the grid, flying together to form a unified emblem or word (like 'Together'), as each face animates with AR-style effects—crowns, stars, confetti—triggered by big smiles and laughter. Creates an energizing visualization of connection worth sharing.\",\"visual_style\":\"Ultra-bright, playful palette mixing live-action video with in-trend AR overlays, energetic transitions, and 'reaction' memes. Kinetic, visually rich use of digital hand-drawn doodles and upbeat social graphics.\",\"motion\":\"Camera zooms into individual tiles as celebration peaks, then tiles animate out of the grid, swirling and merging into a central formation while AR effects (stars, emojis, celebratory bursts) play in sync with laughter and notification pings for maximum shareability and emotional resonance.\"}}]}",
-    "sessionId": 61664
+    "id": 17,
+    "shot_id": 357,
+    "creative_direction": "Animated Credentials Overlay",
+    "idea_data": {
+      "motion": "Smooth fade-ins and slide-ins, with each credential gently appearing and assembling into a corner or border, maintaining focus on Dr. Leslie.",
+      "description": "Elegant motion graphics display Dr. Leslie’s framed diplomas, certifications, and thank-you notes. These visually 'float in' next to her as she introduces herself.",
+      "visual_style": "Minimal, professional overlays; soft gold and blue hues; subtle drop-shadows to create depth.",
+      "creative_direction": "Animated Credentials Overlay"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-5\",\"shot_id\":\"scene-5_shot_3\",\"shot_number\":3,\"shot_title\":\"Community Strength Emphasized\",\"shot_description\":\"MS of circle of support, hands in center, animated lines connect members\",\"roll_type\":\"B\",\"narration_text\":\"These aren't just 'support groups'—they're transformation hubs where real change happens. You'll realize you're not the only one struggling—and that realization? It's powerful. Because when we grow together, we grow stronger.\",\"suggested_broll_visuals\":\"Hands-in unity, vibrantly colored animated connector overlays\",\"suggested_sound_effects\":[\"affirming chord\",\"gentle applause\"],\"emotional_tone\":\"affirming, motivating\",\"shot_purpose\":\"Visualize collective growth and individual empowerment\",\"word_count\":31,\"expected_duration\":12.4,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"Medium shot of a diverse group forming a circle, each member reaching their hand into the center for a collective gesture of unity and support.\",\"visual_style\":\"Warm, natural lighting with a focus on diverse skin tones. Slight top-down angle showing overlapping hands and visible subtle smiles around the circle. Colors are vibrant but true-to-life.\",\"motion\":\"Hands converge in the center, holding for a moment, then gently separating as participants look up and exchange affirming nods or smiles.\"},\"enhanced_broll\":{\"idea\":\"Circle of hands in the center; as they touch, softly glowing, multicolored animated lines emerge, connecting wrists and traveling around the circle, visualizing energy and collective strength.\",\"visual_style\":\"Saturated, gradient lighting brightens the hands and emphasizes connection points. Animated connector lines in bold, lively colors overlay the shot. Slight lens flare highlights add optimism.\",\"motion\":\"Connector lines animate outward from the center, looping around hands and pulsing in sync with an uplifting musical cue; camera slowly pushes in on the hands as the energy builds.\"},\"viral_broll\":{\"idea\":\"Surreal transformation moment: As hands meet at the center, vibrant animated lines shoot out, rapidly connecting each person and spiraling into the air, forming an overhead glowing network seen from above—symbolizing transformation and radical empowerment. Quick flashes reveal words like 'Stronger', 'Together', 'Change' glowing within the network, prompting viewers to feel part of a movement.\",\"visual_style\":\"Bold, stylized look mixing live action with dynamic, neon-inspired animation. Animated overlays are hyper-vivid, with glowing trails and creative typography that pulses and appears integrated within the live footage.\",\"motion\":\"Dramatic push-in as hands connect, then a fast, swirling aerial camera move reveals the animated network radiating outward. Motion graphics ripple and pulse in energetic waves synced to sound, and animated text bursts into view, encouraging viewers to share and internalize the emotion.\"}}]}",
-    "sessionId": 61664
+    "id": 18,
+    "shot_id": 357,
+    "creative_direction": "Impact Vignettes",
+    "idea_data": {
+      "motion": "Short live-action bursts or GIF-style loops that gently layer in and out beside or behind her intro.",
+      "description": "Quick, soft-focused cutaways show Dr. Leslie interacting warmly in real client-like moments: a supportive handshake, a joyful high-five, reading thank-you cards.",
+      "visual_style": "Bright, warmly lit, documentary-style realism. Slight vignette blur keeps moments personal and inviting.",
+      "creative_direction": "Impact Vignettes"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-5\",\"shot_id\":\"scene-5_shot_4\",\"shot_number\":4,\"shot_title\":\"Testimonial: Emily's Story\",\"shot_description\":\"Emily smiles, text quote displayed dynamically beside her, soft vignette\",\"roll_type\":\"B\",\"narration_text\":\"I thought I was the only one. But hearing others' stories gave me the strength to face my own. - Emily, Former Client\",\"suggested_broll_visuals\":\"Close-up on Emily, her words as on-screen animated callout\",\"suggested_sound_effects\":[\"gentle reveal chime\",\"soft applause\"],\"emotional_tone\":\"hopeful, grateful\",\"shot_purpose\":\"Showcase peer testimonial and its emotional resonance\",\"word_count\":23,\"expected_duration\":9.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"Close-up shot of Emily smiling softly, with her testimonial quote displayed clearly as text beside her, framed by a gentle vignette.\",\"visual_style\":\"Warm, natural light, slight vignette around the edges to draw focus. Clean, sans-serif text for the quote, arranged vertically in the negative space next to Emily’s face. Emily’s expression is hopeful and at ease.\",\"motion\":\"The quote gently fades in and out next to Emily as she shifts her eyes from the camera to a soft, reflective gaze. Subtle slow push-in on Emily’s face to enhance intimacy.\"},\"enhanced_broll\":{\"idea\":\"Emily’s close-up against a softly glowing background; as she smiles and begins to speak, her words animate on screen in flowing handwriting, with soft sparkles highlighting key phrases to amplify emotional impact.\",\"visual_style\":\"Dreamy pastel color wash behind Emily, delicate animated hand-lettered text overlays her testimonial. Soft light sparkles drift through the background, complementing her hopefulness.\",\"motion\":\"Individual words/phrases appear in sync with the narration, animating into place as if handwritten. Sparkles follow the text and gently fade once each phrase lands. The camera glides subtly closer as the quote builds.\"},\"viral_broll\":{\"idea\":\"Emily’s quote transforms into a live, interactive graphic: as she smiles, illustrated versions of other diverse group members emerge behind her in soft-focus, while her animated words radiate outward in vibrant colors—each word briefly becoming a pop-up GIF or emoji that visually underscores her gratitude and hope. Optimized for emotional shareability.\",\"visual_style\":\"Hybrid of live action and playful, animated overlays. Vibrant, emotionally resonant color pops; text morphs into upbeat social-style stickers, GIFs, or emojis. Soft-focus figures in the background symbolize community and support.\",\"motion\":\"As Emily’s words appear, each key phrase bursts with animated effects (hearts, sun rays, support emojis). The group behind her comes into clarity with a ripple effect, reinforcing communal hope. Motion graphics sync to gentle chimes for a shareable, feel-good finish.\"}}]}",
-    "sessionId": 61664
+    "id": 19,
+    "shot_id": 357,
+    "creative_direction": "Origins Flashback",
+    "idea_data": {
+      "motion": "Quick transitions between eras using page-turn or sketch-reveal effects, ending with the current professional scene.",
+      "description": "Brief playful illustrated flashbacks showing Dr. Leslie helping others across life stages (e.g. childhood lemonade stand advice, school counselor, adult mentor), conveying lifelong dedication.",
+      "visual_style": "Hand-drawn animation, pastel backgrounds, nostalgic color grading.",
+      "creative_direction": "Origins Flashback"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-6\",\"shot_id\":\"scene-6_shot_1\",\"shot_number\":1,\"shot_title\":\"Presenter Sets Up Self-Guided\",\"shot_description\":\"Dr. Leslie enthusiastically introduces self-guided program to camera\",\"roll_type\":\"A\",\"narration_text\":\"Or maybe you prefer to work at your own pace? That's exactly why I created the Self-Guided Freedom Program.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\",\"confident tone\"],\"emotional_tone\":\"encouraging, upbeat\",\"shot_purpose\":\"Personalize scene, highlight self-study option\",\"word_count\":19,\"expected_duration\":7.6,\"aroll_context\":{\"narrative_summary\":\"Dr. Leslie enthusiastically addresses the camera to introduce the Self-Guided Freedom Program, offering viewers an alternative for independent learning at their own pace.\",\"emotional_tone\":\"encouraging, upbeat\",\"visual_elements\":\"Bright, inviting studio lighting; Dr. Leslie's welcoming gesture and confident posture reinforce empowerment and optimism.\",\"relevance_to_broll\":\"Subsequent B-roll should evoke self-empowerment, independence, and the personal satisfaction of self-directed growth, using visuals that feel fresh and motivational.\"}}",
-    "sessionId": 61664
+    "id": 20,
+    "shot_id": 357,
+    "creative_direction": "Trophy Wall Metaphor",
+    "idea_data": {
+      "motion": "A slow camera dolly or a parallax reveal, with select items lighting up as her credentials are discussed.",
+      "description": "A metaphorical 'wall of achievements' emerges behind Dr. Leslie—trophies, client thank-you notes, client photos, and milestone markers visualized as a gallery.",
+      "visual_style": "3D parallax or collage aesthetic, warm wood and glass, softly glowing key items.",
+      "creative_direction": "Trophy Wall Metaphor"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-6\",\"shot_id\":\"scene-6_shot_2\",\"shot_number\":2,\"shot_title\":\"Self-Paced Learning Visual\",\"shot_description\":\"Person at laptop, checking off online module with proud smile\",\"roll_type\":\"B\",\"narration_text\":\"This interactive journey is packed with real-world strategies, exercises, and step-by-step modules designed to help you regain control—on your terms.\",\"suggested_broll_visuals\":\"User at desk, progress bar fills, badges animate\",\"suggested_sound_effects\":[\"module ding\",\"typing\"],\"emotional_tone\":\"self-assured, optimistic\",\"shot_purpose\":\"Visualize self-empowerment, achievement milestones\",\"word_count\":20,\"expected_duration\":8,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A confident individual sits at a desk, smiling with pride as they check off an online module on their laptop screen.\",\"visual_style\":\"Bright, airy workspace with natural light. Straightforward composition showing user profile and laptop screen with clear module progression indicators.\",\"motion\":\"User clicks a button to complete a module; a simple digital checkmark appears on screen, and the user nods with a proud smile.\"},\"enhanced_broll\":{\"idea\":\"The workspace scene expands to include animated visual elements: as the user checks off a module, a vibrant progress bar fills, and digital achievement badges pop onto the screen, enhancing the sense of progress.\",\"visual_style\":\"Modern, clean design with animated UI overlays. Soft, optimistic color palette emphasizes progress and accomplishment—think gentle blues and greens, with gold highlights on badges.\",\"motion\":\"When the module is completed, the progress bar animates smoothly, and badges bounce onto the screen with a celebratory effect. The camera gently pushes in to focus on the user’s satisfied expression.\"},\"viral_broll\":{\"idea\":\"As the user checks off the module, the laptop emits a glowing burst, and virtual progress bars, animated confetti, and 3D achievement icons fill the room—turning the act of self-paced learning into a joyful celebration. The shot gamifies achievement to make self-empowerment visually irresistible and highly shareable.\",\"visual_style\":\"Whimsical blend of live action with colorful, high-gloss 3D animation layered in. Bold, playful UI elements and confetti effects dominate, using on-trend hues (pastel gradients with neon accents).\",\"motion\":\"The instant the module is completed, the camera quickly zooms in on the screen, then pulls out to reveal animated confetti and 3D badges floating and spinning through the air, as if real, surrounding the beaming user. Animated progress bars arc around them, all in sync with a celebratory sound cue for amplified shareability.\"}}]}",
-    "sessionId": 61664
+    "id": 21,
+    "shot_id": 357,
+    "creative_direction": "Social Trust Signals",
+    "idea_data": {
+      "motion": "UI cards slide in and gently pulse or shimmer, real testimonial text animates as if typed onscreen.",
+      "description": "Visual pop-ins of digital trust signals: screenshot-style overlays of 5-star reviews, press mentions, and awards animate alongside Dr. Leslie to reinforce credibility.",
+      "visual_style": "Modern, sleek UI elements mixed with real testimonial graphics; clean white with brand accent colors.",
+      "creative_direction": "Social Trust Signals"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-6\",\"shot_id\":\"scene-6_shot_3\",\"shot_number\":3,\"shot_title\":\"Self-Reflection & Celebration\",\"shot_description\":\"Video call w/ friend sharing progress; fist pump, joyous grin\",\"roll_type\":\"B\",\"narration_text\":\"This is perfect if you're motivated to create change independently but need the right tools to make it stick. You'll track your progress and celebrate your wins as you reach clear, definable goals.\",\"suggested_broll_visuals\":\"User on video call, showing milestone badges, happy celebration\",\"suggested_sound_effects\":[\"cheerful alert\",\"celebratory sound\"],\"emotional_tone\":\"joyful, fulfilled\",\"shot_purpose\":\"Show personal pride and social sharing of achievements\",\"word_count\":33,\"expected_duration\":13.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"Person on a video call with a friend, proudly showing their screen displaying newly earned milestone badges, and celebrating with a joyful fist pump.\",\"visual_style\":\"Clean, inviting home environment; natural lighting highlights user's enthusiasm. The laptop screen (shown in frame) clearly displays achievement badges. Friend appears in a video call window, smiling supportively.\",\"motion\":\"User excitedly points to the badges on the screen, pumps their fist, and grins broadly as the friend claps or gives a thumbs-up through the video call.\"},\"enhanced_broll\":{\"idea\":\"As the user celebrates on the video call, digital milestone badges animate onto both users' screens in real time, with gentle confetti effects emphasizing the achievement. The friend joins the celebration with an onscreen animated reaction—like clapping hands or celebratory emojis.\",\"visual_style\":\"Hybrid live footage with playful, lively motion graphics layered onto device screens. Soft, saturated color accents highlight badges and reactions, infusing joy and fulfillment.\",\"motion\":\"Milestone badges fly onto the users' screens with cheerful bounce effects, digital confetti drifts across the frame, and celebratory animations or emojis appear around both video call participants, enhancing the infectious joy of the moment.\"},\"viral_broll\":{\"idea\":\"The moment the user shows their progress, the video call background transforms into an animated, digital party—colorful fireworks, floating milestone icons, and popping emojis surround both participants, creating a visually spectacular, highly shareable celebration. The friend’s window expands, and both avatars perform matching victory dances, amplifying the communal energy.\",\"visual_style\":\"Joyful, over-the-top animation overlays dominate—sparkling digital fireworks, bold neon milestone icons, reactive backgrounds that pulse with each celebration. Trendy social platform vibe with exaggerated emoji and avatar reactions.\",\"motion\":\"The shot explodes with celebratory animation: camera zooms in for effect as the background morphs into a digital party, avatars perform lively dances, milestone icons float and spin, and animated reactions shower the screen, synced perfectly with a burst of fun sound effects to maximize shareability.\"}}]}",
-    "sessionId": 61664
+    "id": 22,
+    "shot_id": 358,
+    "creative_direction": "Emotive Cycle Metaphor",
+    "idea_data": {
+      "motion": "Icons flow in a gentle, circular motion, with a flourishing transformation to uplifting symbols at the end.",
+      "description": "Animated emotion icons (stress, regret, temptation) cycle in a loop with currency symbols, then gradually replaced by hopeful icons (spark, heart, open hands) as narration mentions 'taking back control.'",
+      "visual_style": "Smooth, softly shaded icons on a clean white or pastel background, gentle transitions, calming color palette.",
+      "creative_direction": "Emotive Cycle Metaphor"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-7\",\"shot_id\":\"scene-7_shot_1\",\"shot_number\":1,\"shot_title\":\"Presenter: Heartfelt Appeal\",\"shot_description\":\"CU Dr. Leslie, supportive, gentle delivery, direct eye contact, soft backlight\",\"roll_type\":\"A\",\"narration_text\":\"I know what it feels like to want change but not know where to start. This transformation journey isn't just about changing your spending habits—it's about reclaiming your peace of mind, rebuilding your confidence, and feeling proud of the progress you can see and feel in your everyday life.\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\"],\"emotional_tone\":\"compassionate, trusting\",\"shot_purpose\":\"Anchor psychological value of journey, emotional build\",\"word_count\":49,\"expected_duration\":19.6,\"aroll_context\":{\"narrative_summary\":\"Dr. Leslie delivers a heartfelt, gentle message, expressing empathy for viewers seeking change and emphasizing that the journey leads to renewed confidence, peace of mind, and visible progress in daily life.\",\"emotional_tone\":\"compassionate, trusting\",\"visual_elements\":\"Close-up of Dr. Leslie with soft backlighting, direct eye contact, warm and inviting expression highlighted by gentle, supportive lighting.\",\"relevance_to_broll\":\"Upcoming B-roll should capture emotional resonance, focusing on personal transformation, inner peace, and the tangible sense of progress and self-assurance described in the narrative.\"}}",
-    "sessionId": 61664
+    "id": 23,
+    "shot_id": 358,
+    "creative_direction": "Hopeful Split-Screen Shift",
+    "idea_data": {
+      "motion": "Seamless sliding split, with elements on each side animating in harmony, culminating in both sides blending into a bright, unified scene.",
+      "description": "Split-screen animation: left side shows anxious faces, bills, money slipping away; right side shows supportive gestures, energy rising, and a burst of optimistic light when 'good news' is spoken.",
+      "visual_style": "Stylized, illustrative animation (think editorial illustration aesthetic), using contrasting warm and cool tones for emotional impact.",
+      "creative_direction": "Hopeful Split-Screen Shift"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-7\",\"shot_id\":\"scene-7_shot_2\",\"shot_number\":2,\"shot_title\":\"Animated Key Phrases Overlay\",\"shot_description\":\"Animated phrases like 'peace of mind', 'progress' float over soft visuals\",\"roll_type\":\"B\",\"narration_text\":\"Once you understand why you spend, you unlock the power to change it—for good.\",\"suggested_broll_visuals\":\"Soft focus BG, optimistic phrase overlays, gentle lighting\",\"suggested_sound_effects\":[\"phrase whoosh\",\"gentle chime\"],\"emotional_tone\":\"hopeful, inspiring\",\"shot_purpose\":\"Visualize key psychological shifts for audience\",\"word_count\":14,\"expected_duration\":5.6,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"Soft-focus background, such as gentle sunlight through a window or an out-of-focus peaceful landscape, with simple animated key phrases like 'peace of mind' and 'progress' floating elegantly across the screen.\",\"visual_style\":\"Warm, pastel-toned background with a slight blur for softness. White or pale pastel text in a clean, sans-serif font overlays the visuals. Gentle, radiant lighting enhances the atmosphere.\",\"motion\":\"Key phrases gently fade in and slowly drift or float horizontally, each accompanied by a subtle whoosh or chime sound effect as they appear.\"},\"enhanced_broll\":{\"idea\":\"Beautifully animated key phrases, each word or phrase appearing with a soft ripple effect over a serene background like slow-motion sun rays moving across a tranquil room. Each phrase is highlighted briefly as it appears, enhancing the psychological shift.\",\"visual_style\":\"Cinematic shallow depth-of-field with creamy bokeh effects and calming, golden light. Animated text features slight glow and shadow for extra emphasis, with a handwritten or script font conveying warmth and inspiration.\",\"motion\":\"Phrases animate in with ripples or soft glows, then drift gently upward or dissolve like light particles. Occasional subtle camera shift or background movement adds to the immersive, ethereal effect.\"},\"viral_broll\":{\"idea\":\"Abstract, emotionally engaging animated scene: Key phrases materialize as glowing words that bloom out of floating orbs of light, hovering over a surreal, softly colored dreamscape. As each phrase appears, the orbs pulse and send out gentle waves, and the background subtly shifts colors in sync with the narration, creating a mesmerizing, shareable moment.\",\"visual_style\":\"Surreal pastel dreamscape with floating bokeh light orbs. Phrases glow with gradients, surrounded by animated sparkles or shimmering trails. High-intensity emotional color grading and trend-driven animated typography.\",\"motion\":\"Each orb bursts with a pulse as a phrase blooms from it, shimmering and floating across the scene in slow, weightless movement. The camera slowly pushes through the scene as backgrounds shift hues, timed to the narration and inspiring chimes, giving an immersive, almost magical sensory experience.\"}}]}",
-    "sessionId": 61664
+    "id": 24,
+    "shot_id": 358,
+    "creative_direction": "Surreal Interventions",
+    "idea_data": {
+      "motion": "Slow, deliberate hand motions with floating icons; soft spark bursts accompany transitions to hopeful symbols.",
+      "description": "Surreal visuals: oversized animated hands gently lift anxiety/emotion icons and replace them with empowering symbols (a key, spark, open door) as narration shifts to hope and control.",
+      "visual_style": "Minimalist, dream-like with semi-transparent overlays; hands and icons are slightly abstract for emotional resonance.",
+      "creative_direction": "Surreal Interventions"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-8\",\"shot_id\":\"scene-8_shot_1\",\"shot_number\":1,\"shot_title\":\"Testimonial: Debt Free\",\"shot_description\":\"CU of smiling, relieved participant, overlay 'I'm debt-free for the first time in years.'\",\"roll_type\":\"B\",\"narration_text\":\"I'm debt-free for the first time in years.\",\"suggested_broll_visuals\":\"Joyful person; testimonial in handwritten or upbeat type style\",\"suggested_sound_effects\":[\"celebration chime\"],\"emotional_tone\":\"triumphant, relieved\",\"shot_purpose\":\"Highlight real participant victory visually and emotionally\",\"word_count\":8,\"expected_duration\":3.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A close-up of a smiling participant who looks visibly relieved, with a text overlay reading 'I'm debt-free for the first time in years.'\",\"visual_style\":\"Bright, natural lighting that highlights the participant’s joyful expression. The text appears in a clean, upbeat handwritten or casual script font at the bottom third of the frame.\",\"motion\":\"Participant breaks into a genuine smile as the overlay text fades in, punctuated by a soft celebration chime.\"},\"enhanced_broll\":{\"idea\":\"The smiling participant looks up and exhales with visible relief, as the phrase 'I'm debt-free for the first time in years.' animates onto the screen with a playful hand-drawn effect. Subtle celebratory confetti sparkles drift into the frame, enhancing the sense of triumph.\",\"visual_style\":\"Soft, warm color palette with glowing highlights on the face. Handwritten text animates organically like it's being written in real time, accompanied by gentle, animated confetti in pastel shades.\",\"motion\":\"Text appears as if being hand-written in synch with the narration. Confetti sparkles drift gently from the top, and the participant beams with unmistakable pride and relief, all timed to a gentle celebration chime.\"},\"viral_broll\":{\"idea\":\"As the participant’s relieved expression transforms into pure joy, the background subtly animates into a burst of golden light and floating, large, 3D 'debt-free' tokens or icons. The testimonial phrase is dynamically revealed with a kinetic type effect, and the whole moment is punctuated by trending social animation motifs for maximum emotional pull and shareability.\",\"visual_style\":\"High-impact, modern blend of live action and 3D animation. Background shifts into radiant gold with spark and shimmer effects. The testimonial text pops in with kinetic, multi-directional movement using bold, brushstroke or marker font. Trophy icons, fireworks, or digital badge visuals float around the participant.\",\"motion\":\"The participant’s face lights up as the background glows and animated icons float upward. The phrase bursts across the screen in sync with a vibrant chime, and celebratory elements like virtual confetti, badges, and gold sparkles animate in, creating a share-worthy, emotionally charged reveal.\"}}]}",
-    "sessionId": 61664
+    "id": 25,
+    "shot_id": 358,
+    "creative_direction": "Social Loop Animation",
+    "idea_data": {
+      "motion": "Swipe, pop, and ripple effects; feed smoothly transitions from emotional struggle posts to a glowing, hopeful sequence.",
+      "description": "Fast-paced animation simulating a social app feed where viewers see posts representing stress, regret, etc., scrolling by, until a positive 'Take Back Control' post appears and radiates outward, transforming the entire feed to bright optimism.",
+      "visual_style": "Modern, UI-inspired with gentle gradients and simple emojis/icons for emotion; playful but clean look.",
+      "creative_direction": "Social Loop Animation"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-8\",\"shot_id\":\"scene-8_shot_2\",\"shot_number\":2,\"shot_title\":\"Testimonial: Impulse Control\",\"shot_description\":\"Participant expresses contentment, overlay 'I don't feel controlled by my impulses anymore.'\",\"roll_type\":\"B\",\"narration_text\":\"I don't feel controlled by my impulses anymore.\",\"suggested_broll_visuals\":\"Participant serene, content, direct camera smile\",\"suggested_sound_effects\":[\"gentle shimmer\"],\"emotional_tone\":\"empowered, content\",\"shot_purpose\":\"Show permanent change and contentment\",\"word_count\":8,\"expected_duration\":3.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A content participant gazes directly at the camera with a serene, confident smile. Overlay text reads 'I don't feel controlled by my impulses anymore.'\",\"visual_style\":\"Soft, neutral tones with natural, even lighting. Text appears in a calm, modern sans-serif or gentle handwritten font at the lower third of the frame.\",\"motion\":\"Participant gives a gentle, slow smile as the overlay text softly fades in alongside a subtle shimmer sound.\"},\"enhanced_broll\":{\"idea\":\"The participant, seated in a calm setting, breathes easy and gives a peaceful smile to the camera as the testimonial phrase is written onto the screen in a relaxed handwritten animation. A faint glow outlines the participant, emphasizing empowerment.\",\"visual_style\":\"Minimalist background with pastel or earth tones, smooth shallow depth-of-field. Text unfolds with organic, hand-drawn animation; soft glow effect subtly frames the participant, conveying serenity and achievement.\",\"motion\":\"Handwritten text animates in harmony with the participant's contented smile and relaxed breath. An empowering, gentle shimmer effect passes across the screen to punctuate the moment.\"},\"viral_broll\":{\"idea\":\"As the participant’s smile broadens, the scene subtly transitions: delicate waves of calming, animated light sweep across the background, and the phrase 'I don't feel controlled by my impulses anymore.' forms in shimmering, kinetic lettering that momentarily wraps gently around the participant, symbolizing newfound freedom.\",\"visual_style\":\"Sleek blend of real footage and trending kinetic typography. Animated, soothing waves in pastel gradients flow behind. The text glows and shifts, wrapping around or gently embracing the participant for a visually captivating metaphor for control.\",\"motion\":\"Animated waves softly glide horizontally as shimmering text appears, then kinetically encircles or arcs around the participant. As the smile lands, a gentle shimmer sweeps across both participant and text, visually punctuating the sense of empowerment and inviting instant audience connection.\"}}]}",
-    "sessionId": 61664
+    "id": 26,
+    "shot_id": 359,
+    "creative_direction": "Science & Success Montage",
+    "idea_data": {
+      "motion": "Snappy cuts between scenes with smooth animated overlays tracking key words, progress lines, and transformation icons.",
+      "description": "A fast-paced montage of diverse clients in coaching calls, jotting notes in workbooks, and overlayed with dynamic icons: brain graphics, a 'science badge,' and animated CBT-related terms. The sequence closes with confident faces and subtle on-screen graphs showing positive progress.",
+      "visual_style": "Modern, crisp, a blend of natural client footage and sleek digital overlays for credibility.",
+      "creative_direction": "Science & Success Montage"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-8\",\"shot_id\":\"scene-8_shot_3\",\"shot_number\":3,\"shot_title\":\"Testimonial: Life Changed\",\"shot_description\":\"Montage: happy participants, text overlay 'This program changed my life.'\",\"roll_type\":\"B\",\"narration_text\":\"This program changed my life.\",\"suggested_broll_visuals\":\"Diverse faces light up; transformation symbol subtly in BG\",\"suggested_sound_effects\":[\"crowd cheer\"],\"emotional_tone\":\"inspired, joyful\",\"shot_purpose\":\"Showcase many people’s transformation success\",\"word_count\":5,\"expected_duration\":2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"A quick montage of diverse, happy participants looking directly at the camera, each radiating joy and pride. Overlay text reads 'This program changed my life.' across the montage.\",\"visual_style\":\"Bright, natural lighting with vivid colors highlighting a variety of smiling faces. The overlay text is presented in a clear, upbeat handwritten or modern bold font spanning the bottom or center of the screen.\",\"motion\":\"Montage rapidly cycles through several participant close-ups, with each person's smile arriving in sync with a rising crowd cheer. The overlay text gently fades in and remains throughout.\"},\"enhanced_broll\":{\"idea\":\"A dynamic split-screen or tile montage featuring quick cuts of joyful participants from different backgrounds, each lighting up with a transformation symbol (like a butterfly or sunburst) gently animating in the background. The overlay phrase appears with a celebratory handwritten animation.\",\"visual_style\":\"Vivid, saturated color grading enhances the sense of joy. Transformation symbols subtly animate behind participants. The overlay text is bright, brushstroke, or script style, arriving with hand-drawn pop.\",\"motion\":\"Crisp, upbeat montage with quick, in-sync cuts. Each smile is punctuated with a burst of background animation and a subtle crowd cheer. The text writes itself across the frame as the faces appear.\"},\"viral_broll\":{\"idea\":\"A visually engaging, TikTok-style animated mosaic: multiple video clips of diverse participants play simultaneously, forming a collage that zooms out to reveal a large transformation symbol (e.g., a butterfly or rising sun) composed of the mini-videos. The phrase 'This program changed my life.' bursts onto the center in sparkling kinetic type, timed to an uplifting crowd cheer.\",\"visual_style\":\"Trendy animation mixing real faces and bold, stylized overlays. High-contrast, energetic color grading. Transformation symbol (butterfly, sun, or seedling) revealed by the mosaic effect. Vibrant, glittering kinetic typography overlays for the phrase.\",\"motion\":\"Quick-cut mosaic builds from individual participant clips, then zooms out to form the large symbol. Text bursts in with sparkling, energetic motion. Occasional shimmer or sparkle effects highlight movement, culminating as the crowd cheer cascades in for a viral, emotionally charged finish.\"}}]}",
-    "sessionId": 61664
+    "id": 27,
+    "shot_id": 359,
+    "creative_direction": "Illustrated Journey",
+    "idea_data": {
+      "motion": "Elements drawn on rapidly, transitions between frames mimic a guided journey along a visual path.",
+      "description": "Hand-drawn illustrations animate each step of the program: overcoming impulses, open workbook pages, a coach-client dialogue, and success milestones visualized as mini-goals reached.",
+      "visual_style": "Clean, warm, semi-animated line drawings with playful accent colors, over subtle textured backgrounds.",
+      "creative_direction": "Illustrated Journey"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-9\",\"shot_id\":\"scene-9_shot_1\",\"shot_number\":1,\"shot_title\":\"Presenter's Direct Invitation\",\"shot_description\":\"Dr. Leslie to camera, confident and inviting, summarizing options\",\"roll_type\":\"A\",\"narration_text\":\"So, what's the next step for you? One-on-one coaching, group support, or a self-guided journey—each path leads to freedom. The question is: Are you ready to take the first step?\",\"suggested_broll_visuals\":\"\",\"suggested_sound_effects\":[\"studio ambience\",\"inspiring uplift\"],\"emotional_tone\":\"encouraging, challenging\",\"shot_purpose\":\"Encourage action, reinforce program paths\",\"word_count\":30,\"expected_duration\":12,\"aroll_context\":{\"narrative_summary\":\"Dr. Leslie addresses the audience directly to encourage next steps, summarizing available support paths and prompting viewers to make an active choice.\",\"emotional_tone\":\"encouraging, challenging\",\"visual_elements\":\"Confident, inviting presenter framed in a studio or clean environment, strong eye contact and open posture.\",\"relevance_to_broll\":\"Sets up an active, motivational tone for upcoming B-roll, suggesting visuals that reinforce empowerment, choice, and personal agency.\"}}",
-    "sessionId": 61664
+    "id": 28,
+    "shot_id": 359,
+    "creative_direction": "Metaphoric Transformation",
+    "idea_data": {
+      "motion": "Slow, satisfying unraveling or blooming animations, synchronizing with narration points about empowerment.",
+      "description": "Visual metaphors such as a tangled ball of yarn unraveling, a locked box being opened, and a garden blooming represent breaking destructive cycles and building lasting change.",
+      "visual_style": "Close-up, richly colored macro shots or softly lit tableaus, with overlays of program keywords.",
+      "creative_direction": "Metaphoric Transformation"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-9\",\"shot_id\":\"scene-9_shot_2\",\"shot_number\":2,\"shot_title\":\"Program Options Graphics\",\"shot_description\":\"Animated icons for three programs, vibrant panels pop-up style\",\"roll_type\":\"B\",\"narration_text\":\"Your future starts now. Take our free self-assessment or enroll in one of our programs today.\",\"suggested_broll_visuals\":\"3 program option icons, animated CTA button pulses\",\"suggested_sound_effects\":[\"button click\",\"quick shimmer\"],\"emotional_tone\":\"motivational, energetic\",\"shot_purpose\":\"Visualize pathway choices, drive viewer to action\",\"word_count\":16,\"expected_duration\":6.4,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"Animated display of three distinct icons, each representing a program option, with vibrant color panels that pop into view one after the other. A central CTA button appears and pulses to prompt viewer engagement.\",\"visual_style\":\"Clean, flat design with bold, energetic colors. Icons are simple and universally recognizable. Each panel has a distinct hue, and the CTA button is in a high-contrast color to stand out.\",\"motion\":\"Panels quickly pop up in sequence with a light bounce. Each icon animates in as its panel appears. The CTA button appears last, pulsing gently with each button click and a quick shimmer accent.\"},\"enhanced_broll\":{\"idea\":\"Stylized animated panels cascade in with playful, kinetic motion, each featuring a lively icon that briefly transforms to hint at its program (e.g., handshake for group support animates into a group, book flips for self-guided). The CTA button pulses energetically, surrounded by a subtle, sparkling highlight.\",\"visual_style\":\"Trendy, soft-shadowed flat illustration with gradients and mild 3D pop effect. Dynamic use of layered colors and motion blur for added energy. CTA button glows with an animated ring when pulsing.\",\"motion\":\"Panels slide, flip, or bounce in with staggered timing; each icon morphs in for an instant then locks into its final state. The CTA button enters with a lively bounce, then radiates pulses and sparkles right as the narration urges action.\"},\"viral_broll\":{\"idea\":\"A super-energetic, TikTok-inspired transition: program option icons emerge and rotate in 3D, 'flipping' toward the viewer. As each settles, its vibrant panel bursts with animated confetti or digital fireworks. The CTA morphs into a shimmering, oversized interactive button, pulsing with every beat and ending with a viral-style callout animation ('Start Now!' stamp or spark).\",\"visual_style\":\"Bold, contemporary mix of 2D and 3D animation, vivid neon gradients, shadow layering, and confetti/firework overlays. CTA button is glossy, animated, and designed to look like it’s ready to be tapped in a trendy app.\",\"motion\":\"Icons spin and snap into place with rhythmic, energetic transitions. Panels explode with confetti and shimmer for maximum impact. The CTA button grows, pulses with electric energy, and concludes with a viral motion motif—a pop-up stamp or sparkle burst—optimized for viewership and sharing.\"}}]}",
-    "sessionId": 61664
+    "id": 29,
+    "shot_id": 359,
+    "creative_direction": "Animated CBT Overlay",
+    "idea_data": {
+      "motion": "Animated graphics flow into the frame with subtle zooms and connecting lines; overlays highlight in sync with key script lines.",
+      "description": "Live-action shots of coaching scenarios are overlaid with animated diagram callouts: thought loops, actionable steps, checklists, and keywords like ‘evidence-based’ and ‘control.’",
+      "visual_style": "Semi-transparent digital HUD-style overlays on organic coaching shots, mixing cool tones with brand accent colors.",
+      "creative_direction": "Animated CBT Overlay"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   },
   {
-    "shot": "{\"scene_id\":\"scene-10\",\"shot_id\":\"scene-10_shot_1\",\"shot_number\":1,\"shot_title\":\"Final Logo Reveal & Musical Close\",\"shot_description\":\"Retail Therapy Unplugged logo with glowing animation, fade out\",\"roll_type\":\"B\",\"narration_text\":\"[Inspiring music swells. The Retail Therapy Unplugged logo appears with a soft fade-out.]\",\"suggested_broll_visuals\":\"Logo on softly colored background, animated glow, fade to black\",\"suggested_sound_effects\":[\"soft chime\",\"gentle whoosh\"],\"emotional_tone\":\"uplifting, accomplished\",\"shot_purpose\":\"End with strong brand imprint and resolve\",\"word_count\":13,\"expected_duration\":5.2,\"broll_concepts\":[{\"standard_broll\":{\"idea\":\"The Retail Therapy Unplugged logo appears centered on a softly colored gradient background, gently glowing. The entire image slowly fades to black as inspiring music concludes.\",\"visual_style\":\"Clean and minimal, with soft pastel gradients (blues, pinks, or lavender) providing a calm, uplifting atmosphere. The logo glows with a subtle aura, and shadow for depth.\",\"motion\":\"Logo gently fades in, pulse-glows in sync with a soft chime, then gradually fades to black with a smooth whoosh sound.\"},\"enhanced_broll\":{\"idea\":\"The logo materializes from a swirling burst of glowing particles that gently converge at the center, coalescing smoothly into the final mark. The background features a shifting, luminous gradient, reinforcing a sense of accomplishment.\",\"visual_style\":\"Elegant, modern background with animated, colorful gradients drifting slowly. The glow effect on the logo feels ethereal—particles shimmer and gently swirl before becoming the solid logo.\",\"motion\":\"Particles drift and swirl into place as the logo forms, then emit a crescendo glow at musical peak. The animation slows as the logo lingers, then everything slowly dissolves to black on the musical out.\"},\"viral_broll\":{\"idea\":\"A visually striking logo reveal: bright, radiant lines sweep across the frame, drawing the logo in light-painting fashion before it flashes into full color. The background subtly pulses with energy, and vibrant glimmers ripple outward, leaving a lasting impression before a crisp, cinematic fade out.\",\"visual_style\":\"High-contrast, dynamic look using radiant, animated light streaks and bold color pops. On-brand palette with a luminous, digital finish. Logo reveal resembles high-end tech or entertainment branding.\",\"motion\":\"Animated lines race and swirl to trace and 'paint' the logo in sync with musical swells, followed by a burst of glow that ripples out. Brief logo hold, then a stylish, satisfying fade to black coinciding with the music’s resolution.\"}}]}",
-    "sessionId": 61664
+    "id": 30,
+    "shot_id": 359,
+    "creative_direction": "Social Proof Collage",
+    "idea_data": {
+      "motion": "Energetic, rhythmic quick cuts with popping animated text and sticker-style icons during client breakthroughs.",
+      "description": "A vertical video, smartphone-style split panel collage shows real participants texting, video calling, and reacting positively to their progress—intercut with quick testimonials and emoji-style graphics.",
+      "visual_style": "Casual, user-generated vibe, mixed aspect ratios and slightly saturated colors for authenticity.",
+      "creative_direction": "Social Proof Collage"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
+  },
+  {
+    "id": 31,
+    "shot_id": 360,
+    "creative_direction": "Triumphant Montage",
+    "idea_data": {
+      "motion": "Fast-paced edits that crescendo into a slow-motion group high-five or shared laughter; rapid overlays sync with upbeat music and sound effects.",
+      "description": "Quick-cut sequence of clients joyfully celebrating financial milestones—high-fives, texting loved ones, smiling at notification pings and progress bars on their phones.",
+      "visual_style": "Bright colors, energetic lens flares, real environments (home, work, community). Overlays of confetti and animated checkmarks accentuate emotion.",
+      "creative_direction": "Triumphant Montage"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
+  },
+  {
+    "id": 32,
+    "shot_id": 360,
+    "creative_direction": "Gratitude Wall",
+    "idea_data": {
+      "motion": "Smooth camera pans across the wall; notes and photos appear one by one, gentle zooms highlighting faces and messages.",
+      "description": "Clients pinning handwritten thank-you notes and polaroids to a real or virtual 'wall of gratitude.' Close-ups of their proud, emotional expressions.",
+      "visual_style": "Warm, textured backgrounds (wood or soft pastel), shallow depth-of-field for intimacy. Handwriting overlays animate onto screen.",
+      "creative_direction": "Gratitude Wall"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
+  },
+  {
+    "id": 33,
+    "shot_id": 360,
+    "creative_direction": "Animated Progress Journey",
+    "idea_data": {
+      "motion": "Characters march, leap, do joyful spins—the path undulates gently, and milestone effects activate in sync with sound cues.",
+      "description": "Stylized animation where client avatars advance along a path with milestones—each achievement triggers a burst of stars, and gratitude messages pop up as supportive banners.",
+      "visual_style": "Playful, 2D animation with bold outlines, expressive character design, and vibrant colors. Digital progress bars fill and badges unlock.",
+      "creative_direction": "Animated Progress Journey"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
+  },
+  {
+    "id": 34,
+    "shot_id": 360,
+    "creative_direction": "Instant Replay Breakthroughs",
+    "idea_data": {
+      "motion": "Dynamic slow-motion (super-slo-mo) for impact, followed by a freeze and animated text (e.g., 'Breakthrough!', 'Achievement!') swooping in.",
+      "description": "Key celebratory moments (hugging loved ones, holding thank-you notes, receiving a positive text) replayed in slow-motion, each with a freeze-frame overlay of uplifting words and audience-style applause.",
+      "visual_style": "High-contrast, sports highlight-style with bold titles; subtle vignette for focus.",
+      "creative_direction": "Instant Replay Breakthroughs"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
+  },
+  {
+    "id": 35,
+    "shot_id": 360,
+    "creative_direction": "Golden Hour Hug Montage",
+    "idea_data": {
+      "motion": "Slow cross-dissolves and gentle camera dolly moves; sun flares sweep as scenes transition from one embrace to the next.",
+      "description": "Clients and their families/friends embracing at sunset ('golden hour'), smiling with relief. Gratitude notes fade in alongside their expressions.",
+      "visual_style": "Cinematic, warm golden lighting, natural outdoor settings, gentle lens flare. Overlays mimic hand-written gratitude, softly illuminating the frame.",
+      "creative_direction": "Golden Hour Hug Montage"
+    },
+    "version_number": 1,
+    "created": "2025-05-03T00:48:49.144432+00:00"
   }
 ]

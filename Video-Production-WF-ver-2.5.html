@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Production Workflow Requirements Document v2.4</title>
+    <title>Video Production Workflow Requirements Document v2.5</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -131,14 +131,13 @@
 </head>
 
 <body> <!-- START OF METADATA SECTION -->
-    <h1>Video Production Workflow Requirements Document v2.4</h1>
+    <h1>Video Production Workflow Requirements Document v2.5</h1>
     <h2>Document Metadata</h2>
     <ul>
         <li><strong>Name:</strong> Video Production Workflow</li>
-        <li><strong>Version:</strong> 2.4</li>
-        <li><strong>Timestamp:</strong> 2024-07-10T16:00:00+00:00</li>
-        <li><strong>Description:</strong> End-to-end workflow for automating and streamlining the creation of
-            high-quality video content. This version updates the Visual Narrative Design node to independently process all B-roll shots, preserving all three B-roll concepts (standard, enhanced, viral) for each shot rather than selecting just one. The Visual Narrative Design node now directly feeds the Image Prompt Generator and Sound Effects Generator, creating a single comprehensive Visual Narrative document that maintains project-level visual consistency while preserving creative options for later selection during image review. The core workflow structure and other agent responsibilities remain unchanged from previous versions.</li>
+        <li><strong>Version:</strong> 2.5</li>
+        <li><strong>Timestamp:</strong> 2024-07-11T00:00:00+00:00</li>
+        <li><strong>Description:</strong> This version updates the Shot Segmentation node so that it no longer makes a hard classification between A-roll and B-roll. Instead, for each shot, the agent recommends either A-roll or B-roll and provides a rationale for both options. The agent always outputs B-roll suggestions for every shot, even if A-roll is recommended, allowing downstream human or agent override. The Shot Plan document schema is updated accordingly. Other workflow logic and agent responsibilities remain unchanged from v2.4.</li>
     </ul>
 
     <h3>Workflow Persona</h3>
@@ -166,7 +165,7 @@
     </ul>
     
     <div class="note">
-        <strong>n8n Implementation Note:</strong> This workflow leverages n8n's ability to reference data from any previous node without requiring explicit connections. While the workflow diagram shows direct connections between nodes for clarity, many nodes access data from earlier steps without duplicating inputs. This capability is particularly useful for referencing metadata like scene IDs and shot IDs throughout the workflow. In the node descriptions, we distinguish between direct "Input" (primary data flow) and "Referenced Data" (data accessed via n8n's referencing capability).
+        <strong>n8n Implementation Note:</strong> This workflow leverages n8n's ability to reference data from any previous node without requiring explicit connections. While the workflow diagram shows direct connections between nodes for clarity, many nodes access data from earlier steps without duplicating inputs. This capability is particularly useful for referencing metadata like scene labels and shot labels throughout the workflow. In the node descriptions, we distinguish between direct "Input" (primary data flow) and "Referenced Data" (data accessed via n8n's referencing capability).
     </div>
 
     <h2>2. Core Requirements</h2>
@@ -243,11 +242,7 @@
         <tr>
             <td>Shot Segmentation</td>
             <td>Cinematographer & Editorial Planner</td>
-            <td>Breaks down scenes into distinct visual moments, classifies each as A-Roll (narration-driven) or B-Roll (supplementary visuals), 
-                and establishes optimal pacing. Creates visual rhythm through strategic shot variety (wide/establishing, medium, close-up, dynamic), 
-                appropriate shot durations, and intentional transitions. Balances narrative coherence with viewer engagement by maintaining 
-                an ideal ratio of shot types (typically 40% A-roll, 60% B-roll) while supporting the story's emotional arc through 
-                thoughtful composition and visual flow.</td>
+            <td>Breaks down scenes into distinct visual moments, recommends either A-Roll (narration-driven) or B-Roll (supplementary visuals) for each shot with a rationale for both options, and always outputs B-roll suggestions for every shot. Establishes optimal pacing and visual rhythm through strategic shot variety, appropriate shot durations, and intentional transitions. Balances narrative coherence with viewer engagement by supporting the story's emotional arc through thoughtful composition and visual flow.</td>
         </tr>
         <tr>
             <td>B-Roll Ideation</td>
@@ -322,15 +317,7 @@
         <strong>Agent Persona:</strong> Cinematographer & Editorial Planner<br>
         <strong>Input:</strong> <a href="#scene-blueprint">Scene Blueprint</a><br>
         <strong>Output:</strong> <a href="#shot-plan">Shot Plan</a><br>
-        <strong>Description:</strong> Divides scenes into individual shots with precise pacing and framing recommendations.
-        Analyzes each scene to identify logical segmentation points based on natural breaks in narration, shifts in subject matter, 
-        changes in emotional tone, and visual opportunities for emphasis. Classifies each shot as A-roll (narration-driven content) 
-        or B-roll (supplementary visual content), assigning appropriate durations based on content type (typically 2-5 seconds for B-roll). 
-        Creates a balanced visual rhythm through strategic shot variety (wide, medium, close-up), appropriate shot durations, and intentional 
-        transitions between shots. Ensures narrative coherence while maintaining an optimal ratio of A-roll to B-roll (typically 40% A-roll, 60% B-roll) 
-        for maximum viewer engagement. Outputs a detailed Shot Plan in structured JSON format with comprehensive metadata for each shot to guide 
-        downstream production processes.
-    </p>
+        <strong>Description:</strong> Divides scenes into individual shots with precise pacing and framing recommendations. For each shot, the agent recommends either A-roll (narration-driven) or B-roll (supplementary visual content), providing a rationale for both options. For every shot, the agent outputs two nested objects: an <code>a_roll</code> object containing all metadata fields relevant to an A-roll implementation (title, description, sound effects, emotional tone, purpose, notes, etc.), and a <code>b_roll</code> object containing all metadata fields relevant to a B-roll implementation (title, description, b-roll visuals, sound effects, emotional tone, purpose, notes, etc.). This ensures that downstream agents or humans can select either option and have all necessary context and metadata available, without ambiguity or missing fields. The agent also outputs a top-level roll recommendation and rationales for both options, but does not make a final decision.</p>
 
     <h4 id="shot-metrics-node">4.1.2b Shot Metrics Calculator</h4>
     <p><strong>Node Type:</strong> Integration<br>
@@ -345,10 +332,8 @@
         <strong>Agent Persona:</strong> Creative Director<br>
         <strong>Input:</strong> <a href="#shot-plan">Shot Plan</a><br>
         <strong>Output:</strong> <a href="#broll-concepts">B-Roll Concepts</a><br>
-        <strong>Description:</strong> Takes B-roll classified shots and proposes three tiers of visual concepts:
-        standard, enhanced, and viral. Uses lateral thinking to surface emotionally resonant, trend-aligned, or
-        visually surprising ideas. Each tier provides progressively more innovative visual solutions while
-        maintaining narrative coherence.
+        <strong>Description:</strong> Develops 3–5 distinct, creative visual directions for each shot that requires B-roll visualization, supporting a hybrid chat and form-based user interaction. Uses lateral thinking to surface emotionally resonant, trend-aligned, or visually surprising ideas while allowing users to provide feedback and refine concepts through an iterative process. The agent is free to invent and label creative directions or categories appropriate for each shot and context—using standard/enhanced/viral as references but not limited to these. Maintains contextual awareness by accessing neighboring shots and scenes for narrative continuity while avoiding redundancy with previous ideation attempts.<br>
+        <strong>Note:</strong> This node receives the Shot Plan document in which each shot contains both an <code>a_roll</code> and a <code>b_roll</code> object, each with their own metadata. The node should use the fields from the object corresponding to the selected roll type for each shot. If a human or agent changes the roll type selection, all necessary metadata is available without requiring regeneration.</strong>
     </p>
 
     <h4 id="visual-narrative-design-node">4.1.4 Visual Narrative Design</h4>
@@ -356,9 +341,8 @@
         <strong>Agent Persona:</strong> Storyboard Supervisor / Visual Strategist<br>
         <strong>Input:</strong> <a href="#broll-concepts">B-Roll Concepts</a><br>
         <strong>Output:</strong> <a href="#visual-narrative">Visual Narrative</a><br>
-        <strong>Description:</strong> Preserves and enhances all three B-roll visual concepts per segment (standard, enhanced, and viral options) and synthesizes them into a coherent
-        narrative through visual design annotations. Processes all shots to create a comprehensive visual narrative guide that defines shot
-        transitions, visual styling, and storytelling elements across all B-Roll content. Establishes project-wide visual style, consistent visual motifs, emotional progression mapping, motion directives that specify how elements should move within shots, and defines camera movement patterns that enhance storytelling. Creates cross-connections between disparate parts of the narrative while handling situation-specific exceptions that require broader context, such as character appearances across multiple scenes or location continuity. Ensures direct audience connection through strategic visual storytelling techniques including establishing shots, creative angles, lighting design, and visual pacing that resonates emotionally with viewers and maintains engagement throughout the narrative. The output is a single, comprehensive Visual Narrative JSON object that provides a complete visual blueprint for the entire video while maintaining all three concept options (standard, enhanced, viral) for each B-roll shot, allowing for selection during image review.
+        <strong>Description:</strong> Processes the flexible creative directions from B-Roll Ideation and synthesizes them into a coherent visual narrative. Transforms the 3-5 creative concepts per shot into a standardized set of three concept tiers (standard, enhanced, viral) for downstream processing, preserving the rich creative directions while adapting them to the established pipeline structure. Creates a comprehensive visual narrative guide that defines shot transitions, visual styling, and storytelling elements across all B-Roll content. Establishes project-wide visual style, consistent visual motifs, emotional progression mapping, motion directives that specify how elements should move within shots, and defines camera movement patterns that enhance storytelling. Creates cross-connections between disparate parts of the narrative while handling situation-specific exceptions that require broader context, such as character appearances across multiple scenes or location continuity. Ensures direct audience connection through strategic visual storytelling techniques including establishing shots, creative angles, lighting design, and visual pacing that resonates emotionally with viewers and maintains engagement throughout the narrative. The output is a single, comprehensive Visual Narrative JSON object that provides a complete visual blueprint for the entire video while standardizing all creative concepts into three concept options (standard, enhanced, viral) for each B-roll shot, allowing for selection during image review.<br>
+        <strong>Note:</strong> This node receives the Shot Plan document in which each shot contains both an <code>a_roll</code> and a <code>b_roll</code> object, each with their own metadata. The node should use the fields from the object corresponding to the selected roll type for each shot. If a human or agent changes the roll type selection, all necessary metadata is available without requiring regeneration.</strong>
     </p>
 
     <h4 id="character-reference-node">4.1.5 Character Reference Selection</h4>
@@ -444,7 +428,8 @@
         <strong>Service:</strong> ElevenLabs<br>
         <strong>Input:</strong> <a href="#scene-blueprint">Scene Blueprint</a>, <a href="#shot-plan">Shot Plan</a><br>
         <strong>Output:</strong> <a href="#narration-audio">Narration Audio</a><br>
-        <strong>Description:</strong> Generates high-quality voiceover narration for the entire video based on the script segments and emotional context from the Scene Blueprint. The Shot Plan is directly provided to this node to ensure proper pacing and timing of narration based on shot-level details. Audio is generated as a complete narration track for the entire video with timing markers that allow individual shots to reference specific segments for synchronization. This automated process requires no human intervention and creates consistent, professional voiceover output according to predefined voice settings and parameters.
+        <strong>Description:</strong> Generates high-quality voiceover narration for the entire video based on the script segments and emotional context from the Scene Blueprint. The Shot Plan is directly provided to this node to ensure proper pacing and timing of narration based on shot-level details. Audio is generated as a complete narration track for the entire video with timing markers that allow individual shots to reference specific segments for synchronization. This automated process requires no human intervention and creates consistent, professional voiceover output according to predefined voice settings and parameters.<br>
+        <strong>Note:</strong> This node receives the Shot Plan document in which each shot contains both an <code>a_roll</code> and a <code>b_roll</code> object, each with their own metadata. The node should use the fields from the object corresponding to the selected roll type for each shot. If a human or agent changes the roll type selection, all necessary metadata is available without requiring regeneration.</strong>
     </p>
 
     <h4 id="music-selection-node">4.1.14 Music Selection</h4>
@@ -465,7 +450,8 @@
         <strong>Output:</strong> <a href="#sfx-plan">SFX Plan</a><br>
         <strong>Description:</strong> Adds auditory detail to elevate immersion through carefully selected sound effects
         for actions, transitions, and ambient environmental cues. References the Visual Narrative to align sound effects with visual content. All SFX are thematically and emotionally calibrated to
-        maintain coherence and heighten engagement across the video timeline. The Visual Narrative document provides important context about the visual style, transitions, and emotional progression that helps inform appropriate sound effect choices that enhance rather than compete with the visual elements.
+        maintain coherence and heighten engagement across the video timeline. The Visual Narrative document provides important context about the visual style, transitions, and emotional progression that helps inform appropriate sound effect choices that enhance rather than compete with the visual elements.<br>
+        <strong>Note:</strong> This node receives the Shot Plan document in which each shot contains both an <code>a_roll</code> and a <code>b_roll</code> object, each with their own metadata. The node should use the fields from the object corresponding to the selected roll type for each shot. If a human or agent changes the roll type selection, all necessary metadata is available without requiring regeneration.</strong>
     </p>
 
     <h4 id="audio-mixing-node">4.1.16 Audio Mixing</h4>
@@ -581,7 +567,7 @@
             <th>Description</th>
         </tr>
         <tr>
-            <td>scene_id</td>
+            <td>scene_label</td>
             <td>string</td>
             <td>Unique identifier for the scene</td>
         </tr>
@@ -627,89 +613,51 @@
     <p><strong>Format:</strong> JSON (Array)<br>
         <strong>Type:</strong> Structured Data<br>
         <strong>Subtype:</strong> JSON<br>
-        <strong>Description:</strong> Breakdown of scenes into individual shots with detailed specifications for visual pacing, narrative rhythm, and content classification.<br>
+        <strong>Description:</strong> Breakdown of scenes into individual shots with detailed specifications for visual pacing, narrative rhythm, and content recommendations. For each shot, the agent recommends either A-roll or B-roll (with rationale for both), and always outputs full metadata for both options in nested objects. This allows downstream agents or humans to select either option and have all necessary context and metadata available.<br>
         <strong>Generated By:</strong> <a href="#shot-segmentation-node">Shot Segmentation</a>, enhanced by <a href="#shot-metrics-node">Shot Metrics Calculator</a><br>
         <strong>Used By:</strong> <a href="#broll-ideation-node">B-Roll Ideation</a>, <a href="#audio-generation-node">Audio Generation</a>, <a href="#sfx-generation-node">Sound Effects Generation</a>
     </p>
-
     <table>
-        <tr>
-            <th>Field</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>scene_id</td>
-            <td>string</td>
-            <td>Reference to the parent scene (from Scene Blueprint)</td>
-        </tr>
-        <tr>
-            <td>shot_id</td>
-            <td>string</td>
-            <td>Unique identifier for the shot, formatted as {scene_id}_shot_{number}</td>
-        </tr>
-        <tr>
-            <td>shot_number</td>
-            <td>number</td>
-            <td>Sequential number within the scene</td>
-        </tr>
-        <tr>
-            <td>shot_title</td>
-            <td>string</td>
-            <td>Descriptive title for the shot</td>
-        </tr>
-        <tr>
-            <td>shot_description</td>
-            <td>string</td>
-            <td>Clear description of what happens in this shot</td>
-        </tr>
-        <tr>
-            <td>roll_type</td>
-            <td>string</td>
-            <td>Classification as "A" (narration-driven) or "B" (supplementary visuals)</td>
-        </tr>
-        <tr>
-            <td>narration_text</td>
-            <td>string</td>
-            <td>Specific narration text that accompanies this shot</td>
-        </tr>
-        <tr>
-            <td>word_count</td>
-            <td>number</td>
-            <td>Word count of the narration text</td>
-        </tr>
-        <tr>
-            <td>expected_duration</td>
-            <td>number</td>
-            <td>Estimated duration of the shot in seconds</td>
-        </tr>
-        <tr>
-            <td>suggested_broll_visuals</td>
-            <td>string</td>
-            <td>Visual suggestions for B-Roll shots</td>
-        </tr>
-        <tr>
-            <td>suggested_sound_effects</td>
-            <td>array</td>
-            <td>Array of sound effect suggestions</td>
-        </tr>
-        <tr>
-            <td>emotional_tone</td>
-            <td>string</td>
-            <td>Intended emotional quality of the shot</td>
-        </tr>
-        <tr>
-            <td>shot_notes</td>
-            <td>string</td>
-            <td>Structured markdown notes with sections for Shot Goals, Engagement Strategy, Emotional Connection, Visual and Audio Cues, and Additional Context</td>
-        </tr>
+        <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+        <tr><td>scene_label</td><td>string</td><td>Reference to the parent scene (from Scene Blueprint)</td></tr>
+        <tr><td>shot_label</td><td>string</td><td>Unique identifier for the shot, formatted as {scene_label}_shot_{number}</td></tr>
+        <tr><td>shot_number</td><td>number</td><td>Sequential number within the scene</td></tr>
+        <tr><td>roll_recommendation</td><td>string</td><td>Recommended roll type for the shot: "A" (narration-driven) or "B" (supplementary visuals)</td></tr>
+        <tr><td>rationale_a_roll</td><td>string</td><td>Rationale for why A-roll would be appropriate for this shot</td></tr>
+        <tr><td>rationale_b_roll</td><td>string</td><td>Rationale for why B-roll would be appropriate for this shot</td></tr>
+        <tr><td>narration_text</td><td>string</td><td>Specific narration text that accompanies this shot</td></tr>
+        <tr><td>word_count</td><td>number</td><td>Word count of the narration text</td></tr>
+        <tr><td>expected_duration</td><td>number</td><td>Estimated duration of the shot in seconds</td></tr>
+        <tr><td>a_roll</td><td>object</td><td>All metadata fields for the A-roll option (see below)</td></tr>
+        <tr><td>b_roll</td><td>object</td><td>All metadata fields for the B-roll option (see below)</td></tr>
+    </table>
+    <p><strong>a_roll object fields:</strong></p>
+    <table>
+        <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+        <tr><td>shot_title</td><td>string</td><td>Descriptive title for the A-roll shot</td></tr>
+        <tr><td>shot_description</td><td>string</td><td>Clear description of what happens in this A-roll shot</td></tr>
+        <tr><td>suggested_sound_effects</td><td>array</td><td>Array of sound effect suggestions for A-roll</td></tr>
+        <tr><td>emotional_tone</td><td>string</td><td>Intended emotional quality of the A-roll shot</td></tr>
+        <tr><td>shot_purpose</td><td>string</td><td>Purpose of the A-roll shot</td></tr>
+        <tr><td>shot_notes</td><td>string</td><td>Structured markdown notes for A-roll</td></tr>
+    </table>
+    <p><strong>b_roll object fields:</strong></p>
+    <table>
+        <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+        <tr><td>shot_title</td><td>string</td><td>Descriptive title for the B-roll shot</td></tr>
+        <tr><td>shot_description</td><td>string</td><td>Clear description of what happens in this B-roll shot</td></tr>
+        <tr><td>suggested_broll_visuals</td><td>string</td><td>Visual suggestions for B-Roll shots</td></tr>
+        <tr><td>suggested_sound_effects</td><td>array</td><td>Array of sound effect suggestions for B-roll</td></tr>
+        <tr><td>emotional_tone</td><td>string</td><td>Intended emotional quality of the B-roll shot</td></tr>
+        <tr><td>shot_purpose</td><td>string</td><td>Purpose of the B-roll shot</td></tr>
+        <tr><td>shot_notes</td><td>string</td><td>Structured markdown notes for B-roll</td></tr>
     </table>
 
     <h4 id="broll-concepts">5.1.4 B-Roll Concepts</h4>
     <p><strong>Format:</strong> JSON (Array)<br>
         <strong>Type:</strong> Structured Data<br>
         <strong>Subtype:</strong> JSON<br>
-        <strong>Description:</strong> Creative concepts for B-Roll shots at three distinct creativity tiers.<br>
+        <strong>Description:</strong> Creative visual directions for B-Roll shots with interactive user feedback mechanism.<br>
         <strong>Generated By:</strong> <a href="#broll-ideation-node">B-Roll Ideation</a><br>
         <strong>Used By:</strong> <a href="#visual-narrative-design-node">Visual Narrative Design</a>
     </p>
@@ -731,23 +679,52 @@
             <td>Reference to the specific shot</td>
         </tr>
         <tr>
-            <td>standard_broll</td>
-            <td>object</td>
-            <td>Conventional concept with idea, visual_style, and motion properties</td>
+            <td>broll_concepts</td>
+            <td>array</td>
+            <td>Array of 3-5 creative direction objects, each containing creative_direction, description, visual_style, and motion fields</td>
         </tr>
         <tr>
-            <td>enhanced_broll</td>
-            <td>object</td>
-            <td>More creative concept with idea, visual_style, and motion properties</td>
+            <td>chat_output</td>
+            <td>string</td>
+            <td>Summary message about what's new or changed, rationale, and next steps</td>
         </tr>
         <tr>
-            <td>viral_broll</td>
-            <td>object</td>
-            <td>Highly innovative concept with idea, visual_style, and motion properties</td>
+            <td>structured_form</td>
+            <td>object or null</td>
+            <td>JSON schema for user input form containing schema, uiSchema, and defaultValues objects, or null if no form is needed</td>
         </tr>
     </table>
-    
-        <h4 id="visual-narrative">5.1.5 Visual Narrative</h4>
+
+    <p><strong>Creative Direction Object Fields:</strong></p>
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>creative_direction</td>
+            <td>string</td>
+            <td>Label for the creative direction (e.g., "Cinematic Metaphor", "Surreal Pop")</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>Clear description of the visual concept</td>
+        </tr>
+        <tr>
+            <td>visual_style</td>
+            <td>string</td>
+            <td>Artistic direction, composition, and visual characteristics</td>
+        </tr>
+        <tr>
+            <td>motion</td>
+            <td>string</td>
+            <td>How elements should move or be animated within the shot</td>
+        </tr>
+    </table>
+
+    <h4 id="visual-narrative">5.1.5 Visual Narrative</h4>
     <p><strong>Format:</strong> JSON (Array)<br>
         <strong>Type:</strong> Structured Data<br>
         <strong>Subtype:</strong> JSON<br>
@@ -862,12 +839,12 @@
             <th>Description</th>
         </tr>
         <tr>
-            <td>scene_id</td>
+            <td>scene_label</td>
             <td>string</td>
             <td>Reference to the parent scene</td>
         </tr>
         <tr>
-            <td>shot_id</td>
+            <td>shot_label</td>
             <td>string</td>
             <td>Reference to the specific shot</td>
         </tr>
@@ -914,12 +891,12 @@
             <th>Description</th>
         </tr>
         <tr>
-            <td>scene_id</td>
+            <td>scene_label</td>
             <td>string</td>
             <td>Reference to the parent scene</td>
         </tr>
         <tr>
-            <td>shot_id</td>
+            <td>shot_label</td>
             <td>string</td>
             <td>Reference to the specific shot</td>
         </tr>
@@ -971,12 +948,12 @@
             <th>Description</th>
         </tr>
         <tr>
-            <td>scene_id</td>
+            <td>scene_label</td>
             <td>string</td>
             <td>Reference to the parent scene</td>
         </tr>
         <tr>
-            <td>shot_id</td>
+            <td>shot_label</td>
             <td>string</td>
             <td>Reference to the specific shot (for A-Roll segments)</td>
         </tr>
@@ -1023,9 +1000,9 @@
             <td>Unique identifier for the music segment</td>
         </tr>
         <tr>
-            <td>scene_ids</td>
+            <td>scene_labels</td>
             <td>array</td>
-            <td>Array of scene IDs where this music should be used</td>
+            <td>Array of scene labels where this music should be used</td>
         </tr>
         <tr>
             <td>music_style</td>
@@ -1089,12 +1066,12 @@
             <td>Unique identifier for the sound effect</td>
         </tr>
         <tr>
-            <td>scene_id</td>
+            <td>scene_label</td>
             <td>string</td>
             <td>Reference to the parent scene</td>
         </tr>
         <tr>
-            <td>shot_id</td>
+            <td>shot_label</td>
             <td>string</td>
             <td>Reference to the specific shot</td>
         </tr>
@@ -1151,9 +1128,9 @@
             <td>Unique identifier for the audio track</td>
         </tr>
         <tr>
-            <td>scene_ids</td>
+            <td>scene_labels</td>
             <td>array</td>
-            <td>Array of scene IDs covered by this track</td>
+            <td>Array of scene labels covered by this track</td>
         </tr>
         <tr>
             <td>audio_file</td>
@@ -1205,7 +1182,7 @@
         <tr>
             <td>clips</td>
             <td>array</td>
-            <td>Array of clip objects with scene_id and shot_id references</td>
+            <td>Array of clip objects with scene_label and shot_label references</td>
         </tr>
         <tr>
             <td>transitions</td>
@@ -1235,12 +1212,12 @@
             <th>Description</th>
         </tr>
         <tr>
-            <td>scene_id</td>
+            <td>scene_label</td>
             <td>string</td>
             <td>Reference to the parent scene</td>
         </tr>
         <tr>
-            <td>shot_id</td>
+            <td>shot_label</td>
             <td>string</td>
             <td>Reference to the specific shot</td>
         </tr>
@@ -1292,12 +1269,12 @@
             <th>Description</th>
         </tr>
         <tr>
-            <td>scene_id</td>
+            <td>scene_label</td>
             <td>string</td>
             <td>Reference to the parent scene</td>
         </tr>
         <tr>
-            <td>shot_id</td>
+            <td>shot_label</td>
             <td>string</td>
             <td>Reference to the specific shot</td>
         </tr>
@@ -1354,12 +1331,12 @@
             <th>Description</th>
         </tr>
         <tr>
-            <td>scene_id</td>
+            <td>scene_label</td>
             <td>string</td>
             <td>Reference to the parent scene</td>
         </tr>
         <tr>
-            <td>shot_id</td>
+            <td>shot_label</td>
             <td>string</td>
             <td>Reference to the specific shot</td>
         </tr>
@@ -1411,10 +1388,41 @@
         <li>Primary connections in the diagram represent the main data flow and direct inputs</li>
         <li>Dotted lines represent important data references without direct connections</li>
         <li>Nodes may reference any data from previous nodes beyond what is shown in the diagram</li>
-        <li>Metadata like scene_id and shot_id provide consistent referencing throughout the workflow</li>
+        <li>Metadata like scene_label and shot_label provide consistent referencing throughout the workflow</li>
         <li>Document structures support n8n's data referencing with explicit ID fields</li>
         <li>Parallel processing of A-Roll, B-Roll, and Audio production leverages this referencing capability</li>
         <li>Version control for revised assets maintains data integrity across reference points</li>
+    </ul>
+    
+    <h4>6.1.1 B-Roll Ideation Interactive Capabilities</h4>
+    <p>The updated B-Roll Ideation agent introduces an interactive approach to concept development with these key features:</p>
+    <ul>
+        <li><strong>Video TOC Navigation:</strong> The agent accesses a Table of Contents (TOC) containing all scenes and shots for context-aware concept generation.</li>
+        <li><strong>Contextual Awareness:</strong> The agent retrieves information about adjacent shots, scenes, and previous ideation attempts through specialized n8n tools:
+            <ul>
+                <li><code>Get Video TOC</code>: Retrieves overall video structure</li>
+                <li><code>Get Any Scene Data</code>: Accesses detailed scene information</li>
+                <li><code>Get Any Shot Data</code>: Retrieves specific shot details</li>
+                <li><code>Get Any Ideation History</code>: Checks previous concepts to avoid repetition</li>
+            </ul>
+        </li>
+        <li><strong>Interactive Feedback Loop:</strong> The agent supports iterative concept refinement through a hybrid chat and form-based user interface:
+            <ul>
+                <li>Initial concepts generation based on shot metadata</li>
+                <li>User feedback via free-text chat messages</li>
+                <li>Form-based structured input for preference selection</li>
+                <li>Continuous refinement based on user choices</li>
+            </ul>
+        </li>
+        <li><strong>Process Logging:</strong> The agent maintains detailed logs of its decision-making process using an <code>Append Agent Log</code> tool that records:
+            <ul>
+                <li>Tool usage and parameters</li>
+                <li>Thought processes and creative decisions</li>
+                <li>Concepts generated and rationales</li>
+                <li>Timestamps for debugging and auditing</li>
+            </ul>
+        </li>
+        <li><strong>Variable Creative Directions:</strong> Rather than fixed tiers, the agent produces 3-5 flexible creative directions with customized labeling appropriate to the content.</li>
     </ul>
     
     <div class="note">
@@ -1509,6 +1517,7 @@
     <p>The workflow includes the following review paths for handling rejected assets:</p>
     <ul>
         <li><strong>Variation Request Loop:</strong> If a user requests new variations via the RTU Shot Control Panel, the selected variation keys are passed back to Storyboarding Agent or Image Refinement Agent for regeneration</li>
+        <li><strong>B-Roll Ideation Feedback Loop:</strong> Interactive refinement of B-roll concepts through the chat-based interface and form submissions, allowing users to provide feedback, select preferred directions, and request modifications before proceeding to Visual Narrative Design</li>
         <li><strong>Final Quality Review:</strong> Occurs during Final Editing & Assembly, with the option to request refinement on individual images</li>
     </ul>
 
@@ -1736,7 +1745,7 @@
         <li><strong>Implement Schema Validation:</strong> Add JSON schema validation to ensure document integrity at each handover point. Schema validation should validate:
             <ul>
                 <li>Required fields are present and of the correct type</li>
-                <li>Referenced IDs (scene_id, shot_id) exist in upstream documents</li>
+                <li>Referenced labels (scene_label, shot_label) exist in upstream documents</li>
                 <li>Array fields contain valid entries with complete required properties</li>
                 <li>Field values conform to enumerated options where applicable</li>
                 <li>Field lengths and value ranges are within expected boundaries</li>
@@ -1783,8 +1792,8 @@
     </p>
     <table>
         <tr><th>Field</th><th>Type</th><th>Description</th></tr>
-        <tr><td>scene_id</td><td>string</td><td>Reference to the parent scene</td></tr>
-        <tr><td>shot_id</td><td>string</td><td>Reference to the specific shot</td></tr>
+        <tr><td>scene_label</td><td>string</td><td>Reference to the parent scene</td></tr>
+        <tr><td>shot_label</td><td>string</td><td>Reference to the specific shot</td></tr>
         <tr><td>concept_type</td><td>string</td><td>"standard", "enhanced", or "viral"</td></tr>
         <tr><td>variation_types</td><td>array</td><td>Array of variation type keys (from Images-Variations.json) to apply; can be single or any combination</td></tr>
         <tr><td>requester</td><td>string</td><td>User or system making the request</td></tr>
@@ -1802,8 +1811,8 @@
     </p>
     <table>
         <tr><th>Field</th><th>Type</th><th>Description</th></tr>
-        <tr><td>scene_id</td><td>string</td><td>Reference to the parent scene</td></tr>
-        <tr><td>shot_id</td><td>string</td><td>Reference to the specific shot</td></tr>
+        <tr><td>scene_label</td><td>string</td><td>Reference to the parent scene</td></tr>
+        <tr><td>shot_label</td><td>string</td><td>Reference to the specific shot</td></tr>
         <tr><td>image_id</td><td>string</td><td>Reference to the specific generated image to refine</td></tr>
         <tr><td>variation_types</td><td>array</td><td>Array of variation type keys (from Images-Variations.json) to apply; can be single or any combination</td></tr>
         <tr><td>requester</td><td>string</td><td>User or system making the request</td></tr>

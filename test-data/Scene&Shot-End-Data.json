@@ -1,0 +1,964 @@
+[
+  {
+    "shots": [
+      {
+        "id": 270,
+        "scene_id": 176,
+        "shot_number": 1,
+        "is_broll": true,
+        "narrative": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later? Or maybe you've promised yourself, 'This is the last time'-but it never is.",
+        "word_count": 29,
+        "estimated_duration": 11.6,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Host pauses gently for impact.",
+            "shot_title": "Presenter Empathizes with Viewer",
+            "shot_purpose": "Establish connection and relate to common experiences",
+            "emotional_tone": "warm, understanding",
+            "shot_description": "Host faces camera, soft empathetic eye contact, gentle tone",
+            "suggested_sound_effects": [
+              "studio ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Montage pacing mirrors rush/regret.",
+            "shot_title": "Impulse Buy & Regret Montage",
+            "shot_purpose": "Visually establish shopping compulsion and regret cycle",
+            "emotional_tone": "fleeting excitement, immediate remorse",
+            "shot_description": "Quick cuts: online shopping, smiles fading into frowns, people hiding bags",
+            "suggested_broll_visuals": "Tight shots of clicks, delivery arrivals, face transitions from joy to regret",
+            "suggested_sound_effects": [
+              "cart click",
+              "faint sigh"
+            ]
+          },
+          "scene_id": 176,
+          "shot_label": "scene-1_shot_1",
+          "word_count": 29,
+          "scene_label": "scene-1",
+          "shot_number": 1,
+          "narration_text": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later? Or maybe you've promised yourself, 'This is the last time'-but it never is.",
+          "rationale_a_roll": "Presenter introduction would break immersion. B-roll better illustrates emotions.",
+          "rationale_b_roll": "Montage quickly conveys internal struggles and relational tension visually.",
+          "expected_duration": 11.6,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-1_shot_1",
+        "rationale_a_roll": "Presenter introduction would break immersion. B-roll better illustrates emotions.",
+        "rationale_b_roll": "Montage quickly conveys internal struggles and relational tension visually."
+      },
+      {
+        "id": 271,
+        "scene_id": 176,
+        "shot_number": 2,
+        "is_broll": true,
+        "narrative": "Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it.",
+        "word_count": 22,
+        "estimated_duration": 8.8,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Highlights Relationships",
+            "shot_purpose": "Acknowledge broader personal impacts for relatability",
+            "emotional_tone": "concerned, gentle",
+            "shot_description": "Host shifts tone, addresses unseen tension empathetically",
+            "suggested_sound_effects": [
+              "subtle mic reverb"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Actors keep expressions understated; natural light.",
+            "shot_title": "Family Strain Visuals",
+            "shot_purpose": "Show hidden impact on relationships",
+            "emotional_tone": "strained, subtle sadness",
+            "shot_description": "Couple sits across table, worried looks, bills between them, body language tense",
+            "suggested_broll_visuals": "Hands on bills, distant gazes, subtle distancing cues",
+            "suggested_sound_effects": [
+              "paper shuffle",
+              "ambient tension"
+            ]
+          },
+          "scene_id": 176,
+          "shot_label": "scene-1_shot_2",
+          "word_count": 22,
+          "scene_label": "scene-1",
+          "shot_number": 2,
+          "narration_text": "Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it.",
+          "rationale_a_roll": "Internal struggles are better shown than told. Presenter less impactful here.",
+          "rationale_b_roll": "Visuals of credit card stress and couple tension reinforce emotional consequences.",
+          "expected_duration": 8.8,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-1_shot_2",
+        "rationale_a_roll": "Internal struggles are better shown than told. Presenter less impactful here.",
+        "rationale_b_roll": "Visuals of credit card stress and couple tension reinforce emotional consequences."
+      },
+      {
+        "id": 272,
+        "scene_id": 176,
+        "shot_number": 3,
+        "is_broll": true,
+        "narrative": "You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.",
+        "word_count": 21,
+        "estimated_duration": 8.4,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Offers Reassurance",
+            "shot_purpose": "Instill hope and mitigate viewer shame early",
+            "emotional_tone": "reassuring, hopeful",
+            "shot_description": "Host delivers comfort, soft smile, open body language to camera",
+            "suggested_sound_effects": [
+              "soft chime"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Stat overlays remain readable; modern style.",
+            "shot_title": "Dynamic Infographic Montage",
+            "shot_purpose": "Visualize scale of issue; reduce viewer isolation",
+            "emotional_tone": "validating, encouraging",
+            "shot_description": "Animated infographic: silhouettes show prevalence, key stats fade in",
+            "suggested_broll_visuals": "Flowing data overlays, diverse faces highlighted, number counters animate smoothly",
+            "suggested_sound_effects": [
+              "gentle transition"
+            ]
+          },
+          "scene_id": 176,
+          "shot_label": "scene-1_shot_3",
+          "word_count": 21,
+          "scene_label": "scene-1",
+          "shot_number": 3,
+          "narration_text": "You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.",
+          "rationale_a_roll": "Presenter repeating empathy could feel repetitive. Visual data strengthens message.",
+          "rationale_b_roll": "Infographic gives tangible scope, supports narrator's reassurance.",
+          "expected_duration": 8.4,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-1_shot_3",
+        "rationale_a_roll": "Presenter repeating empathy could feel repetitive. Visual data strengthens message.",
+        "rationale_b_roll": "Infographic gives tangible scope, supports narrator's reassurance."
+      },
+      {
+        "id": 273,
+        "scene_id": 177,
+        "shot_number": 1,
+        "is_broll": false,
+        "narrative": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors-especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind.",
+        "word_count": 33,
+        "estimated_duration": 13.2,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Soft lighting enhances approachability.",
+            "shot_title": "Dr. Leslie's Direct Introduction",
+            "shot_purpose": "Build credibility and initial rapport with viewers",
+            "emotional_tone": "trustworthy, approachable",
+            "shot_description": "Warm close-up, Dr. Leslie smiles to camera, gentle hand gesture",
+            "suggested_sound_effects": [
+              "studio ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Credentials animate in.",
+            "shot_title": "Expert Introduction Visuals",
+            "shot_purpose": "Visually back up Dr. Leslie’s expertise",
+            "emotional_tone": "assured, inviting",
+            "shot_description": "Still images: certificates, Dr. Leslie with clients, thank-you notes overlays",
+            "suggested_broll_visuals": "Framed diplomas, handshake shots, welcoming office decor",
+            "suggested_sound_effects": [
+              "page turning"
+            ]
+          },
+          "scene_id": 177,
+          "shot_label": "scene-2_shot_1",
+          "word_count": 33,
+          "scene_label": "scene-2",
+          "shot_number": 1,
+          "narration_text": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors-especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind.",
+          "rationale_a_roll": "Personal, expert intro best delivered face-to-face for credibility.",
+          "rationale_b_roll": "Could use photo montage but less trust-building than direct address.",
+          "expected_duration": 13.2,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-2_shot_1",
+        "rationale_a_roll": "Personal, expert intro best delivered face-to-face for credibility.",
+        "rationale_b_roll": "Could use photo montage but less trust-building than direct address."
+      },
+      {
+        "id": 274,
+        "scene_id": 177,
+        "shot_number": 2,
+        "is_broll": false,
+        "narrative": "Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret. But here's the good news: You can take back control-and I can show you how.",
+        "word_count": 36,
+        "estimated_duration": 14.4,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Cut to a comforting smile on 'good news.'",
+            "shot_title": "Dr. Leslie Discusses Triggers",
+            "shot_purpose": "Educate on deeper causes and offer hope",
+            "emotional_tone": "caring, enlightening",
+            "shot_description": "Medium shot, Dr. Leslie empathetic, slight emphasis on key phrases",
+            "suggested_sound_effects": [
+              "subtle mic reverb"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Emotive iconography preferred.",
+            "shot_title": "Emotion-Money Visual Metaphor",
+            "shot_purpose": "Visualize emotional roots and prospects for change",
+            "emotional_tone": "thoughtful, inspiring",
+            "shot_description": "Animated graphics: emotion icons (stress, regret) cycle with currency signs",
+            "suggested_broll_visuals": "Icons for triggers, animated quick-fix loop, hopeful spark at 'take back control'",
+            "suggested_sound_effects": [
+              "notification chime"
+            ]
+          },
+          "scene_id": 177,
+          "shot_label": "scene-2_shot_2",
+          "word_count": 36,
+          "scene_label": "scene-2",
+          "shot_number": 2,
+          "narration_text": "Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret. But here's the good news: You can take back control-and I can show you how.",
+          "rationale_a_roll": "Presenter explains emotional underpinnings with empathy and clarity.",
+          "rationale_b_roll": "Abstract visuals possible, but core info best from expert directly.",
+          "expected_duration": 14.4,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-2_shot_2",
+        "rationale_a_roll": "Presenter explains emotional underpinnings with empathy and clarity.",
+        "rationale_b_roll": "Abstract visuals possible, but core info best from expert directly."
+      },
+      {
+        "id": 275,
+        "scene_id": 177,
+        "shot_number": 3,
+        "is_broll": true,
+        "narrative": "That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending. This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.",
+        "word_count": 55,
+        "estimated_duration": 22,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Explains Program",
+            "shot_purpose": "Communicate program’s evidence-based difference",
+            "emotional_tone": "enthusiastic, reassuring",
+            "shot_description": "Presenter gestures to highlight program’s uniqueness, confident posture",
+            "suggested_sound_effects": [
+              "pen writing"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Feature diverse clients in montage.",
+            "shot_title": "Coaching & Program Montage",
+            "shot_purpose": "Show smart, personalized, scientific program features",
+            "emotional_tone": "optimistic, credible",
+            "shot_description": "Fast-cut: coaching call, open workbook, shown techniques, CBT keyword overlays",
+            "suggested_broll_visuals": "Hands on workbook, psychology icons, group video session, science badge graphic",
+            "suggested_sound_effects": [
+              "page turn",
+              "soft digital tone"
+            ]
+          },
+          "scene_id": 177,
+          "shot_label": "scene-2_shot_3",
+          "word_count": 55,
+          "scene_label": "scene-2",
+          "shot_number": 3,
+          "narration_text": "That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending. This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of.",
+          "rationale_a_roll": "Listing features less engaging directly from presenter.",
+          "rationale_b_roll": "B-roll/montage illustrates coaching, evidence-based methods, client optimism.",
+          "expected_duration": 22,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-2_shot_3",
+        "rationale_a_roll": "Listing features less engaging directly from presenter.",
+        "rationale_b_roll": "B-roll/montage illustrates coaching, evidence-based methods, client optimism."
+      },
+      {
+        "id": 276,
+        "scene_id": 177,
+        "shot_number": 4,
+        "is_broll": true,
+        "narrative": "We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.",
+        "word_count": 23,
+        "estimated_duration": 9.2,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Explains Difference",
+            "shot_purpose": "Highlight focus on habits and deeper change",
+            "emotional_tone": "hopeful, earnest",
+            "shot_description": "Host sincere, softens tone to stress unique approach",
+            "suggested_sound_effects": [
+              "soft chime"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Montage ends on a positive note.",
+            "shot_title": "Client Breakthroughs Montage",
+            "shot_purpose": "Reinforce emotional authenticity and success",
+            "emotional_tone": "uplifting, proud",
+            "shot_description": "Clients smiling, celebrating milestones, gratitude note overlays",
+            "suggested_broll_visuals": "Handwritten thank-yous, relieved faces, high-five, digital 'progress' bars",
+            "suggested_sound_effects": [
+              "notification ping",
+              "applause"
+            ]
+          },
+          "scene_id": 177,
+          "shot_label": "scene-2_shot_4",
+          "word_count": 23,
+          "scene_label": "scene-2",
+          "shot_number": 4,
+          "narration_text": "We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.",
+          "rationale_a_roll": "Presenter repeating details feels redundant. Visuals emphasize transformation.",
+          "rationale_b_roll": "Montage powerfully shows client breakthroughs and emotional authenticity.",
+          "expected_duration": 9.2,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-2_shot_4",
+        "rationale_a_roll": "Presenter repeating details feels redundant. Visuals emphasize transformation.",
+        "rationale_b_roll": "Montage powerfully shows client breakthroughs and emotional authenticity."
+      },
+      {
+        "id": 277,
+        "scene_id": 178,
+        "shot_number": 1,
+        "is_broll": false,
+        "narrative": "Imagine waking up without that knot of anxiety about your spending. That's the transformation we aim for with our top-tier program: Personalized Transformation Coaching.",
+        "word_count": 24,
+        "estimated_duration": 9.6,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Host uses slower pacing for impact.",
+            "shot_title": "Presenter Sets the Vision",
+            "shot_purpose": "Set aspirational goal and emotional stakes",
+            "emotional_tone": "calm, reassuring",
+            "shot_description": "Host, gentle confidence, calm demeanor, speaks about transformation",
+            "suggested_sound_effects": [
+              "studio ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Very soft color palette.",
+            "shot_title": "Calm Morning Visuals",
+            "shot_purpose": "Show peace that follows relief from compulsion",
+            "emotional_tone": "serene, hopeful",
+            "shot_description": "Soft-lit shot: peaceful person with coffee, journaling by window",
+            "suggested_broll_visuals": "Morning routine, sunlight, relaxed body language, notebook pages",
+            "suggested_sound_effects": [
+              "soft chime"
+            ]
+          },
+          "scene_id": 178,
+          "shot_label": "scene-3_shot_1",
+          "word_count": 24,
+          "scene_label": "scene-3",
+          "shot_number": 1,
+          "narration_text": "Imagine waking up without that knot of anxiety about your spending. That's the transformation we aim for with our top-tier program: Personalized Transformation Coaching.",
+          "rationale_a_roll": "Direct reassurance about transformation is best face-to-face.",
+          "rationale_b_roll": "Could show serene visuals, but direct testimony lands deeper",
+          "expected_duration": 9.6,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-3_shot_1",
+        "rationale_a_roll": "Direct reassurance about transformation is best face-to-face.",
+        "rationale_b_roll": "Could show serene visuals, but direct testimony lands deeper"
+      },
+      {
+        "id": 278,
+        "scene_id": 178,
+        "shot_number": 2,
+        "is_broll": true,
+        "narrative": "This is one-on-one support tailored just for you. We'll identify your triggers, create a step-by-step action plan, and work through emotional roadblocks together-so the changes you make aren't just temporary. They're permanent.",
+        "word_count": 32,
+        "estimated_duration": 12.8,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Details Coaching",
+            "shot_purpose": "Describe personal support value",
+            "emotional_tone": "personal, supportive",
+            "shot_description": "Host explains one-on-one aspect, direct to camera, empathetic smile",
+            "suggested_sound_effects": [
+              "pen on paper"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Match narration keywords to actions.",
+            "shot_title": "Personal Coaching, Journaling",
+            "shot_purpose": "Show personal journey and permanence of change visually",
+            "emotional_tone": "positive, resolute",
+            "shot_description": "Tight shots: video call, crossing off goals, writing action steps",
+            "suggested_broll_visuals": "List on paper, closeup: 'trigger' circled, 'DONE' on checklist",
+            "suggested_sound_effects": [
+              "digital chime",
+              "page flip"
+            ]
+          },
+          "scene_id": 178,
+          "shot_label": "scene-3_shot_2",
+          "word_count": 32,
+          "scene_label": "scene-3",
+          "shot_number": 2,
+          "narration_text": "This is one-on-one support tailored just for you. We'll identify your triggers, create a step-by-step action plan, and work through emotional roadblocks together-so the changes you make aren't just temporary. They're permanent.",
+          "rationale_a_roll": "Presenter explanation would be repetitive. Progress best depicted visually.",
+          "rationale_b_roll": "B-roll of coaching, action plans, and journal breakthroughs tells the story with clarity.",
+          "expected_duration": 12.8,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-3_shot_2",
+        "rationale_a_roll": "Presenter explanation would be repetitive. Progress best depicted visually.",
+        "rationale_b_roll": "B-roll of coaching, action plans, and journal breakthroughs tells the story with clarity."
+      },
+      {
+        "id": 279,
+        "scene_id": 178,
+        "shot_number": 3,
+        "is_broll": false,
+        "narrative": "This level is perfect for high-achievers, professionals, or anyone ready to invest in deep, meaningful change. Because when your mindset shifts, your life shifts. Experience personalized coaching for lasting financial freedom and emotional resilience.",
+        "word_count": 34,
+        "estimated_duration": 13.6,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Host smiles with encouragement.",
+            "shot_title": "Presenter's Aspirational Address",
+            "shot_purpose": "Appeal to viewers ready for significant change",
+            "emotional_tone": "inspirational, inviting",
+            "shot_description": "Host earnest, slight upward camera angle, invites change",
+            "suggested_sound_effects": [
+              "studio ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Focus on uplifted expressions.",
+            "shot_title": "Aspirational Outcomes Visuals",
+            "shot_purpose": "Visualize positive results and self-belief",
+            "emotional_tone": "fortified, hopeful",
+            "shot_description": "Clients looking out windows, smiling with relief, supporting each other",
+            "suggested_broll_visuals": "Montage: Success, open body posture, celebratory coffee toast",
+            "suggested_sound_effects": [
+              "gentle celebration"
+            ]
+          },
+          "scene_id": 178,
+          "shot_label": "scene-3_shot_3",
+          "word_count": 34,
+          "scene_label": "scene-3",
+          "shot_number": 3,
+          "narration_text": "This level is perfect for high-achievers, professionals, or anyone ready to invest in deep, meaningful change. Because when your mindset shifts, your life shifts. Experience personalized coaching for lasting financial freedom and emotional resilience.",
+          "rationale_a_roll": "High-achiever/personal growth remarks are authentic face-to-face.",
+          "rationale_b_roll": "Possible to use aspirational visuals but less impact than personal statement.",
+          "expected_duration": 13.6,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-3_shot_3",
+        "rationale_a_roll": "High-achiever/personal growth remarks are authentic face-to-face.",
+        "rationale_b_roll": "Possible to use aspirational visuals but less impact than personal statement."
+      },
+      {
+        "id": 280,
+        "scene_id": 179,
+        "shot_number": 1,
+        "is_broll": false,
+        "narrative": "Maybe you're looking for support-but you don't want to go it alone. That's where our Empowerment Group Coaching comes in.",
+        "word_count": 20,
+        "estimated_duration": 8,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Introduces Group Coaching",
+            "shot_purpose": "Invite viewers to community support, establish safety",
+            "emotional_tone": "encouraging, inviting",
+            "shot_description": "Presenter smiling warmly, hands folded in open gesture to camera",
+            "suggested_sound_effects": [
+              "studio ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Grid movement matches music rhythm.",
+            "shot_title": "Entering Group B-roll",
+            "shot_purpose": "Visualize joining the group experience",
+            "emotional_tone": "welcoming",
+            "shot_description": "Rows of video call boxes, diverse faces joining, friendly greetings",
+            "suggested_broll_visuals": "Animated video grid, waves, digital connect icons",
+            "suggested_sound_effects": [
+              "group call chime"
+            ]
+          },
+          "scene_id": 179,
+          "shot_label": "scene-4_shot_1",
+          "word_count": 20,
+          "scene_label": "scene-4",
+          "shot_number": 1,
+          "narration_text": "Maybe you're looking for support-but you don't want to go it alone. That's where our Empowerment Group Coaching comes in.",
+          "rationale_a_roll": "Friendly invite and supportive tone best conveyed by presenter.",
+          "rationale_b_roll": "Visual group shots build inclusion but presenter delivers initial warmth.",
+          "expected_duration": 8,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-4_shot_1",
+        "rationale_a_roll": "Friendly invite and supportive tone best conveyed by presenter.",
+        "rationale_b_roll": "Visual group shots build inclusion but presenter delivers initial warmth."
+      },
+      {
+        "id": 281,
+        "scene_id": 179,
+        "shot_number": 2,
+        "is_broll": true,
+        "narrative": "You'll join a community of people who get it. Together, we'll share wins, tackle challenges, and celebrate breakthroughs. These aren't just 'support groups'-they're transformation hubs where real change happens.",
+        "word_count": 29,
+        "estimated_duration": 11.6,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Promotes Community",
+            "shot_purpose": "Inspire confidence in shared growth",
+            "emotional_tone": "cheerful, supportive",
+            "shot_description": "Presenter emphasizes unity, glancing to offscreen group, friendly tone",
+            "suggested_sound_effects": [
+              "laughter"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Edits are snappy, upbeat.",
+            "shot_title": "Group Energy Montage",
+            "shot_purpose": "Showcase support and community breakthroughs",
+            "emotional_tone": "joyful, connected",
+            "shot_description": "Facilitated video call, digital high-fives, chat overlays, group smiles",
+            "suggested_broll_visuals": "Interactive chat bubbles, real-time emoji reactions, group applause",
+            "suggested_sound_effects": [
+              "notification ding",
+              "soft applause"
+            ]
+          },
+          "scene_id": 179,
+          "shot_label": "scene-4_shot_2",
+          "word_count": 29,
+          "scene_label": "scene-4",
+          "shot_number": 2,
+          "narration_text": "You'll join a community of people who get it. Together, we'll share wins, tackle challenges, and celebrate breakthroughs. These aren't just 'support groups'-they're transformation hubs where real change happens.",
+          "rationale_a_roll": "Abstract presenter discussion not as powerful as group visuals.",
+          "rationale_b_roll": "Group energy and celebration visually drive home the message.",
+          "expected_duration": 11.6,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-4_shot_2",
+        "rationale_a_roll": "Abstract presenter discussion not as powerful as group visuals.",
+        "rationale_b_roll": "Group energy and celebration visually drive home the message."
+      },
+      {
+        "id": 282,
+        "scene_id": 179,
+        "shot_number": 3,
+        "is_broll": true,
+        "narrative": "You'll realize you're not the only one struggling-and that realization? It's powerful. Because when we grow together, we grow stronger.\n\n\"I thought I was the only one. But hearing others' stories gave me the strength to face my own.\" - Emily, Former Client\n\nJoin a supportive community and transform your relationship with money.",
+        "word_count": 53,
+        "estimated_duration": 21.2,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Shares Testimonial",
+            "shot_purpose": "Amplify peer validation for empathy",
+            "emotional_tone": "compassionate, gentle",
+            "shot_description": "Presenter quotes Emily sincerely, slight smile, voice softens",
+            "suggested_sound_effects": [
+              "soft chime"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Quote always visible, group scene fades out.",
+            "shot_title": "Testimonial Group Sequence",
+            "shot_purpose": "Empower viewers with peer encouragement",
+            "emotional_tone": "inclusive, heartening",
+            "shot_description": "Overlay quote on dynamic group scene, Emily’s portrait, group reactions",
+            "suggested_broll_visuals": "Emily’s voiceover on montage, text overlay, smiling members",
+            "suggested_sound_effects": [
+              "applause",
+              "gentle whoosh"
+            ]
+          },
+          "scene_id": 179,
+          "shot_label": "scene-4_shot_3",
+          "word_count": 53,
+          "scene_label": "scene-4",
+          "shot_number": 3,
+          "narration_text": "You'll realize you're not the only one struggling-and that realization? It's powerful. Because when we grow together, we grow stronger.\n\n\"I thought I was the only one. But hearing others' stories gave me the strength to face my own.\" - Emily, Former Client\n\nJoin a supportive community and transform your relationship with money.",
+          "rationale_a_roll": "Presenter repeating message is less compelling visually.",
+          "rationale_b_roll": "Client testimonial is best delivered as on-screen quote and visuals.",
+          "expected_duration": 21.2,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-4_shot_3",
+        "rationale_a_roll": "Presenter repeating message is less compelling visually.",
+        "rationale_b_roll": "Client testimonial is best delivered as on-screen quote and visuals."
+      },
+      {
+        "id": 283,
+        "scene_id": 180,
+        "shot_number": 1,
+        "is_broll": false,
+        "narrative": "Or maybe you prefer to work at your own pace? That's exactly why I created the Self-Guided Freedom Program.",
+        "word_count": 19,
+        "estimated_duration": 7.6,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Host sits beside laptop or tablet.",
+            "shot_title": "Presenter Introduces Self-Guided Option",
+            "shot_purpose": "Frame flexible option supportively",
+            "emotional_tone": "encouraging, understanding",
+            "shot_description": "Host looks supportive, gestures to screen indicating program tools",
+            "suggested_sound_effects": [
+              "studio ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Brand colors prominent.",
+            "shot_title": "Self-Guided Program Interface",
+            "shot_purpose": "Show independence and interactivity visually",
+            "emotional_tone": "empowered, focused",
+            "shot_description": "Hands on keyboard, progress bar on laptop, cheerful lighting",
+            "suggested_broll_visuals": "User dashboard, checkmarks fill, smiling user clicks module",
+            "suggested_sound_effects": [
+              "mouse click"
+            ]
+          },
+          "scene_id": 180,
+          "shot_label": "scene-5_shot_1",
+          "word_count": 19,
+          "scene_label": "scene-5",
+          "shot_number": 1,
+          "narration_text": "Or maybe you prefer to work at your own pace? That's exactly why I created the Self-Guided Freedom Program.",
+          "rationale_a_roll": "Intro to self-guided tier best delivered by presenter’s direct support.",
+          "rationale_b_roll": "Possible system/portal shots but warmth centered on host's encouragement.",
+          "expected_duration": 7.6,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-5_shot_1",
+        "rationale_a_roll": "Intro to self-guided tier best delivered by presenter’s direct support.",
+        "rationale_b_roll": "Possible system/portal shots but warmth centered on host's encouragement."
+      },
+      {
+        "id": 284,
+        "scene_id": 180,
+        "shot_number": 2,
+        "is_broll": true,
+        "narrative": "This interactive journey is packed with real-world strategies, exercises, and step-by-step modules designed to help you regain control-on your terms.",
+        "word_count": 20,
+        "estimated_duration": 8,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Explains Modules",
+            "shot_purpose": "Highlight hands-on learning steps",
+            "emotional_tone": "helpful, motivating",
+            "shot_description": "Host seated at computer, screen sharing demo of modules",
+            "suggested_sound_effects": [
+              "computer notification"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Use upbeat pacing for delight.",
+            "shot_title": "Achievement Visuals Montage",
+            "shot_purpose": "Visually reinforce learning and accomplishment",
+            "emotional_tone": "celebratory, dynamic",
+            "shot_description": "Quick montage: modules checked, progress bars, excited fist pumps",
+            "suggested_broll_visuals": "Animated checkmarks fly in, colored progress ramps up",
+            "suggested_sound_effects": [
+              "notification ding",
+              "celebratory burst"
+            ]
+          },
+          "scene_id": 180,
+          "shot_label": "scene-5_shot_2",
+          "word_count": 20,
+          "scene_label": "scene-5",
+          "shot_number": 2,
+          "narration_text": "This interactive journey is packed with real-world strategies, exercises, and step-by-step modules designed to help you regain control-on your terms.",
+          "rationale_a_roll": "Host walk-through of content less engaging than participant milestones.",
+          "rationale_b_roll": "Milestone visuals and digital celebrations reinforce personal achievement.",
+          "expected_duration": 8,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-5_shot_2",
+        "rationale_a_roll": "Host walk-through of content less engaging than participant milestones.",
+        "rationale_b_roll": "Milestone visuals and digital celebrations reinforce personal achievement."
+      },
+      {
+        "id": 285,
+        "scene_id": 180,
+        "shot_number": 3,
+        "is_broll": true,
+        "narrative": "This is perfect if you're motivated to create change independently but need the right tools to make it stick. You'll track your progress and celebrate your wins as you reach clear, definable goals.\n\nBreak free from compulsive spending-at your own pace.",
+        "word_count": 41,
+        "estimated_duration": 16.4,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Recaps Benefits",
+            "shot_purpose": "Reinforce personal achievement as attainable",
+            "emotional_tone": "supportive, energetic",
+            "shot_description": "Host leans in, enthusiastic encouragement, gestures 'go for it'",
+            "suggested_sound_effects": [
+              "studio ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Celebratory overlays match module branding.",
+            "shot_title": "Celebratory Client B-Roll",
+            "shot_purpose": "Show camaraderie and real progress",
+            "emotional_tone": "joyful, self-empowered",
+            "shot_description": "Video call update: user celebrates milestone with friend, high energy",
+            "suggested_broll_visuals": "Laughing, victory gesture on cam, digital confetti pops",
+            "suggested_sound_effects": [
+              "soft cheer",
+              "notification ping"
+            ]
+          },
+          "scene_id": 180,
+          "shot_label": "scene-5_shot_3",
+          "word_count": 41,
+          "scene_label": "scene-5",
+          "shot_number": 3,
+          "narration_text": "This is perfect if you're motivated to create change independently but need the right tools to make it stick. You'll track your progress and celebrate your wins as you reach clear, definable goals.\n\nBreak free from compulsive spending-at your own pace.",
+          "rationale_a_roll": "Redundant if presenter narrates; visuals can better show independent wins.",
+          "rationale_b_roll": "Peer celebration and visual track show self-driven success effectively.",
+          "expected_duration": 16.4,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-5_shot_3",
+        "rationale_a_roll": "Redundant if presenter narrates; visuals can better show independent wins.",
+        "rationale_b_roll": "Peer celebration and visual track show self-driven success effectively."
+      },
+      {
+        "id": 286,
+        "scene_id": 181,
+        "shot_number": 1,
+        "is_broll": false,
+        "narrative": "I know what it feels like to want change but not know where to start. This transformation journey isn't just about changing your spending habits-it's about reclaiming your peace of mind, rebuilding your confidence, and feeling proud of the progress you can see and feel in your everyday life.",
+        "word_count": 49,
+        "estimated_duration": 19.6,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Minimal camera motion for intimacy.",
+            "shot_title": "Presenter's Heartfelt Encouragement",
+            "shot_purpose": "Center emotional transformation and empathy",
+            "emotional_tone": "hopeful, sincere",
+            "shot_description": "Host leans close for direct empathic connection, soft background blur",
+            "suggested_sound_effects": [
+              "soft breath"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Quick, gentle transitions; maintain focus on hope.",
+            "shot_title": "Transformation Flash B-Roll",
+            "shot_purpose": "Show small victories and emotional progress",
+            "emotional_tone": "uplifting, warm",
+            "shot_description": "Montage: journaling, quiet smiles, hugs, showing progress log",
+            "suggested_broll_visuals": "Closeup hands on diary, beaming faces, loving embrace, progress bar fills",
+            "suggested_sound_effects": [
+              "paper rustle"
+            ]
+          },
+          "scene_id": 181,
+          "shot_label": "scene-6_shot_1",
+          "word_count": 49,
+          "scene_label": "scene-6",
+          "shot_number": 1,
+          "narration_text": "I know what it feels like to want change but not know where to start. This transformation journey isn't just about changing your spending habits-it's about reclaiming your peace of mind, rebuilding your confidence, and feeling proud of the progress you can see and feel in your everyday life.",
+          "rationale_a_roll": "Personal emotion, reassurance, and invitation are most effective from presenter.",
+          "rationale_b_roll": "Flash B-roll possible but would dilute direct connection.",
+          "expected_duration": 19.6,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-6_shot_1",
+        "rationale_a_roll": "Personal emotion, reassurance, and invitation are most effective from presenter.",
+        "rationale_b_roll": "Flash B-roll possible but would dilute direct connection."
+      },
+      {
+        "id": 287,
+        "scene_id": 181,
+        "shot_number": 2,
+        "is_broll": false,
+        "narrative": "Once you understand why you spend, you unlock the power to change it-for good.",
+        "word_count": 14,
+        "estimated_duration": 5.6,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Brief, sincere; subtle lighting shift for emphasis.",
+            "shot_title": "Presenter's Direct Call to Action",
+            "shot_purpose": "Impart sense of possibility and agency",
+            "emotional_tone": "empowering, optimistic",
+            "shot_description": "Host beams, looks into camera, gentle upward head nod",
+            "suggested_sound_effects": [
+              "room ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Overlay 'for good' at end.",
+            "shot_title": "Empowerment Visual Motif",
+            "shot_purpose": "Visualize lasting transformation and pride",
+            "emotional_tone": "inspiring, forward-looking",
+            "shot_description": "The words 'change it—for good' animate on screen as people share victories",
+            "suggested_broll_visuals": "Animated text, subtle gold glow, people high-fiving",
+            "suggested_sound_effects": [
+              "gentle whoosh"
+            ]
+          },
+          "scene_id": 181,
+          "shot_label": "scene-6_shot_2",
+          "word_count": 14,
+          "scene_label": "scene-6",
+          "shot_number": 2,
+          "narration_text": "Once you understand why you spend, you unlock the power to change it-for good.",
+          "rationale_a_roll": "Presenter drive home key takeaway best with direct address.",
+          "rationale_b_roll": "Flash visuals could supplement, but eye contact is more powerful here.",
+          "expected_duration": 5.6,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-6_shot_2",
+        "rationale_a_roll": "Presenter drive home key takeaway best with direct address.",
+        "rationale_b_roll": "Flash visuals could supplement, but eye contact is more powerful here."
+      },
+      {
+        "id": 288,
+        "scene_id": 182,
+        "shot_number": 1,
+        "is_broll": true,
+        "narrative": "I'm debt-free for the first time in years. I don't feel controlled by my impulses anymore. This program changed my life.",
+        "word_count": 21,
+        "estimated_duration": 8.4,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "",
+            "shot_title": "Presenter Shares Success Stories",
+            "shot_purpose": "Relay transformations with admiration",
+            "emotional_tone": "celebratory, grateful",
+            "shot_description": "Host recounts client stories, sincere tone, smiles gently",
+            "suggested_sound_effects": [
+              "studio ambience"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Quick, energetic edits; positive body language.",
+            "shot_title": "Testimonial Montage",
+            "shot_purpose": "Authentically display client outcomes",
+            "emotional_tone": "triumphant, joyful",
+            "shot_description": "Quick clips: clients, diverse backgrounds, sharing success joyfully",
+            "suggested_broll_visuals": "Vertical videos, title cards: 'Debt-Free!', smiles, hugs",
+            "suggested_sound_effects": [
+              "cheer",
+              "success chime"
+            ]
+          },
+          "scene_id": 182,
+          "shot_label": "scene-7_shot_1",
+          "word_count": 21,
+          "scene_label": "scene-7",
+          "shot_number": 1,
+          "narration_text": "I'm debt-free for the first time in years. I don't feel controlled by my impulses anymore. This program changed my life.",
+          "rationale_a_roll": "Presenter retelling client stories lacks authenticity compared to direct testimonials.",
+          "rationale_b_roll": "Rapid testimonial montage visually reinforces hope and credibility.",
+          "expected_duration": 8.4,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-7_shot_1",
+        "rationale_a_roll": "Presenter retelling client stories lacks authenticity compared to direct testimonials.",
+        "rationale_b_roll": "Rapid testimonial montage visually reinforces hope and credibility."
+      },
+      {
+        "id": 289,
+        "scene_id": 183,
+        "shot_number": 1,
+        "is_broll": false,
+        "narrative": "So, what's the next step for you? One-on-one coaching, group support, or a self-guided journey-each path leads to freedom. The question is: Are you ready to take the first step?\n\nYour future starts now. Take our free self-assessment or enroll in one of our programs today.",
+        "word_count": 46,
+        "estimated_duration": 18.4,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Host animated, energetic delivery.",
+            "shot_title": "Presenter's Inspiring Call to Action",
+            "shot_purpose": "Motivate immediate action and sign-up",
+            "emotional_tone": "energizing, inspiring",
+            "shot_description": "Confident tone, host gestures invitingly to graphic CTA buttons",
+            "suggested_sound_effects": [
+              "button click"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Ensure buttons appear clickable, overlays pop.",
+            "shot_title": "Visual CTA Montage",
+            "shot_purpose": "Make visual action irresistible",
+            "emotional_tone": "vivid, enthusiastic",
+            "shot_description": "Program icons, animated button, color overlays, text highlights",
+            "suggested_broll_visuals": "CTA button glows, icons flash, colors change for urgency",
+            "suggested_sound_effects": [
+              "inspirational chime",
+              "screen whoosh"
+            ]
+          },
+          "scene_id": 183,
+          "shot_label": "scene-8_shot_1",
+          "word_count": 46,
+          "scene_label": "scene-8",
+          "shot_number": 1,
+          "narration_text": "So, what's the next step for you? One-on-one coaching, group support, or a self-guided journey-each path leads to freedom. The question is: Are you ready to take the first step?\n\nYour future starts now. Take our free self-assessment or enroll in one of our programs today.",
+          "rationale_a_roll": "Direct call-to-action is strongest from presenter for trust and clarity.",
+          "rationale_b_roll": "Animated graphics possible, but trust best served by host's invitation.",
+          "expected_duration": 18.4,
+          "roll_recommendation": "A"
+        },
+        "shot_label": "scene-8_shot_1",
+        "rationale_a_roll": "Direct call-to-action is strongest from presenter for trust and clarity.",
+        "rationale_b_roll": "Animated graphics possible, but trust best served by host's invitation."
+      },
+      {
+        "id": 290,
+        "scene_id": 184,
+        "shot_number": 1,
+        "is_broll": true,
+        "narrative": "Inspiring music swells. The Retail Therapy Unplugged logo appears with a soft fade-out.",
+        "word_count": 13,
+        "estimated_duration": 5.2,
+        "shot_data": {
+          "a_roll": {
+            "shot_notes": "Keep subtle and brief.",
+            "shot_title": "Presenter Farewell",
+            "shot_purpose": "Offer gentle farewell to audience",
+            "emotional_tone": "peaceful, closing",
+            "shot_description": "Host offers grateful smile, slow wave, sincere thank you",
+            "suggested_sound_effects": [
+              "soft chime"
+            ]
+          },
+          "b_roll": {
+            "shot_notes": "Music and animation cue fade-out perfectly.",
+            "shot_title": "Branded Logo Fade-Out",
+            "shot_purpose": "Leave viewers with lasting brand impression",
+            "emotional_tone": "resolved, uplifting",
+            "shot_description": "Program logo animates in, glowing background, soft fade to black",
+            "suggested_broll_visuals": "Animated logo with gradient, shimmer effect, brand palette",
+            "suggested_sound_effects": [
+              "shimmer chime"
+            ]
+          },
+          "scene_id": 184,
+          "shot_label": "scene-9_shot_1",
+          "word_count": 13,
+          "scene_label": "scene-9",
+          "shot_number": 1,
+          "narration_text": "Inspiring music swells. The Retail Therapy Unplugged logo appears with a soft fade-out.",
+          "rationale_a_roll": "No presenter needed for brand close—visuals and music suffice.",
+          "rationale_b_roll": "Branded animation and uplifting logo best deliver emotional closure.",
+          "expected_duration": 5.2,
+          "roll_recommendation": "B"
+        },
+        "shot_label": "scene-9_shot_1",
+        "rationale_a_roll": "No presenter needed for brand close—visuals and music suffice.",
+        "rationale_b_roll": "Branded animation and uplifting logo best deliver emotional closure."
+      }
+    ],
+    "video_id": 23,
+    "video_title": "Video Sales Letter (VSL)"
+  }
+]
