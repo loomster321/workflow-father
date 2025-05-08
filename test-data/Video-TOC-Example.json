@@ -1,138 +1,225 @@
 {
-    "video_id": 12345,
-    "videoTitle": "How to Setup a Garden Irrigation System",
-    "scenes": [
-      {
-        "scene_id": 101,
-        "label": "scene-1",
-        "shots": [
-          {
-            "shot_id": 1001,
-            "label": "scene-1_shot_1",
-            "narration": "Hello gardeners! I'm standing here in my garden to show you how a proper irrigation system transforms your gardening experience. No more dragging hoses around or forgetting to water!"
-          },
-          {
-            "shot_id": 1002,
-            "label": "scene-1_shot_2",
-            "narration": "Let's look at some examples of irrigation systems. Here we have drip irrigation ideal for vegetable gardens, sprinkler systems for lawns, and soaker hoses for perennial beds."
-          }
-        ]
-      },
-      {
-        "scene_id": 102,
-        "label": "scene-2",
-        "shots": [
-          {
-            "shot_id": 1003,
-            "label": "scene-2_shot_1",
-            "narration": "To start planning, we'll measure our garden dimensions using a long tape measure. Be sure to note any slopes or special features that might affect water flow."
-          },
-          {
-            "shot_id": 1004,
-            "label": "scene-2_shot_2",
-            "narration": "Different plants have different water needs. Vegetables typically need 1-2 inches per week, while drought-tolerant perennials might need only half that amount."
-          },
-          {
-            "shot_id": 1005,
-            "label": "scene-2_shot_3",
-            "narration": "Now I'm sketching our irrigation layout, marking water sources, main lines, and where each type of emitter will go. This planning stage saves a lot of headaches later."
-          }
-        ]
-      },
-      {
-        "scene_id": 103,
-        "label": "scene-3",
-        "shots": [
-          {
-            "shot_id": 1006,
-            "label": "scene-3_shot_1",
-            "narration": "Here on my workbench are all the tools we'll need: pipe cutters, hole punch, measuring tape, stakes, and a shovel for burying main lines."
-          },
-          {
-            "shot_id": 1007,
-            "label": "scene-3_shot_2",
-            "narration": "And these are our irrigation components: main PVC pipes, flexible poly tubing, various connectors, drippers, sprinklers, and a timer unit with backup battery."
-          }
-        ]
-      },
-      {
-        "scene_id": 104,
-        "label": "scene-4",
-        "shots": [
-          {
-            "shot_id": 1008,
-            "label": "scene-4_shot_1",
-            "narration": "First, we'll attach our timer and backflow preventer to the outdoor spigot. The backflow preventer is essential to prevent contamination of your household water supply."
-          },
-          {
-            "shot_id": 1009,
-            "label": "scene-4_shot_2",
-            "narration": "Now I'm laying out the main irrigation lines. For permanent installations, we'll dig shallow trenches about 6 inches deep to protect the pipes from UV damage and accidental cuts."
-          },
-          {
-            "shot_id": 1010,
-            "label": "scene-4_shot_3",
-            "narration": "For our vegetable beds, I'm installing adjustable drippers at each plant location. For the perennial border, these micro-sprayers will provide gentle overhead watering."
-          },
-          {
-            "shot_id": 1011,
-            "label": "scene-4_shot_4",
-            "narration": "Now let's program our timer. I recommend watering in early morning, between 5 and 7 AM, when evaporation is minimal and plants can dry before evening to prevent disease."
-          }
-        ]
-      },
-      {
-        "scene_id": 105,
-        "label": "scene-5",
-        "shots": [
-          {
-            "shot_id": 1012,
-            "label": "scene-5_shot_1",
-            "narration": "With everything connected, let's run our first test. I'm checking each zone to ensure proper water pressure and that all connections are secure."
-          },
-          {
-            "shot_id": 1013,
-            "label": "scene-5_shot_2",
-            "narration": "Here's a leak at one of our connections. I'll show you how to quickly fix it by cutting out the damaged section and adding a repair coupling."
-          },
-          {
-            "shot_id": 1014,
-            "label": "scene-5_shot_3",
-            "narration": "Now I'm adjusting our sprinkler heads to prevent overspray onto paths or structures, and fine-tuning our drippers to deliver the right amount of water for each plant type."
-          }
-        ]
-      },
-      {
-        "scene_id": 106,
-        "label": "scene-6",
-        "shots": [
-          {
-            "shot_id": 1015,
-            "label": "scene-6_shot_1",
-            "narration": "Mark your calendar for these maintenance tasks: monthly emitter cleaning in season, filter changes twice a year, and checking for leaks or clogged emitters after winter."
-          },
-          {
-            "shot_id": 1016,
-            "label": "scene-6_shot_2",
-            "narration": "In cold areas, winterizing is crucial. I'm using compressed air to blow all water out of the lines before freezing temperatures arrive, then disconnecting and storing the timer indoors."
-          }
-        ]
-      },
-      {
-        "scene_id": 107,
-        "label": "scene-7",
-        "shots": [
-          {
-            "shot_id": 1017,
-            "label": "scene-7_shot_1",
-            "narration": "Look at this side-by-side comparison. On the left is my garden before irrigation - with uneven growth and dry patches. On the right, after just one month with our new system, everything is lush and thriving."
-          },
-          {
-            "shot_id": 1018,
-            "label": "scene-7_shot_2",
-            "narration": "I hope this guide helps you create an efficient irrigation system for your own garden. Your plants will thank you, you'll save water, and you'll have more time to enjoy your garden rather than maintain it. Happy gardening!"
-          }
-        ]
-      }
-    ]
-  }
+  "video_id": 26,
+  "video_title": "Video Sales Letter (VSL)",
+  "scenes": [
+    {
+      "scene_id": 203,
+      "scene_label": "scene-1",
+      "total_scene_duration": 28.8,
+      "total_scene_word_count": 72,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 354,
+          "duration_sec": 11.6,
+          "word_count": 29,
+          "narration": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later? Or maybe you've promised yourself, 'This is the last time'-but it never is."
+        },
+        {
+          "shot_number": 2,
+          "shot_id": 355,
+          "duration_sec": 8.8,
+          "word_count": 22,
+          "narration": "Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it."
+        },
+        {
+          "shot_number": 3,
+          "shot_id": 356,
+          "duration_sec": 8.4,
+          "word_count": 21,
+          "narration": "You're not alone. And it's not your fault. There is hope for healing—for you, and for the relationships that matter most."
+        }
+      ]
+    },
+    {
+      "scene_id": 204,
+      "scene_label": "scene-2",
+      "total_scene_duration": 58.8,
+      "total_scene_word_count": 147,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 357,
+          "duration_sec": 13.2,
+          "word_count": 33,
+          "narration": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors—especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind."
+        },
+        {
+          "shot_number": 2,
+          "shot_id": 358,
+          "duration_sec": 14.4,
+          "word_count": 36,
+          "narration": "Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret. But here's the good news: You can take back control—and I can show you how."
+        },
+        {
+          "shot_number": 3,
+          "shot_id": 359,
+          "duration_sec": 22.0,
+          "word_count": 55,
+          "narration": "That's why I created Retail Therapy Unplugged—a proven coaching program designed to help you break the cycle of compulsive spending. This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of."
+        },
+        {
+          "shot_number": 4,
+          "shot_id": 360,
+          "duration_sec": 9.2,
+          "word_count": 23,
+          "narration": "We don't just focus on what you spend—we uncover why you spend, and how to build lasting habits that lead to financial freedom."
+        }
+      ]
+    },
+    {
+      "scene_id": 205,
+      "scene_label": "scene-3",
+      "total_scene_duration": 36.0,
+      "total_scene_word_count": 90,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 361,
+          "duration_sec": 9.6,
+          "word_count": 24,
+          "narration": "Imagine waking up without that knot of anxiety about your spending. That's the transformation we aim for with our top-tier program: Personalized Transformation Coaching."
+        },
+        {
+          "shot_number": 2,
+          "shot_id": 362,
+          "duration_sec": 12.8,
+          "word_count": 32,
+          "narration": "This is one-on-one support tailored just for you. We'll identify your triggers, create a step-by-step action plan, and work through emotional roadblocks together—so the changes you make aren't just temporary. They're permanent."
+        },
+        {
+          "shot_number": 3,
+          "shot_id": 363,
+          "duration_sec": 13.6,
+          "word_count": 34,
+          "narration": "This level is perfect for high-achievers, professionals, or anyone ready to invest in deep, meaningful change. Because when your mindset shifts, your life shifts. Experience personalized coaching for lasting financial freedom and emotional resilience."
+        }
+      ]
+    },
+    {
+      "scene_id": 206,
+      "scene_label": "scene-4",
+      "total_scene_duration": 40.8,
+      "total_scene_word_count": 102,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 364,
+          "duration_sec": 8.0,
+          "word_count": 20,
+          "narration": "Maybe you're looking for support—but you don't want to go it alone. That's where our Empowerment Group Coaching comes in."
+        },
+        {
+          "shot_number": 2,
+          "shot_id": 365,
+          "duration_sec": 11.6,
+          "word_count": 29,
+          "narration": "You'll join a community of people who get it. Together, we'll share wins, tackle challenges, and celebrate breakthroughs. These aren't just 'support groups'—they're transformation hubs where real change happens."
+        },
+        {
+          "shot_number": 3,
+          "shot_id": 366,
+          "duration_sec": 21.2,
+          "word_count": 53,
+          "narration": "You'll realize you're not the only one struggling—and that realization? It's powerful. Because when we grow together, we grow stronger. \"I thought I was the only one. But hearing others' stories gave me the strength to face my own.\" - Emily, Former Client Join a supportive community and transform your relationship with money."
+        }
+      ]
+    },
+    {
+      "scene_id": 207,
+      "scene_label": "scene-5",
+      "total_scene_duration": 32.0,
+      "total_scene_word_count": 80,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 367,
+          "duration_sec": 7.6,
+          "word_count": 19,
+          "narration": "Or maybe you prefer to work at your own pace? That's exactly why I created the Self-Guided Freedom Program."
+        },
+        {
+          "shot_number": 2,
+          "shot_id": 368,
+          "duration_sec": 8.0,
+          "word_count": 20,
+          "narration": "This interactive journey is packed with real-world strategies, exercises, and step-by-step modules designed to help you regain control—on your terms."
+        },
+        {
+          "shot_number": 3,
+          "shot_id": 369,
+          "duration_sec": 16.4,
+          "word_count": 41,
+          "narration": "This is perfect if you're motivated to create change independently but need the right tools to make it stick. You'll track your progress and celebrate your wins as you reach clear, definable goals. Break free from compulsive spending—at your own pace."
+        }
+      ]
+    },
+    {
+      "scene_id": 208,
+      "scene_label": "scene-6",
+      "total_scene_duration": 25.2,
+      "total_scene_word_count": 63,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 370,
+          "duration_sec": 19.6,
+          "word_count": 49,
+          "narration": "I know what it feels like to want change but not know where to start. This transformation journey isn't just about changing your spending habits—it's about reclaiming your peace of mind, rebuilding your confidence, and feeling proud of the progress you can see and feel in your everyday life."
+        },
+        {
+          "shot_number": 2,
+          "shot_id": 371,
+          "duration_sec": 5.6,
+          "word_count": 14,
+          "narration": "Once you understand why you spend, you unlock the power to change it—for good."
+        }
+      ]
+    },
+    {
+      "scene_id": 209,
+      "scene_label": "scene-7",
+      "total_scene_duration": 8.4,
+      "total_scene_word_count": 21,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 372,
+          "duration_sec": 8.4,
+          "word_count": 21,
+          "narration": "I'm debt-free for the first time in years. I don't feel controlled by my impulses anymore. This program changed my life."
+        }
+      ]
+    },
+    {
+      "scene_id": 210,
+      "scene_label": "scene-8",
+      "total_scene_duration": 18.4,
+      "total_scene_word_count": 46,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 373,
+          "duration_sec": 18.4,
+          "word_count": 46,
+          "narration": "So, what's the next step for you? One-on-one coaching, group support, or a self-guided journey—each path leads to freedom. The question is: Are you ready to take the first step? Your future starts now. Take our free self-assessment or enroll in one of our programs today."
+        }
+      ]
+    },
+    {
+      "scene_id": 211,
+      "scene_label": "scene-9",
+      "total_scene_duration": 5.2,
+      "total_scene_word_count": 13,
+      "shots": [
+        {
+          "shot_number": 1,
+          "shot_id": 374,
+          "duration_sec": 5.2,
+          "word_count": 13,
+          "narration": "Inspiring music swells. The Retail Therapy Unplugged logo appears with a soft fade-out."
+        }
+      ]
+    }
+  ]
+}

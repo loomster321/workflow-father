@@ -479,9 +479,10 @@ For EVERY shot you process, follow these steps:
 You must use the **Append Agent Log** tool to log your thought process and tool usage for each shot you process. This creates a permanent record that helps with debugging, auditing, and improving the workflow.
 
 - **When to use:** At the start and end of processing each shot, and after any significant decision point
-- **How to call:** `Append Agent Log(agent_name, event_data, shot_id)`
+- **How to call:** `Append Agent Log(agent_name, event_type, event_data, shot_id)`
 - **Parameters:**
   - `agent_name`: Always use "B-Roll Ideation"
+  - `event_type`: The type of event (e.g., 'start_processing', 'tool_usage', 'decision_point', 'end_processing')
   - `event_data`: A JSON object containing your thought process and tool usage (details below)
   - `shot_id`: The ID of the current shot being processed
 
@@ -491,7 +492,6 @@ Format your `event_data` as a JSON object with these fields:
 
 ```json
 {
-  "event_type": "string (e.g., 'start_processing', 'tool_usage', 'decision_point', 'end_processing')",
   "thought_process": "string (detailed description of your reasoning)",
   "tool_usage": [
     {
@@ -512,6 +512,8 @@ Format your `event_data` as a JSON object with these fields:
 }
 ```
 
+**IMPORTANT**: The `event_data` parameter MUST ALWAYS be a JSON object, never a string. If you pass a string instead of a properly structured JSON object, the logs will not be properly stored and cannot be queried effectively.
+
 #### When to Log
 
 1. **Start of Processing**: Log when you begin processing a new shot
@@ -523,10 +525,11 @@ Format your `event_data` as a JSON object with these fields:
 
 **Example 1: Start of Processing**
 ```javascript
+// CORRECT EXAMPLE - event_data is a JSON OBJECT
 Append Agent Log(
   "B-Roll Ideation",
+  "start_processing",
   {
-    "event_type": "start_processing",
     "thought_process": "Beginning to process shot_id 354 in scene_id 203. Will gather context and check for previous ideation.",
     "tool_usage": [],
     "decisions": [],
@@ -539,10 +542,11 @@ Append Agent Log(
 
 **Example 2: After Tool Usage**
 ```javascript
+// CORRECT EXAMPLE - event_data is a JSON OBJECT
 Append Agent Log(
   "B-Roll Ideation",
+  "tool_usage",
   {
-    "event_type": "tool_usage",
     "thought_process": "Retrieved video TOC and ideation history. Found 2 previous concepts focused on shopping regret. Will create distinctly different concepts.",
     "tool_usage": [
       {
@@ -566,10 +570,11 @@ Append Agent Log(
 
 **Example 3: End of Processing**
 ```javascript
+// CORRECT EXAMPLE - event_data is a JSON OBJECT
 Append Agent Log(
   "B-Roll Ideation",
+  "end_processing",
   {
-    "event_type": "end_processing",
     "thought_process": "Completed processing shot_id 354. Generated 3 distinct creative directions based on context and avoiding previous themes.",
     "tool_usage": [],
     "decisions": ["Created unique concepts with distinct visual approaches", "Added social media elements to 'Digital Zeitgeist' concept"],
@@ -584,4 +589,4 @@ Append Agent Log(
 )
 ```
 
-**IMPORTANT**: You must log your process at multiple points during each shot's processing. At minimum, log at the start and end of processing each shot.
+**IMPORTANT**: You must log your process at multiple points during each shot's processing. At minimum, log at the start and end of processing each shot. **NEVER pass a string as the event_data parameter - always use a properly structured JSON object.**

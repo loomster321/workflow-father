@@ -1,0 +1,759 @@
+[
+  {
+    "parsedData": {
+      "video_title": "Retail Therapy Unplugged VSL",
+      "segments": [
+        {
+          "level": "act",
+          "label": "act-1",
+          "title": "Problem & Emotional Cost",
+          "description": "Hooks the audience by depicting the emotional consequences of compulsive spending and its impact on relationships.",
+          "semantic_tags": [
+            "setup",
+            "problem",
+            "emotional_cost"
+          ],
+          "word_count": 72,
+          "estimated_duration": 28.8,
+          "segments": [
+            {
+              "level": "sequence",
+              "label": "act-1_seq-1",
+              "title": "Opening Visual Montage",
+              "description": "Quick visuals of shopping, regret, and relational tension establish the problem visually.",
+              "semantic_tags": [
+                "montage",
+                "tone_setter"
+              ],
+              "word_count": 0,
+              "estimated_duration": 8,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-1_seq-1_scene-1",
+                  "title": "Glimpses of Consequence",
+                  "description": "Soft music plays over visuals: shopping, regretful faces, tense couples.",
+                  "semantic_tags": [
+                    "silent_action",
+                    "regret",
+                    "relationship_tension"
+                  ],
+                  "word_count": 0,
+                  "estimated_duration": 8,
+                  "narration_text": "",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-1_seq-1_scene-1_shot-1",
+                      "description": "A person smiles as they complete an online purchase.",
+                      "semantic_tags": [
+                        "positive_action"
+                      ],
+                      "word_count": 0,
+                      "estimated_duration": 2,
+                      "narration_text": "",
+                      "segments": []
+                    },
+                    {
+                      "level": "shot",
+                      "label": "act-1_seq-1_scene-1_shot-2",
+                      "description": "A sudden look of regret as they see the confirmation.",
+                      "semantic_tags": [
+                        "regret",
+                        "reaction"
+                      ],
+                      "word_count": 0,
+                      "estimated_duration": 2,
+                      "narration_text": "",
+                      "segments": []
+                    },
+                    {
+                      "level": "shot",
+                      "label": "act-1_seq-1_scene-1_shot-3",
+                      "description": "Couple exchanges frustrated glances over a stack of bills.",
+                      "semantic_tags": [
+                        "tension",
+                        "relationship"
+                      ],
+                      "word_count": 0,
+                      "estimated_duration": 2,
+                      "narration_text": "",
+                      "segments": []
+                    }
+                  ]
+                },
+                {
+                  "level": "scene",
+                  "label": "act-1_seq-1_scene-2",
+                  "title": "Infographic: Scale of the Problem",
+                  "description": "Infographic showing prevalence and resonance of shopping disorder, using diverse silhouettes & statistics.",
+                  "semantic_tags": [
+                    "infographic",
+                    "data",
+                    "prevalence"
+                  ],
+                  "word_count": 0,
+                  "estimated_duration": 4,
+                  "narration_text": "",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-1_seq-1_scene-2_shot-1",
+                      "description": "Animated silhouettes highlight affected population.",
+                      "semantic_tags": [
+                        "animation",
+                        "montage"
+                      ],
+                      "word_count": 0,
+                      "estimated_duration": 2,
+                      "narration_text": "",
+                      "segments": []
+                    },
+                    {
+                      "level": "shot",
+                      "label": "act-1_seq-1_scene-2_shot-2",
+                      "description": "Text overlays emphasize statistics and resonance.",
+                      "semantic_tags": [
+                        "text_overlay"
+                      ],
+                      "word_count": 0,
+                      "estimated_duration": 2,
+                      "narration_text": "",
+                      "segments": []
+                    }
+                  ]
+                },
+                {
+                  "level": "scene",
+                  "label": "act-1_seq-1_scene-3",
+                  "title": "Direct Empathy Address",
+                  "description": "Dr. Leslie's opening empathy-based narration.",
+                  "semantic_tags": [
+                    "narration",
+                    "empathy",
+                    "voiceover"
+                  ],
+                  "word_count": 72,
+                  "estimated_duration": 28.8,
+                  "narration_text": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later? Or maybe you've promised yourself, 'This is the last time'-but it never is. Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it. You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-1_seq-1_scene-3_shot-1",
+                      "description": "Empathetic montage with Dr. Leslie VO.",
+                      "semantic_tags": [
+                        "voiceover",
+                        "emotional_connection"
+                      ],
+                      "word_count": 72,
+                      "estimated_duration": 28.8,
+                      "narration_text": "Ever felt that rush after clicking 'Buy Now,' only to be hit with regret moments later? Or maybe you've promised yourself, 'This is the last time'-but it never is. Sometimes, the ripple effect of these struggles quietly touches the people you love, creating stress and distance without you even realizing it. You're not alone. And it's not your fault. There is hope for healing-for you, and for the relationships that matter most.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "act",
+          "label": "act-2",
+          "title": "Authority & Solution Introduction",
+          "description": "Dr. Leslie establishes authority and hope for change, shifting toward solutions.",
+          "semantic_tags": [
+            "authority",
+            "solution",
+            "hope"
+          ],
+          "word_count": 147,
+          "estimated_duration": 59,
+          "segments": [
+            {
+              "level": "sequence",
+              "label": "act-2_seq-1",
+              "title": "Meet Dr. Leslie",
+              "description": "Professional introduction with personal credibility.",
+              "semantic_tags": [
+                "introduction",
+                "personal_story"
+              ],
+              "word_count": 69,
+              "estimated_duration": 27.6,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-2_seq-1_scene-1",
+                  "title": "Dr. Leslie on Camera",
+                  "description": "Direct, warm address establishing authority.",
+                  "semantic_tags": [
+                    "direct_address",
+                    "sincerity"
+                  ],
+                  "word_count": 69,
+                  "estimated_duration": 27.6,
+                  "narration_text": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors-especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind. Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret. But here's the good news: You can take back control-and I can show you how.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-2_seq-1_scene-1_shot-1",
+                      "description": "Dr. Leslie in professional setting, smiling empathetically.",
+                      "semantic_tags": [
+                        "person_on_camera",
+                        "warmth"
+                      ],
+                      "word_count": 69,
+                      "estimated_duration": 27.6,
+                      "narration_text": "Hi, I'm Dr. Leslie Davis. For over 20 years, I've helped people break free from compulsive behaviors-especially the kind that silently drain your finances, strain your relationships, and steal your peace of mind. Shopping addiction isn't just about money. It's about the emotional triggers, the stress, the 'quick fix' that turns into long-term regret. But here's the good news: You can take back control-and I can show you how.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "sequence",
+              "label": "act-2_seq-2",
+              "title": "Introducing the Solution",
+              "description": "Narration of the solution's nature (scientific, practical, not just budgeting).",
+              "semantic_tags": [
+                "solution_intro",
+                "science_backed"
+              ],
+              "word_count": 78,
+              "estimated_duration": 31.2,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-2_seq-2_scene-1",
+                  "title": "Program Philosophy",
+                  "description": "Dr. Leslie explains program is CBT-based and habit focused.",
+                  "semantic_tags": [
+                    "philosophy",
+                    "program_intro"
+                  ],
+                  "word_count": 78,
+                  "estimated_duration": 31.2,
+                  "narration_text": "That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending. This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of. We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-2_seq-2_scene-1_shot-1",
+                      "description": "Visuals of Dr. Leslie coaching, breakthrough moments, notes from clients.",
+                      "semantic_tags": [
+                        "montage",
+                        "hope",
+                        "breakthrough"
+                      ],
+                      "word_count": 78,
+                      "estimated_duration": 31.2,
+                      "narration_text": "That's why I created Retail Therapy Unplugged-a proven coaching program designed to help you break the cycle of compulsive spending. This isn't another cookie-cutter budgeting course. It's a science-backed approach with practical, evidence-based techniques inspired by psychology and Cognitive Behavioral Therapy, that will help you regain control and build a future you are proud of. We don't just focus on what you spend-we uncover why you spend, and how to build lasting habits that lead to financial freedom.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "act",
+          "label": "act-3",
+          "title": "The Offer & Testimonials",
+          "description": "Breaks down each program tier and provides social proof via testimonials.",
+          "semantic_tags": [
+            "offer",
+            "breakdown",
+            "social_proof"
+          ],
+          "word_count": 320,
+          "estimated_duration": 128.4,
+          "segments": [
+            {
+              "level": "sequence",
+              "label": "act-3_seq-1",
+              "title": "Tier 3: Personalized Transformation Coaching",
+              "description": "Features and emotional promises of the top-tier program.",
+              "semantic_tags": [
+                "personalized",
+                "coaching",
+                "transformation"
+              ],
+              "word_count": 80,
+              "estimated_duration": 31.2,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-3_seq-1_scene-1",
+                  "title": "Transformation Overview",
+                  "description": "Describes how one-on-one coaching achieves deep change.",
+                  "semantic_tags": [
+                    "coaching",
+                    "one_on_one",
+                    "deep_change"
+                  ],
+                  "word_count": 56,
+                  "estimated_duration": 22.4,
+                  "narration_text": "Imagine waking up without that knot of anxiety about your spending. That's the transformation we aim for with our top-tier program: Personalized Transformation Coaching. This is one-on-one support tailored just for you. We'll identify your triggers, create a step-by-step action plan, and work through emotional roadblocks together-so the changes you make aren't just temporary. They're permanent.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-1_scene-1_shot-1",
+                      "description": "Montage: virtual sessions, breakthroughs, journaling, empowerment.",
+                      "semantic_tags": [
+                        "montage",
+                        "empowerment",
+                        "personal_progress"
+                      ],
+                      "word_count": 56,
+                      "estimated_duration": 22.4,
+                      "narration_text": "Imagine waking up without that knot of anxiety about your spending. That's the transformation we aim for with our top-tier program: Personalized Transformation Coaching. This is one-on-one support tailored just for you. We'll identify your triggers, create a step-by-step action plan, and work through emotional roadblocks together-so the changes you make aren't just temporary. They're permanent.",
+                      "segments": []
+                    }
+                  ]
+                },
+                {
+                  "level": "scene",
+                  "label": "act-3_seq-1_scene-2",
+                  "title": "Transformation Benefits",
+                  "description": "Highlights target audience & emotional results.",
+                  "semantic_tags": [
+                    "target_audience",
+                    "benefits",
+                    "emotional_resilience"
+                  ],
+                  "word_count": 24,
+                  "estimated_duration": 9.6,
+                  "narration_text": "This level is perfect for high-achievers, professionals, or anyone ready to invest in deep, meaningful change. Because when your mindset shifts, your life shifts.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-1_scene-2_shot-1",
+                      "description": "Text highlights and Dr. Leslie VO; aspirational visuals.",
+                      "semantic_tags": [
+                        "text_highlight",
+                        "aspirational"
+                      ],
+                      "word_count": 24,
+                      "estimated_duration": 9.6,
+                      "narration_text": "This level is perfect for high-achievers, professionals, or anyone ready to invest in deep, meaningful change. Because when your mindset shifts, your life shifts.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "sequence",
+              "label": "act-3_seq-2",
+              "title": "Tier 2: Empowerment Group Coaching",
+              "description": "Presents group-based program and emotional support.",
+              "semantic_tags": [
+                "group",
+                "coaching",
+                "support"
+              ],
+              "word_count": 108,
+              "estimated_duration": 44.8,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-3_seq-2_scene-1",
+                  "title": "Group Coaching Experience",
+                  "description": "Shows collaborative, community nature of offering.",
+                  "semantic_tags": [
+                    "group_experience",
+                    "community",
+                    "support"
+                  ],
+                  "word_count": 49,
+                  "estimated_duration": 19.6,
+                  "narration_text": "Maybe you're looking for support-but you don't want to go it alone. That's where our Empowerment Group Coaching comes in. You'll join a community of people who get it. Together, we'll share wins, tackle challenges, and celebrate breakthroughs. These aren't just 'support groups'-they're transformation hubs where real change happens.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-2_scene-1_shot-1",
+                      "description": "Dynamic group calls, laughter, celebration.",
+                      "semantic_tags": [
+                        "dynamic",
+                        "community"
+                      ],
+                      "word_count": 49,
+                      "estimated_duration": 19.6,
+                      "narration_text": "Maybe you're looking for support-but you don't want to go it alone. That's where our Empowerment Group Coaching comes in. You'll join a community of people who get it. Together, we'll share wins, tackle challenges, and celebrate breakthroughs. These aren't just 'support groups'-they're transformation hubs where real change happens.",
+                      "segments": []
+                    }
+                  ]
+                },
+                {
+                  "level": "scene",
+                  "label": "act-3_seq-2_scene-2",
+                  "title": "Belonging & Power",
+                  "description": "Emphasizes power in connection and shared growth.",
+                  "semantic_tags": [
+                    "belonging",
+                    "empowerment",
+                    "growth"
+                  ],
+                  "word_count": 20,
+                  "estimated_duration": 8,
+                  "narration_text": "You'll realize you're not the only one struggling-and that realization? It's powerful. Because when we grow together, we grow stronger.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-2_scene-2_shot-1",
+                      "description": "Connection moments, group encouragement.",
+                      "semantic_tags": [
+                        "connection",
+                        "support"
+                      ],
+                      "word_count": 20,
+                      "estimated_duration": 8,
+                      "narration_text": "You'll realize you're not the only one struggling-and that realization? It's powerful. Because when we grow together, we grow stronger.",
+                      "segments": []
+                    }
+                  ]
+                },
+                {
+                  "level": "scene",
+                  "label": "act-3_seq-2_scene-3",
+                  "title": "Testimonial - Emily",
+                  "description": "Real client testimonial for emotional resonance.",
+                  "semantic_tags": [
+                    "testimonial",
+                    "client_voice"
+                  ],
+                  "word_count": 19,
+                  "estimated_duration": 7.6,
+                  "narration_text": "I thought I was the only one. But hearing others' stories gave me the strength to face my own.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-2_scene-3_shot-1",
+                      "description": "Text-on-screen and audio for testimonial.",
+                      "semantic_tags": [
+                        "text_on_screen",
+                        "testimonial"
+                      ],
+                      "word_count": 19,
+                      "estimated_duration": 7.6,
+                      "narration_text": "I thought I was the only one. But hearing others' stories gave me the strength to face my own.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "sequence",
+              "label": "act-3_seq-3",
+              "title": "Tier 1: Self-Guided Freedom Program",
+              "description": "Promotes the independent/self-paced program tier.",
+              "semantic_tags": [
+                "self_guided",
+                "independence",
+                "flexibility"
+              ],
+              "word_count": 72,
+              "estimated_duration": 28.8,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-3_seq-3_scene-1",
+                  "title": "Self-Paced Journey",
+                  "description": "Highlights how independent learners will benefit.",
+                  "semantic_tags": [
+                    "journey",
+                    "independent_learning"
+                  ],
+                  "word_count": 39,
+                  "estimated_duration": 15.6,
+                  "narration_text": "Or maybe you prefer to work at your own pace? That's exactly why I created the Self-Guided Freedom Program. This interactive journey is packed with real-world strategies, exercises, and step-by-step modules designed to help you regain control-on your terms.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-3_scene-1_shot-1",
+                      "description": "People working on courses, sharing wins with friends.",
+                      "semantic_tags": [
+                        "visuals",
+                        "online_course",
+                        "celebration"
+                      ],
+                      "word_count": 39,
+                      "estimated_duration": 15.6,
+                      "narration_text": "Or maybe you prefer to work at your own pace? That's exactly why I created the Self-Guided Freedom Program. This interactive journey is packed with real-world strategies, exercises, and step-by-step modules designed to help you regain control-on your terms.",
+                      "segments": []
+                    }
+                  ]
+                },
+                {
+                  "level": "scene",
+                  "label": "act-3_seq-3_scene-2",
+                  "title": "Independent Progress",
+                  "description": "Describes self-motivation and tools for progress.",
+                  "semantic_tags": [
+                    "motivation",
+                    "self_progress"
+                  ],
+                  "word_count": 33,
+                  "estimated_duration": 13.2,
+                  "narration_text": "This is perfect if you're motivated to create change independently but need the right tools to make it stick. You'll track your progress and celebrate your wins as you reach clear, definable goals.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-3_scene-2_shot-1",
+                      "description": "Progress tracking visuals, celebratory moment.",
+                      "semantic_tags": [
+                        "progress_tracking",
+                        "reward"
+                      ],
+                      "word_count": 33,
+                      "estimated_duration": 13.2,
+                      "narration_text": "This is perfect if you're motivated to create change independently but need the right tools to make it stick. You'll track your progress and celebrate your wins as you reach clear, definable goals.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "sequence",
+              "label": "act-3_seq-4",
+              "title": "Client Rapid-Fire Testimonials",
+              "description": "Multiple clients, concise soundbites reflecting outcome and satisfaction.",
+              "semantic_tags": [
+                "testimonials",
+                "social_proof",
+                "rapid_fire"
+              ],
+              "word_count": 21,
+              "estimated_duration": 8.4,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-3_seq-4_scene-1",
+                  "title": "Client Outcomes",
+                  "description": "Testimonial montage: debt free, emotional control, life changed.",
+                  "semantic_tags": [
+                    "testimonial",
+                    "montage",
+                    "results"
+                  ],
+                  "word_count": 21,
+                  "estimated_duration": 8.4,
+                  "narration_text": "I'm debt-free for the first time in years. I don't feel controlled by my impulses anymore. This program changed my life.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-4_scene-1_shot-1",
+                      "description": "Shot 1: Client expressing freedom from debt.",
+                      "semantic_tags": [
+                        "client",
+                        "testimonial",
+                        "debt_free"
+                      ],
+                      "word_count": 8,
+                      "estimated_duration": 3.2,
+                      "narration_text": "I'm debt-free for the first time in years.",
+                      "segments": []
+                    },
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-4_scene-1_shot-2",
+                      "description": "Shot 2: Client describing impulse control.",
+                      "semantic_tags": [
+                        "client",
+                        "testimonial",
+                        "control"
+                      ],
+                      "word_count": 8,
+                      "estimated_duration": 3.2,
+                      "narration_text": "I don't feel controlled by my impulses anymore.",
+                      "segments": []
+                    },
+                    {
+                      "level": "shot",
+                      "label": "act-3_seq-4_scene-1_shot-3",
+                      "description": "Shot 3: Client summarizing positive change.",
+                      "semantic_tags": [
+                        "client",
+                        "testimonial",
+                        "life_change"
+                      ],
+                      "word_count": 5,
+                      "estimated_duration": 2,
+                      "narration_text": "This program changed my life.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "act",
+          "label": "act-4",
+          "title": "Emotional Anchor, CTA & Close",
+          "description": "Anchors emotions, renews hope, presents clear call-to-action and brand close.",
+          "semantic_tags": [
+            "emotional_anchor",
+            "cta",
+            "close"
+          ],
+          "word_count": 126,
+          "estimated_duration": 49.2,
+          "segments": [
+            {
+              "level": "sequence",
+              "label": "act-4_seq-1",
+              "title": "Anchor & Transition",
+              "description": "Dr. Leslie acknowledges viewers' feelings, frames path to hope.",
+              "semantic_tags": [
+                "emotion",
+                "transition"
+              ],
+              "word_count": 63,
+              "estimated_duration": 25.2,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-4_seq-1_scene-1",
+                  "title": "Dr. Leslie Encouragement",
+                  "description": "Dr. Leslie's encouragement, close-up, hopeful delivery.",
+                  "semantic_tags": [
+                    "direct_address",
+                    "encouragement",
+                    "hopeful"
+                  ],
+                  "word_count": 63,
+                  "estimated_duration": 25.2,
+                  "narration_text": "I know what it feels like to want change but not know where to start. This transformation journey isn't just about changing your spending habits-it's about reclaiming your peace of mind, rebuilding your confidence, and feeling proud of the progress you can see and feel in your everyday life. Once you understand why you spend, you unlock the power to change it-for good.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-4_seq-1_scene-1_shot-1",
+                      "description": "Dr. Leslie, warm/direct to camera, soft lighting.",
+                      "semantic_tags": [
+                        "direct_address",
+                        "warm",
+                        "hope"
+                      ],
+                      "word_count": 63,
+                      "estimated_duration": 25.2,
+                      "narration_text": "I know what it feels like to want change but not know where to start. This transformation journey isn't just about changing your spending habits-it's about reclaiming your peace of mind, rebuilding your confidence, and feeling proud of the progress you can see and feel in your everyday life. Once you understand why you spend, you unlock the power to change it-for good.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "sequence",
+              "label": "act-4_seq-2",
+              "title": "Final Call to Action",
+              "description": "Direct, inspiring call to the viewer to act now.",
+              "semantic_tags": [
+                "cta",
+                "direct_appeal"
+              ],
+              "word_count": 30,
+              "estimated_duration": 12,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-4_seq-2_scene-1",
+                  "title": "Next Steps",
+                  "description": "Dr. Leslie voiceover with strong visual CTA.",
+                  "semantic_tags": [
+                    "cta",
+                    "inspiration"
+                  ],
+                  "word_count": 30,
+                  "estimated_duration": 12,
+                  "narration_text": "So, what's the next step for you? One-on-one coaching, group support, or a self-guided journey-each path leads to freedom. The question is: Are you ready to take the first step?",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-4_seq-2_scene-1_shot-1",
+                      "description": "Text on screen: 'Your future starts now.' Button graphic animation.",
+                      "semantic_tags": [
+                        "text_on_screen",
+                        "button",
+                        "highlight"
+                      ],
+                      "word_count": 16,
+                      "estimated_duration": 6.4,
+                      "narration_text": "Your future starts now. Take our free self-assessment or enroll in one of our programs today.",
+                      "segments": [
+                        {
+                          "level": "beat",
+                          "label": "act-4_seq-2_scene-1_shot-1_beat-1",
+                          "description": "Button: 'Start Your Transformation Now' callout.",
+                          "semantic_tags": [
+                            "cta",
+                            "button",
+                            "callout"
+                          ],
+                          "word_count": 4,
+                          "estimated_duration": 1.6,
+                          "narration_text": "Start Your Transformation Now",
+                          "segments": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "level": "sequence",
+              "label": "act-4_seq-3",
+              "title": "Closing Scene",
+              "description": "Brand logo and musical outro.",
+              "semantic_tags": [
+                "closure",
+                "branding",
+                "music_outro"
+              ],
+              "word_count": 13,
+              "estimated_duration": 5.2,
+              "segments": [
+                {
+                  "level": "scene",
+                  "label": "act-4_seq-3_scene-1",
+                  "title": "Outro Logo",
+                  "description": "Logo appears with inspiring music fadeout.",
+                  "semantic_tags": [
+                    "logo",
+                    "music_fadeout",
+                    "end"
+                  ],
+                  "word_count": 13,
+                  "estimated_duration": 5.2,
+                  "narration_text": "Inspiring music swells. The Retail Therapy Unplugged logo appears with a soft fade-out.",
+                  "segments": [
+                    {
+                      "level": "shot",
+                      "label": "act-4_seq-3_scene-1_shot-1",
+                      "description": "Logo lockup, soft fadeout, music crescendos.",
+                      "semantic_tags": [
+                        "logo",
+                        "outro",
+                        "music"
+                      ],
+                      "word_count": 13,
+                      "estimated_duration": 5.2,
+                      "narration_text": "Inspiring music swells. The Retail Therapy Unplugged logo appears with a soft fade-out.",
+                      "segments": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

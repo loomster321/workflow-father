@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Production Workflow Requirements Document v2.5</title>
+    <title>Video Production Workflow Requirements Document v2.6</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -131,11 +131,11 @@
 </head>
 
 <body> <!-- START OF METADATA SECTION -->
-    <h1>Video Production Workflow Requirements Document v2.5</h1>
+    <h1>Video Production Workflow Requirements Document v2.6</h1>
     <h2>Document Metadata</h2>
     <ul>
         <li><strong>Name:</strong> Video Production Workflow</li>
-        <li><strong>Version:</strong> 2.5</li>
+        <li><strong>Version:</strong> 2.6</li>
         <li><strong>Timestamp:</strong> 2024-07-11T00:00:00+00:00</li>
         <li><strong>Description:</strong> This version updates the Shot Segmentation node so that it no longer makes a hard classification between A-roll and B-roll. Instead, for each shot, the agent recommends either A-roll or B-roll and provides a rationale for both options. The agent always outputs B-roll suggestions for every shot, even if A-roll is recommended, allowing downstream human or agent override. The Shot Plan document schema is updated accordingly. Other workflow logic and agent responsibilities remain unchanged from v2.4.</li>
     </ul>
@@ -251,12 +251,6 @@
                 thinking to surface emotionally resonant, trend-aligned, and visually surprising ideas.</td>
         </tr>
         <tr>
-            <td>Visual Narrative Design</td>
-            <td>Storyboard Supervisor / Visual Strategist</td>
-            <td>Ensures cohesive visual style and storytelling across shots. Creates comprehensive visual narrative
-                guides that define transitions, styling, and storytelling elements.</td>
-        </tr>
-        <tr>
             <td>MidJourney Prompt Engineering</td>
             <td>Art Director / Prompt Technologist</td>
             <td>Crafts detailed image prompts blending aesthetics and generation control. Encodes scene styles, framing,
@@ -330,20 +324,16 @@
     <h4 id="broll-ideation-node">4.1.3 B-Roll Ideation</h4>
     <p><strong>Node Type:</strong> AI Agent<br>
         <strong>Agent Persona:</strong> Creative Director<br>
-        <strong>Input:</strong> <a href="#shot-plan">Shot Plan</a><br>
+        <strong>Input:</strong> <a href="#shot-plan">Shot Plan</a>, <a href="#variation-requests">Variation Requests</a><br>
         <strong>Output:</strong> <a href="#broll-concepts">B-Roll Concepts</a><br>
-        <strong>Description:</strong> Develops 3–5 distinct, creative visual directions for each shot that requires B-roll visualization, supporting a hybrid chat and form-based user interaction. Uses lateral thinking to surface emotionally resonant, trend-aligned, or visually surprising ideas while allowing users to provide feedback and refine concepts through an iterative process. The agent is free to invent and label creative directions or categories appropriate for each shot and context—using standard/enhanced/viral as references but not limited to these. Maintains contextual awareness by accessing neighboring shots and scenes for narrative continuity while avoiding redundancy with previous ideation attempts.<br>
+        <strong>Description:</strong> Develops 3–5 distinct, creative visual directions for each shot that requires B-roll visualization, supporting a hybrid chat and form-based user interaction. Uses lateral thinking to surface emotionally resonant, trend-aligned, or visually surprising ideas while allowing users to provide feedback and refine concepts through an iterative process. The agent is free to invent and label creative directions or categories appropriate for each shot and context—using standard/enhanced/viral as references but not limited to these. Maintains contextual awareness by accessing neighboring shots and scenes for narrative continuity while avoiding redundancy with previous ideation attempts. <strong>This node now also processes variation requests from the RTU Shot Control Panel, generating new or revised B-Roll concepts in response to user variation requests.</strong><br>
         <strong>Note:</strong> This node receives the Shot Plan document in which each shot contains both an <code>a_roll</code> and a <code>b_roll</code> object, each with their own metadata. The node should use the fields from the object corresponding to the selected roll type for each shot. If a human or agent changes the roll type selection, all necessary metadata is available without requiring regeneration.</strong>
     </p>
 
     <h4 id="visual-narrative-design-node">4.1.4 Visual Narrative Design</h4>
-    <p><strong>Node Type:</strong> AI Agent<br>
-        <strong>Agent Persona:</strong> Storyboard Supervisor / Visual Strategist<br>
-        <strong>Input:</strong> <a href="#broll-concepts">B-Roll Concepts</a><br>
-        <strong>Output:</strong> <a href="#visual-narrative">Visual Narrative</a><br>
-        <strong>Description:</strong> Processes the flexible creative directions from B-Roll Ideation and synthesizes them into a coherent visual narrative. Transforms the 3-5 creative concepts per shot into a standardized set of three concept tiers (standard, enhanced, viral) for downstream processing, preserving the rich creative directions while adapting them to the established pipeline structure. Creates a comprehensive visual narrative guide that defines shot transitions, visual styling, and storytelling elements across all B-Roll content. Establishes project-wide visual style, consistent visual motifs, emotional progression mapping, motion directives that specify how elements should move within shots, and defines camera movement patterns that enhance storytelling. Creates cross-connections between disparate parts of the narrative while handling situation-specific exceptions that require broader context, such as character appearances across multiple scenes or location continuity. Ensures direct audience connection through strategic visual storytelling techniques including establishing shots, creative angles, lighting design, and visual pacing that resonates emotionally with viewers and maintains engagement throughout the narrative. The output is a single, comprehensive Visual Narrative JSON object that provides a complete visual blueprint for the entire video while standardizing all creative concepts into three concept options (standard, enhanced, viral) for each B-roll shot, allowing for selection during image review.<br>
-        <strong>Note:</strong> This node receives the Shot Plan document in which each shot contains both an <code>a_roll</code> and a <code>b_roll</code> object, each with their own metadata. The node should use the fields from the object corresponding to the selected roll type for each shot. If a human or agent changes the roll type selection, all necessary metadata is available without requiring regeneration.</strong>
-    </p>
+    <div class="note">
+        <strong>Deferred:</strong> The Visual Narrative Design agent is currently removed from the workflow and will be reengineered in a future version. See <a href="references/visual-narrative-design-deferred-requirement.md" target="_blank">Visual Narrative Design Agent Scope & Feedback Loop Reference</a> for details.
+    </div>
 
     <h4 id="character-reference-node">4.1.5 Character Reference Selection</h4>
     <p><strong>Node Type:</strong> Integration with Human in the Loop<br>
@@ -364,9 +354,9 @@
     <h4 id="storyboarding-agent-node">4.1.6 Storyboarding Agent</h4>
     <p><strong>Node Type:</strong> AI Agent<br>
         <strong>Agent Persona:</strong> Art Director / Prompt Technologist<br>
-        <strong>Input:</strong> <a href="#visual-narrative">Visual Narrative</a>, <a href="#variation-keys">Variation Keys</a> (selected from Images-Variations.json; can be single or any combination)<br>
+        <strong>Input:</strong> <a href="#broll-concepts">B-Roll Concepts</a>, <a href="#variation-keys">Variation Keys</a> (selected from Images-Variations.json; can be single or any combination)<br>
         <strong>Output:</strong> <a href="#image-prompts">Image Prompts</a><br>
-        <strong>Description:</strong> Generates prompts for each B-roll shot and concept type (standard, enhanced, viral) based on the Visual Narrative and any selected variation keys (from Images-Variations.json). The first generation defaults to core, but subsequent requests can use any combination of variation types. Prompts are formatted for MidJourney and sent to the Image Generation node for 4-up grid output (minimum 12 images per shot).<br>
+        <strong>Description:</strong> Generates prompts for each B-roll shot and concept type (standard, enhanced, viral) based on the B-Roll Concepts and any selected variation keys (from Images-Variations.json). The first generation defaults to core, but subsequent requests can use any combination of variation types. Prompts are formatted for MidJourney and sent to the Image Generation node for 4-up grid output (minimum 12 images per shot). <strong>Note: Variation requests from the RTU Shot Control Panel are now handled by the B-Roll Ideation agent, not the Storyboarding Agent.</strong><br>
         <strong>Variation Handling:</strong> Can process single or multiple variation types per request, as selected by the user via the RTU Shot Control Panel.</p>
 
     <h4 id="image-generation-node">4.1.7 Image Generation</h4>
@@ -404,12 +394,10 @@
     <h4 id="kling-prompt-engineering-node">4.1.11 Kling Prompt Engineering</h4>
     <p><strong>Node Type:</strong> AI Agent<br>
         <strong>Agent Persona:</strong> Animation Director<br>
-        <strong>Input:</strong> <a href="#approved-images">Approved Images</a><br>
+        <strong>Input:</strong> <a href="#approved-images">Approved Images</a> (actual image file is analyzed)<br>
         <strong>Referenced Data:</strong> <a href="#visual-narrative">Visual Narrative</a><br>
         <strong>Output:</strong> <a href="#animation-prompts">Animation Prompts</a><br>
-        <strong>Description:</strong> Creates animation prompts and movement parameters optimized for Kling video
-        generation. References the Visual Narrative document for style consistency and motion intentions while working with the Approved Images as primary input. Infers viable entry and exit points, camera actions, and motion reinforcement to bring static image
-        sequences to life. The Visual Narrative document is used consistently for all shots to ensure animation style, transitions, and camera movements align with the overall creative direction.
+        <strong>Description:</strong> Creates animation prompts and movement parameters optimized for Kling video generation. The agent analyzes both the actual approved image file and the Visual Narrative document for each shot. By examining the image file, the agent can tailor motion paths, camera actions, and animation effects to the specific visual content, composition, and subject matter present in the image. The Visual Narrative provides style consistency and high-level motion intentions, while the image file analysis ensures that animation is contextually appropriate and visually coherent. This dual analysis ensures that animation style, transitions, and camera movements are both creatively aligned and technically feasible for each specific image.
     </p>
 
     <h4 id="image-to-video-node">4.1.12 Image-to-Video Conversion</h4>
@@ -1257,7 +1245,7 @@
     <p><strong>Format:</strong> JSON (Array)<br>
         <strong>Type:</strong> Structured Data<br>
         <strong>Subtype:</strong> JSON<br>
-        <strong>Description:</strong> Optimized prompts for generating motion from static images.<br>
+        <strong>Description:</strong> Optimized prompts for generating motion from static images. <strong>Prompts are generated based on both the actual image file and the Visual Narrative document for each shot.</strong><br>
         <strong>Generated By:</strong> <a href="#kling-prompt-engineering-node">Kling Prompt Engineering</a><br>
         <strong>Used By:</strong> <a href="#image-to-video-node">Image-to-Video Conversion</a>
     </p>
@@ -1483,6 +1471,14 @@
         <strong>Implementation Sequence:</strong> When implementing deferred requirements, prioritize technical integration first, followed by error handling improvements, then visual consistency enhancements, and finally the more complex MidJourney enhancements. This sequence ensures that foundational capabilities are in place before building more sophisticated features.
     </div>
 
+    <h4>6.2.6 Visual Narrative Design Agent Scope & Feedback Loop</h4>
+    <ul>
+        <li><strong>Elevate Visual Narrative Design Agent:</strong> Move the Visual Narrative Design agent to operate at the scene or video level, rather than the shot level, to ensure global visual and emotional coherence. The agent should output a comprehensive visual narrative guide that includes project-wide style, scene-level transitions, and shot-level details in context.</li>
+        <li><strong>Upstream Feedback Loop:</strong> Implement a feedback loop in the chat interface that allows users to provide feedback at the shot, scene, or video level, with the ability to propagate feedback upstream and trigger revisions to the scene or overall visual narrative as needed.</li>
+        <li>See <a href="references/visual-narrative-design-deferred-requirement.md" target="_blank">Visual Narrative Design Agent Scope & Feedback Loop Reference</a> for detailed rationale and recommendations.</li>
+        <li><strong>Status:</strong> Deferred – High Priority</li>
+    </ul>
+
     <h3>6.3 Error Handling</h3>
     <ul>
         <li>Validation at each handover point with schema validation for all JSON documents</li>
@@ -1619,6 +1615,10 @@
     
     <div class="mermaid">
         flowchart TD
+        %% Note about Visual Narrative Design agent
+        note left
+          The Visual Narrative Design agent is deferred and will be reintegrated in a future version as discussed in section 6.2.6.
+        end
         %% Documents using speech bubble style nodes
         A>"Video Script"]:::document ---> B
         B[Scene Segmentation]:::aiAgent ---> B1
@@ -1636,11 +1636,8 @@
         subgraph BROLL["B-Roll Production"]
         direction TB
         F[B-Roll Ideation]:::aiAgent ---> G
-        G>"B-Roll Concepts"]:::document ---> H1
-        H1[Visual Narrative Design]:::aiAgent ---> G1
-        G1>"Visual Narrative"]:::document ---> H
-        G1 -.-> SE
-        G1 -.-> H2
+        G>"B-Roll Concepts"]:::document ---> H
+        %% Visual Narrative Design node (H1) is deferred; see section 6.2.6
         Z[Character Reference Selection]:::integration ---> Z1
         Z1>"Character References"]:::document -.-> H
         H[Storyboarding]:::aiAgent ---> IP
@@ -1650,7 +1647,7 @@
         K>"Generated Images"]:::document ---> L
         L[RTU Shot Control Panel]:::humanInLoop ---> VR
         L ---> RR
-        VR>"Variation Request"]:::document ---> H
+        VR>"Variation Request"]:::document ---> F
         RR>"Refinement Request"]:::document ---> N
         L -.-> H2
         end
@@ -1702,8 +1699,7 @@
         click E href "#shot-plan" "Go to Shot Plan"
         click F href "#broll-ideation-node" "Go to B-Roll Ideation"
         click G href "#broll-concepts" "Go to B-Roll Concepts"
-        click H1 href "#visual-narrative-design-node" "Go to Visual Narrative Design"
-        click G1 href "#visual-narrative" "Go to Visual Narrative"
+        %% Visual Narrative Design node (H1) is deferred; see section 6.2.6
         click H href "#storyboarding-agent-node" "Go to Storyboarding"
         click N href "#image-refinement-agent-node" "Go to Image Refinement"
         click IP href "#image-prompts" "Go to Image Prompts"
@@ -1765,6 +1761,7 @@
         <li><strong>Create Consistent Naming:</strong> Name nodes according to function rather than agent persona for clarity.</li>
         <li><strong>Log All Operations:</strong> Implement comprehensive logging for troubleshooting and quality control.</li>
         <li><strong>Enable Notifications:</strong> Add notification mechanisms for human review points and error conditions.</li>
+        <li><strong>Note on Kling Prompt Engineering:</strong> The Kling Prompt Engineering agent must have access to the actual image file (not just metadata) and should perform image analysis (e.g., subject detection, composition analysis, color palette extraction) to inform animation prompt generation.</li>
     </ul>
     
     <h3>9.2 Integration with External Systems</h3>
@@ -1839,11 +1836,8 @@
     subgraph BROLL["B-Roll Production"]
     direction TB
     F[B-Roll Ideation]:::aiAgent ---> G
-    G>"B-Roll Concepts"]:::document ---> H1
-    H1[Visual Narrative Design]:::aiAgent ---> G1
-    G1>"Visual Narrative"]:::document ---> H
-    G1 -.-> SE
-    G1 -.-> H2
+    G>"B-Roll Concepts"]:::document ---> H
+    %% Visual Narrative Design node (H1) is deferred; see section 6.2.6
     Z[Character Reference Selection]:::integration ---> Z1
     Z1>"Character References"]:::document -.-> H
     H[Storyboarding]:::aiAgent ---> IP
@@ -1853,7 +1847,7 @@
     K>"Generated Images"]:::document ---> L
     L[RTU Shot Control Panel]:::humanInLoop ---> VR
     L ---> RR
-    VR>"Variation Request"]:::document ---> H
+    VR>"Variation Request"]:::document ---> F
     RR>"Refinement Request"]:::document ---> N
     L -.-> H2
     end
@@ -1905,8 +1899,7 @@
     click E href "#shot-plan" "Go to Shot Plan"
     click F href "#broll-ideation-node" "Go to B-Roll Ideation"
     click G href "#broll-concepts" "Go to B-Roll Concepts"
-    click H1 href "#visual-narrative-design-node" "Go to Visual Narrative Design"
-    click G1 href "#visual-narrative" "Go to Visual Narrative"
+    %% Visual Narrative Design node (H1) is deferred; see section 6.2.6
     click H href "#storyboarding-agent-node" "Go to Storyboarding"
     click N href "#image-refinement-agent-node" "Go to Image Refinement"
     click IP href "#image-prompts" "Go to Image Prompts"

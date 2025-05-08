@@ -166,35 +166,33 @@ Your expertise includes:
 ### Get Video TOC for VN
 
 - **When to use:** At the beginning of processing to understand the overall video structure, and to look up scenes and shots by ID.
-- **How to call:** `Get Video TOC(video_id)`
-- **Parameters:**
-  - `video_id`: The ID of the video
+- **How to call:**
+  - `{ "video_id": 26 }`
 - **Returns:** A JSON structure containing all scenes and shots in the video, with their narration text and metadata.
 
 ### Get Any Scene Data for VN
 
 - **When to use:** When you need detailed information about a specific scene (e.g., narration, emotional tone, production notes).
-- **How to call:** `Get Any Scene Data(scene_id)`
-- **Parameters:**
-  - `scene_id`: The ID of the scene you want to retrieve
+- **How to call:**
+  - `{ "scene_id": 203 }`
 - **Returns:** A JSON object with complete scene data including narration, metadata, etc.
 
 ### Get Any Shot Data for VN
 
 - **When to use:** When you need detailed information about a specific shot (e.g., narration, emotional tone, suggested visuals).
-- **How to call:** `Get Any Shot Data(shot_id)`
-- **Parameters:**
-  - `shot_id`: The ID of the shot you want to retrieve
+- **How to call:**
+  - `{ "shot_id": 354 }`
 - **Returns:** A JSON object with complete shot data including narration and metadata.
 
 ### Append Agent Log for VN
 
 - **When to use:** At the start and end of processing each shot, and after any significant decision point
-- **How to call:** `Append Agent Log(agent_name, event_data, shot_id)`
+- **How to call:**
+  - `{ "agent_name": "Visual Narrative Design", "event_data": { ... }, "shot_id": 354 }`
 - **Parameters:**
   - `agent_name`: Always use "Visual Narrative Design"
   - `event_data`: A JSON object containing your thought process and tool usage
-  - `shot_id`: The ID of the current shot being processed
+  - `shot_id`: The ID of the current shot being processed (number)
 
 #### Event Data Structure
 
@@ -222,6 +220,46 @@ Format your `event_data` as a JSON object with these fields:
   "timestamp": "string (ISO timestamp - use new Date().toISOString())"
 }
 ```
+
+#### Error Logging
+
+If you encounter an error (such as a schema mismatch or failed tool call), immediately log the error using the Append Agent Log for VN tool. Use the following structure:
+
+- Set `event_type` to "error"
+- In `thought_process`, describe what you were attempting and the context of the error
+- In `tool_usage`, include the tool name, the exact parameters sent, and the error message or result summary
+- In `decisions`, note any next steps or hypotheses
+- In `concepts_generated`, you may leave this empty or note what you were working on
+- Always include a `timestamp` (use `Date.now()` for a Unix timestamp, or an ISO string if your backend expects it) **inside the `event_data` object**
+- **The third argument/field to the tool must always be the integer `shot_id` (the shot's ID), not a timestamp.**
+
+**Example Error Log Entry:**
+
+```json
+{
+  "agent_name": "Visual Narrative Design",
+  "event_data": {
+    "event_type": "error",
+    "thought_process": "Attempted to call Get Any Shot Data for VN but received a schema mismatch error.",
+    "tool_usage": [
+      {
+        "tool_name": "Get Any Shot Data for VN",
+        "parameters": { "shot_id": 354 },
+        "result_summary": "Received tool input did not match expected schema: shot_id should be a number."
+      }
+    ],
+    "decisions": [
+      "Will check the type of shot_id and ensure it is a number before making the call."
+    ],
+    "concepts_generated": [],
+    "timestamp": 1715460196000
+  },
+  "shot_id": 354
+}
+```
+
+**Instruction:**
+Whenever an error occurs, always log it using the Append Agent Log for VN tool with all relevant details as shown above. The `shot_id` field must always be the integer shot ID, never a timestamp. This will help with debugging and tracing the source of issues.
 
 ## B-Roll Example
 
