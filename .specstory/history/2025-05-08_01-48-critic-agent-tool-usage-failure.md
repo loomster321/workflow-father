@@ -1341,3 +1341,1336 @@ First, we need to create JavaScript implementations for the two required tools i
 
 ---
 
+_**User**_
+
+None of the tools were called. The name is shown at the bottom of the image. What is going on?
+
+---
+
+_**Assistant**_
+
+
+
+---
+
+_**User**_
+
+None of the tools were called. The name is shown at the bottom of the image. What is going on?
+
+---
+
+_**Assistant**_
+
+
+
+---
+
+_**User**_
+
+None of the tools were called. The name is shown at the bottom of the image. What is going on?
+
+---
+
+_**Assistant**_
+
+Based on your description and the context from the n8n community and documentation, here’s what’s likely happening:
+
+### 1. **The Agent Output Shows the Name, But No Tool Calls Occurred**
+
+If the agent’s output only shows the name (e.g., "Script Structure Critic") at the bottom of the image or output, and none of the expected tools (like Critic Calculator or Critic Logging) were called, this usually means **the agent never invoked any tool sub-nodes** during its reasoning process.
+
+### 2. **Possible Reasons**
+
+#### a. **Prompt/Instruction Issue**
+- If the agent’s system prompt or instructions are not explicit enough about when and how to use the tools, the LLM may skip tool calls and try to answer directly.
+- Even if your instructions are clear, some LLMs (especially if not using OpenAI GPT-4 or a model with robust function-calling support) may not reliably call tools unless the prompt is extremely explicit and the tool schemas are well-defined.
+
+#### b. **Model/Provider Limitation**
+- Some models/providers (e.g., certain OpenRouter or Llama models) do not support function/tool calling as robustly as OpenAI GPT-4 or GPT-4o. This is a known issue in n8n and LangChain-based agents ([see here](https://community.n8n.io/t/ai-agent-node-not-working-with-openrouter-openai-and-google-providers-in-n8n/82916)).
+- If you are using a model that does not support function calling, the agent will never call tools, regardless of your prompt.
+
+#### c. **Tool Schema/Connection Issue**
+- If the tool sub-nodes (e.g., Call n8n Workflow Tool, Custom Code Tool) are not properly connected to the agent node, or their input/output schemas are not correctly defined, the agent may not "see" them as available tools.
+- If the tool input schema does not match what the agent tries to send, the tool call will silently fail or be skipped ([see here](https://community.n8n.io/t/how-to-debug-an-agent/59491)).
+
+#### d. **n8n Version or Bug**
+- There have been bugs in n8n (especially in versions before 1.80.4) where tool calls would not be executed or would not pass the correct data ([see here](https://community.n8n.io/t/n8n-bug-workflow-input-data-not-being-received-correctly-when-simultaneously-triggered-via-an-ai-agent-tool-v2/81740)). Upgrading to the latest version is recommended.
+
+### 3. **How to Debug**
+
+- **Check the Model:** Use OpenAI GPT-4o or another model with strong function-calling support. Avoid models/providers with known issues.
+- **Check Tool Connections:** Make sure your tool nodes are properly connected to the agent node and their schemas are correct.
+- **Add Logging:** Use n8n’s built-in logging and set log level to `debug` ([docs](https://docs.n8n.io/hosting/logging-monitoring/logging/)).
+- **Return Intermediate Steps:** In the Tools Agent node, enable "Return Intermediate Steps" to see if the agent even attempted to call a tool ([docs](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/)).
+- **Test with a Minimal Prompt:** Try a very simple prompt that *only* asks the agent to call a tool, to verify tool calling works at all.
+- **Upgrade n8n:** If you’re on a version before 1.80.4, upgrade, as several tool-calling bugs were fixed recently ([see here](https://community.n8n.io/t/n8n-bug-workflow-input-data-not-being-received-correctly-when-simultaneously-triggered-via-an-ai-agent-tool-v2/81740)).
+
+### 4. **Summary Table**
+
+| Symptom | Likely Cause | Solution |
+|---------|--------------|----------|
+| Agent output shows only name, no tool calls | Model lacks function-calling, tool not connected, or prompt not explicit | Use GPT-4o, check tool connections, make prompt more explicit |
+| Tools are never called, even with clear prompt | Model/provider limitation or schema mismatch | Switch to OpenAI GPT-4o, check tool schemas |
+| Tools called, but fail with schema error | Tool input schema mismatch | Adjust tool input schema to match what agent sends |
+| Tools called, but always same output | n8n bug in parallel tool calls (fixed in 1.80.4) | Upgrade n8n to 1.80.4+ |
+
+---
+
+**References:**
+- [n8n AI Agent Node Not Working with Some Providers](https://community.n8n.io/t/ai-agent-node-not-working-with-openrouter-openai-and-google-providers-in-n8n/82916)
+- [n8n Bug: Workflow Input Data Not Being Received Correctly](https://community.n8n.io/t/n8n-bug-workflow-input-data-not-being-received-correctly-when-simultaneously-triggered-via-an-ai-agent-tool-v2/81740)
+- [How to Debug an Agent](https://community.n8n.io/t/how-to-debug-an-agent/59491)
+- [n8n Docs: Tools Agent Node](https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent/)
+- [n8n Docs: Logging](https://docs.n8n.io/hosting/logging-monitoring/logging/)
+
+If you share your n8n version, model/provider, and a screenshot of your agent node and tool connections, I can help you further pinpoint the issue!
+
+---
+
+_**User**_
+
+Create a test stub agent instructions to just call the logging agent once when input is receeived passing the four parameters for the agent logging.
+
+---
+
+_**Assistant**_
+
+```diff
+- 
++ # Test Stub Logging Agent Instructions
++ 
++ ## Role
++ 
++ You are a test stub agent for workflow debugging. Your only responsibility is to call the logging agent/tool once when any input is received.
++ 
++ ## Behavior
++ 
++ - Upon receiving any input, immediately call the logging agent/tool.
++ - Pass the following four parameters:
++   - `agent_name`: "Test Stub Agent"
++   - `event_type`: "test_log"
++   - `event_data`: `{ "message": "Test log from stub agent", "input": <copy of input> }`
++   - `segment_label`: ""
++ - Do not perform any other processing or output.
++ - Do not return any output except the result of the logging tool call.
++ 
++ ## Example Tool Call
++ 
++ Call the logging agent/tool with:
++ 
++ - `agent_name`: "Test Stub Agent"
++ - `event_type`: "test_log"
++ - `event_data`: `{ "message": "Test log from stub agent", "input": <copy of input> }`
++ - `segment_label`: ""
++ 
++ ## Output
++ 
++ Return only the result of the logging tool call. Do not include any additional text, explanation, or formatting.
++ 
+```
+
+---
+
+Your file `test-stub.md` now contains clear, minimal instructions for a test stub agent that, upon receiving any input, immediately calls the logging agent/tool once with the four required parameters. The instructions specify the exact parameters, expected behavior, and output format for easy debugging and testing in your n8n workflow.
+
+---
+
+_**User**_
+
+Rewrite the test stub to include the input json in the event_data field.
+
+---
+
+_**Assistant**_
+
+```diff
+  ## Role
+  
+- You are a test stub agent for workflow debugging. Your only responsibility is to call the logging agent/tool once when any input is received.
++ You are a test stub agent for workflow debugging. Your only responsibility is to call the Logging Tool once when any input is received.
+  
+  ## Behavior
+```
+
+```diff
+    - `agent_name`: "Test Stub Agent"
+    - `event_type`: "test_log"
+-   - `event_data`: "Blank"
++   - `event_data`: a JSON object with:
++     - `message`: "Test log from stub agent"
++     - `input`: the full input JSON object received by the agent
+    - `segment_label`: ""
+  - Do not perform any other processing or output.
+- - Do not return any output except the result of the logging tool call.
++ - Do not return any output except the result of the Logging Tool call.
+  
+  ## Example Tool Call
+```
+
+```diff
+  - `agent_name`: "Test Stub Agent"
+  - `event_type`: "test_log"
+- - `event_data`: "Blank"
++ - `event_data`: `{ "message": "Test log from stub agent", "input": <full input JSON> }`
+  - `segment_label`: ""
+  
+  ## Output
+  
+- Return only the result of the logging tool call. Do not include any additional text, explanation, or formatting.
++ Return only the result of the Logging Tool call. Do not include any additional text, explanation, or formatting.
+  
+```
+
+---
+
+The test stub agent instructions have been updated. The `event_data` field now contains a JSON object with both a `message` and the full input JSON received by the agent, as requested. This ensures the Logging Tool receives the input context for debugging and traceability.
+
+---
+
+_**User**_
+
+The test stub worked. Modify the critic to use the same logging call structure.
+
+---
+
+_**Assistant**_
+
+```diff
+      - Actionable feedback for each criterion
+  
++ ---
++ 
++ ## Logging Instructions (Updated)
++ 
++ - For every required logging event, call the Critic Logging Tool with the following parameters:
++   - `agent_name`: "Script Structure Critic"
++   - `event_type`: (e.g., "start_processing", "validation_check", "criterion_evaluation", "final_evaluation", "end_processing")
++   - `event_data`: a JSON object with at least:
++     - `message`: a brief description of the event (e.g., "Started processing input", "Completed validation", "Evaluated granularity criterion")
++     - `input`: the full input JSON object (or relevant segment input) for the event
++     - (You may include additional fields as needed, such as tool usage, decisions, or evaluation details)
++   - `segment_label`: the full hierarchical path to the segment (or "" for global events)
++ 
++ ### Example Logging Call
++ 
++ Call the Critic Logging Tool with:
++ 
++ - `agent_name`: "Script Structure Critic"
++ - `event_type`: "start_processing"
++ - `event_data`: `{ "message": "Started processing input", "input": <full input JSON> }`
++ - `segment_label`: ""
++ 
++ Repeat this structure for all other logging events, updating the `message`, `input`, and `segment_label` as appropriate.
++ 
+  ---
+  
+```
+
+```diff
+  
+  Flag and provide specific feedback on any issues or ambiguities that weren't properly handled.
+- 
+- ---
+- 
+- ## Logging Instructions
+- 
+- Use the Critic Logging Tool to record key processing steps. This is essential for traceability and workflow improvement.
+- 
+- ### Required Logging Points
+- 
+- Log at these essential points:
+- 1. Start of processing (beginning of the evaluation)
+- 2. Validation checks (after checking schema compliance)
+- 3. Criterion evaluations (after evaluating each main criterion)
+- 4. End of processing (when evaluation is complete)
+- 
+- ### Logging Tool Call Format
+- 
+- For each logging event, call the Critic Logging Tool with the following parameters:
+- - agent_name: "Script Structure Critic"
+- - event_type: (e.g., "start_processing", "validation_check", "criterion_evaluation", "final_evaluation", "end_processing")
+- - event_data: a JSON object containing:
+-   - thought_process: Brief description of your reasoning
+-   - tool_usage: [] (Only include if tools were used)
+-   - decisions: [Key decision 1, Key decision 2]
+-   - For criterion evaluations, add:
+-     - evaluation_details:
+-       - criterion: Name of criterion
+-       - score: 1-5 rating
+-       - issues_found: [Issue 1, Issue 2]
+- - segment_label: The full hierarchical path to the segment (e.g., "act-1_seq-1_scene-1_shot-2") or "" for global events
+- 
+- ### Example Logging Actions (n8n-Native)
+- 
+- **Start of Processing:**
+- - Call the Critic Logging Tool with:
+-   - agent_name: "Script Structure Critic"
+-   - event_type: "start_processing"
+-   - event_data:
+-     - thought_process: "Beginning evaluation of script structure"
+-     - decisions: ["Will check all required fields and evaluate against criteria"]
+-   - segment_label: ""
+- 
+- **Validation Check:**
+- - Call the Critic Logging Tool with:
+-   - agent_name: "Script Structure Critic"
+-   - event_type: "validation_check"
+-   - event_data:
+-     - thought_process: "Checking shot duration calculations"
+-     - tool_usage: [
+-         {
+-           tool_name: "Critic Calculator",
+-           result_summary: "Duration of 12s exceeds 5s guideline"
+-         }
+-       ]
+-     - decisions: ["Flagged shot as too long for B-roll"]
+-   - segment_label: "act-1_seq-1_scene-1_shot-3"
+- 
+- **Criterion Evaluation:**
+- - Call the Critic Logging Tool with:
+-   - agent_name: "Script Structure Critic"
+-   - event_type: "criterion_evaluation"
+-   - event_data:
+-     - thought_process: "Evaluated segmentation quality across structure"
+-     - decisions: ["Assigned score of 3/5 for Granularity & Segmentation"]
+-     - evaluation_details:
+-       - criterion: "Granularity & Segmentation"
+-       - score: 3
+-       - issues_found: [
+-           "2 shots exceed recommended duration (act-1_seq-1_scene-1_shot-3, act-2_seq-1_scene-2_shot-1)",
+-           "Montage in act-1_seq-2_scene-1 not properly subdivided into beats"
+-         ]
+-   - segment_label: ""
+- 
+- **End of Processing:**
+- - Call the Critic Logging Tool with:
+-   - agent_name: "Script Structure Critic"
+-   - event_type: "end_processing"
+-   - event_data:
+-     - thought_process: "Completed evaluation with total score of 28/35"
+-     - decisions: ["Status: 'revise' with 3 prioritized feedback items"]
+-   - segment_label: ""
+- 
+- ### Summary Table
+- 
+- | When to Log                | agent_name                | event_type           | event_data (fields)                                                                 | segment_label         |
+- |----------------------------|---------------------------|----------------------|-------------------------------------------------------------------------------------|-----------------------|
+- | Start of processing        | Script Structure Critic    | start_processing     | thought_process, decisions                                                          | ""                    |
+- | After validation           | Script Structure Critic    | validation_check     | thought_process, decisions                                                          | "" or segment label   |
+- | After each criterion       | Script Structure Critic    | criterion_evaluation | thought_process, decisions, evaluation_details (criterion, score, issues_found)     | "" or segment label   |
+- | End of processing          | Script Structure Critic    | end_processing       | thought_process, decisions                                                          | ""                    |
+  
+  ---
+```
+
+---
+
+The Script Structure Critic agent instructions have been updated. All logging calls must now use the same structure as your test stub:  
+- The `event_data` field is a JSON object with at least a `message` and an `input` field (the full input JSON or relevant segment input).
+- This is now explicit in the logging instructions, and the example logging call has been updated to match.
+
+This ensures consistency and makes it easy to trace and debug agent actions in your workflow.
+
+---
+
+_**User**_
+
+Modify the critic to include the nestedf JSON in the event data field describing the key events instead of all input. 
+
+---
+
+_**Assistant**_
+
+```diff
+    - `event_data`: a JSON object with at least:
+      - `message`: a brief description of the event (e.g., "Started processing input", "Completed validation", "Evaluated granularity criterion")
+-     - `input`: the full input JSON object (or relevant segment input) for the event
++     - `input`: the relevant nested JSON object for the key event (e.g., the specific segment, field, or data being validated or scored—not the entire input)
+      - (You may include additional fields as needed, such as tool usage, decisions, or evaluation details)
+    - `segment_label`: the full hierarchical path to the segment (or "" for global events)
+```
+
+```diff
+  
+  - `agent_name`: "Script Structure Critic"
+- - `event_type`: "start_processing"
+- - `event_data`: `{ "message": "Started processing input", "input": <full input JSON> }`
+- - `segment_label`: ""
++ - `event_type`: "validation_check"
++ - `event_data`: {
++     "message": "Validated required fields for scene segment.",
++     "input": {
++       "level": "scene",
++       "label": "act-1_seq-1_scene-2",
++       "description": "The protagonist enters the store.",
++       "semantic_tags": ["introduction", "location_change"],
++       "word_count": 42,
++       "estimated_duration": 16.8
++     }
++   }
++ - `segment_label`: "act-1_seq-1_scene-2"
+  
+- Repeat this structure for all other logging events, updating the `message`, `input`, and `segment_label` as appropriate.
++ Repeat this structure for all other logging events, updating the `message`, `input`, and `segment_label` as appropriate for the specific event and segment.
+  
+  ---
+```
+
+---
+
+The Script Structure Critic agent instructions now specify that the `input` field in each logging event's `event_data` should contain only the relevant nested JSON for the key event (such as the specific segment or field being validated or scored), not the entire input. The example logging call has also been updated to demonstrate this approach. This will keep your logs focused, concise, and contextually relevant for each event.
+
+---
+
+_**User**_
+
+You need to updfate the evaluation process section also.
+
+---
+
+_**Assistant**_
+
+```diff
+     - event_type: "start_processing"
+     - event_data:
+-      - thought_process: "Starting evaluation of script structure"
+-      - decisions: ["Will evaluate against all criteria"]
++      - message: "Started evaluation of script structure"
++      - input: the top-level input JSON object (the full script structure)
+     - segment_label: "" (empty string for global events)
+  
+```
+
+```diff
+       - event_type: "validation_check"
+       - event_data:
+-        - thought_process: "Completed structural validation of script hierarchy"
+-        - decisions: ["Structure is valid", "No missing required fields"]
++        - message: "Completed structural validation of script hierarchy"
++        - input: the relevant nested JSON object for the validated segment or structure (e.g., the act, sequence, scene, or shot being validated)
+       - segment_label: "" (or the relevant segment label if applicable)
+  
+```
+
+```diff
+       - event_type: "criterion_evaluation"
+       - event_data:
+-        - thought_process: "Evaluated semantic annotation quality"
+-        - decisions: ["Assigned score of 4/5"]
+-        - evaluation_details:
+-          - criterion: "Semantic Annotation Quality"
+-          - score: 4
+-          - issues_found: ["Some shots missing contextual tags"]
++        - message: "Evaluated [criterion name]"
++        - input: the relevant nested JSON object for the segment or data being scored (e.g., the specific scene, shot, or field)
++        - (You may include additional fields such as evaluation details, tool usage, or decisions)
+       - segment_label: "" (or the relevant segment label if applicable)
+  
+```
+
+```diff
+       - event_type: "final_evaluation"
+       - event_data:
+-        - thought_process: "Calculated total score of 29/35"
+-        - decisions: ["Status: 'revise' due to low score in granularity"]
++        - message: "Calculated total score and determined status"
++        - input: a JSON object summarizing the scores and status
+       - segment_label: ""
+  
+```
+
+```diff
+       - event_type: "end_processing"
+       - event_data:
+-        - thought_process: "Completed evaluation and generated feedback"
+-        - decisions: ["Provided actionable feedback for revision"]
++        - message: "Completed evaluation and generated feedback"
++        - input: the final output JSON object (the evaluation report)
+       - segment_label: ""
+     - IMPORTANT: After all logging is complete, output ONLY the clean JSON object as your final response, without any surrounding text, explanations, or log calls.
+```
+
+```diff
+     - If input is invalid or missing required fields, output `pass_fail: "fail"` and feedback describing the issue
+     - If unable to parse input, return a clear error message and halt further processing
+-    - Log all error events and their context using the Critic Logging Tool before returning any error messages.
++    - Log all error events and their context using the Critic Logging Tool before returning any error messages. The `input` field in event_data should contain the relevant problematic segment or error context, not the entire input.
+  
+  ---
+```
+
+---
+
+The Evaluation Process section is now updated. Each logging step explicitly states that the `input` field in `event_data` should contain only the relevant nested JSON for the key event (such as the specific segment, field, or summary being validated or scored), not the entire input. This is now clear for every logging call in the process, ensuring focused and contextually relevant logs throughout the Critic's workflow.
+
+---
+
+_**User**_
+
+Change all referenced to critic logging tool to just Logging Lool
+
+---
+
+_**Assistant**_
+
+```diff
+    - Assigning scores, generating actionable feedback, and assembling the output JSON evaluation report
+    - Handling errors, ambiguities, and edge cases internally (e.g., outputting fail status and clear feedback if input is malformed or incomplete)
+-   - Logging all key events, tool usage, decisions, and detected issues using the provided **Critic Logging Tool**.
++   - Logging all key events, tool usage, decisions, and detected issues using the provided **Logging Tool**.
+  
+  **CRITICAL NOTE: Your final output must be ONLY the JSON evaluation report object with no surrounding text or logging. The Append Agent Log calls must be separate from your output and should not be included in the response that's returned to the workflow. This is essential for downstream processing.**
+```
+
+```diff
+  ---
+  
+- ## Critic Logging Instructions (Updated)
++ ## Logging Instructions (Updated)
+  
+- - For every required logging event, call the Critic Logging Tool with the following parameters:
++ - For every required logging event, call the Logging Tool with the following parameters:
+    - `agent_name`: "Script Structure Critic"
+    - `event_type`: (e.g., "start_processing", "validation_check", "criterion_evaluation", "final_evaluation", "end_processing")
+```
+
+```diff
+  ### Example Logging Call
+  
+- Call the Critic Logging Tool with:
++ Call the Logging Tool with:
+  
+  - `agent_name`: "Script Structure Critic"
+```
+
+```diff
+  
+  - **Critic Calculator Tool:** For duration estimation and quantitative checks (e.g., estimated_duration calculation)
+- - **Critic Logging Tool:** For recording key events, tool usage, decisions, and evaluation outcomes throughout the review process. Log entries should include event type, thought process, tool usage, decisions, and timestamp.
++ - **Logging Tool:** For recording key events, tool usage, decisions, and evaluation outcomes throughout the review process. Log entries should include event type, thought process, tool usage, decisions, and timestamp.
+  
+  ---
+  
+  ## Evaluation Process
+  
+- 1. **Log the start of processing**: At the start of processing, call the Critic Logging Tool with:
++ 1. **Log the start of processing**: At the start of processing, call the Logging Tool with:
+     - agent_name: "Script Structure Critic"
+     - event_type: "start_processing"
+```
+
+```diff
+     - Check for missing, empty, or placeholder fields with LOW_CONFIDENCE flags
+     - Verify the recursive structure for all levels, using the `segments` array for nesting
+-    - After completing validation, call the Critic Logging Tool with:
++    - After completing validation, call the Logging Tool with:
+       - agent_name: "Script Structure Critic"
+       - event_type: "validation_check"
+```
+
+```diff
+       - Consistency & Naming
+     - For each criterion, assign a score (1–5) and provide specific feedback
+-    - After evaluating each criterion, call the Critic Logging Tool with:
++    - After evaluating each criterion, call the Logging Tool with:
+       - agent_name: "Script Structure Critic"
+       - event_type: "criterion_evaluation"
+```
+
+```diff
+       - Revise: Any category ≤ 3 or total < 28
+       - Fail: Any category ≤ 2 or total < 21
+-    - Call the Critic Logging Tool with:
++    - Call the Logging Tool with:
+       - agent_name: "Script Structure Critic"
+       - event_type: "final_evaluation"
+```
+
+```diff
+       - pass_fail status
+       - feedback array (actionable notes for each criterion)
+-    - Call the Critic Logging Tool with:
++    - Call the Logging Tool with:
+       - agent_name: "Script Structure Critic"
+       - event_type: "end_processing"
+```
+
+```diff
+     - If input is invalid or missing required fields, output `pass_fail: "fail"` and feedback describing the issue
+     - If unable to parse input, return a clear error message and halt further processing
+-    - Log all error events and their context using the Critic Logging Tool before returning any error messages. The `input` field in event_data should contain the relevant problematic segment or error context, not the entire input.
++    - Log all error events and their context using the Logging Tool before returning any error messages. The `input` field in event_data should contain the relevant problematic segment or error context, not the entire input.
+  
+  ---
+```
+
+```diff
+  This agent has two distinct operations that must both occur but remain separate:
+  
+- 1. **Making Log Calls**: Throughout the evaluation process, you must make multiple calls to the Append Agent Log tool (via the Critic Logging Tool) to record your decision-making process. These calls are *not* part of your final output but are essential for workflow traceability.
++ 1. **Making Log Calls**: Throughout the evaluation process, you must make multiple calls to the Append Agent Log tool (via the Logging Tool) to record your decision-making process. These calls are *not* part of your final output but are essential for workflow traceability.
+  
+  2. **Generating Final Output**: After completing all your log calls, you must return *only* the clean JSON structure as your final output. This clean JSON structure is what gets passed to downstream agents in the workflow.
+```
+
+```diff
+    ...
+  }
+- ```
+  ```
+  
+```
+
+---
+
+All references to "Critic Logging Tool" have been changed to "Logging Tool" throughout the Script Structure Critic agent instructions, including section headings, instructions, and example calls. This ensures consistent terminology for your workflow documentation and implementation.
+
+---
+
+_**User**_
+
+We need to simplify the logging significantly. It is not working. Can we pair it down to bare bones. It still has the same call signature but thats it.
+
+---
+
+_**Assistant**_
+
+```diff
+  ---
+  
+- ## Logging Instructions (Updated)
++ ## Logging Instructions (Simplified)
+  
+- - For every required logging event, call the Logging Tool with the following parameters:
+-   - `agent_name`: "Script Structure Critic"
+-   - `event_type`: (e.g., "start_processing", "validation_check", "criterion_evaluation", "final_evaluation", "end_processing")
+-   - `event_data`: a JSON object with at least:
+-     - `message`: a brief description of the event (e.g., "Started processing input", "Completed validation", "Evaluated granularity criterion")
+-     - `input`: the relevant nested JSON object for the key event (e.g., the specific segment, field, or data being validated or scored—not the entire input)
+-     - (You may include additional fields as needed, such as tool usage, decisions, or evaluation details)
+-   - `segment_label`: the full hierarchical path to the segment (or "" for global events)
+- 
+- ### Example Logging Call
+- 
+- Call the Logging Tool with:
+- 
+- - `agent_name`: "Script Structure Critic"
+- - `event_type`: "validation_check"
+- - `event_data`: {
+-     "message": "Validated required fields for scene segment.",
+-     "input": {
+-       "level": "scene",
+-       "label": "act-1_seq-1_scene-2",
+-       "description": "The protagonist enters the store.",
+-       "semantic_tags": ["introduction", "location_change"],
+-       "word_count": 42,
+-       "estimated_duration": 16.8
+-     }
+-   }
+- - `segment_label`: "act-1_seq-1_scene-2"
+- 
+- Repeat this structure for all other logging events, updating the `message`, `input`, and `segment_label` as appropriate for the specific event and segment.
++ For every required logging event, call the Logging Tool with:
++ - agent_name: "Script Structure Critic"
++ - event_type: (e.g., "start_processing", "validation_check", "criterion_evaluation", "final_evaluation", "end_processing")
++ - event_data: { "message": <brief description>, "input": <relevant nested JSON for the event> }
++ - segment_label: (the full hierarchical path to the segment, or "" for global events)
+  
+  ---
+```
+
+---
+
+The logging instructions are now pared down to the bare minimum. For every required logging event, you simply call the Logging Tool with the four parameters (agent_name, event_type, event_data, segment_label), where event_data is just a message and the relevant nested JSON. All extra explanation and examples have been removed—only the essential call signature and requirement remain.
+
+---
+
+_**User**_
+
+Still not working. Any ideas?
+
+---
+
+_**Assistant**_
+
+Absolutely—here are the most likely reasons why your logging tool calls are still not working in n8n, along with practical troubleshooting steps:
+
+---
+
+## 1. **Model/Provider Does Not Support Function Calling Properly**
+- **Symptom:** No tool calls are made, even with a minimal prompt and correct schema.
+- **Details:** Many LLMs (especially non-OpenAI models, or OpenRouter, or some Llama/Mistral variants) do not support function/tool calling reliably in n8n’s Tools Agent node. Even with perfect instructions, the agent will not call tools if the model doesn’t support it.
+- **Solution:**  
+  - Use OpenAI GPT-4o, GPT-4, or GPT-3.5-turbo (with function calling enabled).
+  - Avoid models/providers with known function-calling issues ([see n8n community discussion](https://community.n8n.io/t/ai-agent-node-not-working-with-openrouter-openai-and-google-providers-in-n8n/82916)).
+
+---
+
+## 2. **Tool Node Is Not Properly Connected or Exposed**
+- **Symptom:** The agent never “sees” the tool, so it cannot call it.
+- **Details:** In n8n, the Logging Tool node must be directly connected as a sub-node to the Tools Agent node, and its input schema must match what the agent is expected to send.
+- **Solution:**  
+  - Double-check that the Logging Tool is a sub-node of the Tools Agent node (not just in the workflow, but actually attached as a tool).
+  - Make sure the tool’s input fields are named and typed exactly as the agent expects (e.g., `agent_name`, `event_type`, `event_data`, `segment_label`).
+
+---
+
+## 3. **Input Schema Mismatch**
+- **Symptom:** You see errors like “Received tool input did not match expected schema” or the tool is never called.
+- **Details:** If the tool node’s input schema (field names and types) does not match what the agent sends, the call will silently fail or be skipped ([see here](https://community.n8n.io/t/how-to-debug-an-agent/59491)).
+- **Solution:**  
+  - In the Logging Tool node, define the input fields as:
+    - `agent_name` (string)
+    - `event_type` (string)
+    - `event_data` (object)
+    - `segment_label` (string)
+  - Make sure the agent’s output matches this exactly (no extra fields, no missing fields, correct types).
+
+---
+
+## 4. **n8n Version or Bug**
+- **Symptom:** Tool calls don’t work, or only the first call works, or parallel calls fail.
+- **Details:** There have been bugs in n8n (especially before v1.80.4) that break tool calling or cause input data to be lost ([see here](https://community.n8n.io/t/n8n-bug-workflow-input-data-not-being-received-correctly-when-simultaneously-triggered-via-an-ai-agent-tool-v2/81740)).
+- **Solution:**  
+  - Upgrade n8n to at least v1.80.4 (or latest stable).
+  - Restart your n8n instance after upgrading.
+
+---
+
+## 5. **Prompt/Instruction Issues**
+- **Symptom:** The agent outputs JSON directly, never calls the tool, or ignores the tool.
+- **Details:** Even with a minimal prompt, some models will “shortcut” and output the answer directly unless forced to use the tool.
+- **Solution:**  
+  - Use a system prompt like:  
+    > “You must call the Logging Tool for every event. Do not output anything else. Do not answer directly. Only call the Logging Tool.”
+  - Test with a stub agent (as you did) to confirm tool calling works in isolation.
+
+---
+
+## 6. **Debugging Steps**
+- **Enable “Return Intermediate Steps”** in the Tools Agent node to see if the agent is even attempting tool calls.
+- **Add a simple “Echo” tool** (e.g., a tool that just returns what it receives) to test if *any* tool call works.
+- **Check n8n logs** for errors or schema mismatch messages.
+
+---
+
+## 7. **Summary Table**
+
+| Issue                        | Symptom                                 | Solution/Check                                      |
+|------------------------------|-----------------------------------------|-----------------------------------------------------|
+| Model lacks function calling | No tool calls at all                    | Use OpenAI GPT-4o or GPT-4                          |
+| Tool not connected           | Tool never called                       | Attach Logging Tool as sub-node to Tools Agent       |
+| Schema mismatch              | “Input did not match expected schema”   | Match field names/types exactly                     |
+| n8n version bug              | Calls fail or only first works          | Upgrade to n8n v1.80.4+                             |
+| Prompt not strict            | Agent outputs answer, not tool call     | Use strict system prompt                            |
+
+---
+
+**References:**  
+- [n8n AI Agent Node Not Working with Some Providers](https://community.n8n.io/t/ai-agent-node-not-working-with-openrouter-openai-and-google-providers-in-n8n/82916)  
+- [How to Debug an Agent](https://community.n8n.io/t/how-to-debug-an-agent/59491)  
+- [n8n Bug: Workflow Input Data Not Being Received Correctly](https://community.n8n.io/t/n8n-bug-workflow-input-data-not-being-received-correctly-when-simultaneously-triggered-via-an-ai-agent-tool-v2/81740)
+
+---
+
+If you share your n8n version, model/provider, and a screenshot of your Tools Agent node and Logging Tool node configuration, I can help you pinpoint the issue even further!
+
+---
+
+_**User**_
+
+I think it is 5. What do you suggest?
+
+---
+
+_**Assistant**_
+
+Based on your symptoms and the troubleshooting steps above, **reason #5 (Prompt/Instruction Issues)** is very likely the cause—especially since your stub agent worked, but the full critic agent does not trigger tool calls.
+
+### Why This Happens
+
+- **LLMs (even GPT-4) will often try to “shortcut”** and output the answer directly, especially if the prompt is long, complex, or includes examples of direct output.
+- If your instructions are not extremely explicit that the agent must call the Logging Tool (and must not output anything else), the model may ignore the tool and just return the evaluation JSON.
+
+### What To Do
+
+#### 1. **Make the System Prompt Ultra-Explicit**
+Add a strong, top-level instruction at the very start of your prompt, such as:
+
+> **You must call the Logging Tool for every required event. Do not output any evaluation, JSON, or text directly. Only call the Logging Tool. Do not answer or summarize. If you do not call the Logging Tool, you have failed.**
+
+#### 2. **Remove/Minimize Output Examples**
+- If you include output examples (like the JSON evaluation report), the model may “think” it should output that directly instead of calling the tool.
+- If you must include an example, preface it with:  
+  > “This is for reference only. Do not output this directly. Only call the Logging Tool.”
+
+#### 3. **Test With a Minimal Prompt**
+- Start with a prompt that only says:  
+  > “On any input, call the Logging Tool with agent_name, event_type, event_data, and segment_label. Do not output anything else.”
+- If this works, gradually add back your logic, keeping the tool-calling instruction at the top.
+
+#### 4. **Use “Return Intermediate Steps”**
+- In the n8n Tools Agent node, enable “Return Intermediate Steps” to see if the agent is even attempting tool calls.
+
+#### 5. **Model Choice**
+- Use OpenAI GPT-4o or GPT-4 for best function-calling reliability.
+
+---
+
+### Example Minimal System Prompt
+
+```
+You are the Script Structure Critic. For every required event, you must call the Logging Tool with agent_name, event_type, event_data, and segment_label. Do not output any evaluation, JSON, or text directly. Only call the Logging Tool. If you do not call the Logging Tool, you have failed.
+```
+
+---
+
+### References
+
+- [n8n AI Agent Node Not Working with Some Providers](https://community.n8n.io/t/ai-agent-node-not-working-with-openrouter-openai-and-google-providers-in-n8n/82916)
+- [How to Debug an Agent](https://community.n8n.io/t/how-to-debug-an-agent/59491)
+
+---
+
+**Summary:**  
+Make your tool-calling instruction the very first and most forceful part of your prompt. Remove output examples or make it clear they are not to be output. Test with a minimal prompt and only add complexity once tool calls are reliably triggered.
+
+If you want, I can draft a minimal, “tool-call only” system prompt for your critic agent!
+
+---
+
+_**User**_
+
+Yes
+
+---
+
+_**Assistant**_
+
+Here is a minimal, ultra-explicit system prompt for your Script Structure Critic agent to ensure it always calls the Logging Tool and does not output anything else:
+
+---
+
+**SYSTEM PROMPT FOR SCRIPT STRUCTURE CRITIC (TOOL-CALL ONLY)**
+
+> You are the Script Structure Critic.  
+> For every required event, you must call the Logging Tool with the following four parameters:
+> - `agent_name` (string)
+> - `event_type` (string)
+> - `event_data` (object with at least a `message` and an `input` field)
+> - `segment_label` (string)
+>
+> **You must not output any evaluation, JSON, or text directly. Only call the Logging Tool. Do not answer, summarize, or return any other output. If you do not call the Logging Tool, you have failed.**
+>
+> When you receive input, process it according to your logic, but for every log-worthy event, only call the Logging Tool as described above.  
+> Do not output anything else.
+
+---
+
+**How to use:**  
+- Place this at the very top of your agent’s instructions/system prompt.
+- Remove or move any output examples to the very end, and clearly mark them as “for reference only, do not output.”
+- If you need the agent to eventually output the evaluation JSON, you can later relax the prompt, but for debugging tool calls, this will force the correct behavior.
+
+Let me know if you want a version that also allows the final evaluation JSON output after all logging calls!
+
+---
+
+_**User**_
+
+Make the cahange for me.
+
+---
+
+_**Assistant**_
+
+```diff
++ ---
++ 
++ **SYSTEM PROMPT FOR SCRIPT STRUCTURE CRITIC (TOOL-CALL ONLY)**
++ 
++ You are the Script Structure Critic.
++ For every required event, you must call the Logging Tool with the following four parameters:
++ - agent_name (string)
++ - event_type (string)
++ - event_data (object with at least a message and an input field)
++ - segment_label (string)
++ 
++ You must not output any evaluation, JSON, or text directly. Only call the Logging Tool. Do not answer, summarize, or return any other output. If you do not call the Logging Tool, you have failed.
++ 
++ When you receive input, process it according to your logic, but for every log-worthy event, only call the Logging Tool as described above.
++ Do not output anything else.
++ 
++ ---
++ 
+  # Script Structure Critic Agent
+  
+```
+
+---
+
+The ultra-explicit system prompt has been added to the very top of your ScriptStructureCritic.md file. This will force the agent to only call the Logging Tool for every required event and not output anything else, ensuring tool-calling behavior for debugging and workflow validation. The rest of your file remains unchanged.
+
+---
+
+_**User**_
+
+OK that worked. That means the instructions were the problem. Now we still have to produce output AND logs.
+
+---
+
+_**Assistant**_
+
+Great! Now that you’ve confirmed the agent will reliably call the Logging Tool when explicitly instructed, you can move to the next step: **producing both logs and the final evaluation output**.
+
+Here’s how to structure your instructions so the agent will:
+1. **Call the Logging Tool for each required event** (as before)
+2. **After all logging is complete, output ONLY the clean JSON evaluation report** (no extra text, no logs, no markdown)
+
+---
+
+## How to Update Your Instructions
+
+### 1. **System Prompt (Top of File)**
+Add this at the very top (replace the previous “tool-call only” version):
+
+---
+**SYSTEM PROMPT FOR SCRIPT STRUCTURE CRITIC (LOGS + OUTPUT)**
+
+You are the Script Structure Critic.
+
+- For every required event, you must call the Logging Tool with the following four parameters:
+  - agent_name (string)
+  - event_type (string)
+  - event_data (object with at least a message and an input field)
+  - segment_label (string)
+
+- After all required Logging Tool calls are complete, you must output ONLY the clean JSON evaluation report as your final response.  
+  - Do not include any log calls, explanations, or extra text in your final output.
+  - Do not use markdown code blocks or formatting—output the raw JSON object only.
+
+If you do not call the Logging Tool for each event, or if you do not output the clean JSON report at the end, you have failed.
+
+---
+
+### 2. **Rest of the Instructions**
+- Keep your logging instructions as they are (bare bones, as before).
+- Keep your output format and evaluation process sections as they are.
+
+---
+
+## Example Final Output Section
+
+> After all logging is complete, output ONLY the clean JSON evaluation report as your final response.  
+> Do not include any log calls, explanations, or extra text in your final output.  
+> Do not use markdown code blocks or formatting—output the raw JSON object only.
+
+---
+
+**This approach ensures:**
+- The agent logs every event as required.
+- The agent produces the final evaluation JSON for downstream use.
+- No extra text or logs are included in the output.
+
+Would you like me to make this change directly to your file?
+
+---
+
+_**User**_
+
+yes
+
+---
+
+_**Assistant**_
+
+```diff
+  ---
+- 
+- **SYSTEM PROMPT FOR SCRIPT STRUCTURE CRITIC (TOOL-CALL ONLY)**
++ **SYSTEM PROMPT FOR SCRIPT STRUCTURE CRITIC (LOGS + OUTPUT)**
+  
+  You are the Script Structure Critic.
+- For every required event, you must call the Logging Tool with the following four parameters:
++ 
++ - For every required event, you must call the Logging Tool with the following four parameters:
+    - agent_name (string)
+    - event_type (string)
+    - event_data (object with at least a message and an input field)
+    - segment_label (string)
+  
+- You must not output any evaluation, JSON, or text directly. Only call the Logging Tool. Do not answer, summarize, or return any other output. If you do not call the Logging Tool, you have failed.
++ - After all required Logging Tool calls are complete, you must output ONLY the clean JSON evaluation report as your final response.
++   - Do not include any log calls, explanations, or extra text in your final output.
++   - Do not use markdown code blocks or formatting—output the raw JSON object only.
+  
+- When you receive input, process it according to your logic, but for every log-worthy event, only call the Logging Tool as described above.
+- Do not output anything else.
+- 
++ If you do not call the Logging Tool for each event, or if you do not output the clean JSON report at the end, you have failed.
+  ---
+  
+```
+
+---
+
+Your ScriptStructureCritic.md file now starts with a system prompt that instructs the agent to both call the Logging Tool for every required event and, after all logging is complete, output only the clean JSON evaluation report as the final response. This ensures both logging and correct output for downstream processing. The rest of your file remains unchanged.
+
+---
+
+_**User**_
+
+This looks horrible. Can you make those instructions a bit less obtrusive?
+
+---
+
+_**Assistant**_
+
+```diff
+  ---
+- **SYSTEM PROMPT FOR SCRIPT STRUCTURE CRITIC (LOGS + OUTPUT)**
++ **System Instructions for Script Structure Critic**
+  
+- You are the Script Structure Critic.
+- 
+- - For every required event, you must call the Logging Tool with the following four parameters:
+-   - agent_name (string)
+-   - event_type (string)
+-   - event_data (object with at least a message and an input field)
+-   - segment_label (string)
+- 
+- - After all required Logging Tool calls are complete, you must output ONLY the clean JSON evaluation report as your final response.
+-   - Do not include any log calls, explanations, or extra text in your final output.
+-   - Do not use markdown code blocks or formatting—output the raw JSON object only.
++ As the Script Structure Critic, you should:
++ - Log each key event by calling the Logging Tool with agent_name, event_type, event_data (with a message and relevant input), and segment_label.
++ - After all logging is complete, output only the final clean JSON evaluation report (no extra text, logs, or formatting).
+  
+- If you do not call the Logging Tool for each event, or if you do not output the clean JSON report at the end, you have failed.
++ This ensures both traceability and proper output for downstream processing.
+  ---
+  
+```
+
+---
+
+The system instructions at the top of your file are now concise, professional, and less obtrusive. They clearly state the requirements for logging and output, while maintaining a friendly and workflow-appropriate tone. The rest of your file remains unchanged.
+
+---
+
+_**User**_
+
+Make it part of the responsibilities rather than the very first thing.
+
+---
+
+_**Assistant**_
+
+```diff
+- ---
+- **System Instructions for Script Structure Critic**
+- 
+- As the Script Structure Critic, you should:
+- - Log each key event by calling the Logging Tool with agent_name, event_type, event_data (with a message and relevant input), and segment_label.
+- - After all logging is complete, output only the final clean JSON evaluation report (no extra text, logs, or formatting).
+- 
+- This ensures both traceability and proper output for downstream processing.
+- ---
+- 
+  # Script Structure Critic Agent
+  
+```
+
+```diff
+    - Assigning scores, generating actionable feedback, and assembling the output JSON evaluation report
+    - Handling errors, ambiguities, and edge cases internally (e.g., outputting fail status and clear feedback if input is malformed or incomplete)
+-   - Logging all key events, tool usage, decisions, and detected issues using the provided **Logging Tool**.
++   - Logging all key events, tool usage, decisions, and detected issues using the Logging Tool. For each key event, call the Logging Tool with agent_name, event_type, event_data (with a message and relevant input), and segment_label.
++   - After all logging is complete, output only the final clean JSON evaluation report (no extra text, logs, or formatting).
+  
+  **CRITICAL NOTE: Your final output must be ONLY the JSON evaluation report object with no surrounding text or logging. The Append Agent Log calls must be separate from your output and should not be included in the response that's returned to the workflow. This is essential for downstream processing.**
+```
+
+---
+
+The instructions for logging and output are now integrated directly into the "Core Processing Responsibilities" section as part of the agent's responsibilities, rather than being a separate block at the top. This makes the requirements clear and professional, and keeps the document focused and well-structured.
+
+---
+
+_**User**_
+
+Yep now it stopped logging agin. Geez
+
+---
+
+_**Assistant**_
+
+This is a classic issue with LLM-driven agents in n8n and similar systems:  
+**If the logging requirement is not the very first, most prominent instruction, the model will often “shortcut” and skip tool calls, especially when also asked to produce a final output.**
+
+### Why This Happens
+
+- LLMs (even GPT-4) are highly sensitive to instruction order and emphasis.
+- If the logging requirement is “buried” in a list, the model may focus on the output requirement and skip the logs.
+- The more complex or “buried” the logging instruction, the more likely it is to be ignored.
+
+---
+
+## What Actually Works (Best Practices)
+
+1. **Put the logging requirement as the very first, most prominent instruction.**
+2. **Use strong, explicit language:**  
+   - “For every key event, you must call the Logging Tool. This is required for every event before producing your final output.”
+3. **Keep the output requirement as a separate, clear step after logging.**
+4. **Avoid mixing logging and output instructions in a single bullet list.**
+
+---
+
+## What You Should Do
+
+**Move the logging instruction back to the very top, as a dedicated, prominent system instruction.**  
+Then, in the responsibilities section, you can reference it briefly, but the main “do this first” instruction must be at the top.
+
+---
+
+### Example (Recommended Structure)
+
+```
+---
+**System Instructions for Script Structure Critic**
+
+- For every key event, you must call the Logging Tool with agent_name, event_type, event_data (with a message and relevant input), and segment_label.
+- After all logging is complete, output only the final clean JSON evaluation report (no extra text, logs, or formatting).
+
+This ensures both traceability and proper output for downstream processing.
+---
+
+# Script Structure Critic Agent
+
+## Role and Core Responsibilities
+
+... (your usual responsibilities, referencing logging and output as needed)
+```
+
+---
+
+**Summary:**  
+- LLMs need the logging instruction to be the first and most prominent thing they see.
+- If you want reliable logging, always put it at the very top, in a dedicated block.
+- You can reference it in the responsibilities, but do not rely on that alone.
+
+---
+
+Would you like me to move the logging instruction back to the top for you?
+
+---
+
+_**User**_
+
+OK make it so.
+
+---
+
+_**Assistant**_
+
+```diff
++ ---
++ **System Instructions for Script Structure Critic**
++ 
++ - For every key event, you must call the Logging Tool with agent_name, event_type, event_data (with a message and relevant input), and segment_label.
++ - After all logging is complete, output only the final clean JSON evaluation report (no extra text, logs, or formatting).
++ 
++ This ensures both traceability and proper output for downstream processing.
++ ---
++ 
+  # Script Structure Critic Agent
+  
+```
+
+---
+
+The logging and output instructions are now restored to the very top of your file as a dedicated, prominent system instructions block. This will maximize the likelihood that the agent reliably logs every event and produces the correct final output. The rest of your file remains unchanged.
+
+---
+
+_**User**_
+
+The agent is working pretty well now but I had top switch to the google gemini model to stop the logging problems. However, the output JSON has unnecessary wrappers:
+
+"```json\n{\n  "scores": {\n    "hierarchical_completeness": 1,\n    "granularity_segmentation": 2,\n    "semantic_annotation": 4,\n    "narrative_flow": 4,\n    "production_suitability": 1,\n    "field_completeness": 3,\n    "consistency_naming": 5\n  },\n  "total_score": 20,\n  "pass_fail": "fail",\n  "feedback": [\n    "Hierarchical Incompleteness: Script structure is critically incomplete. It's missing 'shot' and 'beat' levels, which are essential for detailed production planning and execution.",\n    "Granularity Issues: Scenes are not broken down into shots and beats, resulting in insufficient granularity for visualizing and producing the video content.",\n    "Incorrect Duration Calculations: Scene-level durations are miscalculated (e.g., Scene 'act-1_seq-1_scene-1' with 46 words has duration 15.3s, should be 18.4s; Scene 'act-1_seq-2_scene-1' with 56 words has duration 18.7s, should be 22.4s). Parent segment durations and word counts are inconsistent with their child segments (e.g., Act 1 'estimated_duration' is 58.3s, sum of child sequences' provided durations is 34.0s; Act 1 'word_count' is 174, sum of child scenes' 'word_count' is 102).",\n    "High-Level Structure Generally Sound: For the provided Act, Sequence, and Scene levels, semantic annotations, narrative flow, and naming conventions are generally good, but these cannot compensate for the fundamental structural deficiencies."\n  ]\n}\n```"
+
+---
+
+_**Assistant**_
+
+This is a common issue with LLMs (especially Gemini, Claude, and sometimes GPT-4) when you ask for “raw JSON only”:  
+**They often wrap the output in triple backticks and a language tag (like ```json), even when you explicitly tell them not to.**
+
+---
+
+## Why This Happens
+
+- Many LLMs are trained to “helpfully” format code and JSON in markdown, even when you ask for plain output.
+- Some models (especially Gemini and Claude) are more aggressive about this than others.
+- If your prompt contains any markdown, code blocks, or examples with triple backticks, the model is even more likely to do this.
+
+---
+
+## How to Fix or Minimize This
+
+### 1. **Prompt Engineering**
+- At the end of your instructions, add:
+  > Do not use triple backticks, markdown, or any formatting. Output only the raw JSON object, not as a string or code block.
+- If you show an output example, **do not use triple backticks or markdown**—just show the JSON inline.
+
+### 2. **Post-Processing in n8n**
+- Use a **Code node** or **Set node** after the agent to strip wrappers:
+  - Remove ```json, ``` or ``` from the start/end of the string.
+  - Parse the string as JSON.
+
+**Example JavaScript for n8n Code Node:**
+```javascript
+let output = $json["output"];
+if (typeof output === "string") {
+  output = output.replace(/^```json\\n?|```$/g, "").trim();
+  try {
+    output = JSON.parse(output);
+  } catch (e) {
+    // fallback: try to extract JSON substring
+    const match = output.match(/{[\\s\\S]*}/);
+    if (match) output = JSON.parse(match[0]);
+  }
+}
+return { json: output };
+```
+
+### 3. **Model Choice**
+- OpenAI GPT-4o and GPT-4 are more likely to follow “no markdown” instructions than Gemini or Claude.
+- If you must use Gemini, always plan to post-process the output.
+
+---
+
+## Summary Table
+
+| Model         | Markdown Wrapping | Obeys “no markdown”? | Best Practice                |
+|---------------|------------------|----------------------|------------------------------|
+| GPT-4o/GPT-4  | Sometimes        | Usually              | Prompt + post-process        |
+| Gemini        | Often            | Rarely               | Always post-process          |
+| Claude        | Often            | Rarely               | Always post-process          |
+
+---
+
+## What To Do
+
+- **Update your prompt** to be even more explicit about “no markdown, no code blocks.”
+- **Remove all triple-backtick examples** from your instructions.
+- **Add a post-processing step** in n8n to strip wrappers and parse the JSON.
+
+---
+
+**Let me know if you want a ready-to-use n8n Code node snippet for this!**
+
+---
+
+_**User**_
+
+The logs are working well now with Gemini but the event_data is a bit verbose. We could reduce the amount of data especially in the input field.
+
+---
+
+_**Assistant**_
+
+Absolutely! Reducing verbosity in the `event_data.input` field is a best practice for both performance and clarity—especially when logging in n8n or similar systems.
+
+---
+
+## How to Make `event_data.input` Less Verbose
+
+### 1. **Log Only the Most Relevant Fields**
+- Instead of logging the entire segment or structure, log only:
+  - The unique identifier (e.g., `label`)
+  - The `level` (e.g., `"scene"`, `"shot"`)
+  - The specific field(s) being validated or scored (if applicable)
+  - Any error or status message
+
+**Example:**
+```json
+{
+  "message": "Validated required fields for scene segment.",
+  "input": {
+    "level": "scene",
+    "label": "act-1_seq-1_scene-2"
+  }
+}
+```
+
+Or, for a field-level log:
+```json
+{
+  "message": "Checked estimated_duration for shot.",
+  "input": {
+    "level": "shot",
+    "label": "act-1_seq-1_scene-2_shot-3",
+    "estimated_duration": 4.2
+  }
+}
+```
+
+### 2. **Update Your Instructions**
+In your logging instructions, specify:
+- Only include the minimal necessary fields in `input` (e.g., `level`, `label`, and the field(s) under review).
+- Avoid logging full descriptions, narration, or large arrays unless absolutely necessary.
+
+**Instruction Example:**
+> In each Logging Tool call, the `event_data.input` field should contain only the minimal information needed to identify the segment and context (e.g., `level`, `label`, and the specific field(s) being validated or scored).
+
+---
+
+## How to Implement
+
+- **Update your agent instructions** to clarify this expectation.
+- **(Optional)** If you have control over the logging code, add a helper to extract only the relevant fields before logging.
+
+---
+
+## Example Logging Instruction (Concise)
+
+```
+- For every key event, call the Logging Tool with:
+  - agent_name
+  - event_type
+  - event_data: {
+      "message": <brief description>,
+      "input": {
+        "level": <segment level>,
+        "label": <segment label>,
+        ...(only the specific field(s) under review, if needed)
+      }
+    }
+  - segment_label
+```
+
+---
+
+## Next Steps
+
+Would you like me to update your ScriptStructureCritic.md instructions to reflect this concise logging approach? If so, I can make the edit for you!
+
+---
+
+_**User**_
+
+yes update please.
+
+---
+
+_**Assistant**_
+
+
+
+---
+
+
+
+---
+
